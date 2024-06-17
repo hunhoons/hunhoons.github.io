@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+/*     blind      */
+.blind,
+.ico > span	{
+	visibility: hidden; overflow: hidden; 
+	position: absolute; top: -1px; left: -1px;  z-index:-1;
+	width: 1px; height: 1px; font-size: 0; line-height: 0;
+}
+
+
+/*     ellipsis      */
+.ellipsis		{display: block; overflow: hidden; text-overflow: ellipsis;}
+.ellipsis:not([class*="line"])	{white-space: nowrap; -webkit-line-clamp: 1; }
+.ellipsis[class*="line"] { display: -webkit-box; -webkit-box-orient: vertical; }
+.ellipsis.line2	{-webkit-line-clamp: 2;}
+.ellipsis.line3	{-webkit-line-clamp: 3;}
+
+/*     align     */
+.ta-c {text-align: center !important;}
+.ta-l {text-align: left !important;}
+.ta-r {text-align: right !important;}
+
+
+/*      ico      */
+.ico {display: inline-block; background-repeat: no-repeat; background-position: center;}
+.ico.like{ width: 60px; height: 60px; background-image: url("../images/ico/ico_like.svg"); transition: all 0.2s;}
+.active .ico.like{background-image: url("../images/ico/ico_like_active.svg");}
+
+
+/*     img     */
+.img-wrap{position: relative; overflow: hidden;}
+.img{ display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
+
+
+/*     Gutter     */
+.gutter-40{padding: 0 var(--gutter40);}
+.gutter-60{padding: 0 var(--gutter60);}
+.gutter-80{padding: 0 var(--gutter80);}
+.gutter-100{padding: 0 var(--gutter100);}
+
+/*     Title && Text     */
+.title-wrap{}
+.title-wrap .title{font-size: 80px; font-weight: 700;}
+.title-wrap .text{font-size: 22px; font-weight: 400;}
+.title-wrap .title + .text{margin-top: 10px;}
+
+.title-wrap.page{}
+.title-wrap.page .title{}
+.title-wrap.page .text{}
+
+
+
+/*     flex && grid     */
+[class*="flex"]{ display: flex; align-items: center; }
+[class*="grid"]{}
+.flex-both{justify-content: space-between;}
+
+
+/*     item     */
+.item{ position: relative; display: flex; flex-direction: column; align-items: flex-start; }
+.item .img-wrap{width: 100%; border-radius: 0.8em;}
+.item .img-wrap img{
+	width: 100%; height: 100%; vertical-align: top;
+	object-fit: contain; object-position: center;
+}
+/* goods */
+.item.goods{}
+.item.goods:is(:hover, :focus) .img-wrap img{transform: scale(1.2);}
+.item.goods .img-wrap img{transition: all  0.4s ease-out; transform: scale(1);}
+.item.goods .button-area{position: absolute; bottom: 0; z-index: 2;}
+
+.item.goods .img-wrap + .text-wrap{margin-top: 20px;}
+.item.goods .title{font-size: 24px; font-weight: 700;}
+.item.goods .text,
+.item.goods .price{font-size: 18px; font-weight: 400;}
+.item.goods .title + .text{padding-top: 10px;}
+
+
+
+/*     col && data-list     */
+:root{
+	--col2: 15px;
+	--col3: 30px;
+	--col4: 45px;
+	--col2-length: 2;
+	--col3-length: 3;
+	--col4-length: 4;
+}
+[class*="col"]{ display: flex; align-items: flex-start; flex-wrap: wrap; gap: 15px; }
+.col-2 li{width: calc((100% - var(--col2)) / var(--col2-length));}
+.col-3 li{width: calc((100% - var(--col3)) / var(--col3-length));}
+.col-4 li{width: calc((100% - var(--col4)) / var(--col4-length));}
+
+.data-list{}
+
+
+
+/*     pagination     */
+.pagination,
+.pagination :is(ul, ul a, .next, .prev){
+	display: -webkit-box; display: -ms-flexbox; display: flex; 
+	-webkit-box-align: center; -ms-flex-align: center; align-items: center; 
+	-webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+}
+.pagination :is(.next, .prev, .all-prev, .all-next){
+	width: 18px; height: 18px;
+	background-repeat: no-repeat; background-size: contain;
+	background-position: 50% 50%;
+}
+.pagination .all-prev{background-image: url("../images/ico/ico_page_all_prev.svg");}
+.pagination .all-next{background-image: url("../images/ico/ico_page_all_next.svg");}
+.pagination .prev{background-image: url("../images/ico/ico_page_prev.svg");}
+.pagination .next{background-image: url("../images/ico/ico_page_next.svg");}
+.pagination,
+.pagination ul{gap: 10px;}
+.pagination li a{ width: 30px; height: 30px; font-size: 20px; font-weight: 700;}
+.pagination li:is(:hover, .active) a{color: red;}
+
+
+/*     Article     */
+.article-header{}
+.article-header .title{font-size: 60px; font-weight: bold;}
+.article-header + .article-content{margin-top: 60px;}
+.article-content *{font-size: 20px; font-weight: 400;}
+.article-content :is(.img-wrap, p) + :is(p, .img-wrap) {margin-top: 10px;}
+.article-content + .button-area{margin-top: 40px;}

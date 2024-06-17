@@ -1,0 +1,71 @@
+:root{
+
+    /* Variable */
+    --vh100 : calc(var(--vh, 1vh) * 100);
+
+    /*    Variable Color    */
+    --black : #000000;
+    --black2 : #0f0f0f;
+    --black-rgb03 : rgba(0,0,0,0.3);
+    --black-rgb04 : rgba(0,0,0,0.4);
+    --black-rgb05 : rgba(0,0,0,0.5);
+
+    --white : #ffffff;
+
+    --gray : #414141;
+    --gray2 : #ececec;
+
+    
+    /*     Variable Gutter     */
+    --gutter40: 40px;
+    --gutter60: 60px;
+    --gutter80: 80px;
+    --gutter100: 100px;
+
+
+    /*    Variable Button    */
+    /* height */
+    --btn-xsmall : 20px;
+    --btn-small  : 35px;
+    --btn-medium : 45px;
+    --btn-large  : 60px;
+    --btn-xlarge : 80px;
+
+    /* font size */
+    --btn-fs-xsmall : 10px;
+    --btn-fs-small  : 12px;
+    --btn-fs-medium : 16px;
+    --btn-fs-large  : 18px;
+    --btn-fs-xlarge : 20px;
+
+    /* padding */
+    --btn-p-xsmall : 10px;
+    --btn-p-small  : 14px;
+    --btn-p-medium : 18px;
+    --btn-p-large  : 24px;
+    --btn-p-xlarge : 32px;
+
+
+    /*     Variable Input && Select box     */
+    --is-xsmall : 20px;
+    --is-small  : 25px;
+    --is-medium : 40px;
+    --is-large  : 45px;
+    --is-xlarge : 50px;
+
+    /* padding */
+    --is-p-xsmall : 10px;
+    --is-p-small  : 12px;
+    --is-p-medium : 14px;
+    --is-p-large  : 16px;
+    --is-p-xlarge : 18px;
+
+
+
+
+
+
+    
+
+
+}

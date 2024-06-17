@@ -1,0 +1,46 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NL:wght@100..400&display=swap');
+
+
+/* Header && Nav && Footer Common */
+:is(.header .inner, .header .logo, .nav ul, .nav .depth1){
+    display: flex; align-items: center;
+    color: var(--white);
+}
+
+
+/* Header */
+.scroll-down .header{top: -101px;}
+.header{ 
+    position: fixed; top: 50px; width: 100%; padding: 0 100px; 
+    transition: all 0.5s ease-out; z-index: 99;
+}
+.header .inner{
+    position: relative;
+    width: 100%; height: 65px; padding: 14px 20px;
+    background-color: var(--black2); border-radius: 50px;
+    justify-content: space-between;
+}
+
+.header .logo{ height: 100%; justify-content: center;}
+.header .logo a{ font-family: "Playwrite NL", cursive; font-size: 15px; font-weight: bold;}
+
+/* Nav */
+.nav{}
+.nav ul{gap: 60px;}
+.nav li{}
+.nav .depth1{font-size: 18px;}
+.nav .depth2{}
+
+
+/* Footer */
+:is(.footer .info , .footer address){ display: flex; flex-wrap: wrap; gap: 10px;  }
+
+.footer{ width: 100%; padding: 60px 100px 30px; background-color: var(--gray2); }
+.footer .inner{}
+.footer .logo{ padding-bottom: 30px; font-family: "Playwrite NL", cursive; font-size: 22px; font-weight: bold; }
+.footer .info{
+    align-items: center; justify-content: space-between;
+    width: 100%; padding-top: 20px; border-top: 2px solid var(--black2); font-size: 14px;
+}
+.footer address .tel{font-weight: bold;}
