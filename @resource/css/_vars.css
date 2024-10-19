@@ -1,0 +1,48 @@
+:root {
+	--vh100: calc(var(--vh, 1vh) * 100);
+	--vh100Contnet: calc(var(--vh100) - var(--header));
+
+	/****** gutter ******/
+	--gutter : 20px;
+
+	/****** btn & input ******/
+	--xsmall: 32px;
+	--small: 48px;
+	--medium: 56px;
+	--large: 64px;
+	
+	/* scroll */
+	--scroll: 4px;
+
+	/* scroll */
+	--pop-header: 80px;
+
+	/****** line height ******/
+	--lineH-1: 1;
+	--lineH-12: 1.2;
+	--lineH-13: 1.3;
+	--lineH-15: 1.5;
+	
+}
+
+
+@media all and (min-width: 1025px){
+	:root {
+		--header: 80px;
+	}
+}
+@media all and (max-width: 1024px) {
+	:root {
+		--header: 60px;
+	}
+}
+
+@media all and (min-width: 769px){
+	:root {
+	}
+}
+@media all and (max-width: 768px) {
+	:root {
+		
+	}
+}

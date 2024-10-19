@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+
+@font-face {
+	font-family: "Playfair Display", serif;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+	src: url('../PlayfairDisplay/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');	
+}

@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/****** @import ******/
+@import url("../../fonts/PlayfairDisplay/PlayfairDisplay.css");
+@import url("../../fonts/PAPERLOGY/papeerlogy.css");
+
+*{ 
+	margin: 0; padding: 0;
+	font: inherit; color: inherit; vertical-align: baseline;
+}
+
+*,::after,::before,
+header, footer, nav,
+h1, h2, h3, h4, h5, h6,
+ol, ul, li, a, p, span, em, strong,
+figcaption, figure, video, audio, img,
+dl, dt, dd, table, thead, tbody, tfoot,
+article, section, aside, canvas, details,
+button, input, select, textarea, form, fieldset{
+	-webkit-box-sizing: border-box; box-sizing: border-box;
+	color: var(--white);
+}
+
+html,body{
+	height:100%; min-height: var(--vh100);
+	line-height: 1.5; background-color: var(--black-2);
+}
+
+:focus	{ outline: none; }
+
+a,
+a:is(:active,:visited,:link,:hover,:focus){ 
+	text-decoration: none; color: inherit; outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ul, ul[role='list'],
+ol, ol[role='list'],
+li, li[role='list']	{ list-style: none; }
+
+strong{font-weight: 700;}
+
+img, svg, video, canvas, 
+picture, figcaption, figure{ display: block; }
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }

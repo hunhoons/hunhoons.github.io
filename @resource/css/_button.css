@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/* btn && a */
+:is(button, a):is(:focus){ outline-color: transparent; outline-style: none; }
+button{
+    border: 0 none; font: inherit; color: inherit;
+	-webkit-appearance:none; -moz-appearance: none; appearance: none;
+}
+a:is(:link, :visited, :active, :hover){
+    text-decoration: none; color: inherit; outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/* .btn */
+.btn { gap: 8px;
+    width: fit-content; font-size: inherit; text-align: center; vertical-align: middle; 
+    cursor: pointer; background-color: transparent; box-sizing: border-box; 
+    border: 0 none; outline: none; border-radius: 4px;
+	display: -webkit-box; display: -ms-flexbox; display: flex;
+	-webkit-justify-content: center; justify-content: center;
+	-webkit-align-items: center; align-items: center;
+}
+.btn[disabled] {};
+
+input.btn,
+button.btn	{ overflow: visible; margin: 0; }
+
+
+/* button size */
+.btn.xsmall { height: var(--xsmall); padding: 0 18px; }
+.btn.small  { height: var(--small); padding: 0 22px; }
+.btn.medium { height: var(--medium); padding: 0 clamp(22px, 2.063vw ,26px); font-size: clamp(22px, 2.063vw ,26px);}
+.btn.large  { height: var(--large); padding: 0 clamp(24px, 1.563vw ,30px); font-size: clamp(24px, 1.563vw ,30px);}
+@media all and (max-width:768px) {
+    /* .btn.xsmall { padding: 0 18px; font-size: var(); line-height: var(); }
+    .btn.small  { padding: 0 22px; font-size: var(); line-height: var(); }
+    .btn.medium { padding: 0 26px; font-size: var(); line-height: var(); }
+    .btn.large  { padding: 0 30px; line-height: var(); } */
+}
+
+/* button style */
+.btn.color1			{ background-color: var(--blue); color: var(--white); }
+.btn.color1:hover	{}
+
+.btn.color2			{ background-color: var(--white); color: var(--black); border-radius: 8px;}
+.btn.color2:hover	{}
+
+.btn.bdr-color1			{ border: 1px solid var(--blue); color:var(--blue); border-radius: 99px; }
+.btn.bdr-color1:hover	{}
+
+.btn.bdr-color2			{ border: 1px solid var(); }
+.btn.bdr-color2:hover	{}
+
+.btn.etc{font-size: 20px; font-weight: 700; letter-spacing: -0.8px;}
+
+.btn.etc-2{font-size: 26px; color: var(--black-3); gap: 8px; transition: color 0.2s ease-out;}
+.btn.etc-2 .ico.more-3{transition: all 0.2s ease-out;}
+.btn.etc-2:hover{color: var(--blue);}
+.btn.etc-2:hover .ico.more-3{background-image: url('../images/ico/ico_more2.svg');}
+
+
+/* button area && inner */
+.button-area,
+.button-wrap{ gap: var(--gap10);
+    display: -webkit-box; display: -ms-flexbox; display: flex; 
+    -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+}
+.button-gutter{ padding: 0px var(); }
