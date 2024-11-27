@@ -3,12 +3,12 @@
 /****** @import ******/
 @import url("../css/lib/reset.css");
 
-@import url("./css/_vars.css");
-@import url("./css/_form.css");
-@import url("./css/_table.css");
-@import url("./css/_button.css");
-@import url("./css/_layout.css");
-@import url("./css/_global.css");
+@import url("../css/_vars.css");
+@import url("../css/_form.css");
+@import url("../css/_table.css");
+@import url("../css/_button.css");
+@import url("../css/_layout.css");
+@import url("../css/_global.css");
 
 ::-webkit-scrollbar {
 	display: none;
