@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>IDEA Pharmaceutical</title>
+
+	<link rel="icon" href="../@resource/images/favicon.ico" sizes="any">
+	
+	<link rel="stylesheet" href="../@resource/css/idea.css">
+	<link rel="stylesheet" href="../@resource/css/idea_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/idea.js"></script>
+</head>
+<body>
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="content" style="height: 100vh;">
+
+			</main>
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+
+	<div id="popupCookie" class="overlay popup-cookie active">
+		<div class="popup">
+			<div class="popup-header">
+				<button type="button" onclick="isPopupClose('#popupCookie')"
+						class="btn pop-close">
+					<i class="ico mask-popup-close"></i>
+				</button>
+			</div>
+			<div class="popup-body">
+				<div id="cookieSwiper" class="swiper cookie-swiper">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+							<!-- [D] 링크가 있는 경우 A tag 안에 img-wrap -->
+							<a href="javascript:void(0)" target="_blank">
+								<div class="img-wrap">
+									<img src="../@resource/images/@temp/temp_list01.jpg" alt="">
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<!-- [D] 링크가 없는 경우 img-wrap 만 -->
+							<div class="img-wrap">
+								<img src="../@resource/images/@temp/temp_list02.jpg" alt="">
+							</div>
+						</li>
+					</ul>
+
+					<div class="swiper-pagination customer"></div>
+
+				</div>
+			</div>
+			<div class="popup-footer">
+				<div class="button-area center">
+					<button type="button" id="btnToday" class="btn oneday light">
+						<span>Don’t show this again</span>
+					</button>
+					<button type="button" onclick="isPopupClose('#popupCookie')"
+							class="btn closed dark">
+						<span>Close</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<script src="../@resource/js/lib/aos.js"></script>
+<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+<script src="../@resource/js/lib/gsap.min.js"></script>
+<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+<script src="../@resource/js/lib/lenis.min.js"></script>
+
+<script src="../@resource/js/lib/jquery.cookie.js"></script>
+<script>
+	// PATH 운영에서는 isCurrent만 사용
+	isLayoutPath(function(){
+		isCurrent(1,1);
+	});
+
+	$(function(){
+		
+		// () => [Body Load] 로드 후 실행
+		$('body').removeClass('loaded'); // 있다면 초기화 후
+		$('body').addClass('loaded');
+
+		// () => 스크롤 초기화
+		setLenisScrollReset();
+
+		setTimeout( () => {
+			// 헤더효과
+			headerGsap();
+
+			if(window.lenis){
+				// Lenis Lib 안전 하게 실행
+				window.lenis.stop();
+				window.lenis.start();
+			}	
+		}, 50);
+
+		// Const () => [POPUP Cookie Event] 팝업 쿠키 이벤트
+		const cookieSwiper = new Swiper('#cookieSwiper', {
+			slidesPerView: '1',
+			spaceBetween: 10,
+			observer: true,
+			observeParents: true,
+			pagination: {
+				el: "#cookieSwiper .swiper-pagination.customer",
+				clickable: true,
+			},
+		});
+
+		// () => [Cookie Popup Check]
+		//checkTodayHide("popCookie", "#popupCookie");
+		// 클릭하면 cookie 생성 + 팝업 숨김
+			
+		// $('#btnToday').on("click",function () {
+		// 	setTodayHide("popCookie");
+		// 	$("#popupCookie").removeClass('active');
+		// });
+
+
+		// function setTodayHide(cookieName) {
+		// 	// 1일(24시간) 동안 유지
+		// 	$.cookie(cookieName, "Y", { expires: 1, path: "/" });
+		// }
+		// function checkTodayHide(cookieName, target) {
+		// 	if ($.cookie(cookieName) !== "Y") {
+		// 		$(target).addClass('active');   // 보여주기
+		// 	} else {
+		// 		$(target).removeClass('active');   // 숨기기
+		// 	}
+		// }
+
+	});
+</script>
+</html>

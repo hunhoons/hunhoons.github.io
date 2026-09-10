@@ -1,0 +1,341 @@
+@charset "utf-8";
+
+/* ========================================
+[Form Style Reset] 폼 스타일 초기화
+======================================== */
+body:not(:-moz-handler-blocked) fieldset { display: table-cell; }
+legend	{ display: table; padding: 0; }
+label	{ display: inline-block;  cursor: pointer; }
+fieldset{
+	min-width: 0; margin: 0; 
+	padding: 0; border: 0;  
+}
+
+form, fieldset, legend,
+input, select, textarea, label{
+	position: relative;
+	box-sizing: border-box;
+}
+input, select, textarea,
+input::-webkit-search-cancel-button,
+input::-webkit-calendar-picker-indicator{
+	appearance:none;
+	-webkit-appearance:none;
+	outline: none; border:0; border-radius: 0; color: var(--black);
+}
+:is(input, select, textarea):focus{
+	outline-color: transparent; 
+	outline-style: none;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance: none; margin: 0;
+}
+input[type=number]	{ -moz-appearance: textfield; }
+
+input, select{overflow: hidden;}
+select::-ms-expand	{ display: none; }
+
+.label{
+	font-size: 18px; font-weight: 400;
+	cursor: pointer; color: var(--gray-09); 
+}
+::placeholder	{ color: var(--gray-04-2); font-weight: 400;}
+@media all and (min-width:768px) and (max-width:1023px) { .label{font-size: 16px;} }
+@media all and (max-width:767px) 	{ .label{font-size: 14px;} }
+/* // [Form Style Reset End] 폼 스타일 초기화 종료 */
+
+
+
+/* ========================================
+[Form Status] 폼 상태 공통화
+======================================== */
+
+/* Comment () => [Form Element Status] 폼 요소 상태 */
+
+/* [Form Element Focus] 포커스 시 */
+:is(.input, .select, .textarea):focus	{ border-color: none; }
+input, textarea							{ caret-color: var(--black); }
+
+/* [Form Element Disabled & Readonly] 비활성화 & 읽기형태 */
+:is(.input, .select, .textarea):disabled,
+:is(.input, .select, .textarea)[disabled],
+:is(.input, .textarea):read-only,
+:is(.input, .textarea)[readonly]{
+	color: var(--gray-02); 
+	border-color: var(--gray-02);
+}
+
+
+/* Comment () => [Checkbox & Radio Status] 체크박스 & 라디오 상태 */
+
+/* [Checkbox & Radio Disabled Label Color] 비활성화 시 라벨 컬러 */
+:is(.checkbox, .radio):disabled + .label{
+	color: var(--black);
+	cursor: no-drop;
+}
+
+/* [Checkbox & Radio Disabled Outside Color]  비활성화 시 외부 컬러 */
+:is(.checkbox, .radio):disabled::before{
+	border-color: var(--black);
+	background-color: var(--black);
+}
+
+/* [Checkbox & Radio Disabled Inside Color] 비활성화 시 내부 컬러 */
+:is(.checkbox, .radio):disabled::after
+.checkbox:checked:disabled:after,
+.radio:checked:disabled:after{
+	background-color: var(--black);
+}
+/* // [Form Status End] 폼 상태 종료 */
+
+
+
+/* ========================================
+[Form Component Common] 폼 스타일 공통화
+======================================== */
+
+/* Comment () => [Form Size] 폼 사이즈 */
+:is(.input, .select).xsmall{ 
+	height: var(--xsmall);
+	padding: 0 20px;
+}
+:is(.input, .select).small { 
+	height: var(--small); 
+	padding: 0 20px;
+}
+:is(.input, .select).medium{ 
+	height: var(--medium);
+	padding: 0 22px;
+}
+:is(.input, .select).large { 
+	height: var(--large); 
+	padding: 0 20px;
+}
+:is(.input, .select).xlarge { 
+	height: var(--xlarge); 
+	padding: 0 20px;
+}
+
+
+/* Comment () => [Form Basic] 폼 기본 스타일 */
+.input, .select, .textarea{
+	border-radius: 0px; border: 1px solid var(--gray-02);
+	color: var(--gray-99); background-color: var(--white);
+}
+@media all and (max-width: 768px) {
+	.input, .select, .textarea{font-size: 14px;}
+}
+
+
+/* [Input Component] 인풋 요소 */
+.input{}
+.input[type="date"]::-webkit-clear-button,
+.input[type="search"]::-webkit-search-cancel-button{
+	position: relative; right: 5px; 
+	width: 24px; height: 24px;
+
+	background: url('../images/@common/close.svg') center center / cover no-repeat;
+
+	-webkit-appearance: none; 
+	   -moz-appearance: none; 
+			appearance: none;
+}
+
+/* [Select Component] 셀렉트박스 요소 */
+.select:is(.xsmall, .small, .medium, .large, .xlarge){ padding-right: 24px; }
+.select{
+	background: #fff url("../../images/@common/select.svg") no-repeat calc(100% - 4px) 50%; 
+	background-size: 20px 20px; vertical-align: middle;
+}
+.select.is-empty { color: var(--empty, #333); }
+
+
+/* [Textarea Component] 텍스트 영역 요소 */
+.textarea{ 
+	padding: clamp(12px,3.2vw,16px); 
+	resize: none;
+}
+.textarea::-webkit-scrollbar{width: 4px;}
+.textarea::-webkit-scrollbar-thumb {background-color: var(--black-op-60);}
+.textarea::-webkit-scrollbar-track {background-color: var(--white-op-60);}
+/* // [Form Style Common End] 폼 스타일 공통화 종료 */
+
+
+
+/* ========================================
+[Checkbox & Radio Component Style] 요소 스타일 공통화
+======================================== */
+
+/* Comment () => [Checkbox & Radio Compnent] 체크박스 & 라디오 요소 */
+.checkbox, .radio{
+	position: relative; overflow: hidden;
+	width: 24px; height: 24px; margin: 0;
+	vertical-align: middle; background-color: transparent;
+}
+:is(.checkbox, .radio) + .label,
+:is(.checkbox, .radio) + span{
+	position: relative; top: 1px;
+	color: var(--gray-04-2); line-height: 1; font-weight: 400;
+}
+
+/* [Checkbox & Radio Basic Style] 기본 스타일 세팅 */
+.checkbox::before, .checkbox::after,
+.radio::before, .radio::after{
+	content: ''; display: block;
+}
+.checkbox::before, .radio::before{
+	width: 100%; height: 100%; background-color: var(--white);
+	border: 1px solid var(--gray-04-2); box-sizing: border-box;
+	transition: all 0.2s ease;
+}
+.checkbox::after, .radio::after{ 
+	position: absolute; top: 50%; left: 50%;
+	transform: translate(-50%, -50%) scale(1); transition: all 0.2s ease;
+	mask-size: contain; background-color: var(--gray-03);
+}
+
+.checkbox:after					{ 
+	width: 12px; height: 12px;
+
+	-webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 12'%3E%3Cpath d='M13.6823 0.768948C14.0861 1.14578 14.1079 1.77857 13.7311 2.18232L5.33106 11.1823C5.14193 11.385 4.87719 11.5 4.6 11.5C4.32282 11.5 4.05807 11.385 3.86895 11.1823L0.268948 7.32518C-0.107886 6.92143 -0.0860652 6.28864 0.317686 5.91181C0.721436 5.53497 1.35423 5.55679 1.73106 5.96054L4.6 9.03441L12.2689 0.817685C12.6458 0.413935 13.2786 0.392114 13.6823 0.768948Z'/%3E%3C/svg%3E") no-repeat 50% 50%;
+			mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 12'%3E%3Cpath d='M13.6823 0.768948C14.0861 1.14578 14.1079 1.77857 13.7311 2.18232L5.33106 11.1823C5.14193 11.385 4.87719 11.5 4.6 11.5C4.32282 11.5 4.05807 11.385 3.86895 11.1823L0.268948 7.32518C-0.107886 6.92143 -0.0860652 6.28864 0.317686 5.91181C0.721436 5.53497 1.35423 5.55679 1.73106 5.96054L4.6 9.03441L12.2689 0.817685C12.6458 0.413935 13.2786 0.392114 13.6823 0.768948Z'/%3E%3C/svg%3E") no-repeat 50% 50%;
+	
+}
+.checkbox::before						{ border-radius: 0; }
+.checkbox.circle::before				{ border-radius: 100px; }
+
+.radio::after{ width: 8px; height: 8px;}
+.radio, .radio::before, .radio::after	{ border-radius: 50px; }
+
+/* [Is Checked Outside Color Change] 체크 시 외부 컬러 변경  */
+.checkbox:checked:before,
+.radio:checked::before {
+	border-color: var(--black-op-60);
+	background-color: var(--black);
+}
+
+/* [Is Checked Inside Color Change] 체크 시 내부 컬러 변경 */
+.checkbox:checked::after,
+.radio:checked::after {
+	background-color: var(--white);
+	transform: translate(-50%, -50%) scale(1);
+}
+
+@media all and (max-width: 768px) {
+	:is(.checkbox, .radio) + .label,
+	:is(.checkbox, .radio) + span{ font-size: 14px; }
+}
+/* // [Form Component Style End] 요소 스타일 공통화 종료 */
+
+
+
+/* ========================================
+[Form Group & Label Style] 요소 그룹 & 라벨 스타일
+======================================== */
+.field-group, 
+.radio-group,
+.checkbox-group		{ display: flex; align-items: center; gap: 16px; }
+
+.field-group.row, 
+.radio-group.row,
+.checkbox-group.row	{ flex-direction: column; }
+
+.radio-group,
+.checkbox-group		{ flex-wrap: wrap; }
+
+/* Comment () => [Field Group & Wrap] 필드 그룹, 영역 */
+.field-group{}
+.field-wrap{
+	display: flex; gap: 40px;
+	flex-direction: column;
+}
+
+.field{}
+.field .label{width: 100%;}
+@media all and (max-width: 768px) {
+	.field-wrap{gap: 24px;}
+}
+
+
+/* Comment () => [Checkbox & Radio Group & Wrap] 체크박스 & 라디오 그룹, 영역 */
+.checkbox-group{}
+.radio-group{}
+
+.checkbox-wrap,
+.radio-wrap{
+	display: flex; align-items: center;
+	flex-wrap: wrap; gap: 40px;
+}
+.checkbox-wrap{}
+.radio-wrap{}
+@media all and (max-width: 768px) {
+	.checkbox-wrap,
+	.radio-wrap{gap: 16px;}
+}
+
+
+/* Comment () => [Label Style Collection] 라벨 스타일 모음 */
+
+/* [Form Label Style] 폼 라벨 스타일 */
+.label-form{
+	display: flex; gap: 10px;
+	flex-direction: column; 
+}
+.label-form .label{width: 100%;}
+
+/* [Checkbox & Radio Label Style] 체크박스 & 라디오 라벨 스타일 */
+.label-checkbox,
+.label-radio{
+	display: flex; gap: 10px;
+	align-items: center;
+}
+.label-checkbox{}
+.label-radio{}
+
+
+/* [Etc Label Style] 그 외 라벨 스타일 */
+.fileup-wrap,
+.policy-wrap{
+	height: 68px; padding-inline: 20px;
+	display: flex; align-items: center;
+	border: 1px solid var(--gray-02);
+}
+
+/* File Upload Label 파일 업로드 */
+.fileup-wrap{
+	cursor: pointer;
+	justify-content: center;
+}
+.label-fileup{
+	width: 100%; height: 100%;
+	display: flex; align-items: center;
+	justify-content: center;
+}
+.label-fileup span{color: var(--gray-04-2);}
+.label-fileup .btn{gap: 10px; width: 100%; height: 100%;}
+.label-fileup .btn.filedel{display: none;}
+.label-fileup .btn.filedel span{
+	max-width: calc(100% - 24px);
+	width: max-content;
+	color: var(--gray-99);
+}
+
+/* Privacy Policy Label 개인정보 처리방침 */
+.label-policy{
+	display: flex; align-items: center;
+	gap: 10px;
+}
+.label-policy input + div{
+	color: var(--gray-09); 
+	font-weight: 400;
+}
+
+@media all and (max-width: 768px) {
+	.fileup-wrap,
+	.policy-wrap{height: 52px;}
+	.label-policy{font-size: 14px;}
+}
+
+/* // [Form Group Style End] 폼 그룹 종료 */

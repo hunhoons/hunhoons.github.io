@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>IDEA Pharmaceutical</title>
+
+	<link rel="icon" href="../@resource/images/favicon.ico" sizes="any">
+	
+	<link rel="stylesheet" href="../@resource/css/idea.css">
+	<link rel="stylesheet" href="../@resource/css/idea_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/idea.js"></script>
+</head>
+<body>
+	
+	<div id="wrap" class="wrap">
+		<div id="container" class="container container-sub">
+
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<!-- Commtent () => [Page Sub Business] 서브 페이지 비지니스 -->
+			<div id="content" class="sub others error">
+				<div class="page-header">
+					<div class="gutter-32">
+						<div class="max-1560 pack-down">
+							<div class="img-wrap split split-motion">
+								<span>
+									<img src="../@resource/images/@common/oops.png" alt="OOPS!" class="cover">
+								</span>
+							</div>
+							<div class="title-area pack-down">
+								<div class="title-wrap page">
+									<h2 class="page-title lh-100">
+										<span class="split split-motion">
+											<span>찾으시는 페이지가</span>
+										</span>
+										<span class="split split-motion">
+											<span>없습니다.</span>
+										</span>
+									</h2>
+									<p class="page-label split split-motion">
+										<span>Page Not Found</span>
+									</p>
+								</div>
+								<p class="text split split-motion">
+									<span>
+										요청하신 페이지가 이동되었거나 사라졌어요. <br class="only-mo"> 
+										홈으로 돌아가 주세요
+									</span>
+								</p>
+							</div>
+							
+							<div class="button-wrap" data-gsap="fade-up">
+								<a href="../html/MAI-0001.html" class="btn large w-260 solid">
+									<span>Go to HOME</span>
+									<i class="ico arrow-b motion"></i>
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- // [Page Header] 페이지 헤더 -->
+			</div>
+			<!-- // Commtent () => [Page Sub Business] 서브 페이지 비지니스 -->
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+
+</body>
+<script src="../@resource/js/lib/aos.js"></script>
+<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+<script src="../@resource/js/lib/gsap.min.js"></script>
+<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+<script src="../@resource/js/lib/lenis.min.js"></script>
+<script>
+	/* Comment () => [Local isCurrent] 로컬에서만 isCurrent 사용 */
+	isLayoutPath(function(){
+		isCurrent(0);
+	});
+
+	$(function(){
+
+		/* Commtent () => [Page Load Common] 로드 시 공통 */
+		
+		/* [Body Load] 로드 후 실행 */
+		$('body').removeClass('loaded'); // 있다면 초기화 후
+		$('body').addClass('loaded');
+
+		/* [Scroll Reset] 새로고침 시 스크롤 초기화 */
+		setLenisScrollReset();
+
+
+		/* [GSAP Media Match] 미디어 매치 변수 */
+		let mm;
+		
+
+		/* Comment () => [GSAP Motion Common] GSAP 모션 실행을 위한 로드 */
+		$(document).ready(function(){
+
+			/* [GSAP Lib] GSAP 라이브러리 싱행 */
+			gsap.registerPlugin(ScrollTrigger);
+
+			/* [GSAP Leins Scroll] Leins Scroll Smooth 전역 변수 */
+			window.lenis.stop(); // 스크롤 막기
+
+			/* [Page Header] 페이지 헤더 */
+			const split01 = $('.split-motion span');
+			const split02 = $('.button-wrap');
+
+			// Page Header Setting, 타이틀&텍스트 세팅
+			gsap.set(split01, { yPercent: 105, autoAlpha: 0 });
+			gsap.set(split02, { y: 40, autoAlpha: 0 });
+
+			gsap.to(split01,{
+				yPercent: 0,
+				autoAlpha: 1,
+				duration: 1,
+				ease: "elastic.inOut(1,0.75)",
+				stagger: 0.1,
+				onComplete: () => {
+					// 헤더효과
+					headerGsap();
+					setTimeout( () => {
+						if(window.lenis){
+							// Lenis Lib 안전 하게 실행
+							window.lenis.stop();
+							window.lenis.start();
+						}	
+					}, 50);
+				}
+			});
+			gsap.to(split02,{
+				y:0,
+				autoAlpha: 1,
+				duration: 1.6,
+				ease: "power4.out",	
+			}, "<0.6");
+
+		
+			/* [GSAP Refresh] 모션 위치 감지,초기화 */
+			ScrollTrigger.refresh(true);
+		});
+
+
+		/* Comment () => [Resize] GSAP, Window 반응형 대응 */
+		$(window).on('resize', function(){
+
+			/* [GSAP Media Match] 미디어 매치 체크 */
+			// if(mm) mm.revert();
+
+			/* [GSAP Refresh] 모션 위치 감지,초기화 */
+			ScrollTrigger.refresh(true);
+		});
+
+	});
+</script>
+</html> 

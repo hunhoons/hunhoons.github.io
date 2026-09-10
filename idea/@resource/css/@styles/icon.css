@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* ========================================
+= [ICON COMMON STYLE] 아이콘 공통 스타일 
+= Description: Icon Common
+======================================== */
+.ico					{ aspect-ratio: 1/1;
+	display: flex; background-position: center; 
+	background-repeat: no-repeat; background-size: cover;
+	-webkit-mask-size: cover;
+			mask-size: cover;
+}
+.ico:is([class="mask-"]){ 
+	-webkit-mask: url() no-repeat 50% 50%;
+			mask: url() no-repeat 50% 50%;
+	-webkit-mask-size: 100% 100%;
+			mask-size: 100% 100%;
+}
+/* // = [ICON STYLE COMMON END] 아이콘 공통 스타일 종료 */
+
+
+
+/* ========================================
+= [ICON MASK STYLE] 아이콘 마스크 스타일
+= Description: Icon Mask Style
+======================================== */
+/* [Mask - 24px] 24px */
+.ico:is( .mask-pagination )	{width: 24px;}
+.ico.mask-pagination		{
+	-webkit-mask-image: url("../../images/@common/pagination.svg");
+			mask-image: url("../../images/@common/pagination.svg");
+}
+
+/* [Mask - 40px] 40px */
+.ico:is(.mask-popup-close)	{width: 40px;}
+.ico.mask-popup-close	{
+	-webkit-mask-image: url("../../images/@common/pop-close.svg");
+			mask-image: url("../../images/@common/pop-close.svg");
+}
+
+/* [Mask - 60px] 60px */
+.ico:is(.mask-arrow-big){width: 60px;}
+.ico.mask-arrow-big		{
+	-webkit-mask-image: url("../../images/@ico/arrow-w-big.svg");
+			mask-image: url("../../images/@ico/arrow-w-big.svg");
+}
+
+/* [Mask - Etc] 기타 */
+
+/* // = [ICON MASK STYLE END] 아이콘 마스크 스타일 종료 */
+
+
+
+/* ========================================
+= [ICON BACKGROUND STYLE] 아이콘 백그라운드 스타일
+= Description: Icon Background Style
+======================================== */
+/* [Background - 20px] 20px */
+.ico:is(.rotate-arrow, .fileup, .sch-close){width: 20px; }
+.ico.rotate-arrow	{background-image: url("../../images/@ico/rotate-arrow.svg");}
+.ico.fileup			{background-image: url("../../images/@ico/fileup.svg");}
+.ico.sch-close		{background-image: url("../../images/@common/search-close.svg");}
+
+/* [Background - 24px] 24px */
+.ico:is(
+	.menu, .global, .shop, 
+	.naver, .facebook, .instagram,
+	.arrow-b, .arrow-b-02, .arrow-w, .plus
+){width: 24px;}
+.ico.menu		{background-image: url("../../images/@common/menu.svg");}
+.ico.global		{background-image: url("../../images/@ico/globe.svg");}
+.ico.shop		{background-image: url("../../images/@ico/shop.svg");}
+
+.ico.naver		{background-image: url("../../images/@ico/naver.svg");}
+.ico.facebook 	{background-image: url("../../images/@ico/facebook.svg");}
+.ico.instagram 	{background-image: url("../../images/@ico/instagram.svg");}
+
+.ico.arrow-b	{background-image: url("../../images/@ico/arrow-b.svg");}
+.ico.arrow-b-02	{background-image: url("../../images/@ico/arrow-b-02.svg");}
+.ico.arrow-w	{background-image: url("../../images/@ico/arrow-w.svg");}
+
+.ico.plus	{background-image: url("../../images/@ico/plus.svg");}
+@media all and (max-width:767px) {
+	.ico:is( .shop, .arrow-b, .arrow-w, .plus ){width: 20px;}
+}
+
+/* [Background - 60px] 60px */
+.ico:is(.arrow-w-big){width: 60px;}
+.ico.arrow-w-big	{background-image: url("../../images/@ico/arrow-w-big.svg");}
+
+/* [Background - 64px] 64px */
+.ico:is(.plays){width: 64px;}
+.ico.plays			{background-image: url("../../images/@ico/plays.svg");}
+
+/* [Background - 68px] 68px */
+.ico:is(.arrow-b-big){width: 68px;}
+.ico.arrow-b-big	{background-image: url("../../images/@ico/arrow-b-big.svg");}
+
+/* [Background - 80px] 80px */
+.ico:is([class*="research-"], [class*="pharma-"], [class*="consulting-"]){ width: 80px; }
+.ico.research-01 { background-image: url("../../images/@ico/r&d-01.svg"); }
+.ico.research-02 { background-image: url("../../images/@ico/r&d-02.svg"); }
+.ico.research-03 { background-image: url("../../images/@ico/r&d-03.svg"); }
+.ico.research-04 { background-image: url("../../images/@ico/r&d-04.svg"); }
+.ico.research-05 { background-image: url("../../images/@ico/r&d-05.svg"); }
+.ico.research-06 { background-image: url("../../images/@ico/r&d-06.svg"); }
+.ico.research-07 { background-image: url("../../images/@ico/r&d-07.svg"); }
+.ico.research-08 { background-image: url("../../images/@ico/r&d-08.svg"); }
+.ico.research-09 { background-image: url("../../images/@ico/r&d-09.svg"); }
+.ico.research-10 { background-image: url("../../images/@ico/r&d-10.svg"); }
+.ico.research-11 { background-image: url("../../images/@ico/r&d-11.svg"); }
+
+.ico.pharma-01 { background-image: url("../../images/@ico/pharma-01.svg"); }
+.ico.pharma-02 { background-image: url("../../images/@ico/pharma-02.svg"); }
+.ico.pharma-03 { background-image: url("../../images/@ico/pharma-03.svg"); }
+
+.ico.consulting-01 { background-image: url("../../images/@ico/consulting-01.svg"); }
+.ico.consulting-02 { background-image: url("../../images/@ico/consulting-02.svg"); }
+.ico.consulting-03 { background-image: url("../../images/@ico/consulting-03.svg"); }
+.ico.consulting-04 { background-image: url("../../images/@ico/consulting-04.svg"); }
+.ico.consulting-05 { background-image: url("../../images/@ico/consulting-05.svg"); }
+.ico.consulting-06 { background-image: url("../../images/@ico/consulting-06.svg"); }
+.ico.consulting-07 { background-image: url("../../images/@ico/consulting-07.svg"); }
+.ico.consulting-08 { background-image: url("../../images/@ico/consulting-08.svg"); }
+
+.ico:is([class*="cosmetics-"]){ width: clamp(100px,13.04vw,120px); }
+.ico.cosmetics-01 { background-image: url("../../images/@ico/cosmetics-01.svg"); }
+.ico.cosmetics-02 { background-image: url("../../images/@ico/cosmetics-02.svg"); }
+
+/* [Background - Etc] 기타 */
+.ico.cross{
+	width: 15px; aspect-ratio: 15/24;
+	background-image: url("../../images/@common/cross.svg");
+}
+
+.ico.sign{
+	width: 154px; aspect-ratio: 154/72;
+	background-image: url("../../images/@common/sign.svg");
+}
+@media all and (max-width:767px) {
+	.ico.sign{
+		width: 90px;
+		background-image: url("../../images/@common/sign.png");
+	}
+}
+/* // = [ICON BACKGROUND STYLE END] 아이콘 백그라운드 스타일 종료 */

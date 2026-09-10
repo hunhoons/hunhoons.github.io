@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>IDEA Pharmaceutical</title>
+
+	<link rel="icon" href="../@resource/images/favicon.ico" sizes="any">
+	
+	<link rel="stylesheet" href="../@resource/css/idea.css">
+	<link rel="stylesheet" href="../@resource/css/idea_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/idea.js"></script>
+</head>
+<body>
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="content" style="height: 100vh;">
+				<button type="button" class="btn glass">
+					<span class="">12323</span>
+				</button>
+				<button type="button" class="btn glass">
+					<span>22312312</span>
+				</button>
+			</main>	
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+</body>
+
+<script src="../@resource/js/lib/aos.js"></script>
+<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+<script src="../@resource/js/lib/gsap.min.js"></script>
+<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+<script src="../@resource/js/lib/lenis.min.js"></script>
+<script>
+	// PATH 운영에서는 isCurrent만 사용
+	isLayoutPath(function(){
+		isCurrent(1,1);
+	});
+	isGlassSvg();
+
+	$(function(){
+		
+		// () => [Body Load] 로드 후 실행
+		$('body').removeClass('loaded'); // 있다면 초기화 후
+		$('body').addClass('loaded');
+
+		// () => 스크롤 초기화
+		setLenisScrollReset();
+
+		setTimeout( () => {
+			// 헤더효과
+			headerGsap();
+
+			if(window.lenis){
+				// Lenis Lib 안전 하게 실행
+				window.lenis.stop();
+				window.lenis.start();
+			}	
+		}, 50);
+
+	});
+</script>
+</html>

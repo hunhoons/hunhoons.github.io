@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+/* ========================================
+[Button Style Reset] 버튼 스타일 초기화
+======================================= */
+button, .btn{
+	position: relative; 
+	width: fit-content; margin: 0; padding: 0;
+	display: inline-flex; align-items: center;
+	justify-content: center;
+	
+	text-align: center; vertical-align: middle;
+
+	font-size: inherit; color: inherit;
+	border: 0 none; outline: none;
+	appearance: none; background-color: transparent;
+
+	transition: all 0.4s ease; cursor: pointer;
+	gap: 16px;
+}
+
+:is(button, .btn):focus-visible { outline: auto; }
+@media all and (max-width: 767px) {
+	button, .btn{ font-size: 14px; gap: 12px;}
+}
+/* // [Button Style Reset End] 버튼 스타일 초기화 종료 */
+
+
+/* ========================================
+[Button Style Common] 버튼 스타일 공통화
+======================================= */
+
+/* Comment () => [Button Layout] 버튼 정렬 */
+[class*="button-"] {
+	display: flex; 
+	align-items: center;
+}
+
+[class*="button-"].start   { justify-content: flex-start; }
+[class*="button-"].end     { justify-content: flex-end; }
+[class*="button-"].center  { justify-content: center; }
+[class*="button-"].between { justify-content: space-between; }
+[class*="button-"].down    { flex-direction: column; }
+
+
+/* Comment () => [Button Disabled] 버튼 Disabled */
+.btn:disabled:not([class*="swiper-"]),
+.btn[disabled]:not([class*="swiper-"]) {
+	color: #888; background-color: #CCC;
+	cursor: not-allowed;
+}
+
+/* Comment () => [Button Size] 버튼 사이즈 */
+.btn.xsmall { 
+	height: var(--xsmall);
+	padding: 0 12px; 
+}
+.btn.small  { 
+	height: var(--small); 
+	padding: 0 16px; 
+}
+.btn.medium { 
+	height: var(--medium);
+	padding: 0 22px; 
+}
+.btn.large  { 
+	height: var(--large); 
+	padding: 0 30px; 
+}
+.btn.xlarge { 
+	height: var(--xlarge);
+	padding: 0 32px; 
+}
+
+
+/* Comment () => [Button Styles] 버튼 스타일 모음 */
+.btn:is(.solid, .line, .glass){
+	border-radius: 100px;
+	justify-content: space-between;
+}
+
+/* [Button Color] 버튼 컬러 */
+.btn.dark { 
+	color: var(--white);
+	background-color: var(--black-07); 
+}
+.btn.solid,
+.btn.light{
+	color: var(--gray-99);
+	background-color: var(--white);
+}
+
+/* [Button Board] 버튼 선 처리 */
+.btn.line,
+.btn.board-light{
+	color: var(--gray-99);
+	border: 1px solid var(--black-op-20); 
+}
+.btn.board-light{background-color: var(--white);}
+
+
+/* [Button Glass] 버튼 글라스 */
+.btn.glass{ 
+	overflow: hidden; background-color: transparent;
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
+	color: var(--white);
+}
+.btn.glass [class*="liquid-"]{
+	position: absolute; inset: 0 0 0 0; 
+}
+.btn.glass span,
+.btn.glass .ico{position: relative; z-index: 3;}
+
+.btn.glass .liquid-effect {
+	overflow: hidden; isolation: isolate; z-index: 0;
+	-webkit-backdrop-filter: blur(3px); 
+			backdrop-filter: blur(3px); 
+	filter: url(#glass-distortion);
+}
+.btn.glass .liquid-tint {
+	z-index: 1; background: var(--white-op-05);
+}
+.btn.glass .liquid-shine {
+	overflow: hidden; z-index: 2;
+	box-shadow: inset 1px 1px 1px 0 var(--white-op-10), 
+				inset -1px -0px 0px 0px var(--white-op-10);
+	border-radius: 100px;
+}
+.btn.glass:has(.fc-gray99){color: var(--gray-99);}
+
+/* [Button Etc] 버튼 그 외 */
+.btn.more{ color: var(--white); gap: 16px;}
+
+/* [Button Hover Effect] 버튼 호버 효과  */
+.btn:has(.motion, .output) .ico{transition: transform 0.4s ease;}
+@media (any-hover: hover) and (any-pointer: fine) {
+	.btn:has(.motion):hover .ico{ transform: translateX(4px); }
+	.btn:has(.output):hover .ico{ transform: translate(2px, -2px) rotate(-45deg); }
+}
+
+/* [Button RWD] 버튼 반응형  */
+@media all and (max-width:767px) {
+	.btn:is(.solid, .line, .glass){gap: 0px;}
+}
+
+/* // [Button Style Common End] 버튼 스타일 공통화 종료 */
+
+
+/* ========================================
+[Button Swiper & Button Trasnform] 버튼 스와이퍼/트렌스폼
+======================================= */
+.btn[class*="swiper-"]{
+	width: 48px; height: 48px; 
+	border-radius: 100px; border: 1px solid #898E94;
+}
+.btn[class*="swiper-"] .ico{
+	
+	background-size: cover; background-repeat: no-repeat;
+	background-position: center center;
+
+	-webkit-mask-position: center center;
+	        mask-position: center center;
+	-webkit-mask-size: cover;
+	        mask-size: cover;
+	-webkit-mask-repeat: no-repeat;
+	        mask-repeat: no-repeat;
+
+	-webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'><mask id='mask0_1049_13010' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'><rect x='15.25' y='15.25' width='14.5' height='14.5' transform='rotate(-180 15.25 15.25)' fill='%23D9D9D9' stroke='black' stroke-width='1.5'/></mask><g mask='url(%23mask0_1049_13010)'><path d='M9.65625 13.5469L4.11717 8.00779L9.65625 2.46871' stroke='%23898E94' stroke-width='1.6'/></g></svg>");
+	 		mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'><mask id='mask0_1049_13010' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'><rect x='15.25' y='15.25' width='14.5' height='14.5' transform='rotate(-180 15.25 15.25)' fill='%23D9D9D9' stroke='black' stroke-width='1.5'/></mask><g mask='url(%23mask0_1049_13010)'><path d='M9.65625 13.5469L4.11717 8.00779L9.65625 2.46871' stroke='%23898E94' stroke-width='1.6'/></g></svg>");
+	
+	width: 16px; height: 16px;
+	background-color: #898E94;
+}
+.btn.swiper-prev,
+.btn.swiper-next{ opacity: 1 !important; }
+.btn.swiper-next{ transform: rotate(180deg); }
+
+.btn.underline   { text-decoration: underline; }
+.btn.transparent { background-color: transparent; padding: 0; }
+/* // [Button Swiper & Button Trasnform End] 버튼 스와이퍼/트렌스폼 종료 */

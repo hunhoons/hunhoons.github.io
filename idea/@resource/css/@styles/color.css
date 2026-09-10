@@ -1,0 +1,56 @@
+/* ========================================
+= [COLOR STYLE] 컬러 스타일
+= Description: Color Style Common
+======================================== */
+
+:root{
+	/* [Color - White] 흰색 */
+	--white:		#FFFFFF;
+	--white-op-05:	rgba(255,255,255,0.05);
+    --white-op-10:	rgba(255,255,255,0.1);
+    --white-op-20:	rgba(255,255,255,0.2);
+	--white-op-25:	rgba(255,255,255,0.25);
+    --white-op-30:	rgba(255,255,255,0.3);
+    --white-op-40:	rgba(255,255,255,0.4);
+    --white-op-50:	rgba(255,255,255,0.5);
+    --white-op-60:	rgba(255,255,255,0.6);
+    --white-op-70:	rgba(255,255,255,0.7);
+    --white-op-80:	rgba(255,255,255,0.8);
+
+	/* [Color - Black] 검정 */
+    --black:		#000000;
+    --black-op-10:	rgba(0,0,0,0.1);
+    --black-op-20:	rgba(0,0,0,0.2);
+    --black-op-30:	rgba(0,0,0,0.3);
+    --black-op-40:	rgba(0,0,0,0.4);
+    --black-op-50:	rgba(0,0,0,0.5);
+    --black-op-60:	rgba(0,0,0,0.6);
+    --black-op-70:	rgba(0,0,0,0.7);
+    --black-op-80:	rgba(0,0,0,0.8);
+
+	/* [Color - IDEA] 이데아 공통 컬러 */
+	--gray-01:		#F2F2F2;
+	
+	--gray-02:		#D6D7DE;
+	--gray-02-2:	#E4E4E4;
+
+	--gray-03:		#B2B7CF;
+	
+	--gray-04:		#ACACAC;
+	--gray-04-2:	#9B9FAE;
+	
+	--gray-05:		#7B7B7B;
+	--gray-06:		#636363;
+
+	--gray-08:		#252932;
+	--gray-08-2:	#333333;
+
+	--gray-09:		#555B6F;
+
+	--gray-99:		#141414;
+	--gray-99-80:	rgba(20,20,20, 0.8);
+	--gray-99-60:	rgba(20,20,20, 0.6);
+
+	--black-07:		#070707;
+}
+/* // = [COLOR STYLE END] 컬러 스타일 종료 */

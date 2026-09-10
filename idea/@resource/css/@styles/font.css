@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* ========================================
+= [FONT STYLE] 폰트 스타일
+= Description: Font Style Common
+======================================== */
+/* [Font - Suit] 한글 폰트 */
+@font-face {
+	font-family: 'SUIT Variable';
+	font-weight: 100 900;
+	src: local('SUIT Variable'),
+		 url('../../fonts/Suit/SUIT-Variable.woff2') format('woff2-variations'),
+		 url('../../fonts/Suit/SUIT-Variable.ttf') format('truetype');
+	unicode-range: U+AC00-D7A3; /* 한글 유니코드 범위 */
+}
+
+/* [Font - Montserrat] 영문,숫자,기호 폰트 */
+@font-face {
+	font-family: 'Montserrat Variable';
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+	src: local('Montserrat Variable'), 
+		 url('../../fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('woff2-variations'),
+		 url('../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+	unicode-range: U+0020-007E; /* 기본 라틴 (영어/숫자/기호) */
+}
+
+/* [Font - NanumMyeongjo] 특정 폰트 */
+@font-face {
+	font-family: 'NanumMyeongjo';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: local('NanumMyeongjo'), 
+		 url('../../fonts/NanumMyeongjo/NanumMyeongjo.woff2') format('woff2'),
+		 url('../../fonts/NanumMyeongjo/NanumMyeongjo.ttf') format('truetype'),
+		 url('../../fonts/NanumMyeongjo/NanumMyeongjo.otf') format('opentype');
+}
+/* // = [FONT STYLE END] 폰트 스타일 종료 */

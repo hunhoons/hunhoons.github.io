@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>IDEA Pharmaceutical</title>
+
+	<link rel="icon" href="../@resource/images/favicon.ico" sizes="any">
+	
+	<link rel="stylesheet" href="../@resource/css/idea.css">
+	<link rel="stylesheet" href="../@resource/css/idea_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/idea.js"></script>
+</head>
+<body>
+	
+	<div id="wrap" class="wrap">
+		<div id="container" class="container container-sub">
+
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<!-- Commtent () => [Page Sub Contact] 서브 페이지 문의하기 -->
+			<div id="content" class="sub contact">
+				<div class="page-header">
+					<div class="gutter-32">
+						<div class="max-1560 title-wrap page">
+							<h2 class="page-title lh-100">
+								<span class="split">
+									<span>CONTACT US</span>
+								</span>
+							</h2>
+							<p class="page-label split">
+								<span>문의 / 위치</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				 <!-- // [Sub - Page Header End] Page Header 종료  -->
+
+				<div class="page-content">
+					<div class="gutter-32">
+						<div class="max-1560 content-group">
+							<section class="section forms">
+								<div class="inquiry-group">
+									<div class="sticky-wrap">
+										<div class="title-wrap sec col">
+											<h3 class="sec-title fw-300 lh-125 fc-gray99" data-gsap="fade-up">
+												<span>
+													당신의 이야기를 <br>
+													들려주세요! 
+												</span>
+											</h3>
+											<p class="sec-text text-lg3 fc-gray04" data-gsap="fade-up">
+												<span>담당자가 빠른 시일 내에 회신 드리겠습니다</span>	
+											</p>
+										</div>
+									</div>
+
+									<div class="form-wrap">
+										<form id="dataForm">
+											<fieldset>
+												<legend class="blind">Contact Us</legend>
+												<div class="field-wrap">
+													<div class="field" data-gsap="fade-up-mo">
+														<label class="label-form">
+															<span class="label">이름</span>
+															<input	type="text" id="userName" class="input xlarge" 
+																	name="" placeholder="이름을 입력해주세요.">
+														</label>
+													</div>
+
+													<div class="field" data-gsap="fade-up-mo">
+														<label class="label-form">
+															<span class="label">이메일</span>
+															<input	type="text" id="userMail" class="input xlarge" 
+																	name="" placeholder="이메일을 입력해주세요.">
+														</label>
+													</div>
+
+													<div class="field" data-gsap="fade-up-mo">
+														<label class="label-form">
+															<span class="label">전화번호</span>
+															<input	type="tel" id="userTel" class="input xlarge" 
+																	name="" placeholder="휴대전화를 입력해주세요."
+																	maxlength="11">
+														</label>
+													</div>
+
+													<div class="field" data-gsap="fade-up-mo">
+														<span class="label">문의항목</span>
+														<div class="checkbox-wrap">
+															<label class="label-checkbox">
+																<input type="checkbox" class="checkbox" name="">
+																<span>협업 제안</span>
+															</label>
+															<label class="label-checkbox">
+																<input type="checkbox" class="checkbox" name="">
+																<span>기타 문의</span>
+															</label>
+															<label class="label-checkbox">
+																<input type="checkbox" class="checkbox" name="">
+																<span>기타 문의</span>
+															</label>
+														</div>
+													</div>
+													
+													<div class="field pack-down gap-10" data-gsap="fade-up-mo">
+														<label class="label-form">
+															<span class="label">문의내용</span>
+															<textarea 	name="" id="" class="textarea" 
+																		placeholder="문의내용을 입력해주세요."></textarea>
+														</label>
+
+														<div class="fileup-wrap pack-center" data-gsap="fade-up-mo">
+															<div class="label-fileup">
+																<input type="file" id="fileUp" hidden>
+																<input 	type="text" id="fileName" hidden readonly>
+
+																<button type="button" id="fileUpload" class="btn upload">
+																	<span class="ellipsis">첨부파일을 업로드 해 주세요.</span>
+																	<i class="ico fileup"></i>
+																</button>
+																<button type="button" id="fileDel" class="btn filedel">
+																	<span id="fileNameTag" class="ellipsis line-1">
+																	</span>
+																	<i class="ico sch-close"></i>
+																</button>
+															</div>
+														</div>
+
+
+													</div>
+
+													<div class="field policy-wrap" data-gsap="fade-up-mo">
+														<label class="label-policy">
+															<input 	type="checkbox" name=""
+																	id="policyCheckbox" class="checkbox circle">
+															<div class="pack-start items-center">
+																<a	href="../html/POL-0001.html" target="_blank" 
+																	class="btn policy underline">
+																	<span>개인정보 처리방침</span>
+																</a>
+																<span>에 동의합니다.</span>
+															</div>
+														</label>
+													</div>
+
+																				
+												</div>
+
+												<div class="button-area center" data-gsap="fade-up-mo">
+													<button type="button" id="btnConfig"
+															class="btn large dark w-130 round-100 text-base1">
+														<span>확인</span>
+													</button>
+												</div>
+												
+											</fieldset>
+										</form>
+									</div>
+								</div>
+							</section>
+							 <!-- // [Contact - Section Forms End] 섹션 Forms 종료  -->
+
+							<section class="section location">
+								<div class="local-group">
+									<div class="title-wrap sec">
+										<h3 class="sec-title fw-300 lh-125 fc-gray99 uppercase" data-gsap="fade-up">
+											<span>Location</span>
+										</h3>
+									</div>
+									<div class="local-list">
+										<ul class="pack-down gap-10">
+											<li data-gsap="fade-up">
+												<span>OPEN. 9am-6pm (KST)</span>
+											</li>
+											<li data-gsap="fade-up">
+												<a href="mailTo:leadervel@leadervel.com">
+													<span>leadervel@leadervel.com</span>
+												</a>
+											</li>
+											<li data-gsap="fade-up">
+												<a href="tel:02-511-7013">
+													<span>+82 2 511 7013</span>
+												</a>
+											</li>
+											<li data-gsap="fade-up">
+												<span class="copytext">서울특별시 금천구 가산디지털2로 34, 215-220호</span>
+											</li>
+										</ul>
+
+										<button type="button" class="btn small board-light copy" 
+												onclick="isCopyTxt('.copytext', '주소가');">
+											<span>COPY</span>
+										</button>
+									</div>
+								</div>
+
+								<div class="maps-wrap" data-gsap="fade-up" data-lenis-prevent>
+									<div id="maps" class="maps">
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.5375942675187!2d126.88089877714317!3d37.47163832956194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b61e5f741a8ad%3A0x32908c1468572d98!2z7ISc7Jq47Yq567OE7IucIOq4iOyynOq1rCDqsIDsgrDrlJTsp4DthLgy66GcIDM0!5e0!3m2!1sko!2skr!4v1762398733811!5m2!1sko!2skr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+									</div>
+								</div>
+							</section>
+							 <!-- // [Contact - Section Location End] 섹션 Location 종료  -->
+
+						</div>
+					</div>
+				</div>
+				 <!-- // [Sub - Page Content End] Page Content 종료  -->
+
+			</div>
+			<!-- // Commtent () => [Page Sub Contact] 서브 페이지 문의하기 -->
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+
+</body>
+<script src="../@resource/js/lib/aos.js"></script>
+
+<script src="../@resource/js/lib/gsap.min.js"></script>
+<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+<script src="../@resource/js/lib/lenis.min.js"></script>
+<script>
+	/* Comment () => [Local isCurrent] 로컬에서만 isCurrent 사용 */
+	isLayoutPath(function(){
+		isCurrent(4);
+	});
+
+	$(function(){
+
+		/* Commtent () => [Page Load Common] 로드 시 공통 */
+		
+		/* [Body Load] 로드 후 실행 */
+		$('body').removeClass('loaded'); // 있다면 초기화 후
+		$('body').addClass('loaded');
+
+		/* [Scroll Reset] 새로고침 시 스크롤 초기화 */
+		setLenisScrollReset();
+
+		/* [Button Glass Svg] 글라스 효과 버튼 svg */
+		isGlassSvg();
+
+		/* [GSAP Media Match] 미디어 매치 변수 */
+		let mm;
+		
+
+		/* Comment () => [GSAP Motion Common] GSAP 모션 실행을 위한 로드 */
+		$(document).ready(function(){
+
+			/* [GSAP Lib] GSAP 라이브러리 싱행 */
+			gsap.registerPlugin(ScrollTrigger);
+
+			/* [GSAP Leins Scroll] Leins Scroll Smooth 전역 변수 */
+			window.lenis.stop(); // 스크롤 막기
+
+			/* [Page Header] 페이지 헤더 */
+			const pageTit = $('.page-title .split span');
+			const pageLab = $('.page-label span');
+
+			// Page Header Setting, 타이틀&텍스트 세팅
+			gsap.set([pageTit, pageLab], { yPercent: 105, autoAlpha: 0 });
+
+			gsap.to(pageTit,{
+				yPercent: 0,
+				autoAlpha: 1,
+				duration: 1.2,
+				ease: "elastic.inOut(1,0.75)",
+				stagger: 0.1,
+				onComplete: () => {
+					// 헤더효과
+					headerGsap();
+					setTimeout( () => {
+						if(window.lenis){
+							// Lenis Lib 안전 하게 실행
+							window.lenis.stop();
+							window.lenis.start();
+						}	
+					}, 50);
+				}
+			})
+			gsap.to(pageLab,{ 
+				yPercent: 0,
+				autoAlpha: 1,
+				duration: 1.2,
+				ease: "elastic.inOut(1,0.75)",
+			},"<0.3")
+			
+
+			/* [Page Content Motion] 페이지 콘텐츠 모션 */
+			mm = gsap.matchMedia();
+
+			/* [Page Content] 페이지 콘텐츠 */
+				const pageCont = $('.page-content');
+
+			// Page Content Setting, 로드 전 페이지 콘텐츠
+			gsap.set(pageCont,{ y: 60, autoAlpha: 0 });
+
+			/* [Page Content Match PC/Tablet(768px)] 768 이상인 경우 */
+			mm.add("(min-width: 768px)", () => {
+
+				gsap.to(pageCont,{
+					y: 0,
+					autoAlpha: 1,
+					duration: 2,
+					ease: 'power4.out',
+					onStart: () => {
+						fadeUpGsap();
+					}
+				}, "<0.3");
+
+			});
+
+
+			/* [Page Content Match Mobile(767px)] 767 이상인 경우 */
+			mm.add("(max-width: 767px)", () => {
+
+				gsap.to(pageCont,{
+					y: 0,
+					autoAlpha: 1,
+					duration: 2,
+					ease: 'power4.out',
+					onStart: () => {
+						/* [GSAP Fade Up Motion] 페이드 업 모션 */
+						fadeUpGsap(); // 공통
+						fadeUpMoGsap(); // MO용
+					}
+				}, "<0.3");
+
+			});
+
+
+			/* [Date Form Check & Inquire] 폼 체크 및 전송 */
+
+			// 휴대폰 번호 체크
+			$('#userTel').on('input', function(){
+				this.value = this.value.replace(/[^0-9]/g, '');
+			});
+
+			// 파일 업로드
+			const fileName = $('#fileName');
+			const fileNameTag = $('#fileNameTag');
+
+			$('#fileDel').hide();
+			$('#fileUpload').on('click', function(){
+				$('#fileUp').trigger('click');
+			});
+
+			$('#fileUp').on('change', function(){
+				const files = this.files;
+				if (files.length > 0) {
+					fileName.val(files[0].name); // 첫 번째 파일명 표시
+					fileNameTag.text(files[0].name); // 첫 번째 파일명 표시
+				}
+				$('#fileUpload').hide();
+				$('#fileDel').show();
+			});
+
+			$('#fileDel .ico.sch-close').on('click', function(){
+				$('#fileUp').val("");
+				fileName.val("");
+				fileNameTag.text("");
+
+				$('#fileDel').hide();
+				$('#fileUpload').show();
+			});
+
+
+
+			// 문의하기
+			$('#btnConfig').on('click', function(){
+				const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+				if($('#userName').val().trim() === ""){
+					alert('이름을 입력해주세요.');
+					$('#userName').focus();
+					return;
+				}
+
+				if($('#userMail').val().trim() === ""){
+					alert('이메일을 입력해주세요.');
+					$('#userMail').focus();
+					return;
+				}
+				if (!emailPattern.test($('#userMail').val().trim())) {
+					alert('올바른 이메일 형식이 아닙니다.');
+					$('#userMail').focus();
+					return false;
+				}
+
+				if($('#userTel').val().trim() === ""){
+					alert('휴대전화를 입력해주세요.');
+					$('#userTel').focus();
+					return;
+				}
+				if($('#userTel').val().trim().length < 11){
+					alert('휴대전화 11자리를 입력해주세요.');
+					$('#userTel').focus();
+					return;
+				}
+
+				if(!$('#policyCheckbox').is(':checked')){
+					alert('운영정책에 동의하여 주세요.');
+					return;
+				}
+
+				// 데이터 전송 ajax
+				const form = $('#dataForm')[0];
+				const data = new FormData(form);
+				// $.ajax({
+
+				// });
+
+			});
+
+
+			/* [GSAP Refresh] 모션 위치 감지,초기화 */
+			ScrollTrigger.refresh(true);
+		});
+
+
+		/* Comment () => [Resize] GSAP, Window 반응형 대응 */
+		let resizeTimer;
+		$(window).on('resize', function(){
+
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+
+				/* [GSAP Device Check] 디바이스 체크 */
+
+				/* [GSAP Refresh] 모션 위치 감지,초기화 */
+				ScrollTrigger.refresh(true);
+			}, 120);
+
+		});
+
+	});
+</script>
+</html> 

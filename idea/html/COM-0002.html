@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>IDEA Pharmaceutical</title>
+
+	<link rel="icon" href="../@resource/images/favicon.ico" sizes="any">
+	
+	<link rel="stylesheet" href="../@resource/css/idea.css">
+	<link rel="stylesheet" href="../@resource/css/idea_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/idea.js"></script>
+</head>
+<body>
+	
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container container-sub">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<!-- Comment () => [Page Sub Company: Greeting] CEO 인사말 -->
+			<div id="content" class="sub company greeting">
+				<div class="page-header">
+					<div class="gutter-32">
+						<div class="max-1560 title-wrap page">
+							<h2 class="page-title">
+								<span class="split">
+									<span>CEO</span>
+								</span>
+								<span class="split">
+									<span>Greeting</span>
+								</span>
+							</h2>
+							<span class="page-label split">
+								<span>CEO 인사말</span>
+							</span>
+						</div>
+					</div>
+				</div>				
+				 <!-- // [Sub - Page Header End] 페이지 헤더 종료 -->
+
+				 
+				<div class="page-content">
+					<div class="gutter-32">
+						<div class="max-1560 greeting-group pack-between gap-40">
+
+							<div class="section greet pack-down">
+								<div class="title-wrap">
+									<h3 class="sec-title uppercase" data-gsap="fade-up">
+										Be healthy, <br>
+										Be beautiful.
+									</h3>
+								</div>
+								<div class="text-wrap col">
+									<p class="text" data-gsap="fade-up">
+										고객이 건강과 아름다움을 함께 추구할 수 있도록 <br>
+										안전하고 신뢰할 수 있는 제품을 제공하기 위해 노력합니다.
+									</p>
+									<br>
+									<p class="text" data-gsap="fade-up">
+										의약품 및 화장품을 R&D하는 과정을 통해 <br>
+										보다 더 나은 가치와 미래를 만들어 가고자 합니다.
+									</p>
+									<br>
+									<p class="text" data-gsap="fade-up">
+										사용 목적에 따라 세분화 된 커스터마이징 제품을 출시하고 있으며, 
+										<br class="only-pc">
+										신약 및 바이오 기술을 적극 활용하여 고기능성 안티에이징 제품을 개발하고 있습니다.
+									</p>
+									<br>
+									<p class="text" data-gsap="fade-up">
+										신규 브랜드를 런칭하거나 M&A 를 통해 <br class="only-pc">
+										독자적인 원료 개발과 같은 전문기술 확보에 주력하고 있습니다.
+									</p>
+									<br>
+									<p class="text" data-gsap="fade-up">
+										글로벌 시장 진출과 확장을 통해 해외 브랜드의 수입 및 유통권을 확보하고, 
+										<br class="only-pc">
+										최대 강점인 자사의 유통망을 활용하여 자체 브랜드와 기능성 화장품의 수출을 통해 
+										<br class="only-pc">
+										글로벌 시장에 진출하고 있습니다.
+									</p>
+									<br>
+									<p class="text" data-gsap="fade-up">
+										앞으로 더욱 다양한 글로벌 시장에 진출하여 <br>
+										이데아의 고품질 제품로 많은 고객에게 다가가겠습니다.
+									</p>
+								</div>
+								<p class="sign pack-down gap-16"> 
+									<strong data-gsap="fade-up">대표이사 이령 (LI LING)</strong>
+									<i class="ico sign" data-gsap="fade-up"></i>
+								</p>
+							</div>
+							<!-- // [Sub - Section Greet End] 섹션 Greet 종료 -->
+
+
+							<div class="section images">
+								<div class="img-wrap round-8">
+									<img src="../@resource/images/company/greeting-01.jpg" 
+										 alt="대표이사 이령 (LI LING)">
+								</div>
+							</div>
+							<!-- // [Sub - Section Images End] 섹션 Images 종료 -->
+							
+						</div>
+					</div>
+				</div>
+				<!-- // [Sub - Page Content End] 페이지 콘텐트 종료 -->
+
+			</div>
+			<!-- // Comment () => [Page Sub Company: Greeting] CEO 인사말 -->
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+
+</body>
+<script src="../@resource/js/lib/aos.js"></script>
+<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+<script src="../@resource/js/lib/gsap.min.js"></script>
+<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+<script src="../@resource/js/lib/lenis.min.js"></script>
+<script>
+	
+	/* Comment () => [Local isCurrent] 로컬에서만 isCurrent 사용 */
+	isLayoutPath(function(){
+		isCurrent(1,2);
+	});
+
+
+	/* Comment () => [GSAP Device Check] 디바이스 체크 */
+	function isTablet(isYes, isNo) {
+		const states = ['is-tablet', 'is-mobile'];
+  		const hasState = states.some(state => $('body').hasClass(state));
+		
+		return hasState ? isYes : isNo;
+	}
+
+	
+	/* Comment () => [Script Start] 스크립트 시작 */
+	$(function(){
+
+	
+		/* [Body Load] 로드 후 실행 */
+		$('body').removeClass('loaded'); // 있다면 초기화 후
+		$('body').addClass('loaded');
+
+		/* [Function Area] 함수 모음 */
+		// () => {Scroll Reset} 새로고침 시 스크롤 초기화
+		setLenisScrollReset();
+
+		// () => {GSAP Media Match} 미디어 매치 변수
+		let mm;
+
+
+		/* Comment () => [GSAP Motion Common] GSAP 모션 실행을 위한 로드 */
+		$(document).ready(function(){
+
+			/* [GSAP Leins Scroll] Leins Scroll Smooth 전역 변수 */
+			window.lenis.stop(); // 스크롤 막기
+			
+			/* [GSAP Lib] GSAP 라이브러리 싱행 */
+			gsap.registerPlugin(ScrollTrigger);
+			mm = gsap.matchMedia(); // Match Media
+			
+			/* [Page Header] 페이지 헤더 */
+			const pageTit = $('.page-title .split span');
+			const pageLab = $('.page-label span');
+
+			// Page Header Setting, 타이틀&텍스트 세팅
+			gsap.set([pageTit, pageLab], { yPercent: 105, autoAlpha: 0 });
+
+			// Page Header Effect, 타이틀&텍스트 효과
+			gsap.to(pageTit,{
+				yPercent: 0,
+				autoAlpha: 1,
+				duration: 1.2,
+				ease: "elastic.inOut(1,0.75)",
+				stagger: 0.1,
+				onComplete: () => {
+					// 헤더효과
+					headerGsap();
+					setTimeout( () => {
+						if(window.lenis){
+							// Lenis Lib 안전 하게 실행
+							window.lenis.stop();
+							window.lenis.start();
+						}	
+					}, 50);
+				}
+			})
+			gsap.to(pageLab,{
+				yPercent: 0,
+				autoAlpha: 1,
+				duration: 1.2,
+				ease: "elastic.inOut(1,0.75)",
+			},"<0.3")
+
+			
+			/* [Page Content Motion] 페이지 콘텐츠 모션 */
+			mm = gsap.matchMedia();
+
+			/* [Page Content Match PC/Tablet(768px)] 768 이상인 경우 */
+			mm.add("(min-width: 768px)", () => {
+				/* [Page Content] 페이지 콘텐츠 */
+				const pageCont = $('.page-content');
+
+				// Page Content Setting, 로드 전 페이지 콘텐츠
+				gsap.set(pageCont,{ y: 60, autoAlpha: 0 });
+
+				// Page Content Effect, 로드 후 페이지 콘텐츠 효과
+				const tl = gsap.timeline({ defaults: {duration: 2.2, ease: "power4.out"} });
+				tl.to(pageCont,{ y: 0, autoAlpha: 1 }, "+=0.8");
+
+			});
+
+			/* [Page Content Match Mobile(767px)] 767 이상인 경우 */
+			mm.add("(max-width: 767px)", () => {
+
+				/* [Page Content] 페이지 콘텐츠 */
+
+				// Page Content Img Effect, 페이지 콘텐츠 이미지 효과
+				const pageContImg = $('.page-content .img-wrap');
+				gsap.set(pageContImg,{ y: 60, autoAlpha: 0 });
+				gsap.to(pageContImg,{
+					y: 0,
+					autoAlpha: 1,
+					duration: 2,
+					ease: "power4.out",
+					delay: 0.8,
+				});
+
+				/* [GSAP Fade Up Motion] 페이드 업 모션 */
+				fadeUpGsap(); // 공통
+			});
+
+			
+			/* [GSAP Refresh] 모션 위치 감지,초기화 */
+			ScrollTrigger.refresh(true);
+		});
+		
+
+		/* Comment () => [Resize] GSAP, Window 반응형 대응 */
+		let resizeTimer;
+		$(window).on('resize', function(){
+
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+
+				/* [GSAP Device Check] 디바이스 체크 */
+
+				/* [GSAP Refresh] 모션 위치 감지,초기화 */
+				ScrollTrigger.refresh(true);
+			}, 120);
+
+		});
+
+	});
+</script>
+</html> 

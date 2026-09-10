@@ -1,0 +1,280 @@
+/* ========================================
+= [VARIABLE COMMON] 변수 공통
+= Description: Variable Common
+======================================== */
+
+:root{
+	/* [Variable - View Port Height] 뷰 높이값 */
+	--vh100 : calc(var(--vh, 1vh) * 100);
+	--vhMin : 900px;
+
+
+	/* [Variable - Layout] 레이아웃 설정 */
+	--header: 84px;
+
+
+	/* [Variable - Gutter Size] 여백 사이즈 */
+	--gutter: 		64px;
+	--gutter-32: 	64px;	
+	--gutter-240:	240px;
+
+	/* [Variable - Font Collect] 폰트 모음 */
+	/* [Font - Size] - 폰트 사이즈 */
+	--fs-100-40: 	100px;
+
+	--fs-72-32:		72px;
+	--fs-72-28:		72px;
+
+	--fs-68-32: 	68px;
+	--fs-68-28: 	68px;
+	--fs-68-24: 	68px;
+
+	--fs-60-28: 	60px;
+	--fs-60-24: 	60px;
+
+	--fs-48-28: 	48px;
+	--fs-48-24: 	48px;
+
+	--fs-40-24: 	40px;
+	--fs-40-20: 	40px;
+
+	--fs-28: 		28px;
+	--fs-28-18: 	28px;
+
+	--fs-24: 		24px;
+	--fs-24-18:		24px;
+	--fs-24-16:		24px;
+	--fs-24-14:		24px;
+
+	--fs-20: 		20px;
+	--fs-20-18:		20px;
+	--fs-20-16:		20px;
+	--fs-20-14:		20px;
+	--fs-20-12:		20px;
+
+	--fs-18:		18px;
+	--fs-18-16: 	18px;
+	--fs-18-14: 	18px;
+	--fs-18-12: 	18px;
+
+	--fs-16: 		16px;
+	--fs-16-14: 	16px;
+	--fs-16-12: 	16px;
+
+	--fs-14:	 	14px;
+	--fs-14-12:	 	14px;
+
+
+	/* [Font - Weight] - 폰트 굵기 */
+	--fw-200: 200;
+	--fw-300: 300;
+	--fw-400: 400;
+	--fw-500: 500;
+	--fw-600: 600;
+	--fw-700: 700;
+	--fw-700-400: 700;
+
+	/* [Font - Family] - 폰트 */
+	--ff-suit: 'SUIT Variable';
+	--ff-mont: 'Montserrat Variable';
+	--ff-nmjo: 'NanumMyeongjo', 'SUIT Variable', 'Montserrat Variable', serif;
+	
+
+	/* [Variable - Line Height] 라인 높이 설정 */
+	--lh-100:		1;
+	--lh-110:		1.1;
+
+	--lh-120:		1.2;
+	--lh-120-110:	1.2;
+
+	--lh-125:		1.25;
+	--lh-125-160:	1.25;
+
+	--lh-130:		1.3;
+	--lh-140:		1.4;
+	--lh-150:		1.5;
+
+	--lh-160:		1.6;
+	--lh-160-125:	1.6;
+
+
+	/* [Variable - Form & Button Size] 폼 & 버튼 사이즈 */
+	--xsmall:	32px;
+	--small:	40px;
+	--medium:	48px;
+	--large:	60px;
+	--xlarge:	68px;
+
+
+	/* [Variable - Marquee Gutter] 마퀴 여백 */
+	--marquee: clamp(20px,5.33vw,40px);
+
+
+	/* [Variable - Title, Text Font Size] 타이틀, 폰트 변수 */
+	/* [Size - Title] 타이틀 */
+	
+}
+/* // = [VARIABLE COMMON END] 변수 공통 종료 */
+
+
+/* ========================================
+= [RWD VARIABLE COMMON] 반응형 변수 공통
+= Description: RWD Match Media Variable Common
+======================================== */
+@media all and (min-width:1024px) and (max-width: 1279px){
+	:root{
+
+		/* [Variable - Gutter Size] 여백 사이즈 */
+		--gutter: 		48px;
+		--gutter-32: 	48px;
+		--gutter-240: 	200px;
+
+
+		/* [Variable - Font Collect] 폰트 모음 */
+		/* [Font - Size] - 폰트 사이즈 */
+		--fs-100-40: 	clamp(80px,7.82vw,100px);
+
+		--fs-72-32:		clamp(58px,5.63vw,72px);
+		--fs-72-28:		clamp(54px,5.63vw,72px);
+
+		--fs-68-32: 	clamp(56px,5.32vw,68px);
+		--fs-68-28: 	clamp(52px,5.32vw,68px);
+		--fs-68-24: 	clamp(46px,5.32vw,68px);
+
+		--fs-60-28: 	clamp(48px,4.69vw,60px);
+		--fs-60-24: 	clamp(46px,4.69vw,60px);
+
+		--fs-48-28: 	clamp(40px,3.75vw,48px);
+		--fs-48-24: 	clamp(38px,3.75vw,48px);
+
+		--fs-40-24: 	clamp(34px,3.13vw,40px);
+		--fs-40-20: 	clamp(32px,3.13vw,40px);
+
+		--fs-28-18: 	clamp(24px,2.19vw,28px);
+
+		--fs-24-18:		clamp(22px,1.88vw,24px);
+		--fs-24-16:		clamp(20px,1.88vw,24px);
+		--fs-24-14:		clamp(18px,1.88vw,24px);
+		--fs-24-12:		clamp(16px,1.88vw,24px);
+
+		--fs-20-16:		clamp(18px,1.56vw,20px);
+		--fs-20-14:		clamp(16px,1.56vw,20px);
+		--fs-20-12:		clamp(16px,1.56vw,20px);
+
+		--fs-18-16: 	clamp(16px,1.41vw,18px);
+		--fs-18-14: 	clamp(16px,1.41vw,18px);
+		--fs-18-12: 	clamp(16px,1.41vw,18px);
+	}
+}
+@media all and (min-width:768px) and (max-width: 1023px){
+	:root{
+
+		/* [Variable - Gutter Size] 여백 사이즈 */
+		--gutter: 		40px;
+		--gutter-32:	40px;
+		--gutter-240:	160px;
+
+		/* [Variable - Font Collect] 폰트 모음 */
+		/* [Font - Size] - 폰트 사이즈 */
+		--fs-100-40: 	clamp(60px,7.81vw,80px);
+
+		--fs-72-32:		clamp(46px,5.99vw,58px);
+		--fs-72-28:		clamp(42px,5.47vw,54px);
+
+		--fs-68-32: 	clamp(44px,5.32vw,56px);
+		--fs-68-28: 	clamp(40px,5.21vw,52px);
+		--fs-68-24: 	clamp(36px,4.69vw,46px);
+
+		--fs-60-28: 	clamp(38px,4.95vw,48px);
+		--fs-60-24: 	clamp(34px,4.43vw,46px);
+
+		--fs-48-28: 	clamp(34px,4.43vw,40px);
+		--fs-48-24: 	clamp(30px,3.91vw,38px);
+
+		--fs-40-24: 	clamp(26px,3.39vw,34px);
+		--fs-40-20: 	clamp(24px,3.13vw,32px);
+	
+		--fs-28-18: 	clamp(20px,2.6vw,24px);
+
+		--fs-24-18:		clamp(18px,2.34vw,22px);
+		--fs-24-16:		clamp(16px,2.08vw,20px);
+		--fs-24-14:		18px;
+		--fs-24-12:		16px;
+
+		--fs-20-16:		clamp(16px,2.08vw,18px);
+		--fs-20-14:		16px;
+		--fs-20-12:		14px;
+
+		--fs-18-16: 	clamp(16px,2.08vw,18px);
+		--fs-18-14: 	16px;
+		--fs-18-12: 	14px;
+
+	}
+}
+@media all and (max-width: 767px) {
+	:root{
+
+		/* [Variable - Layout] 레이아웃 설정 */
+		--header: 64px;
+
+
+		/* [Variable - Gutter Size] 여백 사이즈 */
+		--gutter:		16px;
+		--gutter-32:	32px;
+		--gutter-240:	120px;
+
+		/* [Variable - Font Collect] 폰트 모음 */
+		/* [Font - Size] - 폰트 사이즈 */
+		--fs-100-40: 	clamp(40px,10.67vw,60px);
+
+		--fs-72-32:		clamp(32px,8.53vw,46px);
+		--fs-72-28:		clamp(28px,7.47vw,42px);
+
+		--fs-68-32: 	clamp(32px,8.53vw,44px);
+		--fs-68-28: 	clamp(28px,7.47vw,40px);
+		--fs-68-24: 	clamp(24px,6.4vw,36px);
+
+		--fs-60-28: 	clamp(28px,7.47vw,38px);
+		--fs-60-24: 	clamp(24px,6.4vw,34px);
+
+		--fs-48-28: 	clamp(28px,7.47vw,40px);
+		--fs-48-24: 	clamp(24px,6.4vw,30px);
+
+		--fs-40-24: 	clamp(24px,6.4vw,26px);
+		--fs-40-20: 	clamp(20px,5.33vw,24px);
+
+		--fs-28-18: 	clamp(18px,4.8vw,20px);
+
+		--fs-24-18:		18px;
+		--fs-24-16:		16px;
+		--fs-24-14:		clamp(14px,3.73vw,18px);
+		--fs-24-12:		clamp(12px,3.2vw,16px);
+
+		--fs-20-16:		16px;
+		--fs-20-14:		clamp(14px,3.73vw,16px);
+		--fs-20-12:		clamp(12px,3.2vw,14px);
+
+		--fs-18-16: 	16px;
+		--fs-18-14: 	clamp(14px,3.73vw,16px);
+		--fs-18-12: 	clamp(12px,3.2vw,14px);
+
+		--fs-16-14: 	clamp(14px,3.73vw,16px);		
+		--fs-16-12: 	clamp(12px,3.2vw,14px);		
+		--fs-14-12:	 	clamp(12px,3.2vw,14px);
+
+		/* [Font - Weight] - 폰트 굵기 */
+		--fw-700-400: 400;
+
+
+		/* [Variable - Line Height] 라인 높이 설정 */
+		--lh-120-110: 1.1;
+		--lh-125-160: 1.6;
+		--lh-160-125: 1.25;
+
+
+		/* [Variable - Form & Button Size] 폼 & 버튼 사이즈 */
+		--large: 48px;
+		--xlarge: 52px;
+	}
+}
+/* // = [RWD VARIABLE COMMON END] 반응형 변수 공통 종료 */
