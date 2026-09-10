@@ -1,0 +1,311 @@
+@charset "utf-8";
+/* [Icon] (Project Icon) */
+/* Description: 프로젝트 사용 아이콘 */
+
+/* <Setting> - 아이콘 설정 */
+.ico		{
+	display: flex; aspect-ratio: 1/1;
+	background-position: center;
+	background-repeat: no-repeat; background-size: cover;
+	-webkit-mask-size: cover;
+			mask-size: cover;
+	
+}
+.ico:is([class="mask-"]) { 
+	-webkit-mask: url() no-repeat 50% 50%;
+			mask: url() no-repeat 50% 50%;
+	-webkit-mask-size: 100% 100%;
+			mask-size: 100% 100%;
+}
+
+/* {Background} - 아이콘 백그라운드 */
+/* <Basic> - 기본 */
+/* 10px */
+.ico:is(.outlink)				{ width: 10px; }
+.ico.outlink					{ background-image: url("../../images/@ico/outlink.svg"); }
+
+/* 12px */
+.ico:is(
+	.hot, .twinkle-12
+)								{ width: 12px; }
+.ico.hot						{ background-image: url("../../images/@ico/hot.svg"); }
+.ico.twinkle-12					{ background-image: url("../../images/@ico/twinkle-12.svg"); }
+
+/* 16px */
+.ico:is(
+	[class*="warning-"], .outlink2
+)								{ width: 16px; }
+.ico.warning-normal				{ background-image: url("../../images/@ico/warning.svg"); }
+.ico.warning-circle				{ background-image: url("../../images/@ico/warning-circle.svg"); }
+.ico.outlink2				{ background-image: url("../../images/@ico/outlink2.svg"); }
+
+/* 18px */
+.ico:is(
+	.copy
+)						{ width: 18px; }
+.ico.copy				{ background-image: url("../../images/@ico/copy.svg"); }
+
+/* 20px */
+.ico:is(
+	.add-plue, .twinkle-20
+)								{ width: 20px; }
+.ico.add-plue					{ background-image: url("../../images/@ico/add-plue.svg"); }
+.ico.twinkle-20					{ background-image: url("../../images/@ico/twinkle-20.svg"); }
+
+/* 24px */
+.ico:is(
+	.search,
+	[class*="-24"], .home, .share, .twinkle-24, .popup-close,
+)								{ width: 24px; }
+.ico.search						{ background-image: url("../../images/@common/search.svg"); }
+.ico.home						{ background-image: url("../../images/@ico/home.svg"); }
+.ico.share						{ background-image: url("../../images/@ico/share.svg"); }
+.ico.twinkle-24					{ background-image: url("../../images/@ico/twinkle-24.svg"); }
+.ico.popup-close				{ background-image: url("../../images/@common/popup-close.svg"); }
+
+
+.ico.youtube-24					{ background-image: url("../../images/@ico/youtube.svg"); }
+.ico.twitch-24					{ background-image: url("../../images/@ico/twitch.svg"); }
+.ico.tiktok-24					{ background-image: url("../../images/@ico/tiktok.svg"); }
+.ico.chzzk-24					{ background-image: url("../../images/@ico/chzzk.svg"); }
+
+.ico.level-24-01				{ background-image: url("../../images/@ico/level-01.svg"); }
+.ico.level-24-02				{ background-image: url("../../images/@ico/level-02.svg"); }
+.ico.level-24-03				{ background-image: url("../../images/@ico/level-03.svg"); }
+.ico.level-24-04				{ background-image: url("../../images/@ico/level-04.svg"); }
+
+/* 28px */
+.ico:is(
+	[class*="-28"], .crown, .delete, .delete2
+)								{ width: 28px; }
+.ico.crown						{ background-image: url("../../images/@ico/crown.svg"); }
+.ico.delete						{ background-image: url("../../images/@ico/delete.svg"); }
+.ico.delete2					{ background-image: url("../../images/@ico/delete2.svg"); }
+
+.ico.youtube-28					{ background-image: url("../../images/@ico/youtube.svg"); }
+.ico.twitch-28					{ background-image: url("../../images/@ico/twitch.svg"); }
+.ico.tiktok-28					{ background-image: url("../../images/@ico/tiktok.svg"); }
+.ico.chzzk-28					{ background-image: url("../../images/@ico/chzzk.svg"); }
+
+/* 30px */
+.ico:is(
+	[class*="-circle-30"]
+)								{ width: 30px; }
+.ico.youtube-circle-30			{ background-image: url("../../images/@ico/youtube-circle.svg"); }
+.ico.twitch-circle-30			{ background-image: url("../../images/@ico/twitch-circle.svg"); }
+.ico.tiktok-circle-30			{ background-image: url("../../images/@ico/tiktok-circle.svg"); }
+.ico.chzzk-circle-30			{ background-image: url("../../images/@ico/chzzk-circle.svg"); }
+
+/* 32px */
+.ico:is(
+	.edit
+)								{ width: 32px; }
+.ico.edit			{ background-image: url("../../images/@ico/edit.svg"); }
+
+/* 36px */
+.ico:is(
+	[class*="-36"],
+)								{ width: 36px; }
+.ico.youtube-36					{ background-image: url("../../images/@ico/youtube.svg"); }
+.ico.twitch-36					{ background-image: url("../../images/@ico/twitch.svg"); }
+.ico.tiktok-36					{ background-image: url("../../images/@ico/tiktok.svg"); }
+.ico.chzzk-36					{ background-image: url("../../images/@ico/chzzk.svg"); }
+
+.ico.level-36-01					{ background-image: url("../../images/@ico/level-01.svg"); }
+.ico.level-36-02					{ background-image: url("../../images/@ico/level-02.svg"); }
+.ico.level-36-03					{ background-image: url("../../images/@ico/level-03.svg"); }
+.ico.level-36-04					{ background-image: url("../../images/@ico/level-04.svg"); }
+
+/* 44px */
+.ico:is(
+	.snow-01
+)								{ width: 44px; }
+.ico.snow-01					{ background-image: url("../../images/@ico/snow-01.svg"); }
+
+/* 48px */
+.ico:is(
+	.warning-big,
+)								{ width: 48px; }
+.ico.warning-big			{ background-image: url("../../images/@ico/warning-big.svg"); }
+
+/* 52px */
+.ico:is(
+	[class*="-solid-52"], [class*="-circle-52"]
+)								{ width: 52px; }
+.ico.youtube-solid-52			{ background-image: url("../../images/@ico/youtube-solid.svg"); }
+.ico.twitch-solid-52			{ background-image: url("../../images/@ico/twitch-solid.svg"); }
+.ico.tiktok-solid-52			{ background-image: url("../../images/@ico/tiktok-solid.svg"); }
+.ico.chzzk-solid-52				{ background-image: url("../../images/@ico/chzzk-solid.svg"); }
+
+.ico.youtube-circle-52			{ background-image: url("../../images/@ico/youtube-circle.svg"); }
+.ico.twitch-circle-52			{ background-image: url("../../images/@ico/twitch-circle.svg"); }
+.ico.tiktok-circle-52			{ background-image: url("../../images/@ico/tiktok-circle.svg"); }
+.ico.chzzk-circle-52			{ background-image: url("../../images/@ico/chzzk-circle.svg"); }
+
+/* 56px */
+.ico:is(
+	[class*="-56"],
+)								{ width: 56px; }
+.ico.star-56					{ background-image: url("../../images/@ico/star-56.svg"); }
+.ico.twinkle-56					{ background-image: url("../../images/@ico/twinkle-56.svg"); }
+
+/* 77px */
+.ico:is(
+	.snow-02
+)								{ width: 77px; }
+.ico.snow-02					{ background-image: url("../../images/@ico/snow-02.svg"); }
+
+/* 88px */
+.ico.mylevel-01					{ background-image: url("../../images/@ico/mylevel-01.png"); }
+.ico.mylevel-02					{ background-image: url("../../images/@ico/mylevel-02.png"); }
+.ico.mylevel-03					{ background-image: url("../../images/@ico/mylevel-03.png"); }
+.ico.mylevel-04					{ background-image: url("../../images/@ico/mylevel-04.png"); }
+
+
+/* <Etc> - 기타 */
+.ico.logos						{
+	width: clamp(146px,19.01vw,194px); aspect-ratio: 194/38;
+	background-image: url("../../images/@common/logo-b.svg");
+}
+
+.ico[class*="camp-"]		{ width: clamp(28px,3.65vw,32px) }
+.ico.camp-cash				{ background-image: url("../../images/@ico/camp-cash.svg"); }
+.ico.camp-gift				{ background-image: url("../../images/@ico/camp-gift.svg"); }
+.ico.camp-coin				{ background-image: url("../../images/@ico/camp-coin.svg"); }
+.ico.camp-coupon			{ background-image: url("../../images/@ico/camp-coupon.svg"); }
+.ico.camp-character			{ background-image: url("../../images/@ico/camp-character.svg"); }
+.ico.camp-store				{ 
+	width: clamp(66px,8.59vw,72px) !important; aspect-ratio: 72/32;
+	background-image: url("../../images/@ico/camp-store.svg");
+}
+
+/* [RWD] (Responsive) 반응형 */
+@media all and (max-width:767px) {
+	.ico.logos					{ width: 124px; }
+	.ico[class*="camp-"]		{ width: 24px; }
+	.ico.camp-store			{ width: 62px !important;}
+}
+
+
+
+/* {Mask} - 아이콘 마스크 */
+/* <Basic> - 기본 */
+
+/* 14px */
+.ico:is(.mask-select2)			{ width: 14px; }
+.ico.mask-select2				{
+	-webkit-mask-image: url("../../images/@common/select2.svg");
+			mask-image: url("../../images/@common/select2.svg");
+}
+
+/* 14px */
+.ico:is(.mask-crown2, .mask-download)			{ width: 16px; }
+.ico.mask-crown2				{
+	-webkit-mask-image: url("../../images/@ico/crown-02.svg");
+			mask-image: url("../../images/@ico/crown-02.svg");
+}
+.ico.mask-download				{
+	-webkit-mask-image: url("../../images/@ico/download.svg");
+			mask-image: url("../../images/@ico/download.svg");
+}
+
+
+/* 24px */
+.ico:is(
+	.mask-menu, .mask-close,  .mask-chevDown, .mask-accordion, .mask-chevLeft, .mask-chevRight,
+	.mask-note, .mask-mypage, .mask-acc, .mask-shop
+)								{ width: 24px; }
+.ico.mask-menu					{ 
+	-webkit-mask-image: url("../../images/@common/menu.svg");
+			mask-image: url("../../images/@common/menu.svg");
+}
+.ico.mask-close					{ 
+	-webkit-mask-image: url("../../images/@common/close.svg");
+			mask-image: url("../../images/@common/close.svg");
+}
+.ico.mask-chevDown				{ 
+	-webkit-mask-image: url("../../images/@common/chev-down.svg");
+			mask-image: url("../../images/@common/chev-down.svg");
+}
+.ico.mask-chevLeft				{ 
+	transform: rotate(90deg);
+	-webkit-mask-image: url("../../images/@common/chev-down.svg");
+			mask-image: url("../../images/@common/chev-down.svg");
+}
+.ico.mask-chevRight				{ 
+	transform: rotate(-90deg);
+	-webkit-mask-image: url("../../images/@common/chev-down.svg");
+			mask-image: url("../../images/@common/chev-down.svg");
+}
+.ico.mask-accordion				{ 
+	-webkit-mask-image: url("../../images/@common/accordion.svg");
+			mask-image: url("../../images/@common/accordion.svg");
+}
+.ico.mask-note					{ 
+	-webkit-mask-image: url("../../images/@ico/note.svg");
+			mask-image: url("../../images/@ico/note.svg");
+}
+.ico.mask-mypage				{ 
+	-webkit-mask-image: url("../../images/@ico/mypage.svg");
+			mask-image: url("../../images/@ico/mypage.svg");
+}
+
+.ico.mask-edit					{ 
+	-webkit-mask-image: url("../../images/@ico/edit.svg");
+			mask-image: url("../../images/@ico/edit.svg");
+}
+.ico.mask-shop					{ 
+	-webkit-mask-image: url("../../images/@ico/shop.svg");
+			mask-image: url("../../images/@ico/shop.svg");
+}
+
+.ico:is(.mask-delete, .mask-delete2) { width: 28px; }
+.ico.mask-delete						{ 
+	-webkit-mask-image: url("../../images/@ico/delete.svg");
+			mask-image: url("../../images/@ico/delete.svg");
+}
+.ico.mask-delete2					{ 
+	-webkit-mask-image: url("../../images/@ico/delete2.svg");
+			mask-image: url("../../images/@ico/delete2.svg");
+}
+
+
+
+/* <Etc> - 기타 */
+
+
+/* <Size> - 아이콘 사이즈 */
+.ico-10			{ width: 10px !important; }
+.ico-16			{ width: 16px !important; }
+.ico-18			{ width: 18px !important; }
+.ico-20			{ width: 20px !important; }
+.ico-24			{ width: 24px !important; }
+.ico-28			{ width: 28px !important; }
+.ico-30			{ width: 30px !important; }
+.ico-32			{ width: 32px !important; }
+.ico-36			{ width: 36px !important; }
+.ico-40			{ width: 40px !important; }
+.ico-44			{ width: 44px !important; }
+.ico-48			{ width: 48px !important; }
+.ico-50			{ width: 50px !important; }
+.ico-52			{ width: 52px !important; }
+.ico-60			{ width: 60px !important; }
+.ico-72			{ width: 72px !important; }
+.ico-88			{ width: 88px !important; }
+
+.ico-30-36		{ width: 30px !important; }
+.ico-32-24		{ width: clamp(28px,3.65vw,32px) !important; }
+.ico-52-36		{ width: clamp(44px,5.73vw,52px) !important; }
+.ico-56-32		{ width: clamp(40px,5.21vw,52px) !important; }
+.ico-72-62		{ width: clamp(66px,8.59vw,72px) !important; aspect-ratio: 72/32; }
+
+/* [RWD] (Responsive) 반응형 */
+@media all and (max-width:767px) {
+	.ico-30-36,
+	.ico-52-36		{ width: 36px !important; }
+	.ico-56-32		{ width: 32px !important; }
+
+	.ico-32-24		{ width: 24px !important; }
+	.ico-72-62		{ width: 62px !important;}
+}
+/* // [Icon] 프로젝트 사용 아이콘 종료 */

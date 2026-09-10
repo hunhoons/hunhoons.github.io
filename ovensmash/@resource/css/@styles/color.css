@@ -1,0 +1,48 @@
+/* [Colors] (Project Colors Style) */
+/* Description: 프로젝트 컬러 스타일 */
+
+:root{
+
+	/* <White> - 흰색 계열 */
+	--white:		#FFFFFF;
+    --white-op-10: 	rgba(255,255,255,0.1);
+    --white-op-14: 	rgba(255,255,255,0.14);
+    --white-op-20: 	rgba(255,255,255,0.2);
+    --white-op-30: 	rgba(255,255,255,0.3);
+    --white-op-40: 	rgba(255,255,255,0.4);
+    --white-op-50: 	rgba(255,255,255,0.5);
+    --white-op-60: 	rgba(255,255,255,0.6);
+    --white-op-70: 	rgba(255,255,255,0.7);
+    --white-op-80: 	rgba(255,255,255,0.8);
+
+	/* <Black> - 검정색 계열 */
+    --black: 		#000000;
+    --black-op-10: 	rgba(0,0,0,0.1);
+    --black-op-14: 	rgba(0,0,0,0.14);
+    --black-op-20: 	rgba(0,0,0,0.2);
+    --black-op-30: 	rgba(0,0,0,0.3);
+    --black-op-40: 	rgba(0,0,0,0.4);
+    --black-op-50: 	rgba(0,0,0,0.5);
+    --black-op-60: 	rgba(0,0,0,0.6);
+    --black-op-70: 	rgba(0,0,0,0.7);
+    --black-op-80: 	rgba(0,0,0,0.8);
+
+	/* <Project Color> - 프로젝트 사용 색상 */
+	--primary		: #716AFF ;
+	--secondary		: #80EEFF ;
+	--lightgray2	: #DCDCDC ;
+	--lightgray		: #B3B3B3 ;
+	--mediumgray	: #B3B3B3 ;
+	--darkgray		: #868686 ;
+	--wrning		: #FF524C ;
+	--lightpurple	: #CAC7FF;
+	--lightsky		: #E6FCFF;
+
+	--background_g	: #F0F0F0 ;
+	--background_p	: #F3F5FF ;
+	--background_lg	: #F6F6F6 ;
+
+	--dropshadow	: 0 1px 15px var(--black-op-10);
+	--dropshadow2	: 0 3px 14px var(--black-op-14);
+}
+/* // [Colors] 프로젝트 컬러 스타일 종료 */

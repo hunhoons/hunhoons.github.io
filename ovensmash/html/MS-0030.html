@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>COOKIERUN CREATORFAMILY</title>
+
+	<!-- Open Graph (카카오, 페북, 슬랙 등) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="COOKIERUN CREATORFAMILY">
+	<meta property="og:description" content="COOKIERUN CREATORFAMILY">
+	<meta property="og:image" content="../@resource/images/opengraph.jpg">
+	<meta property="og:url" content="">
+
+	<!-- Twitter 카드 -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="COOKIERUN CREATORFAMILY">
+	<meta name="twitter:description" content="COOKIERUN CREATORFAMILY">
+	<meta name="twitter:image" content="../@resource/images/opengraph.jpg">
+
+	<link rel="icon" href="../@resource/images/favicon.svg" sizes="any">
+	<link rel="apple-touch-icon" sizes="192x192" href="../@resource/images/favicon.svg">
+
+	<link rel="stylesheet" href="../@resource/css/cookierun.css">
+	<link rel="stylesheet" href="../@resource/css/cookierun_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/cookierun.js"></script>
+
+</head>
+<body>
+	
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="sub message">
+				<div class="gutter">
+					<div class="max-1280 inner-area">
+						<div class="page-header">
+							<div class="title-area">
+								<i class="ico snow-01" data-gsap="img-scale2"></i>
+								<i class="ico snow-02" data-gsap="img-scale2"></i>
+								<h2 class="page-tit lh130 head02-rwd fw800">
+									<span class="split">
+										<span> 받은 쪽지함 </span>
+									</span>
+								</h2>
+								<p class="page-txt body03-rwd">
+									<span class="split">
+										<span>
+											총 <span class="fc-primary">2개</span>의 새 쪽지가 있습니다.
+										</span>
+									</span>
+								</p>
+							</div>
+						</div>
+						<!-- // [Page Header End] 페이지 헤더 종료 -->
+
+						<div class="page-content">
+							
+							<section class="section forms">
+								<div class="swiper-area">
+									<!-- [P] 스와이퍼로 수정 할 수 있음으로 swiper 클래스 사용 -->
+									<div id="swiperTab" class="swiper swiper-tab">
+										<ul class="swiper-wrapper">
+											<!-- [페이지 이동 시 각 페이지에 맞게 current 추가] -->
+											<li class="swiper-slide current">
+												<a href="javascript:void(0);" class="btn">
+													<span>전체</span>
+												</a>
+											</li>
+											<li class="swiper-slide">
+												<a href="javascript:void(0);" class="btn">
+													<span>읽지 않은 쪽지</span>
+												</a>
+											</li>
+											<li class="swiper-slide">
+												<a href="javascript:void(0);" class="btn">
+													<span>읽은 쪽지</span>
+												</a>
+											</li>
+											<!-- [D] 모바일 노출 -->
+											<li class="swiper-slide waste">
+												<a href="javascript:void(0);" class="btn">	
+													<span>휴지통</span>
+												</a>
+											</li>
+											<!-- // [D] 모바일 노출 -->
+										</ul>
+									</div>
+
+									<!-- [D] PC 노출 -->
+									<div class="button-wrap">
+										<a 	href="javascript:void(0);"
+											class="btn btn-waste fc-darkgray subtit04-rwd fw700 ls-n10">
+											<i class="ico mask-delete2"></i>
+											<span>휴지통</span>
+										</a>
+									</div>
+									<!-- // [D] PC 노출 -->
+								</div>
+
+								<div class="no-mess-result pack-center">
+									<div class="pack-down items-center">
+										<i class="ico mask-message"></i>
+										<p class="text fc-darkgray ls-n10 head07-rwd fw700">
+											<span>도착한 쪽지가 없습니다.</span>
+										</p>
+									</div>
+								</div>
+							</section>
+
+
+						</div>
+					</div>
+				</div>
+			</main>
+		
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+
+	
+
+	<!-- [JS] (Project JS Module) -->
+	<script src="../@resource/js/lib/imagesloaded.min.js"></script>
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+	<script src="../@resource/js/lib/select2.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+	<script>
+
+		/* {isLayoutPath} - 레이아웃 불러오기 */
+		isLayoutPath(function(){
+			
+			/* <isCurrent> - 메뉴 뎁스 체크 */
+			isCurrent(1,1);
+		});
+
+		/* [Document Ready] (DOM) */
+		/* Description: DOM 로드 시 실행 함수 */
+		$(function(){
+
+			/* <Brower Evnet> - 로드 후 이벤트 */
+			const body = document.body;
+			body.classList.remove('loaded'); // 있다면 초기화 후
+			body.classList.add('loaded'); 	 // 초기화 이후 로드
+
+			/* <Scroll Reset> - 스크롤 새로고침 */
+			isScrollResetLenis();
+
+			/* <Lenis Scroll Stop> - Lenis Scroll 초기 정지 */
+			//window.lenis.stop(); 
+
+			
+			/* {GSAP Lib} - GSAP 모션 실행 함수 */
+			gsap.registerPlugin(ScrollTrigger); // 라이브러리 실행
+			let mm = gsap.matchMedia(); 		// 미디어 쿼리
+			fadeUpGsap(); 						// 페이드 업 실행 함수
+			scaleGsap2();						// 스케일업 함수
+
+
+			const pageTl 	 = gsap.timeline({});
+			const pageHeader = document.querySelector('.page-header');
+			const pageTit 	 = pageHeader.querySelectorAll('.page-tit .split span');
+			const pageTxt 	 = pageHeader.querySelectorAll('.page-txt .split > span');
+
+			gsap.set([pageTit,pageTxt], { yPercent: 150, autoAlpha: 0 }, 0);
+
+			pageTl.to(pageTit,{
+				yPercent: 0,
+				autoAlpha: 1,
+				duration: 1.2,
+				ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+				stagger: 0.1,
+				onComplete: () => {
+					// 헤더효과
+					//headerGsap();
+					setTimeout( () => {
+						if(window.lenis){
+							// Lenis Lib 안전 하게 실행
+							window.lenis.stop();
+							window.lenis.start();
+						}	
+					}, 150);
+				},
+			})
+			.to(pageTxt,{
+				yPercent: 0,
+				autoAlpha: 1,
+				duration: 1.25,
+				ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+			}, "<");
+
+		
+			/* <TAB Swiper> */
+			// const tabSwiper = new Swiper("#swiperTab",{
+			// 	slidesPerView: 'auto',
+			// 	//freeMode: true,
+			// 	spaceBetween: 4,
+			// 	slideToClickedSlide: true,
+			// 	breakpoints: {
+			// 		768: {
+			// 			slidesPerView: 'auto',
+			// 			spaceBetween: 8,
+			// 		},
+			// 	}
+			// });
+
+
+			/* <GSAP Refresh> - 모션 초기화 */
+			requestAnimationFrame(() => {
+				ScrollTrigger.refresh(true);
+			});
+		});
+		/* // [Document Ready] - DOM 로드 시 실행 함수 종료 */
+		
+
+		/* [Window Event] (Window) */
+		/* Description: 이벤트 함수 */
+		/* <Resizing> - 리사이징 */
+		
+		/* // [Window Event] 이벤트 함수 종료 */
+	</script>
+
+</body>
+</html>

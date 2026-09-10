@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>COOKIERUN CREATORFAMILY</title>
+
+	<!-- Open Graph (카카오, 페북, 슬랙 등) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="COOKIERUN CREATORFAMILY">
+	<meta property="og:description" content="COOKIERUN CREATORFAMILY">
+	<meta property="og:image" content="../@resource/images/opengraph.jpg">
+	<meta property="og:url" content="">
+
+	<!-- Twitter 카드 -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="COOKIERUN CREATORFAMILY">
+	<meta name="twitter:description" content="COOKIERUN CREATORFAMILY">
+	<meta name="twitter:image" content="../@resource/images/opengraph.jpg">
+
+	<link rel="icon" href="../@resource/images/favicon.svg" sizes="any">
+	<link rel="apple-touch-icon" sizes="192x192" href="../@resource/images/favicon.svg">
+
+	<link rel="stylesheet" href="../@resource/css/cookierun.css">
+	<link rel="stylesheet" href="../@resource/css/cookierun_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/cookierun.js"></script>
+
+</head>
+<body>
+	
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="sub cs notice">
+				<div class="gutter">
+					<div class="max-1280 inner-area">
+						<div class="page-header">
+							<div class="title-area">
+								<i class="ico snow-01" data-gsap="img-scale2"></i>
+								<i class="ico snow-02" data-gsap="img-scale2"></i>
+								<h2 class="page-tit lh130 head02-rwd fw800">
+									<span class="split">
+										<span>공지사항</span>
+									</span>
+								</h2>
+								<p class="page-txt body03-rwd">
+									<span class="split">
+										<span>총 <span class="fc-primary">32개</span>의 공지사항이 검색 되었습니다.</span>
+									</span>
+								</p>
+							</div>
+						</div>
+						<!-- // [Page Header End] 페이지 헤더 종료 -->
+
+						<div class="page-content">
+						
+							<section class="section content">
+								<div class="form-wrap search-area pack-basic justify-end">
+									<form id="dataForm">
+										<fieldset class="pack-basic gap-20-10">
+											<div class="field">
+												<div class="select-wrap shadow">
+													<select name="sort_select" id="sortSel">
+														<option value="all">제목 + 내용</option>
+														<option value="title">제목</option>
+														<option value="content">내용</option>
+													</select>
+												</div>
+											</div>
+											<div class="field">
+												<div class="search-wrap">
+													<input 	type="search" class="input medium" 
+															placeholder="검색어를 입력해주세요.">
+													<button type="button" class="btn search">
+														<i class="ico search"></i>
+													</button>
+												</div>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+
+
+								<div class="board-layout">
+									<div class="board-head bg-p">
+										<ul class="pack-basic">
+											<li class="col col-01">
+												<div class="thead-wrap">
+													<span class="subtit04-rwd fw700">No.</span>
+												</div>
+											</li>
+											<li class="col col-02">
+												<div class="thead-wrap">
+													<span class="subtit04-rwd fw700">제목</span>
+												</div>
+											</li>
+											<li class="col col-03">
+												<div class="thead-wrap">
+													<span class="subtit04-rwd fw700">등록일시</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="board-body">
+										<ul class="board-list">
+											<!-- [D] 공지사항 페이지에서만 공지인 경우 li에 클래스 notice 추가 -->
+											<li class="notice">
+												<a href="../html/CS-0011.html" class="board-item">
+												<div class="board-box utils-wrap col-01">
+														<!-- [D] 공지 인 경우 -->
+														<span class="badge line-notice notice small"> 공지 </span>
+														<!-- // [D] 공지 인 경우 -->
+															
+														<!-- [D] 공지가 아닌 경우 -->
+														<!-- <span class="number"> 01 </span> -->
+														<!-- // [D] 공지가 아닌 경우 -->
+													</div>
+														
+													<div class="board-box col-02">
+														<div class="title-wrap">
+															<h3 class="title ellipsis line-1-2">
+																<span>
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 1줄 / max - width 810 까지쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 1줄 / max - width 810 까지쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 1줄 / max - width 810 까지
+																</span>
+															</h3>
+														</div>
+													</div>
+
+													<div class="board-box col-03 utils-wrap">
+														<span class="data">2026.03.11</span>
+													</div>
+												</a>
+											</li>
+											
+											<li class="notice">
+												<a href="../html/CS-0011.html" class="board-item">
+												<div class="board-box utils-wrap col-01">
+														<!-- [D] 공지 인 경우 -->
+														<span class="badge line-notice notice small"> 공지 </span>
+														<!-- // [D] 공지 인 경우 -->
+															
+														<!-- [D] 공지가 아닌 경우 -->
+														<!-- <span class="number"> 01 </span> -->
+														<!-- // [D] 공지가 아닌 경우 -->
+													</div>
+														
+													<div class="board-box col-02">
+														<div class="title-wrap">
+															<h3 class="title ellipsis line-1-2">
+																<span>
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 1줄 / max - width 810 까지쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 1줄 / max - width 810 까지쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 1줄 / max - width 810 까지
+																</span>
+															</h3>
+														</div>
+													</div>
+
+													<div class="board-box col-03 utils-wrap">
+														<span class="data">2026.03.11</span>
+													</div>
+												</a>
+											</li>
+											<li class="notice">
+												<a href="../html/CS-0011.html" class="board-item">
+												<div class="board-box utils-wrap col col-01">
+														<!-- [D] 공지 인 경우 -->
+														<span class="badge line-notice notice small"> 공지 </span>
+														<!-- // [D] 공지 인 경우 -->
+															
+														<!-- [D] 공지가 아닌 경우 -->
+														<!-- <span class="number"> 01 </span> -->
+														<!-- // [D] 공지가 아닌 경우 -->
+													</div>
+														
+													<div class="board-box col col-02">
+														<div class="title-wrap">
+															<h3 class="title ellipsis line-1-2">
+																<span>
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 1줄 / max - width 810 까지쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 1줄 / max - width 810 까지쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 1줄 / max - width 810 까지
+																</span>
+															</h3>
+														</div>
+													</div>
+
+													<div class="board-box col col-03 utils-wrap">
+														<span class="data">2026.03.11</span>
+													</div>
+												</a>
+											</li>
+											<!-- // [D] 공지사항 페이지에서만 공지인 경우 li에 클래스 notice 추가 -->
+
+											<li>
+												<a href="../html/CS-0011.html" class="board-item">
+												<div class="board-box utils-wrap col col-01">
+														<!-- [D] 공지 인 경우 -->
+														<!-- <span class="badge line-notice notice small"> 공지 </span> -->
+														<!-- // [D] 공지 인 경우 -->
+															
+														<!-- [D] 공지가 아닌 경우 -->
+														<span class="number"> 01 </span>
+														<!-- // [D] 공지가 아닌 경우 -->
+													</div>
+														
+													<div class="board-box col col-02">
+														<div class="title-wrap">
+															<h3 class="title ellipsis line-1-2">
+																<span>
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 1줄 / max - width 810 까지쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 1줄 / max - width 810 까지쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 1줄 / max - width 810 까지
+																</span>
+															</h3>
+														</div>
+													</div>
+
+													<div class="board-box col col-03 utils-wrap">
+														<span class="data">2026.03.11</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="../html/CS-0011.html" class="board-item">
+												<div class="board-box utils-wrap col col-01">
+														<!-- [D] 공지 인 경우 -->
+														<!-- <span class="badge line-notice notice small"> 공지 </span> -->
+														<!-- // [D] 공지 인 경우 -->
+															
+														<!-- [D] 공지가 아닌 경우 -->
+														<span class="number"> 02 </span>
+														<!-- // [D] 공지가 아닌 경우 -->
+													</div>
+														
+													<div class="board-box col col-02">
+														<div class="title-wrap">
+															<h3 class="title ellipsis line-1-2">
+																<span>
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																</span>
+															</h3>
+														</div>
+													</div>
+
+													<div class="board-box col col-03 utils-wrap">
+														<span class="data">2026.03.11</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="../html/CS-0011.html" class="board-item">
+													<div class="board-box utils-wrap col col-01">
+														<!-- [D] 공지 인 경우 -->
+														<!-- <span class="badge line-notice notice small"> 공지 </span> -->
+														<!-- // [D] 공지 인 경우 -->
+															
+														<!-- [D] 공지가 아닌 경우 -->
+														<span class="number"> 03 </span>
+														<!-- // [D] 공지가 아닌 경우 -->
+													</div>
+														
+													<div class="board-box col col-02">
+														<div class="title-wrap">
+															<h3 class="title ellipsis line-1-2">
+																<span>
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 
+																</span>
+															</h3>
+														</div>
+													</div>
+
+													<div class="board-box col col-03 utils-wrap">
+														<span class="data">2026.03.11</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="../html/CS-0011.html" class="board-item">
+												<div class="board-box utils-wrap col col-01">
+														<!-- [D] 공지 인 경우 -->
+														<!-- <span class="badge line-notice notice small"> 공지 </span> -->
+														<!-- // [D] 공지 인 경우 -->
+															
+														<!-- [D] 공지가 아닌 경우 -->
+														<span class="number"> 04 </span>
+														<!-- // [D] 공지가 아닌 경우 -->
+													</div>
+														
+													<div class="board-box col col-02">
+														<div class="title-wrap">
+															<h3 class="title ellipsis line-1-2">
+																<span>
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 
+																</span>
+															</h3>
+														</div>
+													</div>
+
+													<div class="board-box col col-03 utils-wrap">
+														<span class="data">2026.03.11</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="../html/CS-0011.html" class="board-item">
+												<div class="board-box utils-wrap col col-01">
+														<!-- [D] 공지 인 경우 -->
+														<!-- <span class="badge line-notice notice small"> 공지 </span> -->
+														<!-- // [D] 공지 인 경우 -->
+															
+														<!-- [D] 공지가 아닌 경우 -->
+														<span class="number"> 05 </span>
+														<!-- // [D] 공지가 아닌 경우 -->
+													</div>
+														
+													<div class="board-box col col-02">
+														<div class="title-wrap">
+															<h3 class="title ellipsis line-1-2">
+																<span>
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																</span>
+															</h3>
+														</div>
+													</div>
+
+													<div class="board-box col col-03 utils-wrap">
+														<span class="data">2026.03.11</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="../html/CS-0011.html" class="board-item">
+												<div class="board-box utils-wrap col col-01">
+														<!-- [D] 공지 인 경우 -->
+														<!-- <span class="badge line-notice notice small"> 공지 </span> -->
+														<!-- // [D] 공지 인 경우 -->
+															
+														<!-- [D] 공지가 아닌 경우 -->
+														<span class="number"> 06 </span>
+														<!-- // [D] 공지가 아닌 경우 -->
+													</div>
+														
+													<div class="board-box col col-02">
+														<div class="title-wrap">
+															<h3 class="title ellipsis line-1-2">
+																<span>
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																</span>
+															</h3>
+														</div>
+													</div>
+
+													<div class="board-box col col-03 utils-wrap">
+														<span class="data">2026.03.11</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="../html/CS-0011.html" class="board-item">
+												<div class="board-box utils-wrap col col-01">
+														<!-- [D] 공지 인 경우 -->
+														<!-- <span class="badge line-notice notice small"> 공지 </span> -->
+														<!-- // [D] 공지 인 경우 -->
+															
+														<!-- [D] 공지가 아닌 경우 -->
+														<span class="number"> 07 </span>
+														<!-- // [D] 공지가 아닌 경우 -->
+													</div>
+														
+													<div class="board-box col col-02">
+														<div class="title-wrap">
+															<h3 class="title ellipsis line-1-2">
+																<span>
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+															
+																</span>
+															</h3>
+														</div>
+													</div>
+
+													<div class="board-box col col-03 utils-wrap">
+														<span class="data">2026.03.11</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="../html/CS-0011.html" class="board-item">
+												<div class="board-box utils-wrap col col-01">
+														<!-- [D] 공지 인 경우 -->
+														<!-- <span class="badge line-notice notice small"> 공지 </span> -->
+														<!-- // [D] 공지 인 경우 -->
+															
+														<!-- [D] 공지가 아닌 경우 -->
+														<span class="number"> 08 </span>
+														<!-- // [D] 공지가 아닌 경우 -->
+													</div>
+														
+													<div class="board-box col col-02">
+														<div class="title-wrap">
+															<h3 class="title ellipsis line-1-2">
+																<span>
+																	쿠키런 크리에이터 패밀리 이용 약관
+																</span>
+															</h3>
+														</div>
+													</div>
+
+													<div class="board-box col col-03 utils-wrap">
+														<span class="data">2026.03.11</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="../html/CS-0011.html" class="board-item">
+												<div class="board-box utils-wrap col col-01">
+														<!-- [D] 공지 인 경우 -->
+														<!-- <span class="badge line-notice notice small"> 공지 </span> -->
+														<!-- // [D] 공지 인 경우 -->
+															
+														<!-- [D] 공지가 아닌 경우 -->
+														<span class="number"> 09 </span>
+														<!-- // [D] 공지가 아닌 경우 -->
+													</div>
+														
+													<div class="board-box col col-02">
+														<div class="title-wrap">
+															<h3 class="title ellipsis line-1-2">
+																<span>
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인 
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+																</span>
+															</h3>
+														</div>
+													</div>
+
+													<div class="board-box col col-03 utils-wrap">
+														<span class="data">2026.03.11</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="../html/CS-0011.html" class="board-item">
+												<div class="board-box utils-wrap col col-01">
+														<!-- [D] 공지 인 경우 -->
+														<!-- <span class="badge line-notice notice small"> 공지 </span> -->
+														<!-- // [D] 공지 인 경우 -->
+															
+														<!-- [D] 공지가 아닌 경우 -->
+														<span class="number"> 10 </span>
+														<!-- // [D] 공지가 아닌 경우 -->
+													</div>
+														
+													<div class="board-box col col-02">
+														<div class="title-wrap">
+															<h3 class="title ellipsis line-1-2">
+																<span>
+																	쿠키런 크리에이터 패밀리 이용 약관 핵심 요약 및 지식재산권 가이드라인
+															
+																</span>
+															</h3>
+														</div>
+													</div>
+
+													<div class="board-box col col-03 utils-wrap">
+														<span class="data">2026.03.11</span>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="pagination">
+									<a href="" class="prev">
+										<i class="ico"></i>
+									</a>
+									<ul>
+										<li class="current">
+											<a href="javascript:void(0);">
+												<span>1</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">
+												<span>2</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">
+												<span>3</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">
+												<span>4</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">
+												<span>5</span>
+											</a>
+										</li>
+									</ul>
+									<a href="" class="next">
+										<i class="ico"></i>
+									</a>
+								</div>
+							</section>
+						</div>
+						<!-- // [Page Content End] 페이지 콘텐츠 종료 -->
+					</div>
+				</div>
+			</main>
+			<!-- // () => [Page Sub Mypage End] 서브 마이페이지 종료 -->
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+
+
+	<!-- [JS] (Project JS Module) -->
+	<script src="../@resource/js/lib/imagesloaded.min.js"></script>
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+	<script src="../@resource/js/lib/select2.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+	<script>
+
+		/* {isLayoutPath} - 레이아웃 불러오기 */
+		isLayoutPath(function(){
+			
+			/* <isCurrent> - 메뉴 뎁스 체크 */
+			isCurrent(3,1);
+		});
+
+		/* [Document Ready] (DOM) */
+		/* Description: DOM 로드 시 실행 함수 */
+		$(function(){
+
+			/* <Brower Evnet> - 로드 후 이벤트 */
+			const body = document.body;
+			body.classList.remove('loaded'); // 있다면 초기화 후
+			body.classList.add('loaded'); 	 // 초기화 이후 로드
+
+			/* <Scroll Reset> - 스크롤 새로고침 */
+			isScrollResetLenis();
+
+			/* <Lenis Scroll Stop> - Lenis Scroll 초기 정지 */
+			//window.lenis.stop(); 
+
+			/* {GSAP Lib} - GSAP 모션 실행 함수 */
+			gsap.registerPlugin(ScrollTrigger); // 라이브러리 실행
+			let mm = gsap.matchMedia(); 		// 미디어 쿼리
+			//fadeUpGsap(); 						// 페이드 업 실행 함수
+			scaleGsap2();						// 스케일업 함수
+
+
+			const pageTl 	 = gsap.timeline({});
+			const pageHeader = document.querySelector('.page-header');
+			const pageTit 	 = pageHeader.querySelectorAll('.page-tit .split span');
+			const pageTxt 	 = pageHeader.querySelectorAll('.page-txt .split > span');
+
+			const pageCont	 = document.querySelector('.page-content');
+
+			gsap.set([pageTit,pageTxt], { yPercent: 150, autoAlpha: 0 }, 0);
+			
+
+			pageTl.to(pageTit,{
+				yPercent: 0,
+				autoAlpha: 1,
+				duration: 1.2,
+				ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+				stagger: 0.1,
+				onComplete: () => {
+					// 헤더효과
+					//headerGsap();
+					setTimeout( () => {
+						if(window.lenis){
+							// Lenis Lib 안전 하게 실행
+							window.lenis.stop();
+							window.lenis.start();
+						}	
+					}, 150);
+				},
+			})
+			.to(pageTxt,{
+				yPercent: 0,
+				autoAlpha: 1,
+				duration: 1.25,
+				ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+			}, "<")
+		
+			
+
+			// Select2
+			isSelect2('#sortSel', 'medium');
+
+
+
+			/* <GSAP Refresh> - 모션 초기화 */
+			requestAnimationFrame(() => {
+				ScrollTrigger.refresh(true);
+			});
+		});
+		/* // [Document Ready] - DOM 로드 시 실행 함수 종료 */
+		
+
+		/* [Window Event] (Window) */
+		/* Description: 이벤트 함수 */
+		/* <Resizing> - 리사이징 */
+		let resizeTimer;
+		window.addEventListener('resize', function(){
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+
+				/* {GSAP Device Check} 디바이스 체크 */
+				
+
+				/* {GSAP Refresh} 모션 위치 감지,초기화 */
+				requestAnimationFrame(() => {
+					if(window.lenis){ 
+						window.lenis.resize();
+					}
+					ScrollTrigger.refresh(true);
+				});
+			}, 120);
+		});
+
+		/* <Orientationchange> - 방향 전환 */
+		window.addEventListener("orientationchange", () => {
+			setTimeout(() => {
+				if(window.lenis){ 
+					window.lenis.resize();
+				}
+				window.ScrollTrigger?.refresh();
+			}, 300);
+		});
+		/* // [Window Event] 이벤트 함수 종료 */
+	</script>
+
+</body>
+</html>

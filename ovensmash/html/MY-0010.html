@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>COOKIERUN CREATORFAMILY</title>
+
+	<!-- Open Graph (카카오, 페북, 슬랙 등) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="COOKIERUN CREATORFAMILY">
+	<meta property="og:description" content="COOKIERUN CREATORFAMILY">
+	<meta property="og:image" content="../@resource/images/opengraph.jpg">
+	<meta property="og:url" content="">
+
+	<!-- Twitter 카드 -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="COOKIERUN CREATORFAMILY">
+	<meta name="twitter:description" content="COOKIERUN CREATORFAMILY">
+	<meta name="twitter:image" content="../@resource/images/opengraph.jpg">
+
+	<link rel="icon" href="../@resource/images/favicon.svg" sizes="any">
+	<link rel="apple-touch-icon" sizes="192x192" href="../@resource/images/favicon.svg">
+
+	<link rel="stylesheet" href="../@resource/css/cookierun.css">
+	<link rel="stylesheet" href="../@resource/css/cookierun_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/cookierun.js"></script>
+
+</head>
+<body>
+	
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="sub mypage status myprofile">
+				<div class="gutter">
+					<div class="max-1280 inner-area pack-down">
+						<div class="page-header">
+							<div class="title-area">
+								<i class="ico snow-01" data-gsap="img-scale2"></i>
+								<i class="ico snow-02" data-gsap="img-scale2"></i>
+								<h2 class="page-tit lh130 head02-rwd fw800">
+									<span class="split">
+										<span>MY STUDIO</span>
+									</span>
+								</h2>
+							</div>
+						</div>
+						<!-- // [Page Header End] 페이지 헤더 종료 -->
+
+						<div class="page-content w-full">
+							<div class="tabs-wrap">
+								<ul class="tabs line-tabs">
+									<!-- [D] 패밀리 신청 전 노출, 승인 이후 비노출 -->
+									<li class="current">
+										<a href="../html/MY-0010.html" class="btn">
+											<span>신청현황</span>
+										</a>
+									</li>
+									<!-- // [D] 패밀리 신청 전 노출, 승인 이후 비노출 -->
+									<li>
+										<a href="../html/MY-0020.html" class="btn">
+											<span>내 프로필</span>
+										</a>
+									</li>
+									<li>
+										<a href="../html/MY-0030.html" class="btn">
+											<span>캠페인 참여현황</span>
+										</a>
+									</li>
+									<li>
+										<a href="../html/MY-0040.html" class="btn">
+											<span>콘텐츠 관리</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<!-- [D] 미신청 -->
+							<div class="text-area no-fam pack-down gap-50">
+								<div class="text-wrap pack-down gap-15">
+									<i class="ico warning-big"></i>
+									<div class="pack-down gap-5 ta-c">
+										<h3 class="title head07-rwd lh130">
+											<strong>쿠키런 크리에이터 패밀리 <br class="only-mo"> 
+												지원 내역이 없습니다.</strong>
+										</h3>
+										<p class="text body04-rwd">
+											<span class="fc-darkgray">당신의 다양한 콘텐츠 활동을 응원합니다.</span>
+										</p>
+									</div>
+								</div>
+								<div class="button-wrap">
+									<button type="button"
+											class="btn line-primary round-100 large subtit04-rwd w-410">
+										<strong>쿠키런 크리에이터 패밀리 신청하기</strong>
+									</button>
+								</div>
+							</div>
+							<!-- // [D] 미신청 -->
+
+						</div>
+						<!-- // [Page Content End] 페이지 콘텐츠 종료 -->
+					</div>
+				</div>
+			</main>
+			<!-- // () => [Page Sub Mypage End] 서브 마이페이지 종료 -->
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+
+	<!-- [JS] (Project JS Module) -->
+	<script src="../@resource/js/lib/imagesloaded.min.js"></script>
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+	<script src="../@resource/js/lib/select2.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+	<script>
+
+		/* {isLayoutPath} - 레이아웃 불러오기 */
+		isLayoutPath(function(){
+			
+			/* <isCurrent> - 메뉴 뎁스 체크 */
+			isCurrent(0);
+		});
+
+		/* [Document Ready] (DOM) */
+		/* Description: DOM 로드 시 실행 함수 */
+		$(function(){
+
+			/* <Brower Evnet> - 로드 후 이벤트 */
+			const body = document.body;
+			body.classList.remove('loaded'); // 있다면 초기화 후
+			body.classList.add('loaded'); 	 // 초기화 이후 로드
+
+			/* <Scroll Reset> - 스크롤 새로고침 */
+			isScrollResetLenis();
+
+			/* <Lenis Scroll Stop> - Lenis Scroll 초기 정지 */
+			//window.lenis.stop(); 
+
+			/* {GSAP Lib} - GSAP 모션 실행 함수 */
+			gsap.registerPlugin(ScrollTrigger); // 라이브러리 실행
+			let mm = gsap.matchMedia(); 		// 미디어 쿼리
+			//fadeUpGsap(); 						// 페이드 업 실행 함수
+			scaleGsap2();						// 스케일업 함수
+
+
+			const pageTl 	 = gsap.timeline({});
+			const pageHeader = document.querySelector('.page-header');
+			const pageTit 	 = pageHeader.querySelectorAll('.page-tit .split span');
+
+			const pageCont	 = document.querySelector('.page-content');
+
+			gsap.set(pageTit, { yPercent: 150, autoAlpha: 0 }, 0);
+			
+
+			pageTl.to(pageTit,{
+				yPercent: 0,
+				autoAlpha: 1,
+				duration: 1.2,
+				ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+				stagger: 0.1,
+				onComplete: () => {
+					// 헤더효과
+					//headerGsap();
+					setTimeout( () => {
+						if(window.lenis){
+							// Lenis Lib 안전 하게 실행
+							window.lenis.stop();
+							window.lenis.start();
+						}	
+					}, 150);
+				},
+			})
+		
+			
+			
+
+
+			/* <GSAP Refresh> - 모션 초기화 */
+			requestAnimationFrame(() => {
+				ScrollTrigger.refresh(true);
+			});
+		});
+		/* // [Document Ready] - DOM 로드 시 실행 함수 종료 */
+		
+
+		/* [Window Event] (Window) */
+		/* Description: 이벤트 함수 */
+		/* <Resizing> - 리사이징 */
+		let resizeTimer;
+		window.addEventListener('resize', function(){
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+
+				/* {GSAP Device Check} 디바이스 체크 */
+				
+
+				/* {GSAP Refresh} 모션 위치 감지,초기화 */
+				requestAnimationFrame(() => {
+					if(window.lenis){ 
+						window.lenis.resize();
+					}
+					ScrollTrigger.refresh(true);
+				});
+			}, 120);
+		});
+
+		/* <Orientationchange> - 방향 전환 */
+		window.addEventListener("orientationchange", () => {
+			setTimeout(() => {
+				if(window.lenis){ 
+					window.lenis.resize();
+				}
+				window.ScrollTrigger?.refresh();
+			}, 300);
+		});
+		/* // [Window Event] 이벤트 함수 종료 */
+	</script>
+
+</body>
+</html>

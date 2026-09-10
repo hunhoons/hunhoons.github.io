@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>COOKIERUN CREATORFAMILY</title>
+
+	<!-- Open Graph (카카오, 페북, 슬랙 등) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="COOKIERUN CREATORFAMILY">
+	<meta property="og:description" content="COOKIERUN CREATORFAMILY">
+	<meta property="og:image" content="../@resource/images/opengraph.jpg">
+	<meta property="og:url" content="">
+
+	<!-- Twitter 카드 -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="COOKIERUN CREATORFAMILY">
+	<meta name="twitter:description" content="COOKIERUN CREATORFAMILY">
+	<meta name="twitter:image" content="../@resource/images/opengraph.jpg">
+
+	<link rel="icon" href="../@resource/images/favicon.svg" sizes="any">
+	<link rel="apple-touch-icon" sizes="192x192" href="../@resource/images/favicon.svg">
+
+	<link rel="stylesheet" href="../@resource/css/cookierun.css">
+	<link rel="stylesheet" href="../@resource/css/cookierun_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/cookierun.js"></script>
+
+</head>
+<body>
+	
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="sub terms">
+				<div class="gutter">
+					<div class="max-1062 inner-area">
+						<div class="page-header">
+							<div class="title-area ta-c">
+								<h2 class="page-tit head03-rwd fw800 lh130">
+									<span class="split">
+										<span>CookieRun Creator Family Supporter Policy</span>
+									</span>
+								</h2>
+							</div>
+						</div>
+						<div class="page-content">
+							<div class="item card" data-gsap="fade-up">
+								<div class="term-area max-inner">
+									<div class="term-wrap">
+
+										<h3 class="title">
+											Article 1 (Definition and Scope of Support)
+										</h3>
+										<ol class="number">
+											<li>
+												<p>
+													“Family Support” refers to a voluntary act in which a supporter purchases products and designates that a portion of the payment be credited as points to a creator (the “Family”) they support, as a way of expressing appreciation and encouraging their creative activities.
+												</p>
+											</li>
+											<li>
+												<p>
+													Support is a voluntary act by the supporter and does not grant the supporter any authority to direct or supervise the Family, nor any right to demand private interaction. Supporters shall not exert undue influence over the Family or make unreasonable requests that are not socially acceptable on the basis of their support.
+												</p>
+											</li>
+										</ol>
+
+										<h3 class="title">
+											Article 2 (Refunds and Prevention of Abuse)
+										</h3>
+										<ol class="number">
+											<li>
+												<p>
+													If a supporter applies a Family code when purchasing a product and subsequently requests a refund (withdrawal of subscription), any points granted to the Family as a result of that purchase shall be deducted immediately.
+												</p>
+											</li>
+											<li>
+												<p>
+													If a supporter makes high-value support contributions for purposes such as triggering broadcast alerts and repeatedly requests refunds, thereby causing confusion in settlement data or interfering with operations, the Company may permanently restrict the supporter’s use of the support feature and suspend their access to the game.
+												</p>
+											</li>
+										</ol>
+
+										<h3 class="title">
+											Article 3 (Separation of Creator Responsibility)
+										</h3>
+										<ol class="number">
+											<li>
+												<p>
+													Any content produced or statements made by the Family reflect the individual creator’s opinions and do not represent the official position of the Company.
+												</p>
+											</li>
+											<li>
+												<p>
+													Supporters may not request refunds or compensation from the Company on the grounds that a Family member has failed to fulfill any private promise.
+												</p>
+											</li>
+										</ol>
+
+										<h3 class="title">
+											Article 4 (Prohibited Conduct)
+										</h3>
+										<p class="text">The following actions are prohibited:</p>
+										<ul class="circle">
+											<li>
+												<p>
+													Creating codes using names similar to well-known creators in order to deceive others or induce support
+												</p>
+											</li>
+											<li>
+												<p>
+													Requesting cash rebates, kickbacks, or in-kind rewards from the Family in exchange for support
+												</p>
+											</li>
+										</ul>
+										
+										<p class="text">
+											<strong>Supplementary Provision</strong> This Policy shall take effect on March 27, 2026.
+										</p>
+									
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+
+
+	<!-- [JS] (Project JS Module) -->
+	<script src="../@resource/js/lib/imagesloaded.min.js"></script>
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+	<script>
+
+		/* {isLayoutPath} - 레이아웃 불러오기 */
+		isLayoutPath(function(){
+			
+			/* <isCurrent> - 메뉴 뎁스 체크 */
+			isCurrent(0);
+		});
+
+		/* [Document Ready] (DOM) */
+		/* Description: DOM 로드 시 실행 함수 */
+		$(function(){
+
+			/* <Brower Evnet> - 로드 후 이벤트 */
+			const body = document.body;
+			body.classList.remove('loaded'); // 있다면 초기화 후
+			body.classList.add('loaded'); 	 // 초기화 이후 로드
+
+			/* <Scroll Reset> - 스크롤 새로고침 */
+			isScrollResetLenis();
+
+			/* <Lenis Scroll Stop> - Lenis Scroll 초기 정지 */
+			//window.lenis.stop(); 
+
+			
+			/* {GSAP Lib} - GSAP 모션 실행 함수 */
+			gsap.registerPlugin(ScrollTrigger); // 라이브러리 실행
+			let mm = gsap.matchMedia(); 		// 미디어 쿼리
+			fadeUpGsap(); 						// 페이드 업 실행 함수
+
+			const pageTl 	 = gsap.timeline({});
+			const pageHeader = document.querySelector('.page-header');
+			const pageTit 	 = pageHeader.querySelectorAll('.page-tit .split span');
+
+			const pageCont	 = document.querySelector('.page-content');
+
+			gsap.set(pageTit, { yPercent: 150, autoAlpha: 0 }, 0);
+			gsap.set(pageCont, { y: 30, autoAlpha: 0 })
+
+			pageTl.to(pageTit,{
+				yPercent: 0,
+				autoAlpha: 1,
+				duration: 1.2,
+				ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+				stagger: 0.1,
+				onComplete: () => {
+					// 헤더효과
+					//headerGsap();
+					setTimeout( () => {
+						if(window.lenis){
+							// Lenis Lib 안전 하게 실행
+							window.lenis.stop();
+							window.lenis.start();
+						}	
+					}, 150);
+				},
+			})
+			.to(pageCont,{
+				y: 0,
+				autoAlpha: 1,
+				duration: 1,
+				ease: "power2.out",
+			}, "<")					// 페이드 업 실행 함수
+
+
+
+			/* <GSAP Refresh> - 모션 초기화 */
+			requestAnimationFrame(() => {
+				ScrollTrigger.refresh(true);
+			});
+		});
+		/* // [Document Ready] - DOM 로드 시 실행 함수 종료 */
+		
+
+		/* [Window Event] (Window) */
+		/* Description: 이벤트 함수 */
+		/* <Resizing> - 리사이징 */
+		let resizeTimer;
+		window.addEventListener('resize', function(){
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+
+				/* {GSAP Device Check} 디바이스 체크 */
+				
+
+				/* {GSAP Refresh} 모션 위치 감지,초기화 */
+				requestAnimationFrame(() => {
+					if(window.lenis){ 
+						window.lenis.resize();
+					}
+					ScrollTrigger.refresh(true);
+				});
+			}, 120);
+		});
+
+		/* <Orientationchange> - 방향 전환 */
+		window.addEventListener("orientationchange", () => {
+			setTimeout(() => {
+				if(window.lenis){ 
+					window.lenis.resize();
+				}
+				window.ScrollTrigger?.refresh();
+			}, 300);
+		});
+		/* // [Window Event] 이벤트 함수 종료 */
+	</script>
+
+</body>
+</html>

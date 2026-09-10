@@ -1,0 +1,294 @@
+@charset "UTF-8";
+
+/*  START ===========
+    Customize
+    (Customize CSS)
+    추가⭕ 수정⭕
+*/
+
+/****** DataPicker  ******/
+/* 전체 캘린더 컨테이너 */
+.ui-datepicker { width: fit-content !important;
+    padding: 16px; background-color: #F8F8FA;
+    border: none !important; border-radius: 8px; 
+    font-family: 'Gmarket Sans'; font-size: 14px;
+    font-weight: 500;
+}
+
+/* 헤더 영역 */
+.ui-datepicker-header {
+    padding: 10px 0; text-align: center;
+    color: #333333; background-color: transparent;
+    border-radius: 6px 6px 0 0; border: none !important;
+    border-bottom: 1px solid #e6e6e6 !important;
+    
+}
+.ui-datepicker-header select{ text-align: center; font-weight: 500;
+    font-family: 'Gmarket Sans', 'Apple SD Gothic Neo', sans-serif;
+    color: #333333;
+}
+
+/* 네비게이션 버튼 */
+.ui-datepicker-prev, .ui-datepicker-next { top: 4px !important;
+    cursor: pointer; border: none !important;
+    background-image: url("../../images/@uio/datepicker-arr.svg") !important;
+    background-size: cover !important; background-repeat: no-repeat !important;
+    background-color: transparent !important; 
+}
+.ui-datepicker-prev{ left: 1px !important;
+    transform: rotate(180deg);
+}
+.ui-datepicker-next{right: 1px !important}
+
+
+/* 요일 셀 */
+.ui-datepicker thead th{
+    padding: 0px; text-align: center;
+    color: #C0C0C0; font-weight: 500;
+    width: 40px !important; height: 40px !important;
+}
+
+/* 날짜 셀 */
+.ui-datepicker td{padding: 1px !important;}
+.ui-datepicker td a,
+.ui-state-default { padding: 0px;
+    display: flex !important; align-items: center;
+    justify-content: center; line-height: 1 !important;
+    text-align: center; color: #333333;
+    border-radius: 50%; border: none !important;
+    width: 38px !important; height: 38px !important;
+}
+
+/* 오늘 날짜 */
+.ui-datepicker td a:hover {
+    color: #FFFFFF; background-color: #45704f;
+}
+.ui-datepicker .ui-datepicker-today a {
+    border: 1px solid #C0C0C0 !important;
+    color: #333333; background-color: transparent;
+}
+/* 선택된 날짜 */
+.ui-datepicker .ui-state-active {
+    color: #FFFFFF; background-color: #45704f;
+}
+
+/****** YearPicker ******/
+
+/****** selectric ******/
+/* 셀렉트 박스 컨테이너 */
+.selectric,
+.selectric .label,
+.selectric .button,
+.selectric-items li{font-size: var(--fs16-14);}
+
+.selectric { position: relative;
+    border: 1px solid var(--border); border-radius: 0px;
+    background-color: var(--white); color: var(--black);    
+    cursor: pointer;
+}
+.selectric.xsmall{ height: var(--xsmall); padding: 0 8px;}
+.selectric.small { height: var(--small);  padding: 0 10px;}
+.selectric.medium{ height: var(--medium); padding: 0 12px;}
+.selectric.large { height: var(--large);  padding: 0 20px;}
+.selectric.xlarge { height: var(--xlarge);  padding: 0 20px;}
+
+/* 라벨 텍스트 */
+.selectric .label { height: inherit; margin: 0 auto;
+    display: flex; align-items: center;
+    color: #333; line-height: inherit;
+    font-family: 'Gmarket Sans', sans-serif;
+}
+
+/* 화살표 버튼 */
+.selectric .button { overflow: hidden; text-indent: -9999px;
+    position: absolute; right: 0;
+    top: 50%; transform: translateY(-50%);
+    width: 40px; height: 100%;
+    color: var(--black); background-color: transparent;
+    pointer-events: none;
+}
+.selectric .button::after{content: "" !important; border: none !important;
+    background-image: url("../../images/@uio/select.svg") !important;
+    background-size: cover; width: 20px; height: 20px;
+}
+.selectric-open .selectric .button::after{transform: rotate(180deg);}
+
+  /* 옵션 목록 */
+.selectric-items { overflow-y: auto; z-index: 10;
+    max-height: 300px; background-color: #fff;
+    border: 1px solid var(--black); border-radius: 0px;
+	padding: 16.5px 20px; box-shadow: none;
+}
+
+/* 리스트 항목 */
+.selectric-items ul{
+	display: flex; flex-direction: column; gap:12px;
+}
+.selectric-items li {
+    padding: 0;
+    font-family: 'Gmarket Sans', sans-serif;
+    color: var(--gray-8); cursor: pointer;
+	font-size: 14px; line-height: 1.6;
+}
+.selectric-items li{color: #B3B3B3;}
+
+/* 마우스 hover 시 & 선택된 항목 표시 */
+
+.selectric-items li:hover,
+.selectric-items li.selected{
+    background-color: var(--white); color: var(--black);
+}
+
+/****** Select2 ******/
+.select2 { position: relative;
+	width: 100% !important;
+    border-radius: 8px; border: 1px solid var(--lightgray2);
+	color: var(--black); caret-color: var(--black);
+	background-color: var(--white); cursor: pointer;
+}
+.select2.xsmall		{ height: var(--xsmall); padding: 0 8px;}
+.select2.small 		{ height: var(--small);  padding: 0 10px;}
+.select2.medium		{ height: 42px; padding: 0 14px;}
+.select2.large 		{ height: var(--large-rwd);  padding: 0 clamp(18px,2.34vw,20px);}
+.select2.xlarge 	{ height: var(--xlarge-rwd); padding: 0 clamp(20px,2.6vw,26px);}
+/* [RWD] (Responsive) 반응형 */
+@media all and (max-width:767px) {
+	:is(.input, .select).large,
+	:is(.input, .select).xlarge{ padding-inline: 15px; }
+}
+
+
+.select-wrap.shadow	{ 
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 2px 2px var(--black-op-10) !important;
+}
+.select-wrap.shadow .select2{
+	border: none !important;
+	background-color: var(--white) !important;
+}
+
+@media all and (max-width: 767px) {
+	.select2.medium,
+	.select2.large{ padding: 0 15px; }
+}
+
+.select2 .selection,
+.select2 .select2-selection{height: 100% !important;
+	display: flex !important; align-items: center !important;
+	justify-content: flex-start !important;
+	outline: none !important;
+}
+
+.select2 .selection{}
+.select2 .select2-selection{
+	width: 100% !important; height: 100% !important;
+	border: none !important; 
+	border-radius: 0 !important;
+}
+
+.select2 .select2-selection__rendered{
+	padding-left: 0 !important; padding-right: 0 !important;
+	color:var(--darkgray) !important; line-height: 1.5 !important;
+	font-weight: var(--fw500) !important;
+
+}
+
+.select2 .select2-selection__arrow{
+	top: 50% !important; transform: translateY(-50%); right: 24px !important;
+	width: fit-content !important; height: 100% !important;
+}
+.select2 .select2-selection__arrow b{
+	position: absolute; top: 50% !important; left: auto !important; right: -6px;
+	transform: translateY(-50%); 
+	width: 16px !important; height: 16px !important; border: none !important;
+	-webkit-mask: url("../../images/@common/select2_big.svg") no-repeat 50% 50%;
+			mask: url("../../images/@common/select2_big.svg") no-repeat 50% 50%;
+	-webkit-mask-size: 100% 100%;
+			mask-size: 100% 100%;
+	margin: 0 auto !important; background-color: var(--darkgray);
+}
+
+
+
+.select2.select2-container--open{border-color: var(--black);}
+.select2.select2-container--open .select2-selection__rendered{ color: var(--black) !important; }
+.select2.select2-container--open .select2-selection__arrow b{
+	transform: translateY(-50%) rotate(180deg);
+	background-color: var(--black);
+}
+/* @media (any-hover: hover) and (any-pointer: fine) {
+	.select2:hover{border-color: var(--black);}
+	.select2:hover .select2-selection__rendered{ color: var(--black) !important; }
+	.select2:hover .select2-selection__arrow b{
+		border-color: var(--black) rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) !important;
+	}
+} */
+
+.select2-container.select2-container--open .custom-dropdown-style{
+	overflow: hidden; border-radius: 10px; z-index: 9 !important;
+	margin-top: 10px; border: 1px solid var(--lightgray2);
+}
+.select2-container.select2-container--open .custom-dropdown-style.select2-dropdown--above{
+	margin-top: -10px;
+}
+
+.select2-container.select2-container--open .select2-search--dropdown{
+	position: relative; padding: 10px; background-color: var(--background_g);
+}
+.select2-container.select2-container--open .select2-search--dropdown input{
+	position: relative;
+	height: 34px; padding: 0 10px; border: none !important;
+	border-radius: 5px; background-color: var(--white) !important;
+}
+.select2-container.select2-container--open .select2-search--dropdown::after{ content: "";
+	width: 24px; height: 24px; 
+	position: absolute; top: 50%; 
+	transform: translateY(-50%); right: 20px; cursor: pointer;
+
+	mask-size: cover; mask-position: center center;
+	mask-image: url("../../images/@common/search.svg");
+	background-color: var(--darkgray);
+}
+
+
+.select2-container.select2-container--open .select2-results__options{max-height: 250px !important;}
+.select2-container.select2-container--open .select2-results__options li{
+	padding: 12px 18px !important; letter-spacing: -0.24px; background-color: var(--white) !important;
+	color: var(--darkgray) !important;
+}
+.select2-container.select2-container--open .select2-results__options li.select2-results__option--highlighted{
+	color: var(--primary) !important;
+}
+.select2-container.select2-container--open .select2-results__options::-webkit-scrollbar-track	{ background-color: var(--white); }
+.select2-container.select2-container--open .select2-results__options::-webkit-scrollbar			{ border-radius: 100px;}
+.select2-container.select2-container--open .select2-results__options::-webkit-scrollbar-thumb	{ background-color: var(--background_g);}
+
+.select2-container--disabled,
+.select2-container--disabled .select2-selection--single{background-color: var(--lightgray2) !important;}
+
+@media all and (max-width: 767px) {
+	.select2-container.select2-container--open .custom-dropdown-style{ margin-top: 6px; }
+	.select2-container.select2-container--open .custom-dropdown-style.select2-dropdown--above{ margin-top: -6px; }
+}
+/****** Swiper ******/
+.swiper-container{}
+.swiper-wrapper{}
+.swiper-slide{}
+
+
+.swiper-pagination.customer	{}
+.swiper-pagination.customer span{
+	width: 8px; height: 8px; opacity: 1 !important;
+	background-color: var(--lightgray2); border-radius: 100px;
+	transition: all 0.4s ease;
+}
+.swiper-pagination.customer span[class*="-bullet-active"]{
+	width: 40px; background-color: var(--primary);
+}
+
+/*  // END
+    Customize
+    (Customize CSS)
+    추가⭕ 수정⭕
+*/

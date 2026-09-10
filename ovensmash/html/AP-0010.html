@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>COOKIERUN CREATORFAMILY</title>
+
+	<!-- Open Graph (카카오, 페북, 슬랙 등) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="COOKIERUN CREATORFAMILY">
+	<meta property="og:description" content="COOKIERUN CREATORFAMILY">
+	<meta property="og:image" content="../@resource/images/opengraph.jpg">
+	<meta property="og:url" content="">
+
+	<!-- Twitter 카드 -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="COOKIERUN CREATORFAMILY">
+	<meta name="twitter:description" content="COOKIERUN CREATORFAMILY">
+	<meta name="twitter:image" content="../@resource/images/opengraph.jpg">
+
+	<link rel="icon" href="../@resource/images/favicon.svg" sizes="any">
+	<link rel="apple-touch-icon" sizes="192x192" href="../@resource/images/favicon.svg">
+
+	<link rel="stylesheet" href="../@resource/css/cookierun.css">
+	<link rel="stylesheet" href="../@resource/css/cookierun_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/cookierun.js"></script>
+
+</head>
+<body>
+	
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="sub apply step">
+				<div class="gutter">
+					<div class="form-wrap">
+						<form id="dataForm">
+							<fieldset>
+								<section class="section step step01">
+									<div class="sect-wrap">
+										<div class="sect-head">
+											<div class="title-wrap ta-c">
+												<h2 class="page-tit head03-rwd fw800 lh130">
+													<span class="split">
+														<span>
+															쿠키런 크리에이터 패밀리 <br class="only-mo">
+															지원을 위해 <br class="only-pc"> 국가와 사용 언어를 
+															<br class="only-mo">
+															선택해 주세요.
+														</span>
+													</span>
+												</h2>
+											</div>
+										</div>
+
+										<div class="sect-body">
+											<div class="item card no-shadow-mo">
+												<div class="item-inner pack-down gap-45">
+													<div class="field-wrap gap-30 w-full">
+														<div class="field">
+															<label class="country-label down gap-10">
+																<span class="label subtit01-rwd fw700">국가</span>
+
+																<div class="insert select-wrap" 
+																	 data-lenis-prevent>
+																	<select name="tbl_country" id="countrySel">
+																		<option value="none" selected disabled>Country</option>
+																		<option value="America">America</option>
+																		<option value="China">China</option>
+																		<option value="France">France</option>
+																		<option value="Germany">Germany</option>
+																		<option value="Indonesia">Indonesia</option>
+																		<option value="Japan">Japan</option>
+																		<option value="Korea">Korea</option>
+																		<option value="Malaysia">Malaysia</option>
+																		<option value="Portugal">Portugal</option>
+																		<option value="Russia">Russia</option>
+																		<option value="Spain">Spain</option>
+																		<option value="Thailand">Thailand</option>
+																		<option value="Taiwan">Taiwan</option>
+																		<option value="Vietnam">Vietnam</option>
+																		<option value="Other">Other</option>
+																	</select>
+																</div>
+															</label>
+														</div>
+														<div class="field">
+															<label class="lang-label down gap-10">
+																<span class="label subtit01-rwd fw700">사용언어</span>
+
+																<div class="insert select-wrap" 
+																	 data-lenis-prevent>
+																	<select name="tbl_language" id="languageSel">
+																		<option value="none" selected disabled>Language</option>
+																		<option value="en">English</option>
+																		<option value="ko">한국어</option>
+																		<option value="ja">Japanese</option>
+																		<option value="zh-Hant">
+																			Traditional Chinese
+																		</option>
+																		<option value="zh-Hans">
+																			Simplified Chinese
+																		</option>
+																		<option value="de">German</option>
+																		<option value="fr">French</option>
+																		<option value="es">Spanish</option>
+																		<option value="pt">Portuguese</option>
+																		<option value="ru">Russian</option>
+																		<option value="th">Thai</option>
+																		<option value="vi">Vietnamese</option>
+																		<option value="id">Indonesian</option>
+																		<option value="ms">Malay</option>
+																		<option value="other"> Other (Please specify) </option>
+																	</select>
+																</div>
+
+																<input 	type="text" name="tbl_language" 
+																		id="txtLang" class="input large w-full" 
+																		placeholder="기타 언어(텍스트 기재)">
+															</label>
+														</div>
+													</div>
+
+													<div class="button-wrap w-full">
+														<button type="button" id="btnStep01" 
+																class="btn line-primary round-100 large subtit04-rwd w-full">
+															<strong>다음으로</strong>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<!-- // [Section Step01 End] 스탭01 종료 -->
+
+								<section class="section step step02 active">
+									<div class="sect-wrap">
+										<div class="sect-head">
+											<div class="title-wrap ta-c pack-down gap-18-8">
+												<h2 class="page-tit head03-rwd fw800 lh130">
+													<span class="split">
+														<span>
+															쿠키런 크리에이터 패밀리 <br>
+															신청하기
+														</span>
+													</span>
+												</h2>
+												<p class="text body04-rwd fc-darkgray lh130">
+													쿠키런 크리에이터 패밀리는 만 19세 이상, <br class="only-mo">
+													각 플랫폼별 자격을 만족하는 크리에이터일 <br class="only-mo">
+													경우 지원 할 수 있습니다.
+												</p>
+											</div>
+										</div>
+
+										<div class="sect-body">
+											<div class="item card no-shadow-mo">
+												<div class="item-inner pack-down gap-60-30">
+													<div class="field-group pack-down gap-50">
+														<div class="field-wrap field-01">
+															<h3 class="title subtit01-rwd fw700">
+																<strong>개인정보 입력</strong>
+																<span class="essential">*</span>
+															</h3>
+
+															<div class="insert halfs pack-wrap gap-20">
+																<div class="field half-01">
+																	<label class="form-label">
+																		<span class="label only-tab">
+																			이름
+																			<span class="essential">*</span>
+																		</span>
+
+																		<input 	type="text" id="userName" class="input large"
+																		placeholder="이름을 입력하세요.">
+																	</label>
+																</div>
+
+																<div class="field half-02">
+																	<label class="form-label">
+																		<span class="label only-tab">
+																			휴대전화
+																			<span class="essential">*</span>
+																		</span>
+																		<div class="half-wrap pack-basic gap-12">
+																			<!-- [D] 인증 후 input readonly 추가 -->
+																			<input 	type="text" id="userTel" class="input large"
+																					inputmode="numeric" pattern="[0-9]*" maxlength="11"
+																					placeholder="휴대폰 번호를 입력하세요." >
+
+																			<!-- [D] 인증 후 button disabled 활성화 -->
+																			<button type="button" id="btnVerif" 
+																					class="btn verif large line-primary" disabled>
+																				<span class="fw-700">본인 인증</span>
+																			</button>
+																		</div>
+																	</label>
+																</div>
+
+																<div class="field w-full">
+																	<label class="form-label">
+																		<span class="label only-tab">
+																			이메일
+																			<span class="essential">*</span>
+																		</span>
+																		<input 	type="text" id="userMail" class="input large" 
+																				placeholder="메일 주소를 입력해 주세요.">
+																	</label>
+																</div>
+															</div>
+														</div>
+
+														<div class="field-wrap field-02 w-full">
+															<h3 class="title subtit01-rwd fw700">
+																<strong>활동 채널</strong>
+															</h3>
+
+															<div class="field">
+																<label class="form-label">
+																	<span class="label">
+																		필수 채널
+																		<span class="essential">*</span>
+																	</span>
+																	<div class="insert pack-basic w-full gap-20-10">
+																		<div class="channel-type">
+																			<picture class="img-wrap">
+																				<source srcset="../@resource/images/@common/youtube_apply_mo.svg"
+																						media="(max-width: 767px)">
+																				<img src="../@resource/images/@common/youtube_apply.svg" alt="Youtube">
+																			</picture>
+																		</div>
+																		<div class="pack-basic">
+																			<input 	type="text" class="input large" readonly
+																				placeholder="채널 인증을 진행해 주세요.">
+																			<button type="button" id="btnChYoutube"
+																					class="btn large solid-primary">
+																				<span class="fw700">인증하기</span>
+																			</button>
+																		</div>
+																	</div>
+																</label>
+															</div>
+															<div class="field field-channel pack-down gap-12">
+																<label class="form-label">
+																	<span class="label"> 기타 채널 </span>
+																	<div class="insert pack-basic w-full gap-20-10">
+																		<div class="channel-type">
+																			<picture class="img-wrap">
+																				<source srcset="../@resource/images/@common/twitch_apply_mo.svg"
+																						media="(max-width: 767px)">
+																				<img src="../@resource/images/@common/twitch_apply.svg" alt="Twitch">
+																			</picture>
+																		</div>
+																		<div class="pack-basic">
+																			<input 	type="text" class="input large" readonly
+																				placeholder="채널 인증을 진행해 주세요.">
+																			<button type="button" id="btnChTwitch"
+																					class="btn large solid-primary">
+																				<span class="fw700">인증하기</span>
+																			</button>
+																		</div>
+																	</div>
+																</label>
+
+																<label class="form-label">
+																	<div class="insert pack-basic w-full gap-20-10">
+																		<div class="channel-type">
+																			<picture class="img-wrap">
+																				<source srcset="../@resource/images/@common/tiktok_apply_mo.svg"
+																						media="(max-width: 767px)">
+																				<img src="../@resource/images/@common/tiktok_apply.svg" alt="Tiktok">
+																			</picture>
+																		</div>
+																		<div class="pack-basic">
+																			<input 	type="text" class="input large" readonly
+																				placeholder="채널 인증을 진행해 주세요.">
+																			<button type="button" id="btnChTiktok"
+																					class="btn large solid-primary">
+																				<span class="fw700">인증하기</span>
+																			</button>
+																		</div>
+																	</div>
+																</label>
+
+																<label class="form-label">
+																	<div class="insert pack-basic w-full gap-20-10">
+																		<div class="channel-type">
+																			<picture class="img-wrap">
+																				<source srcset="../@resource/images/@common/chzzk_apply_mo.svg"
+																						media="(max-width: 767px)">
+																				<img src="../@resource/images/@common/chzzk_apply.svg" alt="Chzzk">
+																			</picture>
+																		</div>
+																		<div class="pack-basic">
+																			<input 	type="text" class="input large" readonly
+																				placeholder="채널 인증을 진행해 주세요.">
+																			<button type="button" id="btnChChzzk"
+																					class="btn large solid-primary">
+																				<span class="fw700">인증하기</span>
+																			</button>
+																		</div>
+																	</div>
+																</label>
+															</div>
+
+															<div class="notice-wrap bg">
+																<ul class="dot-list">
+																	<li>
+																		<span></span>
+																		<p>
+																			검토를 통해 본인의 채널이 아닌 것으로 확인되는 경우, 크리에이터 활동 자격이 주어지지 않습니다.
+																		</p>
+																	</li>
+																	<li>
+																		<span></span>
+																		<p>
+																			크리에이터 선정 이후에도 지속적인 관리를 진행하며, 운영 정책에 위반되는 행위를 할 경우 자격이 정지되거나 해지될 수 있습니다.
+																		</p>
+																	</li>
+																	<li>
+																		<span></span>
+																		<p>
+																			Youtube/Twitch/Chzzk/Tiktok 중 1개 이상의 채널에 대해 기준 이상의 구독자/애청자/팔로워를 보유하고 있을 경우 신청 가능합니다. <br class="only-pc">
+																			(Youtube : 100명 /Twitch : 50명 / Chzzk : 50명 / Tiktok : 1,000명)
+																		</p>
+																	</li>
+																</ul>
+															</div>
+
+														</div>
+
+														<div class="mix-field w-full pack-down gap-50 ">
+
+															<div class="field-wrap w-full field-03">
+																<h3 class="title subtit01-rwd fw700">
+																	<strong>채널 소개</strong>
+																</h3>
+																<div class="field">
+																	<div class="insert halfs pack-wrap items-start gap-20">
+																		<div class="field half-03">
+																			<label class="form-label">
+																				<span class="label">
+																					프로필
+																					<span class="essential">*</span>
+																				</span>
+
+																				<div class="half-wrap pack-basic gap-12">
+																					<input 	type="text" readonly
+																							id="userProfile" class="input large"
+																							placeholder="프로필 이미지를 추가해 주세요." >
+																					<input type="file" hidden id="uploadFile">
+																					<button type="button" id="btnFileUpload"
+																							class="btn large solid-primary">
+																						<span class="fw700">추가하기</span>
+																					</button>
+																				</div>
+																			</label>
+																			<p class="notice-txt fc-lightgray caption02 fw600">
+																				<span>
+																					50mb 이하의 jpg / png 파일 1장만 업로드 가능합니다.
+																				</span>
+																			</p>
+																		</div>
+
+																		<div class="field half-04">
+																			<label class="form-label">
+																				<span class="label">
+																					채널명
+																					<span class="essential">*</span>
+																				</span>
+																				<input 	type="text" id="userChannelName" 
+																						class="input large"
+																						placeholder="최대 8자까지 입력 가능합니다."
+																						oninput="isMaxlength(this,8)">
+																			</label>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="field">
+																	<label class="form-label">
+																		<span class="label">
+																			채널 소개
+																			<span class="essential">*</span>	
+																		</span>
+																		<textarea class="textarea" id="userChannelInfo"
+																					oninput="isMaxlength(this,50)"
+																					placeholder="최대 50자까지 입력할 수 있습니다. 본인의 대표 채널을 소개해 주세요."></textarea>
+																	</label>
+																</div>
+															</div>
+
+															<div class="field-wrap w-full field-04">
+																<h3 class="title subtit01-rwd fw700 only-desk">
+																	<strong>후원 코드</strong>
+																	<span class="essential">*</span>
+																</h3>
+
+																<label class="insert halfs pack-wrap items-start gap-20-10">
+																	<span class="label only-tab">
+																		후원코드
+																		<span class="essential">*</span>
+																	</span>
+																	<div class="field half-03">
+																		<div class="half-wrap pack-basic gap-12">
+																			<input 	type="text" maxlength="8"
+																				id="userCode" class="input large" 
+																				inputmode="lowercase" pattern="[a-z0-9]*"
+																				placeholder="영문 소문자+숫자(최대8자)를 입력해 주세요." >
+																			<button type="button" id="btnCodeCreate"
+																					class="btn large solid-primary">
+																				<span class="fw700">코드 생성</span>
+																			</button>
+																		</div>
+																		<p class="notice-txt fc-lightgray caption02 fw600">
+																			<span>
+																				입력하신 영문 소문자+숫자 뒤에 랜덤 4자리 숫자가 붙어 후원 코드가 완성됩니다.
+																			</span>
+																		</p>
+																	</div>
+
+																	<div class="field half-04">
+																		<input 	type="text" id="userCreateCode" 
+																				readonly class="input large w-full"
+																				placeholder="완성된 코드">
+																	</div>
+																</label>
+															</div>
+														</div>
+
+
+														<div class="checkable-wrap justify-center ta-c">
+															<label class="checkable-label">
+																<input type="checkbox" class="checkbox">
+
+																<div class="label-wrap">
+																	<div class="label-box">
+																		<span>(필수)</span>
+																		<button type="button" id="btnPolicy" class="btn policy">
+																			<span>쿠키런 크리에이터 패밀리 운영 정책</span>
+																		</button>
+																	</div>
+																	<span class="block-txt">내용을 읽었으며, 이에 동의합니다.</span>
+																</div>
+															</label>
+															
+															<label class="checkable-label">
+																<input type="checkbox" class="checkbox">
+
+																<div class="label-wrap">
+																	<div class="label-box">
+																		<span>(필수)</span>
+																		<button type="button" id="btnPolicy2" class="btn policy">
+																			<span>개인정보 수집 및 이용 동의</span>
+																		</button>
+																	</div>
+																	<span class="block-txt">내용을 읽었으며, 이에 동의합니다.</span>
+																</div>
+															</label>
+														</div>
+
+													</div>
+
+													<div class="button-wrap">
+														<button type="button" id="btnCookieFam" 
+																class="btn line-primary round-100 large subtit04-rwd w-410">
+															<strong>쿠키런 크리에이터 패밀리 신청하기</strong>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<!-- // [Section Step01 End] 스탭02 종료 -->
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</main>
+			<!-- // () => [Sub Apply End] 서브페이지 종료 -->
+
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+
+
+	<!-- [JS] (Project JS Module) -->
+	<script src="../@resource/js/lib/imagesloaded.min.js"></script>
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+	<script src="../@resource/js/lib/select2.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+	<script>
+
+		/* {isLayoutPath} - 레이아웃 불러오기 */
+		isLayoutPath(function(){
+			
+			/* <isCurrent> - 메뉴 뎁스 체크 */
+			isCurrent(1,2);
+		});
+
+		/* [Document Ready] (DOM) */
+		/* Description: DOM 로드 시 실행 함수 */
+		$(function(){
+
+			/* <Brower Evnet> - 로드 후 이벤트 */
+			const body = document.body;
+			body.classList.remove('loaded'); // 있다면 초기화 후
+			body.classList.add('loaded'); 	 // 초기화 이후 로드
+
+			/* <Scroll Reset> - 스크롤 새로고침 */
+			isScrollResetLenis();
+
+			/* <Lenis Scroll Stop> - Lenis Scroll 초기 정지 */
+			//window.lenis.stop(); 
+
+			
+			/* {GSAP Lib} - GSAP 모션 실행 함수 */
+			gsap.registerPlugin(ScrollTrigger); // 라이브러리 실행
+			let mm = gsap.matchMedia(); 		// 미디어 쿼리
+			//fadeUpGsap(); 						// 페이드 업 실행 함수
+
+			const pageTl 	 = gsap.timeline({});
+			const pageHeader = document.querySelector('.sect-head');
+			const pageTit 	 = pageHeader.querySelectorAll('.page-tit .split span');
+
+			const pageCont	 = document.querySelector('.sect-body');
+
+			gsap.set(pageTit, { yPercent: 150, autoAlpha: 0 }, 0);
+			
+
+			pageTl.to(pageTit,{
+				yPercent: 0,
+				autoAlpha: 1,
+				duration: 1.2,
+				ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+				stagger: 0.1,
+				onComplete: () => {
+					// 헤더효과
+					//headerGsap();
+					setTimeout( () => {
+						if(window.lenis){
+							// Lenis Lib 안전 하게 실행
+							window.lenis.stop();
+							window.lenis.start();
+						}	
+					}, 150);
+				},
+			})
+			
+
+
+			
+			/* [SETP01 EVENT] STEP01 이벤트 */
+			// () => Select2 라이브러리 사용 함수
+			isSelect2('#countrySel', 'xlarge', 'on');
+			isSelect2('#languageSel', 'xlarge');
+
+			// () => 함수, 변수 정리
+			const selCountry 	=  $('#countrySel');
+			const selLanguage 	=  $('#languageSel');
+			const otherText 	=  $('#txtLang');
+
+			const isLanguageCheck = () => {
+				const isOtherSelected = selLanguage.val().toLowerCase() === 'other';
+				$('.lang-label').toggleClass('active', isOtherSelected);
+			};
+
+			const isLanguageDisabled = () => {
+				const hasText = otherText.val().trim() !== '';
+				selLanguage.prop('disabled', hasText);
+			};
+
+			// () => 국가 선택 시 발생 이벤트
+			selCountry.on('change', function(){
+				const isKorea = $(this).val().toLowerCase() === 'korea';
+				const isTrigger = isKorea ? 'ko' : 'en';
+
+				selLanguage.val(isTrigger).trigger('change');
+
+				if($(window).outerWidth() < 768){
+					$('html, body').animate({ scrollTop: 80 }, 400);
+				}
+
+			});
+
+			// () => 언어 선택 시 && 기타 언어 입력 시 발생 이벤트
+			selLanguage.on('change', function(){ isLanguageCheck(); });
+			otherText.on('input', function(){ isLanguageDisabled(); });
+			
+			// () => 다음 스탭 클릭 이벤트
+			$('#btnStep01').on('click', function(){
+				if(selCountry.val() === 'none' || selCountry.val() === null){ // 국가
+					alert('Please select your country.');
+					selCountry.select2('open');
+					return;
+				}
+
+				if(selLanguage.val() === 'none' || selLanguage.val() === null){ // 언어
+					alert('Please select a language');
+					selLanguage.select2('open');
+					return;
+				}
+
+				if($('.lang-label').hasClass('active')){
+					if(otherText.val().trim() === ""){ // 
+						alert('Please specify in text.');
+						otherText.focus();
+						return;
+					}
+				}
+				
+				$('.sub.apply .section.step01').removeClass('active');
+				$('.sub.apply .section.step02').addClass('active');
+			});
+		/* // [SETP01 Event End] STEP01 이벤트 종료 */
+
+		/* [SETP02 EVENT] STEP02 이벤트 */
+
+		// () => Select2 라이브러리 사용 함수
+		isSelect2('#channelSel', 'large');
+		// isSelect2('#etcChannelSel01', 'large');
+		// isSelect2('#etcChannelSel02', 'large');
+		// isSelect2('#etcChannelSel03', 'large');
+
+
+
+		// () => 프로필 이미지 업로드
+		$('#btnFileUpload').on('click', function(){
+			$('#uploadFile').trigger('click');
+		});
+		// () => 업로드 시 파일명 노출
+		$('#uploadFile').on('change', function(){
+			const fileNameBox = $('#userProfile');
+			const files = this.files;
+			if (files.length > 0) {
+				fileNameBox.val(files[0].name); // 첫 번째 파일명 표시
+			}
+		});
+
+
+		// () => 휴대폰 번호 입력 시 이벤트
+		$('#userTel').on('input', function(){
+			const btn = $('#btnVerif');
+			const tel = $(this).val().replace(/[^0-9]/g, ''); // 숫자만 남김
+			$(this).val(tel); // 입력값 반영
+
+			this.value = this.value.replace(/[^0-9]/g, '');
+
+			const isValid = tel !== '' && tel.length === 11;
+  			btn.prop('disabled', !isValid); // 조건 반전으로 깔끔하게
+		});
+		// () => 본인 인증 이벤트
+		$('#btnVerif').on('click', function(){
+
+			// 전화번호 11자리 이하인 경우 
+			if($('#userTel').val().length < 11){
+				alert('휴대폰 번호를 정확히 입력해주세요');
+				$('#userTel').focus();
+				return;
+			}
+
+			// 본인인증 API 호출
+
+			// 완료 후 input readonly 추가
+			$('#userTel').prop('readonly', true);
+			// 완료 후 버튼 disabled 활성화
+			$(this).prop('disabled', true);
+		});
+
+
+		// () => 활동코드 생성
+		$('#userCode').on('input', function(){
+			//this.value = this.value.replace(/[^a-z0-9]/g, '');
+			let val = this.value.toLowerCase(); // 자동 소문자 변환
+			val = val.replace(/[^a-z0-9]/g, ''); // 영문/숫자 외 제거
+			val = val.replace(/^[^a-z]+/, '');   // 첫 글자가 영문이 아닐 경우 제거
+			this.value = val;		
+		});
+		// () => 코드 생성 버튼 이벤트
+		$('#btnCodeCreate').on('click', function(){
+			const codeName = $('#userCode');
+			let codeValue = $('#userCode').val().trim();
+
+			if(codeValue === ""){
+				alert('활동코드를 입력해주세요.');
+				codeName.focus();
+				return;
+			}
+			
+			// 랜덤 숫자 4자리 생성
+			const randomNum = Math.floor(1000 + Math.random() * 9000);
+			
+			// 기존에 _숫자4자리가 붙어 있다면 제거
+			codeValue = codeValue.replace(/_\d{4}$/, '');
+
+			// 값 설정
+			$('#userCreateCode').val(`${codeValue}_${randomNum}`);
+
+			// 값 설정 후 input readonly 추가
+			codeName.prop('readonly', true);
+			// 값 설정 후 버튼 disabled 활성화
+			$(this).prop('disabled', true); // 완성 코드 값에 대한 중복 체크 필요
+		});
+
+		
+
+		// () => 크리에이터 패밀리 신청하기 클릭 이벤트
+		$('#btnCookieFam').on('click', function(){
+			const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+		
+			// 이름
+			if($('#userName').val().trim() == ""){
+				alert('이름을 입력해주세요.');
+				$('#userName').focus();
+				return;
+			}
+
+			// 휴대폰
+			if($('#userTel').val().trim() == ""){
+				alert('휴대폰 번호를 입력해주세요.');
+				$('#userTel').focus();
+				return;
+			}
+
+			if(!$('#userTel').is('[readonly]')){
+				alert('휴대폰 번호를 인증해주세요.');
+				$('#userTel').focus();
+				return;
+			}
+
+			// 메일
+			if($('#userMail').val().trim() == ""){
+				alert('메일을 입력해주세요.');
+				$('#userMail').focus();
+				return;
+			}
+			if (!emailPattern.test($('#userMail').val().trim())) {
+				alert('올바른 이메일 형식이 아닙니다.');
+				$('#userMail').focus();
+				return false;
+			}
+
+			// 활동채널
+			if($('#channelSel').val() === 'none' || $('#channelSel').val() === null){ // 언어
+				alert('필수 채널을 선택해 주세요.');
+				$('#channelSel').select2('open');
+				return;
+			}
+			if($('#mainChannelUrl').val().trim() == ''){ // 언어
+				alert('필수 채널을 URL을 입력해주세요.');
+				$('#mainChannelUrl').focus();;
+				return;
+			}
+
+			// 프로필
+			if($('#userProfile').val() == ""){
+				alert('프로필을 업로드해주세요.');
+				$('#userProfile').focus();
+				return;
+			}
+
+			if($('#userChannelName').val().trim() == ""){
+				alert('채널명을 입력해주세요.');
+				$('#userChannelName').focus();
+				return;
+			}
+
+			if($('#userChannelInfo').val() == ""){
+				alert('채널소개를 입력해주세요.');
+				$('#userChannelInfo').focus();
+				return;
+			}
+
+			// 활동코드 생성
+			if($('#userCode').val().trim() == ""){
+				alert('활동코드를 입력해주세요.');
+				$('#userCode').focus();
+				return;
+			}
+
+			// 정책 동의
+			if(!$('#policyCheckbox').is(':checked')){
+				alert('운영정책에 동의하여 주세요.');
+				return;
+			}
+
+
+
+			// ajax
+			// 완료 후 페이지 이동
+			window.location.href = "/html/AP002.html"
+		});
+
+
+
+			/* <GSAP Refresh> - 모션 초기화 */
+			requestAnimationFrame(() => {
+				ScrollTrigger.refresh(true);
+			});
+		});
+		/* // [Document Ready] - DOM 로드 시 실행 함수 종료 */
+		
+
+		/* [Window Event] (Window) */
+		/* Description: 이벤트 함수 */
+		/* <Resizing> - 리사이징 */
+		let resizeTimer;
+		window.addEventListener('resize', function(){
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+
+				/* {GSAP Device Check} 디바이스 체크 */
+				
+
+				/* {GSAP Refresh} 모션 위치 감지,초기화 */
+				requestAnimationFrame(() => {
+					if(window.lenis){ 
+						window.lenis.resize();
+					}
+					ScrollTrigger.refresh(true);
+				});
+			}, 120);
+		});
+
+		/* <Orientationchange> - 방향 전환 */
+		window.addEventListener("orientationchange", () => {
+			setTimeout(() => {
+				if(window.lenis){ 
+					window.lenis.resize();
+				}
+				window.ScrollTrigger?.refresh();
+			}, 300);
+		});
+		/* // [Window Event] 이벤트 함수 종료 */
+	</script>
+
+</body>
+</html>

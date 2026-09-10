@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>COOKIERUN CREATORFAMILY</title>
+
+	<!-- Open Graph (카카오, 페북, 슬랙 등) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="COOKIERUN CREATORFAMILY">
+	<meta property="og:description" content="COOKIERUN CREATORFAMILY">
+	<meta property="og:image" content="../@resource/images/opengraph.jpg">
+	<meta property="og:url" content="">
+
+	<!-- Twitter 카드 -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="COOKIERUN CREATORFAMILY">
+	<meta name="twitter:description" content="COOKIERUN CREATORFAMILY">
+	<meta name="twitter:image" content="../@resource/images/opengraph.jpg">
+
+	<link rel="icon" href="../@resource/images/favicon.svg" sizes="any">
+	<link rel="apple-touch-icon" sizes="192x192" href="../@resource/images/favicon.svg">
+
+	<link rel="stylesheet" href="../@resource/css/cookierun.css">
+	<link rel="stylesheet" href="../@resource/css/cookierun_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/cookierun.js"></script>
+
+</head>
+<body>
+	
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="content pack-center" style="min-height: 100vh;">
+				
+				<div class="gutter">
+					<div class="max-1280">
+						<div class="button-area pack-wrap gap-12">
+							<button type="button" onclick="isPopupOpen('#popupFamily')"
+									class="btn solid-primary large round-100">
+								<span>패밀리 신청하기 팝업</span>
+							</button>
+
+							<button type="button" onclick="isPopupOpen('#popupFamilyQuit')"
+									class="btn solid-primary large round-100">
+								<span>MYPAGE 패밀리 그만두기 팝업</span>
+							</button>
+
+							<button type="button" onclick="isPopupOpen('#popupEditBio')"
+									class="btn solid-primary large round-100">
+								<span>MYPAGE 소개글 수정 팝업</span>
+							</button>
+
+							<button type="button" onclick="isPopupOpen('#popupOptOut')"
+									class="btn solid-primary large round-100">
+								<span>MYPAGE 광고 철회 팝업</span>
+							</button>
+
+							<button type="button" onclick="isPopupOpen('#popupOptIn')"
+									class="btn solid-primary large round-100">
+								<span>MYPAGE 광고 동의 팝업</span>
+							</button>
+
+							<button type="button" onclick="isPopupOpen('#popupNewMission')"
+									class="btn solid-primary large round-100">
+								<span>MYPAGE 소개영상 미션 업로드 팝업</span>
+							</button>
+
+							<button type="button" onclick="isPopupOpen('#popupNewContent')"
+									class="btn solid-primary large round-100">
+								<span>MYPAGE 콘텐츠 등록 팝업</span>
+							</button>
+
+							<button type="button" onclick="isPopupOpen('#popupContDel')"
+									class="btn solid-primary large round-100">
+								<span>MYPAGE 콘텐츠 삭제 팝업</span>
+							</button>
+
+							<button type="button" onclick="isPopupOpen('#popupMissionDel')"
+									class="btn solid-primary large round-100">
+								<span>MYPAGE 참여내역 삭제 팝업</span>
+							</button>
+
+							<button type="button" onclick="isPopupOpen('#popupPolicy')"
+									class="btn solid-primary large round-100">
+								<span>개인정보 수집 동의서</span>
+							</button>
+						</div>
+
+						<br><br>
+						<h2 class="head01-rwd">2차 추가 팝업</h2>
+						<div class="button-area pack-wrap gap-12">
+							<button type="button" onclick="isPopupOpen('#popupShop')"
+									class="btn solid-primary large round-100">
+								<span>포인트 교환</span>
+							</button>
+
+							<button type="button" onclick="isPopupOpen('#popupShoping')"
+									class="btn solid-primary large round-100">
+								<span>포인트 교환 진행</span>
+							</button>
+
+							<button type="button" onclick="isPopupOpen('#popupShopingComp')"
+									class="btn solid-primary large round-100">
+								<span>포인트 교환 완료</span>
+							</button>
+
+							<button type="button" onclick="isPopupOpen('#popupTrash')"
+									class="btn solid-primary large round-100">
+								<span>쪽지함 삭제 팝업</span>
+							</button>
+						</div>
+						<br>
+						<br>
+					</div>
+				</div>
+
+			</main>
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+
+	<!-- [POPUP] 패밀리 신청하기 팝업 -->
+	<div id="popupFamily" class="overlay popup-family">
+		<div class="popup">
+			<div class="popup-header">
+				<div class="title-wrap ta-c">
+					<h3 class="title subtit02-rwd fw700 lh130">
+						<span>
+							<!-- [D] 플랫폼 네임 영문으로 -->
+							<!-- Youtube / Twitch / Tiktok / ChzzK -->
+							<span class="platform">YouTube</span> 연동을 위해 <br>
+							아래 버튼을 눌러 연결을 진행해주세요
+							<!-- // [D] 플랫폼 네임 영문으로 -->
+						</span>
+					</h3>
+				</div>
+			</div>
+			<div class="popup-body">
+				<div class="popup-wrap">
+					<div class="connect-wrap round-8-10 pack-cneter">
+						<button type="button" class="btn connection w-full body04-rwd fc-darkgray">
+							<span>채널 연결을 진행해 주세요</span>
+						</button>
+					</div>
+					<div class="notice-wrap">
+						<i class="ico warning-normal"></i>
+						<span class="caption02 fw600 fc-darkgray lh140">
+							담당자 검토를 통해, 본인 채널이 아닌 것이 확인 된 경우, <br class="only-mo">
+							쿠키런 크리에이터 패밀리 자격이 박탈될 수 있습니다.
+						</span>
+					</div>
+					
+					<div class="button-area center">
+						<button type="button" 
+								class="btn line-primary large subtit04-rwd fw700-600 round-100">
+							<span>다음으로</span>
+						</button>
+					</div>
+				</div>
+				
+			</div>
+
+			<!-- [PUB] 팝업 닫기 버튼 -->
+			<button type="button" class="btn popup-close" onclick="isPopupClose('#popupFamily')">
+				<i class="ico popup-close"></i>
+			</button>
+		</div>
+	</div>
+	<!-- // [POPUP] 패밀리 신청하기 팝업 -->
+
+	<!-- [POPUP] 마이페이지 패밀리 그만두기 팝업 -->
+	<div id="popupFamilyQuit" class="overlay popup-family-quit">
+		<div class="popup">
+			<div class="popup-header">
+				<div class="title-wrap ta-c">
+					<h3 class="title subtit01-rwd fw700 lh130">
+						<span>
+							패밀리 그만두기
+						</span>
+					</h3>
+				</div>
+			</div>
+			<div class="popup-body">
+				<div class="popup-wrap">
+					<div class="notice-wrap">
+						<i class="ico warning-normal"></i>
+						<span class="caption02 fw600 fc-darkgray lh140">
+							패밀리 활동을 그만두시기 전, 아래 내용을 꼭 읽어주시기 바랍니다.  <br>
+							아래 내용에 동의하신다면, '그만두기' 버튼을 눌러주세요.
+						</span>
+					</div>
+
+					<div class="notice-wrap bg">
+						<ul class="dot-list">
+							<li>
+								<span></span>
+								<p> Devplay 게임 계정의 패밀리 자격이 즉시 해지됩니다. </p>
+							</li>
+							<li>
+								<span></span>
+								<p> 정산하지 않은 포인트는 즉시 소멸되며, 복구 불가합니다. </p>
+							</li>
+							<li>
+								<span></span>
+								<p>
+									패밀리 그만두기 후 동일 계정으로 다시 패밀리 신청이 가능하나, <br>
+									<span class="fc-black">
+										소멸된 포인트는 패밀리로 재선정된 후에도 복구 되지 않습니다.
+									</span>
+								</p>
+							</li>
+							<li>
+								<span></span>
+								<p>
+									계정에 부여된 ‘패밀리 자격’만 해지되며, 이용하시는 게임 계정에는 영향을 주지 않습니다.
+								</p>
+							</li>
+						</ul>
+					</div>
+		
+					<div class="button-area center">
+						<button type="button" onclick="isPopupClose('#popupFamilyQuit')"
+								class="btn line-primary large subtit04-rwd fw700-600 round-100">
+							<span>그만두기</span>
+						</button>
+						<button type="button" 
+								class="btn solid-primary large subtit04-rwd fw700-600 round-100">
+							<span>탈퇴하기</span>
+						</button>
+					</div>
+				</div>
+				
+			</div>
+
+			<!-- [PUB] 팝업 닫기 버튼 -->
+			<button type="button" class="btn popup-close" onclick="isPopupClose('#popupFamilyQuit')">
+				<i class="ico popup-close"></i>
+			</button>
+		</div>
+	</div>
+	<!-- // [POPUP] 마이페이지 패밀리 그만두기 팝업 -->
+
+	<!-- [POPUP] 마이페이지 소개글 수정 팝업 -->
+	<div id="popupEditBio" class="overlay popup-edit-bio">
+		<div class="popup">
+			<div class="popup-header">
+				<div class="title-wrap ta-c">
+					<h3 class="title subtit01-rwd fw700 lh130">
+						<span>
+							소개글 수정
+						</span>
+					</h3>
+				</div>
+			</div>
+			<div class="popup-body">
+				<div class="popup-wrap">
+					<div class="form-wrap">
+						<form id="EditForm">
+							<fieldset>
+								<!-- 
+									[D] 바이트 체크 함수 필수 
+								 	fn_loadByte(targe,byte);
+								-->
+								<div class="field">
+									<textarea 	name="" id="myIntroduction" class="textarea" 
+												onkeyup="fn_checkByte(this,300)">소개글입니다. 123</textarea>
+									<div class="byte-wrap caption02 fw500 fc-darkgray">
+										<span id="nowByte" class="byte">0</span>
+										<span>/</span>
+										<span>300byte</span>
+									</div>
+								</div>
+
+								<div class="button-area center">
+									<button type="button"
+											class="btn line-primary large subtit04-rwd fw700-600 round-100">
+										<span>수정완료</span>
+									</button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- [PUB] 팝업 닫기 버튼 -->
+			<button type="button" class="btn popup-close" onclick="isPopupClose('#popupEditBio')">
+				<i class="ico popup-close"></i>
+			</button>
+		</div>
+	</div>
+	<!-- // [POPUP] 마이페이지 소개글 수정 팝업 -->
+
+	<!-- [POPUP] 마이페이지 광고성 수신 철회 팝업 -->
+	<div id="popupOptOut" class="overlay popup-opt-out">
+		<div class="popup">
+			<div class="popup-header">
+				<div class="title-wrap ta-c">
+					<h3 class="title subtit01-rwd fw700 lh130">
+						<span>
+							광고성 정보 수신 동의 철회하기
+						</span>
+					</h3>
+				</div>
+			</div>
+			<div class="popup-body">
+				<div class="popup-wrap">
+					<div class="text-wrap">
+						<p class="text ta-c body04-rwd lh130 txt-01 fc-darkgray">
+							<span>
+								광고성 정보 수신 동의 철회 시 모든 혜택 알림을 <br>
+								받을 수 없게 됩니다. 동의를 철회 하시겠습니까?
+							</span>
+						</p>
+						<p class="text ta-c body04-rwd lh130 txt-02 fc-darkgray">
+							<span>
+								2023.06.09 광고성 정보 수신 동의 철회 되었습니다. <br>
+								MY STUDIO 메뉴에서 수신 설정 변경 가능합니다.
+							</span>
+						</p>
+					</div>
+					<div class="button-area center">
+						<button type="button" id="btnOptOut" onclick="$('#popupOptOut').find('.popup-wrap').addClass('out')"
+								class="btn line-primary large subtit04-rwd fw700-600 w-full round-100">
+							<span>철회하기</span>
+						</button>
+						<button type="button" id="btnConfig" onclick="isPopupClose('#popupOptOut')"
+								class="btn line-primary large subtit04-rwd fw700-600 w-full round-100">
+							<span>확인</span>
+						</button>
+					</div>
+				</div>
+				
+			</div>
+
+			<!-- [PUB] 팝업 닫기 버튼 -->
+			<button type="button" class="btn popup-close" onclick="isPopupClose('#popupOptOut')">
+				<i class="ico popup-close"></i>
+			</button>
+		</div>
+	</div>
+	<!-- // [POPUP] 마이페이지 광고성 수신 철회 팝업 -->
+
+	<!-- [POPUP] 마이페이지 광고성 수신 동의 팝업 -->
+	<div id="popupOptIn" class="overlay popup-opt-in">
+		<div class="popup">
+			<div class="popup-header">
+				<div class="title-wrap ta-c">
+					<h3 class="title subtit01-rwd fw700 lh130">
+						<span>
+							광고성 정보 수신 동의하기
+						</span>
+					</h3>
+				</div>
+			</div>
+			<div class="popup-body">
+				<div class="popup-wrap">
+					<div class="notice-wrap bg">
+						<p> Devplay 게임 계정의 패밀리 자격이 즉시 해지됩니다. </p>
+						<ul class="dot-list">
+							<li>								
+								<span></span>
+								<p>수집 및 이용 목적 : 패밀리 프로그램 및 혜택 안내</p>
+							</li>
+							<li>
+								<span></span>
+								<p> 수집 항목 : 휴대폰 번호 / 이메일 </p>
+							</li>
+							<li>
+								<span></span>
+								<p> 보유 및 이용기간 : 동의 후 2년 또는 별도 철회 시 까지 </p>
+							</li>
+						</ul>
+						<p>
+							광고성 정보 수신 동의에 거부하실 수 있으며, 미동의 시 본 서비스에 대한 안내를 받으실 수 없습니다. <br>
+							포인트 정산 불가 등, 본 항목 미동의로 인한 불이익에 대한 본사가 책임지지 않습니다.
+						</p>
+					</div>
+
+					<div class="button-area center">
+						<button type="button" id="btnConfig"
+								class="btn line-primary large subtit04-rwd fw700-600 w-full round-100">
+							<span>광고 수신 동의하기</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- [PUB] 팝업 닫기 버튼 -->
+			<button type="button" class="btn popup-close" onclick="isPopupClose('#popupOptIn')">
+				<i class="ico popup-close"></i>
+			</button>
+		</div>
+	</div>
+	<!-- // [POPUP] 마이페이지 광고성 수신 동의 팝업 -->
+
+	<!-- [POPUP] 개인정보 수집 이용 동의 팝업 -->
+	<div id="popupPolicy" class="overlay popup-policy">
+		<div class="popup">
+			<div class="popup-header">
+				<div class="title-wrap ta-c">
+					<h3 class="title subtit01-rwd fw700 lh130">
+						<span>
+							개인정보 수집 및 이용 동의서
+						</span>
+					</h3>
+				</div>
+			</div>
+			<div class="popup-body">
+				<div class="popup-wrap">
+					<div class="notice-wrap bg">
+						<p> 데브시스터즈(주)에서는 쿠키런 패밀리 함께하기 서비스 제공을 위해 개인정보를 수집 및 이용합니다. </p>
+
+						<div class="pack-down items-normal">
+							<p>■ 개인정보 수집 및 이용목적</p>
+							<ul class="dot-list">
+								<li>								
+									<span></span>
+									<p>수집 및 이용 목적 : 패밀리 프로그램 및 혜택 안내</p>
+								</li>
+							</ul>
+						</div>
+
+						<div class="pack-down items-normal">
+							<p>■ 수집 항목</p>
+							<ul class="dot-list">
+								<li>								
+									<span></span>
+									<p>이름, 채널 URL, 이에밀 주소, 휴대폰 번호</p>
+								</li>
+							</ul>
+						</div>
+
+						<div class="pack-down items-normal">
+							<p>■ 보유 및 이용 기간</p>
+							<ul class="">
+								<li>								
+									<p class="txt">
+										<strong>
+											<span class="underline">회원탈퇴 시까지</span> 
+											<span class="fc-wrning underline">(서식 유지)</span>
+										</strong>
+									</p>
+								</li>
+							</ul>
+						</div>
+
+						<p>개인 정보 수집 및 이용에 대한 동의를 거절할 수 있으며, 거절할 시 쿠키런 패밀리 함께하기 서비스 제공이 불가합니다.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- [PUB] 팝업 닫기 버튼 -->
+			<button type="button" class="btn popup-close" onclick="isPopupClose('#popupPolicy')">
+				<i class="ico popup-close"></i>
+			</button>
+		</div>
+	</div>
+	<!-- // [POPUP] 개인정보 수집 이용 동의 팝업 -->
+
+	<!-- [POPUP] 마이페이지 신규 미션 등록 팝업 -->
+	<div id="popupNewMission" class="overlay popup-new-mission popup-cont-upload">
+		<div class="popup">
+			<div class="popup-header">
+				<div class="title-wrap ta-c">
+					<h3 class="title subtit01-rwd fw700 lh130">
+						<span>
+							신규 모드 소개 영상 업로드 미션!
+						</span>
+					</h3>
+				</div>
+			</div>
+			<div class="popup-body">
+				<div class="popup-wrap">
+					<div class="form-wrap">
+						<form id="uploadForm">
+							<fieldset>
+								<div class="field">
+									<div class="insert">
+										<input type="text" class="input large-fix w-full" placeholder="영상URL을 입력해주세요.">
+									</div>
+
+									<div class="notice-wrap w-full">
+										<i class="ico warning-normal"></i>
+										<span class="caption02 fw600 fc-darkgray lh140">
+											본인 채널에 업로드 된 영상이어야 합니다.
+										</span>
+									</div>
+								</div>
+
+								<div class="scroller-wrap" data-lenis-prevent>
+									<div class="notice-wrap bg w-full" >
+										<p>
+											미션에 참여여 영상은 쿠키런 크리에이터 패밀리의 이용정책을 동의하는 것으로 간주하며 이용정책 중 콘텐츠 관련 정책 부분을 발췌하여 넣어둡니다.
+										</p>
+									</div>
+								</div>
+
+								<div class="button-area center">
+									<button type="button"
+											class="btn line-primary large subtit04-rwd fw700-600 w-full round-100">
+										<span>수정하기</span>
+									</button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- [PUB] 팝업 닫기 버튼 -->
+			<button type="button" class="btn popup-close" onclick="isPopupClose('#popupNewMission')">
+				<i class="ico popup-close"></i>
+			</button>
+		</div>
+	</div>
+	<!-- // [POPUP] 마이페이지 신규 미션 등록 팝업 -->
+
+	<!-- [POPUP] 마이페이지 콘텐츠 등록 팝업 -->
+	<div id="popupNewContent" class="overlay popup-new-mission popup-cont-upload">
+		<div class="popup">
+			<div class="popup-header">
+				<div class="title-wrap ta-c">
+					<h3 class="title subtit01-rwd fw700 lh130">
+						<span>
+							콘텐츠 등록하기
+						</span>
+					</h3>
+				</div>
+			</div>
+			<div class="popup-body">
+				<div class="popup-wrap">
+					<div class="form-wrap">
+						<form id="uploadForm">
+							<fieldset>
+								<div class="field">
+									<div class="insert">
+										<input type="text" class="input large-fix w-full" placeholder="영상URL을 입력해주세요.">
+									</div>
+
+									<div class="notice-wrap w-full">
+										<i class="ico warning-normal"></i>
+										<span class="caption02 fw600 fc-darkgray lh140">
+											본인 채널에 업로드 된 영상이어야 합니다.
+										</span>
+									</div>
+								</div>
+
+								<div class="scroller-wrap" data-lenis-prevent>
+									<div class="notice-wrap bg w-full" >
+										<p>
+											콘텐츠 영상은 쿠키런 크리에이터 패밀리의 이용정책을 동의하는것으로 간주하며
+											이용정책 중 콘텐츠 관련 정책 부분을 발췌하여 넣어 둡니다.
+										</p>
+									</div>
+								</div>
+
+								<div class="button-area center">
+									<button type="button"
+											class="btn line-primary large subtit04-rwd fw700-600 w-full round-100">
+										<span>등록하기</span>
+									</button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- [PUB] 팝업 닫기 버튼 -->
+			<button type="button" class="btn popup-close" onclick="isPopupClose('#popupNewContent')">
+				<i class="ico popup-close"></i>
+			</button>
+		</div>
+	</div>
+	<!-- // [POPUP] 마이페이지 콘텐츠 등록 팝업 -->
+
+	<!-- [POPUP] 마이페이지 콘텐츠 삭제 팝업 -->
+	<div id="popupContDel" class="overlay popup-cont-del popup-content-delete">
+		<div class="popup">
+			<div class="popup-header">
+				<div class="title-wrap ta-c">
+					<h3 class="title subtit01-rwd fw700 lh130">
+						<span>
+							콘텐츠 제목이 들어갑니다.
+						</span>
+					</h3>
+					<div class="notice-wrap w-full">
+						<i class="ico warning-normal"></i>
+						<span class="caption02 fw600 fc-darkgray lh140">
+							본인 채널에 업로드 된 영상이어야 합니다.
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="popup-body">
+				<div class="popup-wrap">
+					<div class="text-wrap">
+						<p class="text subtit03-rwd fw700-600 ta-c">
+							<span>해당 콘텐츠를 삭제 하시겠습니까?</span>
+						</p>
+					</div>
+					<div class="button-area center">
+						<button type="button"
+								class="btn line-primary large subtit04-rwd fw700-600 w-full round-100">
+							<span>삭제하기</span>
+						</button>
+					</div>
+				</div>
+				
+			</div>
+
+			<!-- [PUB] 팝업 닫기 버튼 -->
+			<button type="button" class="btn popup-close" onclick="isPopupClose('#popupContDel')">
+				<i class="ico popup-close"></i>
+			</button>
+		</div>
+	</div>
+	<!-- // [POPUP] 마이페이지 콘텐츠 삭제 팝업 -->
+
+	<!-- [POPUP] 마이페이지 미션 삭제 팝업 -->
+	<div id="popupMissionDel" class="overlay popup-mission-del popup-content-delete">
+		<div class="popup">
+			<div class="popup-header">
+				<div class="title-wrap ta-c">
+					<h3 class="title subtit01-rwd fw700 lh130">
+						<span>
+							신맵 소개 영상 업로드 미션!
+						</span>
+					</h3>
+					<div class="notice-wrap w-full">
+						<i class="ico warning-normal"></i>
+						<span class="caption02 fw600 fc-darkgray lh140">
+							캠페인 참여 영상이 삭제됩니다.
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="popup-body">
+				<div class="popup-wrap">
+					<div class="text-wrap">
+						<p class="text subtit03-rwd fw700-600 ta-c">
+							<span>캠페인 참여 내역을 삭제 하시겠습니까?</span>
+						</p>
+					</div>
+					<div class="button-area center">
+						<button type="button"
+								class="btn line-primary large subtit04-rwd fw700-600 w-full round-100">
+							<span>삭제하기</span>
+						</button>
+					</div>
+				</div>
+				
+			</div>
+
+			<!-- [PUB] 팝업 닫기 버튼 -->
+			<button type="button" class="btn popup-close" onclick="isPopupClose('#popupMissionDel')">
+				<i class="ico popup-close"></i>
+			</button>
+		</div>
+	</div>
+	<!-- // [POPUP] 마이페이지 미션 삭제 팝업 -->
+
+
+	<!-- [POPUP] 포인트 교환 팝업 -->
+	<div id="popupShop" class="overlay popup-shop">
+		<div class="popup">
+			<div class="scroll-wrap" data-lenis-prevent>
+				<div class="popup-header pack-down gap-20">
+					<div class="title-wrap">
+						<h3 class="title head05-rwd fw700 ls-n15">
+							<span>크리스탈 10,000개</span>
+						</h3>
+					</div>
+					<div class="img-wrap">
+						<img src="../@resource/images/@temp/temp-popup-shop.png" alt="제품명">
+					</div>
+				</div>
+				<div class="popup-body">
+					<div class="popup-wrap">
+						<div class="form-wrap">
+							<form id="pointForm">
+								<fieldset class="fieldset">
+									<div class="field-wrap">
+										<dl class="field">
+											<dt>
+												<span>교환 수량</span>
+											</dt>
+											<dd>
+												<div class="number-wrap">
+													<button type="button" id="btnQuantityPrev" class="btn num-prev" disabled>
+														<i class="ico shop-add"></i>
+													</button>
+													<input type="number" id="inputQuantity" value="1" readonly>
+													<button type="button" id="btnQuantityNext" class="btn num-next">
+														<i class="ico shop-add"></i>
+													</button>
+												</div>
+											</dd>
+										</dl>
+										<!-- [D] 월 횟수 제한이 있는 경우 -->
+										<!-- <dl class="field">
+											<dt>
+												<span>교환 가능 횟수</span>
+											</dt>
+											<dd>
+												<span>월간 (<span>0</span>/5)</span>
+											</dd>
+										</dl> -->
+										<!-- // [D] 월 횟수 제한이 있는 경우 -->
+										<dl class="field">
+											<dt>
+												<span>교환 포인트</span>
+											</dt>
+											<dd>
+												<span id="changePoint">3,000P</span>
+											</dd>
+										</dl>
+										<dl class="field">
+											<dt>
+												<span>보유 포인트</span>
+											</dt>
+											<dd>
+												<span id="myPoint">21,000P</span>
+											</dd>
+										</dl>
+										<dl class="field points">
+											<dt class="fc-primary">
+												<strong>교환 후 포인트</strong>
+											</dt>
+											<dd class="fc-primary">
+												<strong id="lastPoint">8,000P</strong>
+											</dd>
+										</dl>
+									</div>
+
+									<div class="field actions">
+										<div class="notice-wrap bg">
+											<ul class="dot-list">
+												<li>
+													<span></span>
+													<p class="body04-rwd ls-n20">
+														구매하신 쿠폰은 쪽지함으로 전달 됩니다.
+													</p>
+												</li>
+											</ul>
+										</div>
+
+										<div class="checkable-wrap justify-center ta-c">
+											<label class="checkable-label">
+												<input type="checkbox" class="checkbox">
+												<div class="label-wrap">
+													<div class="label-box">
+														<button type="button" id="btnPolicy" class="btn policy">
+															<span>포인트 교환 정책</span>
+														</button>
+													</div>
+													<span>정책에 동의합니다.</span>
+												</div>
+											</label>
+										</div>
+										<div class="button-area center">
+											<button type="button"
+												class="btn gradient01 large subtit03-rwd fw700-600 w-full round-100">
+												<span>3,000 포인트 교환하기</span>
+											</button>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- [PUB] 팝업 닫기 버튼 -->
+			<button type="button" class="btn popup-close" onclick="isPopupClose('#popupShop')">
+				<i class="ico popup-close"></i>
+			</button>
+		</div>
+	</div>
+	<!-- // [POPUP] 포인트 교환 팝업 -->
+	 
+
+	<!-- [POPUP] 포인트 교환 진행 팝업 -->
+	<div id="popupShoping" class="overlay popup-shoping">
+		<div class="popup">
+			<div class="popup-header">
+				<div class="title-wrap ta-c">
+					<h3 class="title subtit01-rwd fw700 lh130">
+						<span>
+							포인트 교환 진행
+						</span>
+					</h3>
+				</div>
+			</div>
+			<div class="popup-body">
+				<div class="popup-wrap">
+					<div class="text-wrap">
+						<p class="text body03-rwd ls-n10 ta-c">
+							<span>해당 상품으로 교환 하시겠습니까?</span>
+						</p>
+					</div>
+					<div class="button-area center">
+						<button type="button"
+							class="btn line-primary large subtit04-rwd fw700-600 w-full round-100">
+							<span>교환 진행</span>
+						</button>
+						<button type="button"  onclick="isPopupClose('#popupShoping')"
+							class="btn solid-primary large subtit04-rwd fw700-600 w-full round-100">
+							<span>교환 취소</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- [PUB] 팝업 닫기 버튼 -->
+			<button type="button" class="btn popup-close" onclick="isPopupClose('#popupShoping')">
+				<i class="ico popup-close"></i>
+			</button>
+		</div>
+	</div>
+	<!-- // [POPUP] 포인트 교환 진행 팝업 -->
+
+
+	<!-- [POPUP] 포인트 교환 진행 팝업 -->
+	<div id="popupShopingComp" class="overlay popup-shoping">
+		<div class="popup">
+			<div class="popup-header">
+				<div class="title-wrap ta-c">
+					<h3 class="title subtit01-rwd fw700 lh130">
+						<span>
+							포인트 교환 완료
+						</span>
+					</h3>
+				</div>
+			</div>
+			<div class="popup-body">
+				<div class="popup-wrap">
+					<div class="text-wrap">
+						<p class="text body03-rwd ls-n10 ta-c">
+							<span>
+								포인트 교환이 완료 되었습니다. <br>
+								<strong class="fc-primary">쪽지함</strong>으로 해당 쿠폰이 발송 되었습니다.
+							</span>
+						</p>
+					</div>
+					<div class="button-area center">
+						<a href="../html/MS-0010.html"
+							class="btn line-primary large subtit04-rwd fw700-600 w-full round-100">
+							<span>쪽지함 이동</span>
+						</a>
+						<button type="button"  onclick="isPopupClose('#popupShopingComp')"
+							class="btn solid-primary large subtit04-rwd fw700-600 w-full round-100">
+							<span>계속 교환하기</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- [PUB] 팝업 닫기 버튼 -->
+			<button type="button" class="btn popup-close" onclick="isPopupClose('#popupShopingComp')">
+				<i class="ico popup-close"></i>
+			</button>
+		</div>
+	</div>
+	<!-- // [POPUP] 포인트 교환 완료 팝업 -->
+
+	<!-- [POPUP] 메시지 삭제 팝업 -->
+	<div id="popupTrash" class="overlay popup-trash">
+		<div class="popup">
+			<div class="popup-body">
+				<div class="popup-wrap">
+					<div class="text-wrap pack-down items-center gap-16">
+						<i class="ico mask-warning-big bg-primary"></i>
+						<p class="text ta-c body04-rwd fc-darkgray ls-n20-10">
+							<span>
+								휴지통에서 삭제 시 복구할 수 없습니다. <br>
+								쪽지를 삭제하시겠습니까?
+							</span>
+						</p>
+					</div>
+
+					<div class="button-area center">
+						<button type="button" onclick="isPopupClose('#popupTrash')" class="btn solid-primary large subtit04-rwd fw700-600 w-full round-100">
+							<span>취소</span>
+						</button>
+						<button type="button" id="btnMessDel" class="btn line-primary large subtit04-rwd fw700-600 w-full round-100">
+							<span>삭제</span>
+						</button>
+						
+					</div>
+				</div>
+			</div>
+			
+			<button type="button" class="btn popup-close" onclick="isPopupClose('#popupTrash')">
+				<i class="ico popup-close"></i>
+			</button>
+		</div>
+	</div>
+	<!-- // [POPUP] 메시지 삭제 팝업 -->
+
+
+	<!-- [JS] (Project JS Module) -->
+	<script src="../@resource/js/lib/imagesloaded.min.js"></script>
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+	<script>
+
+		/* {isLayoutPath} - 레이아웃 불러오기 */
+		isLayoutPath(function(){
+			
+			/* <isCurrent> - 메뉴 뎁스 체크 */
+			isCurrent(1,1);
+		});
+
+		/* [Document Ready] (DOM) */
+		/* Description: DOM 로드 시 실행 함수 */
+		$(function(){
+
+			// 바이트 체크 함수
+			fn_loadByte('#myIntroduction',300);
+
+			/* <Brower Evnet> - 로드 후 이벤트 */
+			const body = document.body;
+			body.classList.remove('loaded'); // 있다면 초기화 후
+			body.classList.add('loaded'); 	 // 초기화 이후 로드
+
+			/* <Scroll Reset> - 스크롤 새로고침 */
+			isScrollResetLenis();
+
+			/* <Lenis Scroll Stop> - Lenis Scroll 초기 정지 */
+			//window.lenis.stop(); 
+
+			
+			/* {GSAP Lib} - GSAP 모션 실행 함수 */
+			gsap.registerPlugin(ScrollTrigger); // 라이브러리 실행
+			let mm = gsap.matchMedia(); 		// 미디어 쿼리
+			fadeUpGsap(); 						// 페이드 업 실행 함수
+
+
+
+			/* <GSAP Refresh> - 모션 초기화 */
+			requestAnimationFrame(() => {
+				ScrollTrigger.refresh(true);
+			});
+		});
+		/* // [Document Ready] - DOM 로드 시 실행 함수 종료 */
+		
+
+		/* [Window Event] (Window) */
+		/* Description: 이벤트 함수 */
+		/* <Resizing> - 리사이징 */
+		let resizeTimer;
+		window.addEventListener('resize', function(){
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+
+				/* {GSAP Device Check} 디바이스 체크 */
+				
+
+				/* {GSAP Refresh} 모션 위치 감지,초기화 */
+				requestAnimationFrame(() => {
+					if(window.lenis){ 
+						window.lenis.resize();
+					}
+					ScrollTrigger.refresh(true);
+				});
+			}, 120);
+		});
+
+		/* <Orientationchange> - 방향 전환 */
+		window.addEventListener("orientationchange", () => {
+			setTimeout(() => {
+				if(window.lenis){ 
+					window.lenis.resize();
+				}
+				window.ScrollTrigger?.refresh();
+			}, 300);
+		});
+		/* // [Window Event] 이벤트 함수 종료 */
+	</script>
+
+</body>
+</html>

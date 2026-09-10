@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* [Button] (Button Component) */
+/* Description: 버튼 요소 */
+
+/* <Setting> - 버튼 설정 */
+button, .btn{
+	position: relative; cursor: pointer;
+	width: fit-content; margin: 0; padding: 0;
+
+	display: inline-flex; align-items: center;
+	justify-content: center;
+
+	text-align: center; vertical-align: middle;
+
+	border: 0 none; outline: none;
+	color: inherit; background-color: transparent;
+
+	font-size: inherit; 
+
+	transition: all 0.4s ease; appearance: none;
+	border-radius: 8px;
+}
+:is(button, .btn):focus-visible { outline: auto; }
+
+/* <Utility> - 버튼 유틸리티 */
+[class*="button-"] 			{
+	display: flex; 
+	align-items: center;
+}
+[class*="button-"].start   	{ justify-content: flex-start; }
+[class*="button-"].end     	{ justify-content: flex-end; }
+[class*="button-"].center  	{ justify-content: center; }
+[class*="button-"].between 	{ justify-content: space-between; }
+[class*="button-"].down    	{ flex-direction: column; }
+/* [RWD] (Responsive) 반응형 */
+@media all and (max-width: 767px) {
+	.btn:has(.fw700, strong),
+	.btn:has(.fw700, strong) span{ font-weight: var(--fw600) !important; }
+	[class*="button-"].mo-down { flex-direction: column; }
+}
+
+/* <State> - 버튼 상태 값 */
+.btn:disabled,
+.btn[disabled] {
+	color: var(--black); cursor: not-allowed;
+	background-color: var(--black-op-80);
+}
+
+/* <Size> - 버튼 사이즈 */
+.btn.xxsmall 	{
+	height: var(--xxsmall);
+	padding: 0 10px; 
+}
+.btn.xsmall 	{ 
+	height: var(--xsmall);
+	padding: 0 10px; 
+}
+.btn.small  	{ 
+	height: var(--small); 
+	padding: 0 14px; 
+}
+.btn.medium 	{ 
+	height: var(--medium);
+	padding: 0 16px; 
+}
+.btn.large  	{ 
+	height: var(--large); 
+	padding: 0 20px; 
+}
+.btn.xlarge 	{ 
+	height: var(--xlarge);
+	padding: 0 24px; 
+}
+.btn.large-fix  	{ 
+	height: var(--large); 
+	padding: 0 20px; 
+}
+.btn.xlarge-fix 	{ 
+	height: var(--xlarge);
+	padding: 0 24px; 
+}
+
+
+/* <Styles> - 버튼 스타일 */
+.btn[class*="line-"]	{ 
+	color: var(--white); 
+	background-color: transparent;
+}
+.btn.line-primary		{ background-color: var(--primary); }
+.btn.line-black			{ background-color: var(--black); }
+.btn.line-gray			{ background-color: var(--background_g); }
+.btn.line-white			{ color: var(--primary); background-color: var(--white); }
+
+.btn[class*="solid-"]	{ 
+	background-color: transparent;
+	border: 1px solid transparent;
+	
+}
+.btn.solid-primary		{ color: var(--primary); border-color: var(--primary); }
+.btn.solid-black		{ color: var(--black); border-color: var(--black); }
+.btn.solid-gray			{ color: var(--darkgray); border-color: var(--darkgray); }
+.btn.solid-lightgray	{ color: var(--darkgray); border-color: var(--lightgray); }
+.btn.solid-lightgray2	{ color: var(--darkgray); border-color: var(--lightgray2); }
+
+.btn.gradient01{
+	background: RGBA(72, 188, 255, 1);
+	background: linear-gradient(90deg,rgba(72, 188, 255, 1) 0%, rgba(111, 123, 255, 1) 50%, rgba(125, 95, 255, 1) 100%);
+	color: var(--white);
+}
+
+.btn.link	{}
+.btn.more	{ 
+	gap: 6px; color: var(--primary);
+	font-size: var(--subtit03-rwd); font-weight: var(--fw700);
+}
+.btn.more .ico{  }
+
+.btn.copy	{ width: 30px; border-radius: 50%; aspect-ratio: 1/1; }
+
+.btn.download	{ border-radius: 100px; gap: 4px;  }
+.btn.download .ico	{background-color: var(--primary) !important; transition: background-color 0.4s ease; }
+
+.button-swipers			{}
+.button-swipers .btn 	{
+	width: var(--medium); aspect-ratio: 1/1;
+	border-radius: 100px; border: 1px solid var(--lightgray2);
+	gap: 0px; background-color: var(--white);
+	box-shadow: 0px 0px 10px var(--black-op-14);
+}
+.button-swipers .btn .ico	{
+	background-size: cover; background-repeat: no-repeat;
+	background-position: center center;
+
+	-webkit-mask-position: center center;
+	mask-position: center center;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+
+	-webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'><mask id='mask0_1049_13010' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'><rect x='15.25' y='15.25' width='14.5' height='14.5' transform='rotate(-180 15.25 15.25)' fill='%23D9D9D9' stroke='black' stroke-width='1.5'/></mask><g mask='url(%23mask0_1049_13010)'><path d='M9.65625 13.5469L4.11717 8.00779L9.65625 2.46871' stroke='%23898E94' stroke-width='1.6'/></g></svg>");
+			mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'><mask id='mask0_1049_13010' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'><rect x='15.25' y='15.25' width='14.5' height='14.5' transform='rotate(-180 15.25 15.25)' fill='%23D9D9D9' stroke='black' stroke-width='1.5'/></mask><g mask='url(%23mask0_1049_13010)'><path d='M9.65625 13.5469L4.11717 8.00779L9.65625 2.46871' stroke='%23898E94' stroke-width='1.6'/></g></svg>");
+	
+	width: 20px; aspect-ratio: 1/1;
+	background-color: var(--darkgray);
+}
+.button-swipers .btn.prev	{ }
+.button-swipers .btn.next .ico	{ transform: rotate(180deg); }
+/* [Hover] 버튼 호버 시 */
+.btn:has(.motions, .output, .rotate-45) .ico { transition: transform 0.5s; }
+@media (any-hover: hover) and (any-pointer: fine) {
+	.btn.line-b:hover	{ background-color: var(--n-800); }
+
+	.button-swipers .btn:not(:disabled):hover { border-color: var(--primary); }
+	.button-swipers .btn:not(:disabled):hover .ico { background-color: var(--primary); }
+
+	.btn:has(.motions):hover .ico	{ transform: translateX(3px); }
+	.btn:has(.output):hover .ico	{ transform: translate(2px, -2px); }
+	.btn:has(.rotate-45):hover .ico	{ transform: rotate(-45deg);}
+
+	.btn.solid-primary:hover:not(.not-hover)		{ 
+		color: var(--white); border-color: var(--primary); 
+		background-color: var(--primary);
+	}
+	.btn.download:hover .ico{ background-color: var(--white) !important; }
+
+}
+
+/* <State> - 버튼 상태 값 */
+.btn:disabled,
+.btn[disabled] {
+	color: var(--darkgray); cursor: not-allowed;
+	background-color: var(--background_g);
+	border-color: var(--background_g);
+}
+/* // [Button] 버튼 요소 종료 */

@@ -1,0 +1,318 @@
+/* [Variable] (Project Variable Style) */
+/* Description: 프로젝트 변수 스타일 */
+
+:root{
+
+	/* <Browser View Port> - 브라우저 뷰 포트 */
+	--vh100: 		calc(var(--vh, 1vh) * 100);
+	--vhMin: 		900px;
+	
+	/* <Layout> - 레이아웃  */
+	--header: 		80px;
+
+	/* <Gutter & Inner & Gap> - 여백 */
+	--gutter:		clamp(28px,3.65vw,48px);
+	
+	--gap-2: 		2px;
+	--gap-3: 		3px;
+	--gap-4: 		4px;
+	--gap-5: 		5px;
+	--gap-6: 		6px;
+	--gap-8: 		8px;
+
+	--gap-10: 		10px;
+	--gap-12: 		12px;
+	--gap-14: 		14px;
+	--gap-15: 		15px;
+	--gap-16: 		16px;
+	--gap-18: 		18px;
+
+	--gap-20: 		20px;
+	--gap-22: 		22px;
+	--gap-24: 		24px;
+	--gap-28:		28px;
+
+	--gap-30:		30px;
+	--gap-34:		34px;
+	--gap-36:		36px;
+
+	--gap-40:		40px;
+	--gap-42:		42px;
+	--gap-44:		44px;
+	--gap-45:		45px;
+
+	--gap-50:		50px;
+	--gap-60:		60px;
+	--gap-70:		70px;
+	--gap-80:		80px;
+
+	--gap-110:		110px;
+	--gap-120:		120px;
+	--gap-130:		130px;
+	--gap-140:		140px;
+	--gap-150:		150px;
+	--gap-160:		160px;
+	--gap-240:		240px;
+
+	--gap-240-200: 	clamp(220px,28.65vw,240px);
+	--gap-240-180: 	clamp(200px,26.04vw,240px);
+	--gap-240-160: 	clamp(180px,23.44vw,240px);
+
+	--gap-160-120:	clamp(140px,18.23vw,160px);
+	--gap-160-80:	clamp(120px,15.63vw,160px);
+	--gap-100-80:	100px;
+
+	--gap-60-45: 	clamp(52px,6.77vw,60px);
+	--gap-60-40: 	clamp(52px,6.77vw,60px);
+
+	--gap-60-30: 	clamp(38px,4.95vw,60px);
+	--gap-50-45: 	50px;
+	--gap-50-30: 	clamp(38px,4.95vw,50px);
+	--gap-40-28:	clamp(32px,4.17vw,40px);
+	--gap-40-24:	clamp(30px,3.91vw,40px);
+	--gap-40-18:	clamp(26px,3.39vw,40px);
+
+	--gap-30-20:	30px;
+	--gap-30-15:	clamp(20px,1.95vw,30px);
+	--gap-30-10:	clamp(16px,2.08vw,30px);
+
+	--gap-24-20: 	24px;
+	--gap-24-14: 	clamp(18px,2.34vw,24px);
+	--gap-24-12: 	clamp(16px,2.08vw,24px);
+
+	--gap-20-25:	20px;
+	--gap-20-10:	clamp(16px,2.08vw,20px);
+	--gap-18-10: 	clamp(14px,1.82vw,18px);
+	--gap-18-8: 	clamp(14px,1.82vw,18px);
+	--gap-14-7: 	clamp(11px,1.43vw,14px);
+	--gap-14-2: 	clamp(7px,0.91vw,14px);
+	--gap-12-10: 	12px;
+	--gap-12-7: 	12px;
+	--gap-8-6: 		8px;
+	
+	/* <Line Height> - 텍스트 라인 높이 */
+	--lh100: 		1;
+	--lh110: 		1.1;
+	--lh120: 		1.2;
+	--lh125: 		1.25;
+	--lh130: 		1.3;
+	--lh140: 		1.4;
+	--lh150: 		1.5;
+	--lh160: 		1.6;
+	--lh170: 		1.7;
+	--lh180: 		1.8;
+	
+	--lh-125-140: 	1.25;
+	--lh-125-160: 	1.25;
+	--lh-140-160: 	1.4;
+	
+	/* <Opacity> - 불투명도 */
+	--op-10: 		0.1;
+	--op-20: 		0.2;
+	--op-30: 		0.3;
+	--op-40: 		0.4;
+	--op-50: 		0.5;
+	--op-60: 		0.6;
+	--op-70: 		0.7;
+	--op-80: 		0.8;
+
+	/* <Basic Size> - 기본 사이즈 */
+	--xxsmall: 		24px;
+	--xsmall: 		28px;
+	--small	: 		40px;
+	--medium: 		48px;
+	--large	: 		52px;
+	--xlarge: 		62px;
+	
+	--large-rwd	: 	52px;
+	--xlarge-rwd: 	62px;
+
+	/* {Font Variable} - 폰트 관련 변수 */
+	/* <Weight> - 폰트 굵기 */
+	--fw200: 		200;
+	--fw300: 		300;
+	--fw400: 		400;
+	--fw500: 		500;
+	--fw600: 		600;
+	--fw700: 		700;
+	--fw800: 		800;
+	--fw900: 		900;
+
+	--fw500-600: 	500;
+	--fw600-500: 	600;
+	--fw500-700: 	500;
+	--fw700-600: 	700;
+	--fw700-500: 	700;
+
+	/* <Size> - 폰트 사이즈 */
+	--head01:			52px;
+	--head01-rwd:		clamp(38px,4.95vw,52px); /* fs-52-30 */
+	--head02:			42px;
+	--head02-rwd:		clamp(36px,4.69vw,42px); /* fs-42-30 */
+	--head03:			36px;
+	--head03-rwd:		clamp(32px,4.17vw,36px); /* fs-36-28 */
+	--head04:			32px;
+	--head04-rwd:		clamp(28px,3.65vw,32px); /* fs-32-24 */
+	--head05:			30px;
+	--head05-rwd:		clamp(26px,3.39vw,30px); /* fs-30-22 */
+	--head06:			28px;
+	--head06-rwd:		clamp(24px,3.13vw,28px); /* fs-28-20 */
+	--head07:			24px;
+	--head07-rwd:		clamp(22px,2.86vw,24px); /* fs-24-18 */
+
+	--subtit01:			22px;
+	--subtit01-rwd:		22px; /* fs-22-20 */
+	--subtit02:			20px;
+	--subtit02-rwd:		20px; /* fs-20-18 */
+	--subtit03:			18px;
+	--subtit03-rwd:		18px; /* fs-18-16 */
+	--subtit04:			16px;
+	--subtit04-rwd:		16px; /* fs-16-14 */
+
+	--body01:			22px;
+	--body01-rwd:		clamp(20px,1.95vw,22px); /* fs-22-18 */
+	--body02:			20px;
+	--body02-rwd:		20px; /* fs-20-18 */
+	--body03:			18px;
+	--body03-rwd:		18px; /* fs-36-28 */
+	--body04:			16px;
+	--body04-rwd:		16px; /* fs-18-16 */
+	--body05:			14px;
+
+	--caption01:		10px;
+	--caption02:		12px;
+	--caption03:		13px;
+
+	--en-head: 			50px;
+	--en-head-rwd:		clamp(44px,5.73vw,50px); /* fs-50-40 */
+	--en-subtit: 		24px;
+
+	
+	/* <Family> - 폰트 종류 */
+	--ff-prd:  'Pretendard Variable', -apple-system, BlinkMacSystemFont, sans-serif;
+	--ff-out: 'Outfit Variable', system-ui, sans-serif;
+
+	/* <Letter Spacing> */
+	--ls-n10: 		-1%;
+	--ls-n13: 		-1.3%;
+	--ls-n15: 		-1.5%;
+	--ls-n20: 		-2%;
+	--ls-n25: 		-2.5%;
+
+	--ls-n10-20: 	-1%;
+	--ls-n15-10: 	-1.5%;
+	--ls-n15-20: 	-1.5%;
+	--ls-n20-10: 	-2%;
+	--ls-n20-15: 	-2%;
+	--ls-n25-20: 	-2.5%;
+	
+	
+}
+
+/* [RWD] (Responsive) 반응형 */
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+	:root{
+		/* <Layout> - 레이아웃  */
+		/* --header: 		clamp(80px,7.81vw,100px); */
+	}
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+	:root{
+		--header: 		clamp(65px,8.46vw,80px);
+	}
+}
+@media all and (max-width: 1023px) {
+	:root{}
+}
+@media all and (max-width: 767px) {
+	:root{
+		
+		/* <Layout> - 레이아웃  */
+		--header: 		50px;
+
+		/* <Gutter & Inner & Gap> - 여백 */
+		--gutter: 		20px;
+
+		--gap-240-200: 	200px;
+		--gap-240-180: 	180px;
+		--gap-240-160: 	160px;
+		--gap-160-120:	120px;
+		--gap-160-80:	80px;
+		--gap-100-80:	80px;
+
+		--gap-60-45: 	45px;
+		--gap-60-40: 	40px;
+		--gap-60-30: 	30px;
+		--gap-50-45: 	45px;
+		--gap-50-30: 	30px;
+		
+		--gap-40-28:	28px;
+		--gap-40-24:	24px;
+		--gap-40-18:	18px;
+
+		--gap-30-20:	20px;
+		--gap-30-15:	15px;
+		--gap-30-10:	10px;
+
+		--gap-24-20: 	20px;
+		--gap-24-14: 	14px;
+		--gap-24-12: 	12px;
+
+		--gap-20-25:	25px;
+		--gap-20-10:	10px;
+
+		--gap-18-10:	10px;
+		--gap-18-8: 	8px;
+		--gap-14-7: 	7px;
+		--gap-14-2: 	2px;
+		--gap-12-10: 	10px;
+		--gap-12-7: 	7px;
+		--gap-8-6: 		8px;
+
+		/* <Line Height> - 텍스트 라인 높이 */
+		--lh-125-140: 	1.4;
+		--lh-125-160: 	1.6;
+		--lh-140-160: 	1.6;
+
+		/* <Basic Size> - 기본 사이즈 */
+		--large-rwd	: 	42px;
+		--xlarge-rwd: 	52px;
+
+		/* {Font Variable} - 폰트 관련 변수 */
+		/* <Weight> - 폰트 굵기 */
+		--fw500-700: 	700;
+		--fw500-600: 	600;
+		--fw600-500: 	500;
+		--fw700-600: 	600;
+		--fw700-500: 	500;
+		
+
+		/* <Size> - 폰트 사이즈 */
+		--head01-rwd:		30px;
+		--head02-rwd:		30px;
+		--head03-rwd:		28px;
+		--head04-rwd:		24px;
+		--head05-rwd:		22px;
+		--head06-rwd:		20px;
+		--head07-rwd:		18px;
+
+		--subtit01-rwd:		20px;
+		--subtit02-rwd:		18px;
+		--subtit03-rwd:		16px;
+		--subtit04-rwd:		14px;
+
+		--body01-rwd:		18px;
+		--body02-rwd:		18px;
+		--body03-rwd:		16px;
+		--body04-rwd:		14px;
+
+		/* <Letter Spacing> */
+		--ls-n10-20: 	-2%;
+		--ls-n15-10: 	-1%;
+		--ls-n15-20: 	-2%;
+		--ls-n20-15: 	-1.5%;
+		--ls-n20-10: 	-1%;
+		--ls-n25-20: 	-2%;
+	}
+}
+/* // [Variable] 프로젝트 변수 스타일 종료 */

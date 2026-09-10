@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>COOKIERUN CREATORFAMILY</title>
+
+	<!-- Open Graph (카카오, 페북, 슬랙 등) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="COOKIERUN CREATORFAMILY">
+	<meta property="og:description" content="COOKIERUN CREATORFAMILY">
+	<meta property="og:image" content="../@resource/images/opengraph.jpg">
+	<meta property="og:url" content="">
+
+	<!-- Twitter 카드 -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="COOKIERUN CREATORFAMILY">
+	<meta name="twitter:description" content="COOKIERUN CREATORFAMILY">
+	<meta name="twitter:image" content="../@resource/images/opengraph.jpg">
+
+	<link rel="icon" href="../@resource/images/favicon.svg" sizes="any">
+	<link rel="apple-touch-icon" sizes="192x192" href="../@resource/images/favicon.svg">
+
+	<link rel="stylesheet" href="../@resource/css/cookierun.css">
+	<link rel="stylesheet" href="../@resource/css/cookierun_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/cookierun.js"></script>
+
+</head>
+<body>
+	
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="content pack-center" style="height: 100vh;">
+				
+				<div class="gutter">
+					<div class="max-1280">
+						<!-- [D] 실제 팝업 시 popupCookie 통일 / 구분을 위한 영문팝업 -->
+						<div class="button-area pack-wrap gap-12">
+							<button type="button" onclick="isPopupOpen('#popupCookie')"
+									class="btn solid-primary large round-100">
+								<span>메인 팝업</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+			</main>
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+
+	<!-- [POPUP] 패밀리 신청하기 팝업 -->
+	<div id="popupCookie" class="overlay popup-cookie">
+		<div class="popup">
+			<div class="popup-body">
+				<div id="swiperCookie" class="swiper">
+					<ul class="swiper-wrapper">
+						<!-- [D] 링크 있을때 -->
+						<li class="swiper-slide">
+							<a href="javascript:void(0);" target="_blank">
+								<div class="img-wrap">
+									<img src="../@resource/images/@temp/temp-cookie.png" alt="이벤트 내용">
+								</div>
+							</a>
+						</li>
+
+						<!-- [D] 링크 없을때 -->
+						<li class="swiper-slide">
+							<div class="img-wrap">
+								<img src="../@resource/images/@temp/temp-cookie.png" alt="이벤트 내용">
+							</div>
+						</li>
+					</ul>
+					<div class="swiper-pagination customer "></div>
+				</div>
+
+				<div class="button-area">
+					<button type="button" id="btnCloseToday" class="btn close-today">
+						<span>오늘 하루 그만 보기</span>
+						<!-- <span>Don't show again today</span> -->
+					</button>
+					<button type="button" class="btn popup-close" onclick="isPopupClose('#popupCookie')">
+						<span>닫기</span>
+						<!-- <span>Close</span> -->
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // [POPUP] 패밀리 신청하기 팝업 -->
+
+
+
+
+	<!-- [JS] (Project JS Module) -->
+	<script src="../@resource/js/lib/imagesloaded.min.js"></script>
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+	<script>
+
+		/* {isLayoutPath} - 레이아웃 불러오기 */
+		isLayoutPath(function(){
+			
+			/* <isCurrent> - 메뉴 뎁스 체크 */
+			isCurrent(1,1);
+		});
+
+		/* [Document Ready] (DOM) */
+		/* Description: DOM 로드 시 실행 함수 */
+		$(function(){
+
+			
+
+			/* <Brower Evnet> - 로드 후 이벤트 */
+			const body = document.body;
+			body.classList.remove('loaded'); // 있다면 초기화 후
+			body.classList.add('loaded'); 	 // 초기화 이후 로드
+
+			/* <Scroll Reset> - 스크롤 새로고침 */
+			isScrollResetLenis();
+
+			/* <Lenis Scroll Stop> - Lenis Scroll 초기 정지 */
+			//window.lenis.stop(); 
+
+			
+			const cookieSwiper = new Swiper('#swiperCookie', {
+				slidesPerView: 'auto',
+				pagination: {
+					el: '#swiperCookie .swiper-pagination',
+					clickable: true,
+				}
+			})
+
+			/* {GSAP Lib} - GSAP 모션 실행 함수 */
+			gsap.registerPlugin(ScrollTrigger); // 라이브러리 실행
+			let mm = gsap.matchMedia(); 		// 미디어 쿼리
+			fadeUpGsap(); 						// 페이드 업 실행 함수
+
+
+
+			/* <GSAP Refresh> - 모션 초기화 */
+			requestAnimationFrame(() => {
+				ScrollTrigger.refresh(true);
+			});
+		});
+		/* // [Document Ready] - DOM 로드 시 실행 함수 종료 */
+		
+
+		/* [Window Event] (Window) */
+		/* Description: 이벤트 함수 */
+		/* <Resizing> - 리사이징 */
+		let resizeTimer;
+		window.addEventListener('resize', function(){
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+
+				/* {GSAP Device Check} 디바이스 체크 */
+				
+
+				/* {GSAP Refresh} 모션 위치 감지,초기화 */
+				requestAnimationFrame(() => {
+					if(window.lenis){ 
+						window.lenis.resize();
+					}
+					ScrollTrigger.refresh(true);
+				});
+			}, 120);
+		});
+
+		/* <Orientationchange> - 방향 전환 */
+		window.addEventListener("orientationchange", () => {
+			setTimeout(() => {
+				if(window.lenis){ 
+					window.lenis.resize();
+				}
+				window.ScrollTrigger?.refresh();
+			}, 300);
+		});
+		/* // [Window Event] 이벤트 함수 종료 */
+	</script>
+
+</body>
+</html>
