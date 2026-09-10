@@ -1,0 +1,158 @@
+@charset "utf-8";
+/* [Icon] (Project Icon) */
+/* Description: 프로젝트 사용 아이콘 */
+
+/* <Setting> - 아이콘 설정 */
+.ico		{
+	display: flex; aspect-ratio: 1/1;
+	background-position: center;
+	background-repeat: no-repeat; background-size: cover;
+	-webkit-mask-size: cover;
+			mask-size: cover;
+	
+}
+.ico:is([class="mask-"]) { 
+	-webkit-mask: url() no-repeat 50% 50%;
+			mask: url() no-repeat 50% 50%;
+	-webkit-mask-size: 100% 100%;
+			mask-size: 100% 100%;
+}
+
+/* {Background} - 아이콘 백그라운드 */
+/* <Basic> - 기본 */
+
+/* 24px */
+.ico:is(
+	.arrow-r, .chev-up, .outlink
+)				{ width: 24px; }
+.ico.arrow-r	{ background-image: url("../../images/@ico/arrow-right.svg"); }
+.ico.chev-up	{ background-image: url("../../images/@ico/chev-up.svg"); }
+.ico.outlink	{ background-image: url("../../images/@ico/outlink.svg"); }
+
+/* 40px */
+.ico:is()		{ width: 40px; }
+.ico.download	{ background-image: url("../../images/@ico/download.svg"); }
+
+/* 60px */
+.ico:is(
+	.arrow-r-big
+)					{ width: 60px; }
+.ico.arrow-r-big	{ background-image: url("../../images/@ico/arrow-right_big.svg"); }
+
+
+/* 120px */
+.ico:is(
+	[class*="task-"]
+)					{ width: 120px; }
+.ico.task-process01	{ background-image: url("../../images/@ico/task-process01.png"); }
+.ico.task-process02	{ background-image: url("../../images/@ico/task-process02.png"); }
+.ico.task-process03	{ background-image: url("../../images/@ico/task-process03.png"); }
+.ico.task-process04	{ background-image: url("../../images/@ico/task-process04.png"); }
+.ico.task-process05	{ background-image: url("../../images/@ico/task-process05.png"); }
+.ico.task-process06	{ background-image: url("../../images/@ico/task-process06.png"); }
+
+/* <Etc> - 기타 */
+.ico.logos{
+	width: 15px; aspect-ratio: 15/24;
+	background-image: url("");
+}
+
+/* {Mask} - 아이콘 마스크 */
+/* <Basic> - 기본 */
+
+/* 20px */
+.ico:is(
+	.mask-check
+)							{ width: 20px; }
+.ico.mask-check				{
+	-webkit-mask-image: url("../../images/@ico/check");
+			mask-image: url("../../images/@ico/check.svg");
+}
+
+/* 24px */
+.ico:is(
+	.mask-menu, .mask-close, .mask-search, [class*="mask-sns-"], 
+	.mask-arrow-r, .mask-chev-r
+)							{ width: 24px; }
+
+.ico.mask-menu				{
+	-webkit-mask-image: url("../../images/@common/menu.svg");
+			mask-image: url("../../images/@common/menu.svg");
+}
+.ico.mask-cirClose			{
+	-webkit-mask-image: url("../../images/@common/close-circle.svg");
+			mask-image: url("../../images/@common/close-circle.svg");
+}
+.ico.mask-close				{
+	-webkit-mask-image: url("../../images/@common/close.svg");
+			mask-image: url("../../images/@common/close.svg");
+}
+.ico.mask-search	{
+	-webkit-mask-image: url("../../images/@common/search.svg");
+			mask-image: url("../../images/@common/search.svg");
+}
+
+.ico.mask-sns-01				{
+	-webkit-mask-image: url("../../images/@common/sns-01.svg");
+			mask-image: url("../../images/@common/sns-01.svg");
+}
+.ico.mask-sns-02				{
+	-webkit-mask-image: url("../../images/@common/sns-02.svg");
+			mask-image: url("../../images/@common/sns-02.svg");
+}
+.ico.mask-sns-03				{
+	-webkit-mask-image: url("../../images/@common/sns-03.svg");
+			mask-image: url("../../images/@common/sns-03.svg");
+}
+.ico.mask-sns-04				{
+	-webkit-mask-image: url("../../images/@common/sns-04.svg");
+			mask-image: url("../../images/@common/sns-04.svg");
+}
+.ico.mask-sns-05				{
+	-webkit-mask-image: url("../../images/@common/sns-05.svg");
+			mask-image: url("../../images/@common/sns-05.svg");
+}
+.ico.mask-sns-06				{
+	-webkit-mask-image: url("../../images/@common/sns-06.svg");
+			mask-image: url("../../images/@common/sns-06.svg");
+}
+.ico.mask-sns-07				{
+	-webkit-mask-image: url("../../images/@common/sns-07.svg");
+			mask-image: url("../../images/@common/sns-07.svg");
+}
+.ico.mask-arrow-r	{
+	-webkit-mask-image: url("../../images/@ico/arrow-right.svg");
+			mask-image: url("../../images/@ico/arrow-right.svg");
+}
+.ico.mask-chev-r	{
+	-webkit-mask-image: url("../../images/@ico/chev-right.svg");
+			mask-image: url("../../images/@ico/chev-right.svg");
+}
+
+
+/* <Etc> - 기타 */
+.ico.mask-logos{
+	width: 15px; aspect-ratio: 15/24;
+	-webkit-mask-image: url("");
+			mask-image: url("");
+}
+
+/* <Size> - 아이콘 사이즈 */
+.ico-20			{ width: 20px; }
+.ico-24			{ width: 24px; }
+.ico-24-16		{ width: 24px; }
+
+.ico-30			{ width: 30px; }
+.ico-32			{ width: 32px; }
+.ico-40			{ width: 40px; }
+.ico-40-24		{ width: 40px; }
+.ico-60			{ width: 60px; }
+
+/* [RWD] (Responsive) 반응형 */
+@media all and (max-width:767px) {
+	.ico-24-16		{ width: 16px; }
+	.ico-40-24		{ width: 24px; }
+
+	.ico:is( [class*="task-"]) { width: 80px; }
+}
+/* // [Icon] 프로젝트 사용 아이콘 종료 */

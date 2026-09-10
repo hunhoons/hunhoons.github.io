@@ -1,0 +1,255 @@
+@charset "utf-8";
+/* [Form] (Form Component) */
+/* Description: 폼 요소 */
+
+/* <Setting> - 폼 설정 */
+form, fieldset, legend,
+input, select, textarea, label				{ position: relative; box-sizing: border-box; }
+input, select, textarea,
+input::-webkit-search-cancel-button,
+input::-webkit-calendar-picker-indicator	{
+	outline: none; border:0; 
+	border-radius: 0; color: var(--black);
+	-webkit-appearance:none;
+			appearance:none;
+}
+
+fieldset	{ min-width: 0; margin: 0; padding: 0;  border: 0;  }
+legend		{ display: table; padding: 0; }
+label		{ display: inline-block;  cursor: pointer; }
+
+input, select		{ overflow: hidden; }
+input, textarea		{ caret-color: var(--black); }
+select::-ms-expand	{ display: none; }
+::placeholder		{ color: var(--gray-04); }
+
+:is(input, select, textarea):focus				{ outline: 2px solid transparent; }
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button 	{
+	margin: 0;
+	-webkit-appearance: none; 
+			appearance:none;
+}
+input[type=number]								{ -moz-appearance: textfield; }
+input[type="date"]::-webkit-clear-button,
+input[type="search"]::-webkit-search-cancel-button {
+	position: relative; right: 0px; 
+	width: 24px; aspect-ratio: 1/1;
+	background: url('../../images/@common/close-circle.svg') center center / cover no-repeat;
+	-webkit-appearance: none; 
+			appearance: none;
+}
+
+/* <State> - 폼 상태 값 */
+:is(.input, .select, .textarea):focus		{ border-color: none; }
+:is(.input, .select, .textarea):disabled,
+:is(.input, .select, .textarea)[disabled]	{ color: var(--gray-08);  }
+
+/* <Size> - 폼 사이즈 */
+:is(.input, .select).xsmall{ 
+	height: var(--xsmall);
+	padding: 0 20px;
+}
+:is(.input, .select).small { 
+	height: var(--small); 
+	padding: 0 20px;
+}
+:is(.input, .select).medium{ 
+	height: var(--medium);
+	padding: 0 22px;
+}
+:is(.input, .select).large { 
+	height: var(--large); 
+	padding: 0 20px;
+}
+:is(.input, .select).xlarge { 
+	height: var(--xlarge); 
+	padding: 0 20px;
+}
+
+/* <Styles> - 폼 스타일 */
+.input, .select, .textarea{ border-radius: 0px; color: var(--gray-08); }
+
+/* <Input> - 폼 인풋 */
+.input			{ }
+.input.under	{
+	border: none; 
+	border-bottom: 1px solid var(--gray-04);
+}
+
+/* <Select> - 폼 셀렉트박스 */
+.select{
+	background: #fff url("../../images/@common/select.svg") no-repeat calc(100% - 4px) 50%; 
+	background-size: 20px 20px; vertical-align: middle;
+}
+.select:is(.xsmall, .small, .medium, .large, .xlarge)	{ padding-right: 24px; }
+
+/* <Textarea> - 폼 텍스트에리어 */
+.textarea{ padding: 20px; resize: none; }
+.textarea::-webkit-scrollbar		{ width: 4px; }
+.textarea::-webkit-scrollbar-thumb	{ background-color: var(--black-op-60); }
+.textarea::-webkit-scrollbar-track	{ background-color: var(--white-op-60); }
+
+
+/* {Checkbox & Radio} - 폼 체크박스 & 라디오 */
+.checkbox, .radio{
+	overflow: hidden; position: relative;
+	width: 20px; aspect-ratio: 1/1; margin: 0;
+	vertical-align: middle; background-color: transparent;
+}
+:is(.checkbox, .radio) + .label			{ color: var(--black); }
+
+.checkbox::before, .radio::before, 
+.checkbox::after, .radio::after			{ content: ''; display: block; }
+
+.checkbox::before, .radio::before		{ /* 외부 컬러 & 선 */
+	width: 100%; height: 100%; background-color: var(--white); 
+	border: 1px solid var(--black); box-sizing: border-box;
+	transition: all 0.2s ease;
+}
+.checkbox::after, .radio::after			{  /* 내부 컬러 & 효과 */
+	position: absolute; top: 50%; left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	mask-size: contain; background-color: transparent;
+	transition: all 0.2s ease;
+}
+
+.checkbox:after							{ 
+	width: 12px; height: 12px;
+	-webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 12'%3E%3Cpath d='M13.6823 0.768948C14.0861 1.14578 14.1079 1.77857 13.7311 2.18232L5.33106 11.1823C5.14193 11.385 4.87719 11.5 4.6 11.5C4.32282 11.5 4.05807 11.385 3.86895 11.1823L0.268948 7.32518C-0.107886 6.92143 -0.0860652 6.28864 0.317686 5.91181C0.721436 5.53497 1.35423 5.55679 1.73106 5.96054L4.6 9.03441L12.2689 0.817685C12.6458 0.413935 13.2786 0.392114 13.6823 0.768948Z'/%3E%3C/svg%3E") no-repeat 50% 50%;
+			mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 12'%3E%3Cpath d='M13.6823 0.768948C14.0861 1.14578 14.1079 1.77857 13.7311 2.18232L5.33106 11.1823C5.14193 11.385 4.87719 11.5 4.6 11.5C4.32282 11.5 4.05807 11.385 3.86895 11.1823L0.268948 7.32518C-0.107886 6.92143 -0.0860652 6.28864 0.317686 5.91181C0.721436 5.53497 1.35423 5.55679 1.73106 5.96054L4.6 9.03441L12.2689 0.817685C12.6458 0.413935 13.2786 0.392114 13.6823 0.768948Z'/%3E%3C/svg%3E") no-repeat 50% 50%;
+	
+}
+.checkbox::before						{ border-radius: 2px; }
+
+.radio::after							{ width: 8px; height: 8px; }
+.radio, .radio::before, .radio::after	{ border-radius: 100px; }
+
+/* <Checked> - 체크 했을 떄 */
+.checkbox:checked:before,
+.radio:checked::before 	{ /* Checked 시 Border & Background Color 변경 */
+	border-color: var(--black-op-60);
+	background-color: var(--black);
+}
+.checkbox:checked::after,
+.radio:checked::after 	{ /* Checked 시 Icon & Background Color 변경 */
+	background-color: var(--white);
+	transform: translate(-50%, -50%) scale(1);
+}
+
+/* <State> - 체크박스 & 라디오 상태 */
+.checkbox:checked:disabled:before,
+.radio:checked:disabled:before		{
+	border-color: var(--black);
+	background-color: var(--black);
+}
+.checkbox:checked:disabled:after,
+.radio:checked:disabled:after		{
+	background-color: var(--black);
+}
+:is(.checkbox, .radio):disabled + .label{
+	color: var(--black);
+	cursor: no-drop;
+}
+/* // {Checkbox & Radio} - 폼 체크박스 & 라디오 종료 */
+
+
+/* {Field & labels} - 폼 필드 & 라벨 */
+.field-group,
+.checkable-group			{ display: flex; flex-direction: column; }
+
+/* <Forms> - 기본 */
+.field-wrap					{ display: flex; flex-direction: column; }
+.field						{ }
+.field .insert				{ }
+
+/* <Checkbox & Radio> - 체크박스 & 라디오 */
+.checkable-wrap				{
+	display: flex; align-items: center;
+	flex-wrap: wrap; gap: 10px 20px;
+}
+
+/* <Labels> - 라벨 태그에 사용 */
+[class*="-label"]			{ display: flex; gap: 10px; }
+[class*="-label"].down		{ flex-direction: column; }
+[class*="-label"] .label	{ width: 100%; color: var(--gray-08); letter-spacing: -1.5%; }
+
+.form-label{
+	display: flex; flex-direction: column;
+	gap: 20px;
+}
+.form-label.under-label{
+	height: var(--xlarge); align-items: center; flex-direction: unset;
+	gap: 0px; border-bottom: 1px solid var(--bg-02);
+}
+.form-label.under-label .label	{ width: clamp(75px,9.77vw,100px); }
+.form-label.under-label .input	{ width: calc(100% - clamp(75px,9.77vw,100px)); }
+.form-label.under-label:has(.input:focus){ border-color: var(--gray-08); }
+
+.checkable-label{ display: flex; gap: 10px; }
+/* // {Field & labels} - 폼 필드 & 라벨 종료 */
+
+/* <Search Form> - 검색 공통 */
+.search-area		{}
+.search-wrap		{ 
+	position: relative; 
+	height: var(--large); padding-inline: 20px;
+}
+.search-wrap input			{ width: calc(100% - 40px); height: 100%; padding-right: 10px; }
+.search-wrap input[type="search"]::-webkit-search-cancel-button{ right: -10px; }
+.search-wrap .btn.search	{ position: absolute; top: 0; right: 0; width: 60px; height: 100%; }
+@media all and (max-width: 767px) {
+	.search-wrap				{ height: 48px; padding-inline: 10px; }
+	.search-wrap input			{ width: calc(100% - 38px); }
+	.search-wrap input[type="search"]::-webkit-search-cancel-button{ right: -5px; }
+	.search-wrap .btn.search	{ width: 48px; }
+}
+
+/* <File Upload> - 파일 업로드 */
+.upload-label{
+	width: 100%; height: var(--xlarge); padding-inline: 0;
+	justify-content: space-between; cursor: pointer;
+	border-bottom: 1px solid var(--gray-08);
+}
+
+.upload-label #btnUpload{ font-size: var(--fs-20-16); color: var(--gray-08); }
+.upload-label #btnUpload .filedel{ width: 40px; }
+.upload-label #btnUpload .filedel,
+.upload-label #btnUpload.active .ico.download{display: none !important;}
+.upload-label #btnUpload.active .filedel{display: flex !important;}
+
+/* <TAG Checkbox> - 태그 타입 체크박스 */
+.tagbox-label{ flex-wrap: wrap; }
+.tag-label 		{
+	width: fit-content; height: var(--medium); padding-inline: clamp(24px,3.13vw,34px);
+	display: flex; align-items: center; justify-content: center;
+	color: var(--gray-08); font-weight: 400; font-size: var(--fs-18-14);
+	background-color: var(--gray-01); transition: all 0.25s;
+	border-radius: 4px; gap: 0;
+}
+.tag-label .ico{transform: scale(0); width: 0; transition: all 0.25s;}
+.tag-label:has(input[type="radio"]:checked, input[type="checkbox"]:checked){
+	background-color: var(--gray-08); color: var(--white);
+}
+.tag-label:has(input[type="radio"]:checked, input[type="checkbox"]:checked) .ico{
+	width: 20px; transform: scale(1); margin-right: 4px;
+}
+@media all and (min-width: 768px) {
+	.tagbox-label	{ padding-block: 6px; }
+}
+
+/* <Checkable Boxed> - 개인정보 처리방침 */
+.checkable-label.boxed{ 
+	width: 100%; height: var(--xlarge);
+	display: flex; align-items: center;
+	justify-content: center; color: var(--gray-04);
+	background-color: var(--gray-01); border-radius: 4px;
+	font-size: var(--fs-18-16); gap: var(--gap-10);
+}
+.checkable-label.boxed *{ transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) ; }
+
+.checkable-label.boxed .btn{ font-size: var(--fs-18-16); }
+.checkable-label.boxed:has(input[type="checkbox"]:checked){ color: var(--gray-08 ); }
+.checkable-label.boxed:has(input[type="checkbox"]:checked) .ico{ background-color: var(--gray-08); }
+
+/* // [Form] 폼 요소 종료 */

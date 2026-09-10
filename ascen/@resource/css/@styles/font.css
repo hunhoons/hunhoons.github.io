@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* [Font] (Project Font Style) */
+/* Description: 프로젝트 폰트 스타일 */
+
+/* <SUIT> - 수이트 */
+@font-face {
+	font-family: 'SUIT Variable';
+	font-weight: 100 900;
+	src: local('SUIT Variable'),
+		 url('../../fonts/Suit/SUIT-Variable.woff2') format('woff2-variations'),
+		 url('../../fonts/Suit/SUIT-Variable.ttf') format('truetype');
+	unicode-range: U+AC00-D7A3; /* 한글 유니코드 범위 */
+}
+
+/* <Montserrat> - 몬세라트 */
+@font-face {
+	font-family: 'Montserrat Variable';
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+	src: local('Montserrat Variable'), 
+		 url('../../fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('woff2-variations'),
+		 url('../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+	unicode-range: U+0020-007E; /* 기본 라틴 (영어/숫자/기호) */
+}
+
+/* <Mongolian Baiti> - 몽골어 */
+@font-face {
+	font-family: 'MongolianBaiti';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: local('MongolianBaiti'), 
+		 url('../../fonts/MongolianBaiti/MongolianBaiti.woff2') format('woff2'),
+		 url('../../fonts/MongolianBaiti/MongolianBaiti.ttf') format('truetype'),
+}
+
+/* <NanumMyeongjo> - 나눔명조 */
+@font-face {
+	font-family: 'NanumMyeongjo';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: local('NanumMyeongjo'), 
+		 url('../../fonts/NanumMyeongjo/NanumMyeongjo.woff2') format('woff2'),
+		 url('../../fonts/NanumMyeongjo/NanumMyeongjo.ttf') format('truetype'),
+		 url('../../fonts/NanumMyeongjo/NanumMyeongjo.otf') format('opentype');
+}
+@font-face {
+	font-family: 'NanumMyeongjo';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: local('NanumMyeongjo'), 
+		 url('../../fonts/NanumMyeongjo/NanumMyeongjoBold.woff2') format('woff2'),
+		 url('../../fonts/NanumMyeongjo/NanumMyeongjoBold.ttf') format('truetype'),
+		 url('../../fonts/NanumMyeongjo/NanumMyeongjoBold.otf') format('opentype');
+}
+/* // [Font] 프로젝트 폰트 스타일 종료 */

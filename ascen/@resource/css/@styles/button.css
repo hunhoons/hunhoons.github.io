@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* [Button] (Button Component) */
+/* Description: 버튼 요소 */
+
+/* <Setting> - 버튼 설정 */
+button, .btn{
+	position: relative; cursor: pointer;
+	width: fit-content; margin: 0; padding: 0;
+
+	display: inline-flex; align-items: center;
+	justify-content: center;
+
+	text-align: center; vertical-align: middle;
+
+	border: 0 none; outline: none;
+	color: inherit; background-color: transparent;
+
+	font-size: inherit; 
+
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1); appearance: none;
+	font-size: inherit;
+}
+:is(button, .btn):focus-visible { outline: auto; }
+
+/* <Utility> - 버튼 유틸리티 */
+[class*="button-"] 			{
+	display: flex; 
+	align-items: center;
+}
+[class*="button-"].start   	{ justify-content: flex-start; }
+[class*="button-"].end     	{ justify-content: flex-end; }
+[class*="button-"].center  	{ justify-content: center; }
+[class*="button-"].between 	{ justify-content: space-between; }
+[class*="button-"].down    	{ flex-direction: column; }
+/* [RWD] (Responsive) 반응형 */
+@media all and (max-width: 767px) {
+	[class*="button-"].mo-down { flex-direction: column; }
+}
+
+/* <State> - 버튼 상태 값 */
+.btn:disabled,
+.btn[disabled] {
+	color: var(--black); cursor: not-allowed;
+	background-color: var(--black-op-80);
+}
+
+/* <Size> - 버튼 사이즈 */
+.btn.xsmall { 
+	height: var(--xsmall);
+	padding: 0 4px; 
+}
+.btn.small  { 
+	height: var(--small); 
+	padding: 0 8px;
+}
+.btn.medium { 
+	height: var(--medium);
+	padding: 0 16px; 
+}
+.btn.large  { 
+	height: var(--large); 
+	padding: 0 20px; 
+}
+.btn.xlarge { 
+	height: var(--xlarge);
+	padding: 0 24px; 
+}
+.btn.xxlarge { 
+	height: var(--xxlarge);
+	padding: 0 24px; 
+}
+
+/* <Styles> - 버튼 스타일 */
+.btn.r100					{ border-radius: 100px; }
+
+.btn[class*="line-"]		{  }
+.btn.line-w					{ background-color: var(--white); color: var(--black); }
+.btn.line-b					{ background-color: var(--black); color: var(--white); }
+.btn.line-g8				{ background-color: var(--gray-08); color: var(--white); }
+
+.btn[class*="solid-"]		{ border: 1px solid transparent; }
+.btn.solid-w				{ border-color: var(--white-op-40); color: var(--white); }
+.btn.solid-g8				{ border-color: var(--gray-08); color: var(--white-op-60); }
+
+.btn.link	{}
+.btn.more	{}
+
+.button-swipers			{}
+.button-swipers .btn 	{
+	width: var(--gap-80-48); aspect-ratio: 1/1;
+}
+.button-swipers .btn .ico	{
+	background-size: cover; background-repeat: no-repeat;
+	background-position: center center;
+
+	-webkit-mask-position: center center;
+	        mask-position: center center;
+	-webkit-mask-size: cover;
+	        mask-size: cover;
+	-webkit-mask-repeat: no-repeat;
+	        mask-repeat: no-repeat;
+
+	-webkit-mask-image: url("../../images/@ico/arrow-right_big2.svg");
+	 		mask-image: url("../../images/@ico/arrow-right_big2.svg");
+	
+	width: var(--gap-80-48); aspect-ratio: 1/1;
+	background-color: var(--gray-08);
+}
+.button-swipers .btn.prev	{  }
+.button-swipers .btn.next	{ transform: rotate(180deg); }
+.button-swipers .swiper-button-disabled{ background-color: transparent; }
+/* [Hover] 버튼 호버 시 */
+.btn:has(.motions, .output, .rotate-45) .ico { transition: transform 0.5s; }
+@media (any-hover: hover) and (any-pointer: fine) {
+	.btn.line-b:hover	{ background-color: var(--black-op-80); }
+	.btn.line-g8:hover				{ background-color: var(--gray-08); color: var(--white); }
+
+	.btn:has(.motions):hover .ico	{ transform: translateX(3px); }
+	.btn:has(.output):hover .ico	{ transform: translate(2px, -2px); }
+	.btn:has(.rotate-45):hover .ico	{ transform: rotate(-45deg);}
+}
+/* // [Button] 버튼 요소 종료 */

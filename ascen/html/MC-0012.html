@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>ASCEN</title>
+
+	<!-- Open Graph (카카오, 페북, 슬랙 등) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="ASCEN">
+	<meta property="og:description" content="ASCEN">
+	<meta property="og:image" content="../@resource/images/opengraph.jpg">
+	<meta property="og:url" content="">
+
+	<!-- Twitter 카드 -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="ASCEN">
+	<meta name="twitter:description" content="ASCEN">
+	<meta name="twitter:image" content="../@resource/images/opengraph.jpg">
+
+	<link rel="icon" href="../@resource/images/favicon.svg" sizes="any">
+	<link rel="apple-touch-icon" sizes="192x192" href="../@resource/images/favicon.svg">
+
+	<link rel="stylesheet" href="../@resource/css/ascen.css">
+	<link rel="stylesheet" href="../@resource/css/ascen_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/ascen.js"></script>
+</head>
+<body>
+	
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<!-- [D] 헤더 화이트 사용 시 : content에 header-white 클래스 추가 -->
+			<main id="content" class="sub media news">
+				<div class="gutter">
+					<div class="max-1680 inner-area">
+						<div class="page-header pack-down gap-80">
+							<div class="title-area pack-center ta-c gap-20">
+								<h2 class="page-tit fs-120-44 lh125 fw700 uppercase">
+									<span class="split">
+										<span>News room</span>
+									</span>
+								</h2>
+							</div>
+
+							<div class="tabs-group pack-down gap-48" data-gsap="fade-up">
+								<div id="tabSwiper" class="tabs-header swiper">
+									<ul class="tabs swiper-wrapper line-01">
+										<li class="swiper-slide current">
+											<a href="javascript:void(0);">
+												<span>ALL</span>
+											</a>
+										</li>
+										<li class="swiper-slide">
+											<a href="javascript:void(0);">
+												<span>언론보도</span>
+											</a>
+										</li>
+										<li class="swiper-slide">
+											<a href="javascript:void(0);">
+												<span>합격후기</span>
+											</a>
+										</li>
+										<li class="swiper-slide">
+											<a href="javascript:void(0);">
+												<span>SNS</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+
+								<div class="form-wrap" data-gsap="fade-up">
+									<form id="dataForm" class="form">
+										<fieldset class="fieldset">
+											<div class="search-area">
+												<div class="search-wrap input under">
+													<input id="search" type="search" placeholder="검색어를 입력하세요">
+													<button type="button" class="btn search">
+														<i class="ico mask-search bg-gray08"></i>
+													</button>
+												</div>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+							</div>
+
+						</div>
+						<!-- // [PAGE Header] 페이지 헤더 종료 -->
+
+						<div class="page-content">
+							
+							<div class="no-result" data-gsap="fade-up">
+								<div class="text-wrap">
+									<p class="text fs-20-14 fc-black-op-60">
+										<span>찾으시는 내용이 없습니다.</span>
+									</p>
+								</div>
+							</div>
+
+						</div>
+						<!-- // [PAGE Content] 페이지 콘텐트 종료 -->
+					</div>
+				</div>
+			</main>
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+
+			<div class="cursor"></div>
+		</div>
+	</div>
+
+	<!-- [JS] (Project JS Module) -->
+	<script src="../@resource/js/lib/imagesloaded.min.js"></script>
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+	<script>
+
+		/* {isLayoutPath} - 레이아웃 불러오기 */
+		typeof isLayoutPath === 'function' ? isLayoutPath(function(){ isCurrent(4); }) : isCurrent(4);
+		
+
+		/* [Document Ready] (DOM) */
+		/* Description: DOM 로드 시 실행 함수 */
+		$(function(){
+
+			/* <Brower Evnet> - 로드 후 이벤트 */
+			const body = document.body;
+			body.classList.remove('loaded'); // 있다면 초기화 후
+			body.classList.add('loaded'); 	 // 초기화 이후 로드
+
+			/* <Scroll Reset> - 스크롤 새로고침 */
+			//isScrollResetLenis();
+
+			/* <Lenis Scroll Stop> - Lenis Scroll 초기 정지 */
+			window.lenis.stop();
+			
+
+			/* {GSAP Lib} - GSAP 모션 실행 함수 */
+			gsap.registerPlugin(ScrollTrigger); // 라이브러리 실행
+			let mm = gsap.matchMedia(); 		// 미디어 쿼리
+			fadeUpGsap(); 						// 페이드 업 실행 함수
+			footerGsap();						// 푸터 모션
+
+
+			/* <Header GSAP> - 헤더 모션 실행 후 스크롤 시작 */
+			const pageTl  = gsap.timeline({});
+			const pageTit = $('.page-tit .split span');
+
+
+			const pageCont = $('.page-content');
+
+			gsap.set(pageTit, { yPercent: 105, autoAlpha: 0 });
+			gsap.set(pageCont,{ y: 40, autoAlpha: 0 });
+
+			pageTl.to(pageTit,{	// 페이지 타이틀
+				yPercent: 0,
+				autoAlpha: 1,
+				duration: 1.2,
+				ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+				stagger: 0.1,
+				onComplete: () => {
+					// 헤더효과
+					headerGsap();
+					setTimeout( () => {
+						if(window.lenis){
+							// Lenis Lib 안전 하게 실행
+							window.lenis.stop();
+							window.lenis.start();
+						}	
+					}, 50);
+				}
+			})
+			.to(pageCont,{		// 페이지 콘텐츠
+				y: 0,
+				autoAlpha: 1,
+				duration: 2,
+				ease: 'power4.out',
+				onStart: () => {
+					mm.add("(min-width: 1025px)", () => {
+						function galleryMotion(){
+							const itemNews = gsap.utils.toArray('.items.news');
+							itemNews.forEach( (item, idx) => {
+								gsap.set(item, { scale: 0.8, autoAlpha: 0 })
+								gsap.to(item,{
+									scale: 1,
+									autoAlpha: 1,
+									duration: 1.5,
+									ease: "elastic.out(1, 0.75)", 
+									delay: Math.random() * 1 // 시작 타이밍도 랜덤
+								})
+							});
+						};
+						galleryMotion();
+					});
+				}
+			}, "<0.2");
+
+			const tabSwiper = new Swiper("#tabSwiper",{
+				slidesPerView: 'auto',
+				freeMode: true,
+				slideToClickedSlide: true,
+			});
+	
+			mm.add("(max-width: 1024px)", () => {
+				fadeUpGsapMo();
+			});
+	
+
+			/* <GSAP Refresh> - 모션 초기화 */
+			requestAnimationFrame(() => {
+				ScrollTrigger.refresh(true);
+			});
+		});
+		/* // [Document Ready] - DOM 로드 시 실행 함수 종료 */
+		
+		
+		/* [Window Event] (Window) */
+		/* Description: 이벤트 함수 */
+		/* <Resizing> - 리사이징 */
+		let resizeTimer;
+		window.addEventListener('resize', function(){
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+
+				/* {GSAP Device Check} 디바이스 체크 */
+				
+
+				/* {GSAP Refresh} 모션 위치 감지,초기화 */
+				requestAnimationFrame(() => {
+					if(window.lenis){ 
+						window.lenis.resize();
+					}
+					ScrollTrigger.refresh(true);
+				});
+			}, 120);
+		});
+
+		/* <Orientationchange> - 방향 전환 */
+		window.addEventListener("orientationchange", () => {
+			setTimeout(() => {
+				if(window.lenis){ 
+					window.lenis.resize();
+				}
+				window.ScrollTrigger?.refresh();
+			}, 300);
+		});
+		/* // [Window Event] 이벤트 함수 종료 */
+	</script> 
+
+</body>
+</html>

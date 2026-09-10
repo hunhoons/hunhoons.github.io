@@ -1,0 +1,46 @@
+/* [Colors] (Project Colors Style) */
+/* Description: 프로젝트 컬러 스타일 */
+
+:root{
+
+	/* <White> - 흰색 계열 */
+	--white:		#FFFFFF;
+    --white-op-10: 	rgba(255,255,255,0.1);
+    --white-op-20: 	rgba(255,255,255,0.2);
+    --white-op-30: 	rgba(255,255,255,0.3);
+    --white-op-40: 	rgba(255,255,255,0.4);
+    --white-op-50: 	rgba(255,255,255,0.5);
+    --white-op-60: 	rgba(255,255,255,0.6);
+    --white-op-70: 	rgba(255,255,255,0.7);
+    --white-op-80: 	rgba(255,255,255,0.8);
+
+	/* <Black> - 검정색 계열 */
+    --black: 		#000000;
+    --black-op-10: 	rgba(0,0,0,0.1);
+    --black-op-20: 	rgba(0,0,0,0.2);
+    --black-op-30: 	rgba(0,0,0,0.3);
+    --black-op-40: 	rgba(0,0,0,0.4);
+    --black-op-50: 	rgba(0,0,0,0.5);
+    --black-op-60: 	rgba(0,0,0,0.6);
+    --black-op-70: 	rgba(0,0,0,0.7);
+    --black-op-80: 	rgba(0,0,0,0.8);
+
+	/* <Project Color> - 프로젝트 사용 색상 */
+	
+	--gray-01: #F3F3F3;
+	--gray-03: #C3C5CC;
+
+	--gray-04: #909296;
+	--gray-06: #5D5D5D;
+	--gray-08: #2B2C2D;
+	--gray-09: #1C1D1F;
+
+	--blue-01: #215DCE;
+
+	--bg-01: #F0F0F0;
+	--bg-02: #DDE1E8;
+	--bg-03: #D1D4D9;
+	--bg-04: #08121C;
+	
+}
+/* // [Colors] 프로젝트 컬러 스타일 종료 */

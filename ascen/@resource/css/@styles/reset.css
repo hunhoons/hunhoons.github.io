@@ -1,0 +1,70 @@
+@charset "utf-8";
+/*  ========================================
+    Base Reset + Theme Variable Template
+    @created: 2026 / @Name: HunHoon
+    ======================================== 
+*/
+
+/* [Reset] (Browser Style Reset) */
+/* Description: 브라우저 기본 스타일 초기화 */
+
+*,
+*::before,
+*::after 	{
+	box-sizing: border-box !important;
+	margin: 0; padding: 0;
+}
+html		{ scroll-behavior: smooth; }
+html, body 	{
+	height: 100%;
+	-ms-touch-action: manipulation;
+		touch-action: manipulation;
+
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+h1, h2, h3,
+h4, h5, h6 	{ font-weight: inherit; font-size: inherit; }
+ul, ol		{ list-style: none; }
+a 			{ color: inherit; text-decoration: none; }
+span		{ font: inherit; }
+
+input, select,
+textarea, button {
+	font: inherit; 
+	background: none; color: inherit;
+	border: none; outline: none; border-radius: 0;
+	-webkit-appearance: none;
+			appearance: none; 
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+img, video, canvas, svg, figure, picture { 
+	display: block;
+	max-width: 100%; height: auto;
+
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+article, aside, figcaption, figure,
+footer, header, main, nav, section {
+	display: block;
+}
+iframe, embed 	{ border: none; }
+address			{ font-style: normal; text-decoration: none; }
+
+:focus { outline: none; }
+:focus-visible { outline: auto; } /* 키보드 접근 시만 표시 */
+/* // [Reset] 브라우저 기본 스타일 초기화 종료 */
