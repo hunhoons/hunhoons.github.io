@@ -1,0 +1,145 @@
+			<!-- [D] index OR main 페이지인 경우 header에 white 클래스 추가   -->
+			<header id="header" class="header"> 
+				<div class="gutter">
+					
+					<h1 class="range-wrap">
+						<a href="javascript:void(0);" class="current">
+							<span class="blind">국문</span> KR
+						</a>
+						<a href="javascript:void(0);">
+							<span class="blind">영문</span> EN
+						</a>
+					</h1>
+					
+					<nav id="nav" class="nav">
+						<ul>
+							<li>
+								<a href="../html/ABO-0001.html" class="depth1"> <span>디센트 소개</span> </a>
+								<ul>
+									<li>
+										<a href="../html/ABO-0001.html"> <span>소개</span> </a>
+									</li>
+									<li class="local-depth">
+										<a href="../html/ABO-0001.html?#secMap"> <span>오시는길</span> </a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="../html/WOR-0001.html" class="depth1"> <span>전문분야</span> </a>
+								<ul>
+									<li>
+										<a href="../html/WOR-0001.html"> <span>업무분야</span> </a>
+									</li>
+									<li>
+										<a href="../html/WOR-0003.html"> <span>비즈니스</span> </a>
+									</li>
+									<li>
+										<a href="../html/WOR-0006.html"> <span>집단소송</span> </a>
+									</li>
+									<li>
+										<a href="../html/WOR-0004.html"> <span>가상자산</span> </a>
+									</li>
+									<li>
+										<a href="../html/WOR-0005.html"> <span>국제법무</span> </a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="../html/PAR-0001.html" class="depth1 lawyers"> <span>구성원</span> </a> 
+							</li>
+							<li>
+								<a href="../html/NEWS-0001.html" class="depth1"> <span>NEWS</span> </a>
+								<ul>
+									<li>
+										<a href="../html/NEW-0005.html"> <span>성공사례</span> </a>
+									</li>
+									<li>
+										<a href="../html/NEWS-0001.html"> <span>디센트 소식</span> </a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+					</nav>
+					
+					<div class="util-wrap">
+						<a href="tel:02-6951-5248" class="btn call">
+							<i class="ico call-2"></i>
+						</a>
+						<button type="button" class="btn search" onclick="modalOpen('#popupSearch')">
+							<i class="ico search-2"></i>
+						</button>
+						<button type="button" id="hamburger" class="btn hamburger" title="menu toggle">
+							<i class="ico menu-2"></i>
+						</button>
+					</div>
+					
+				</div>
+				<!-- // gutter -->
+
+			</header>
+			<!-- // header -->
+
+			<!-- [D] ‘상담신청’ 페이지에서는 해당 플로팅배너 뜨지 않음 (CON-0001) -->
+			<div class="float-contact">
+				<div class="gutter">
+
+					<div class="box-area only-pc">
+						<div class="img-wrap">
+							<a href="../html/Main-001.html">
+								<img src="../@resource/images/logo-w.svg" alt="">
+							</a>
+						</div>
+						<p>
+							당신의 고민, <br> 디센트 법률사무소가 <br class="br-none"> 함께합니다.
+						</p>
+					</div>
+					<div class="form-wrap only-pc">
+						<form id="bannerDataForm" class="form">
+							<fieldset>
+								<legend class="blind"> 배너 문의 </legend>
+								<div class="field">
+									<input type="text" id="bannerUserName" name="" class="input-text small" placeholder="성함">
+								</div>
+								<div class="field">
+									<input type="tel" id="bannerUserTel" name="" class="input-text small" placeholder="연락처" oninput="autoHyphen(this);" maxlength="13">
+								</div>
+								<div class="check-wrap">
+									<input type="checkbox" id="bannerPrivacy" name="" class="checkbox">
+									<label for="bannerPrivacy" class="label"> 개인정보수집동의 </label>
+									
+								</div>
+							</fieldset>
+							
+							<div class="button-area">
+								<button id="btnConatct" type="button" class="btn medium color1"> 상담 신청 </button>
+							</div>
+
+						</form>
+					</div>
+
+					<ul class="only-mo">
+						<li>
+							<div class="img-wrap">
+								<a href="../html/Main-001.html">
+									<img src="../@resource/images/logo-w.svg" alt="">
+								</a>
+							</div> 
+						<li>
+							<a href="tel:02-6951-5248">
+								<i class="ico call-3"></i>
+								<span> 전화 상담 </span>
+							</a>
+						</li>
+						<li>
+							<a href="../html/CON-0001.html">
+								<i class="ico phone"></i>
+								<span> 모바일 상담 </span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+
+

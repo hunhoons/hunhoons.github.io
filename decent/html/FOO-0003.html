@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title> DECENT LAW FIRM | 디센트 법률사무소 </title>
+	<link rel="shortcut icon" type="image/x-icon" href="../@resource/images/favicon_image.svg">
+
+	<!-- meta -->
+	<meta name="description" content="스타트업, 블록체인 전문 로펌 디센트 법률사무소입니다.">
+	<meta name="keywords" content="법률 사무소, 디센트 법률사무소, 디센트법률사무소">
+
+	<!-- meta og -->
+	<meta property="og:site_name" content="DECENT LAW FIRM | 디센트 법률사무소">
+	<meta property="og:title" content="DECENT LAW FIRM | 디센트 법률사무소">
+	<meta property="og:description" content="스타트업, 블록체인 전문 로펌 디센트 법률사무소입니다.">
+	<meta property="og:url" content="/">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="../@resource/images/sns_img.png">
+	<meta property="og:image:width" content="800">
+	<meta property="og:image:height" content="420">
+
+	<link type="text/css" rel="stylesheet" href="../@resource/css/decent.css">
+	<link type="text/css" rel="stylesheet" href="../@resource/css/decent_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/decent.js"></script>
+</head>
+<body style="background-color: #eee;">
+	<div class="skip-nav">
+		<a href="#content">본문 바로가기</a>
+	</div><!-- // .skip-nav -->
+
+
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<div id="locations" class="location-wrap">
+				<!-- [D] LocationGnb() 함수 사용 -->
+			</div>
+			<!-- // locations -->
+
+			<div id="content" class="sub privacy">
+				<div class="gutter">
+					
+					<div class="page-header">
+						<h2 class="page-title">저작권공고</h2>
+					</div>
+					<div class="page-content">
+						<div class="term-wrap">
+							<p>
+								본 웹사이트에서 제공되는 모든 콘텐츠는 디센트 법률사무소의 소유이며 저작권법의 보호를 받습니다. <br>
+								따라서 별도의 동의 없이 복사·수정·배포·전송·게시·재생산 등을 할 수 없습니다. 상업적인 목적으로 활용되거나 다른 매체에 재배포하는 일체의 행위도 금지됩니다. 
+								<br><br>
+								본 웹사이트의 모든 콘텐츠는 당사의 소유이거나 소유자로부터 사용 권한을 부여받은 것이며 제 3자의 권리를 침해하거나 불법적인 콘텐츠를 게시하지 않도록 주의하고 있습니다.
+								<br><br> 
+								만약, 귀하의 창작물이 포함되어 있어 일부 게시물에 대해 삭제 또는 수정을 원하신다면 언제든 연락 주시기 바랍니다.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div><!-- // #content -->
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div><!-- // #container -->
+	</div><!-- // #wrap -->
+
+
+	<script src="../@resource/js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+	<script src="../@resource/js/lib/aos.js"></script>
+	<script src="http://pub.hanbom.com/@pub/@resource/js/hanbomIn2023.js"></script>
+	<script>
+		var includeCallback = function(e){
+			if (e == '_header_wsg.html') {
+				nav.headerChange();
+			}
+			if (e == '_nav_wsg.html') {
+				nav.current(0,0);
+			}
+		};
+
+		AOS.init({
+			easing: 'ease-out-back',
+			duration: 1500,
+		});
+
+		$(function(){
+			includeCallback();
+		
+			// locations
+			$('#locations').append(LocationGnb('./FOO-0002.html','저작권공고'));
+		});
+
+		$(window).on('load', function(){
+			$('.term-wrap').mCustomScrollbar({
+				theme:"dark"
+			});
+		});
+
+	</script>
+</body>
+</html>
