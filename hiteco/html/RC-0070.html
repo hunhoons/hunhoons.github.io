@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HiTECO Group">
+	<meta property="og:description" content="WE MAKE IT SIMPLE">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="하이테코 그룹">
+	<meta property="og:image" content="../@resource/images/ogimg.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<link rel="icon" href="../@resource/images/favicon.ico" sizes="any">
+
+	<title>HiTECO Group</title>
+
+	<link rel="stylesheet" href="../@resource/css/hiteco.css">
+	<link rel="stylesheet" href="../@resource/css/hiteco_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/hiteco.js"></script>
+
+</head>
+<body>
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container container-sub">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="sub contact help">
+				<div class="page-content">
+					<div class="content-area pack-down gap-240-160">
+						<section class="section forms">
+							<div class="gutter">
+								<div class="max-1452 sect-wrap pack-between items-start">
+									<div class="sect-header">
+										<div class="title-area pack-down gap-16-10">
+											<h2 class="page-tit">
+												<div class="split-overline">
+													<span class="split-line">
+														<span>HELP ONE</span>
+													</span>
+												</div>									
+												<div class="split-overline">
+													<span class="split-line">
+														<span>신고하기</span>
+													</span>
+												</div>
+											</h2>
+											<p class="page-label split-box">
+												<span>Report an Issue</span>
+											</p>
+										</div>
+									</div>
+									<div class="sect-content">
+										<div class="form-wrap">
+											<form id="dataForm">
+												<fieldset class="pack-down gap-84">
+													<legend class="blind">문의하기</legend>
+													<div class="field-group pack-down">
+
+														<div class="field-area pack-down gap-48">
+															<div class="title-wrap" data-gsap="fade-up-mo">
+																<h3 class="title fs-48-24">
+																	<strong>상세 제보 내용</strong>
+																</h3>
+															</div>
+															<div class="field-wrap pack-down gap-48-24">
+																<div class="field" data-gsap="fade-up-mo">
+																	<div class="tagbox-label pack-basic wrap">
+																		<span class="label">
+																			해당되는 신고 내용을 선택해주세요.
+																		</span>
+																		<label class="tag-label">
+																			<input type="checkbox" name="issue" hidden>
+																			<i class="ico mask-check bg-white"></i>
+																			<span>성희롱</span>
+																		</label>
+																		<label class="tag-label">
+																			<input type="checkbox" name="issue" hidden>
+																			<i class="ico mask-check bg-white"></i>
+																			<span>차별적 대우, 직장내 갑질 및 폭언</span>
+																		</label>
+																		<label class="tag-label">
+																			<input type="checkbox" name="issue" hidden>
+																			<i class="ico mask-check bg-white"></i>
+																			<span>법률 위반 및 기타 제보</span>
+																		</label>
+																		<label class="tag-label">
+																			<input type="checkbox" name="issue" hidden>
+																			<i class="ico mask-check bg-white"></i>
+																			<span class="lh125 ta-c">부정 부패 및 비리 제보 <br class="only-mo"> (금품, 향응수수, 거래업체특혜, 공금횡령 등)</span>
+																		</label>
+																	</div>
+																</div>
+
+																<div class="field" data-gsap="fade-up-mo">
+																	<label class="form-label pack-down gap-10">
+																		<span class="label">상세 신고내용을 입력해주세요</span>
+																		<textarea name="" id="userContent" class="textarea fw400" placeholder="문의 내용을 입력해 주세요."></textarea>
+																	</label>
+																</div>
+
+																<div class="field" data-gsap="fade-up-mo">
+																	<div class="upload-label pack-down">
+																		<span class="label">첨부파일 등록하기</span>
+																		<input type="file" id="fileup" hidden>
+																		<input type="input" id="fileName" hidden readonly>
+
+																		<div class="input large">
+																			<div id="btnUpload" class="is-full pack-between">
+																				<div class="pack-center gap-4">
+																					<span id="fileNameTag" class="fc-n400 fw400 fs-16">
+																						파일등록
+																					</span>
+																					<button type="button" id="fileDel" class="btn fieldel">
+																						<i class="ico close"></i>
+																					</button>
+																				</div>
+																				<i class="ico mask-download2 bg-n400"></i>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="field policy-wrap" data-gsap="fade-up-mo">
+																	<label class="policy-label input large w-full pack-center">
+																		<input type="checkbox" hidden id="policyCheckbox">
+																		<i class="ico mask-check bg-n400"></i>
+																		<span class="fc-n400 fw400">상기 제보 내용은 모두 사실입니다.</span>
+																	</label>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="button-wrap" data-gsap="fade-up-mo">
+														<button type="button" id="btnConfig" class="btn config xlarge line-b">
+															<span>제출하기</span>
+														</button>
+													</div>
+												</fieldset>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- // {Section Forms End} 섹션 Forms 종료  -->
+					</div>
+				</div>
+				<!-- // [Page Content End] 페이지 콘텐츠 종료 -->
+			</main>
+			<!-- // () => [Page Sub Contact End] 서브 문의하기 종료 -->
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+
+	<script src="../@resource/js/lib/imagesloaded.min.js"></script>
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+	<script>
+
+		/* [MODULE - FUNCTION] 모듈 - 페이지 공통 함수 */
+		// {Local isCurrent} 로컬에서만 isCurrent 사용
+		isLayoutPath(function(){
+			isCurrent(1,5);
+		});
+
+		// {GSAP Device Check} 디바이스 체크
+		function byDevice({ tablet, mobile, desktop }) {
+			const $body = $('body');
+
+			if ($body.hasClass('is-mobile')) return mobile;
+			if ($body.hasClass('is-tablet')) return tablet;
+
+			return desktop;
+		}
+		/* // () => [MODULE - FUNCTION] 모듈 - 페이지 공통 함수 */
+
+		
+		/* [SCRIPT - FUNCTION] 스크립트 - 페이지 내 함수, 스크립트 */
+		$(function(){
+
+			// {Page Load Event} 페이지 로드 후 이벤트
+			const bodys = document.body;
+			bodys.classList.remove('loaded'); // 있다면 초기화 후
+			bodys.classList.add('loaded'); 	 // 초기화 이후 로드
+
+			// {Lenis Scroll Reset} 스크롤 새로고침
+			scrollResetWithLenis();
+
+			// {Lenis Scroll Stop} 스크롤 막기
+			window.lenis.stop(); 
+
+			// {Global Function Tab} 탭 이벤트
+			isTab();
+			
+			// {GSAP Global Function} 모션 공통 함수
+			let mm; 		// 미디어 매치 변수
+			fadeUpGsap(); 	// GSAP Fade Up
+			
+
+			// {GSAP Motion Event} GSAP 모션 이벤트
+			$(document).ready(function(){
+
+				// GSAP Lib - 모션 라이브러리 실행
+				gsap.registerPlugin(ScrollTrigger);
+				mm = gsap.matchMedia(); // Match Media
+
+				// GSAP - Fade Up Mobile
+				mm.add("(min-width: 1024px)", () => {
+					if(document.body.classList.contains('is-tablet')){
+						fadeUpMoGsap();
+					}
+				});
+				mm.add("(max-width: 1023px)", () => {
+					fadeUpMoGsap();
+				});
+
+
+				// Section Forms - 페이지 로드 타이틀
+				let titStagger = byDevice({
+					desktop: 0,
+					tablet: 0,
+					mobile: 0.1,
+				});
+				const pageTl 	 = gsap.timeline({});
+				const pageHeader = document.querySelector('.section.forms .sect-header');
+				const pageTit 	 = pageHeader.querySelectorAll('.split-line span');
+				const pageLab 	 = pageHeader.querySelector('.page-label span');
+
+				gsap.set([pageTit, pageLab], { yPercent: 150, autoAlpha: 0 }, 0);
+				pageTl.to(pageTit,{
+					yPercent: 0,
+					autoAlpha: 1,
+					duration: 1.2,
+					ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+					stagger: titStagger,
+					onComplete: () => {
+						// 헤더효과
+						headerGsap();
+						setTimeout( () => {
+							if(window.lenis){
+								// Lenis Lib 안전 하게 실행
+								window.lenis.stop();
+								window.lenis.start();
+							}	
+						}, 150);
+					},
+				}).to(pageLab,{ 
+					yPercent: 0,
+					autoAlpha: 1,
+					duration: 1,
+					ease: "sint.out",
+				}, "<0.2");
+
+				const pageCont = document.querySelector('.section.forms .sect-content');
+				gsap.set(pageCont, { y: 60, autoAlpha: 0, });
+				gsap.to	(pageCont, {
+					y: 0,
+					autoAlpha: 1,
+					duration: 1.6,
+					ease: 'power2.out'
+				}, "<0.3")
+				
+
+
+				// {Date Form Check & Inquire} 폼 체크 및 전송
+				// 휴대폰 번호 체크
+				$('#userTel').on('input', function(){
+					this.value = this.value.replace(/[^0-9]/g, '');
+				});
+
+				// 파일 업로드
+				const fileName = $('#fileName');
+				const fileNameTag = $('#fileNameTag');
+
+				$('#fileUpload').on('click', function(){
+					$('#fileUp').trigger('click');
+				});
+
+				$('#btnUpload').on('click', function(){
+					$('#fileup').trigger('click');
+				});
+				
+				$('#fileup').on('change', function(){
+					const files = this.files;
+					if (files.length > 0) {
+						fileName.val(files[0].name); // 첫 번째 파일명 표시
+						fileNameTag.text(files[0].name); // 첫 번째 파일명 표시
+					}
+					$('#btnUpload').addClass('active');
+				});
+
+				$('#fileDel').on('click', function(e){
+					e.stopPropagation(); 
+					$('#btnUpload').removeClass('active');
+
+					$('#fileup').val("");
+					fileName.val("");
+					fileNameTag.text("파일등록");
+				});
+
+				// 문의하기
+				$('#btnConfig').on('click', function(){
+					
+					if(!$("input[name='inquiry']").is(":checked")){
+						alert('신고 내용을 선택해주세요.');
+						return;
+					}
+				
+					if($("#userContent").val().trim() === ""){
+						alert('신고 내용을 입력해주세요.');
+						$('#userContent').focus();
+						return;
+					}
+
+					if(!$('#policyCheckbox').is(':checked')){
+						alert('상기 제보 사실 여부의 체크해주세요.');
+						return;
+					}
+
+					// 데이터 전송 ajax
+					const form = $('#dataForm')[0];
+					const data = new FormData(form);
+					// $.ajax({
+
+					// });
+
+				});
+
+
+				// GSAP Refresh - 모션 초기화
+				requestAnimationFrame(() => {
+					ScrollTrigger.refresh(true);
+				});
+			});
+		});
+		/* // () => [SCRIPT - FUNCTION] 스크립트 - 페이지 내 함수, 스크립트 */
+
+
+		/* [WINDOW - RESIZE] 윈도우 - 리사이징 */
+		let resizeTimer;
+		$(window).on('resize', function(){
+
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+
+				/* {GSAP Device Check} 디바이스 체크 */
+				
+
+				/* {GSAP Refresh} 모션 위치 감지,초기화 */
+				requestAnimationFrame(() => {
+					window.lenis.resize();
+					ScrollTrigger.refresh(true);
+				});
+
+			}, 120);
+
+		});
+		/* // () => [WINDOW - RESIZE] 윈도우 - 리사이징 */
+	</script>
+</body>
+</html>

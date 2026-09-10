@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HiTECO Group">
+	<meta property="og:description" content="WE MAKE IT SIMPLE">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="하이테코 그룹">
+	<meta property="og:image" content="../@resource/images/ogimg.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<link rel="icon" href="../@resource/images/favicon.ico" sizes="any">
+
+	<title>HiTECO Group</title>
+
+	<link rel="stylesheet" href="../@resource/css/hiteco.css">
+	<link rel="stylesheet" href="../@resource/css/hiteco_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/hiteco.js"></script>
+
+</head>
+<body>
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container container-sub">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="sub media library">
+				<div class="page-header">
+					<div class="gutter">
+						<div class="max-1452">
+							<div class="title-wrap pack-down center gap-16">
+								<h2 class="page-tit fs-100-48 lh125">
+									<strong class="split">
+										<span>LIBRARY</span>
+									</strong>
+								</h2>
+								<p class="page-txt fs-18-14 fw400 fc-n600 pack-down">
+									<span class="split">
+										<span>HiTECO GROUP 이 제공하는</span>
+									</span>
+									<span class="split">
+										<span>다양한 자료를 확인해 보세요.</span>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // [Page Header End] 페이지 헤더 종료 -->
+
+				<div class="page-content">
+					<div class="gutter">
+						<div class="max-1452 pack-down gap-48">
+							<div class="tabs-group pack-down gap-84-48">
+								<div class="tabs-header">
+									<div class="pack-down gap-24">
+										<div class="pack-between w-full">
+											<div id="swiper01" class="swiper m-0" data-gsap="fade-up">
+												<ul class="swiper-wrapper tabs line-01">
+													<!-- [DEV] 페이지 이동 후 각각에 맞는 탭에 맞게 current -->
+													<li class="swiper-slide current">
+														<a href="#tab00" class="round-100 fw400">
+															<span>All</span>
+														</a>
+													</li>
+													<li class="swiper-slide">
+														<a href="#tab01" class="round-100 fw400">
+															<span>카탈로그</span>
+														</a>
+													</li>
+													<li class="swiper-slide">
+														<a href="#tab02" class="round-100 fw400">
+															<span>전시회</span>
+														</a>
+													</li>
+													<li class="swiper-slide">
+														<a href="#tab03" class="round-100 fw400">
+															<span>사보</span>
+														</a>
+													</li>
+													<!-- // [DEV] 페이지 이동 후 각각에 맞는 탭에 맞게 current -->
+												</ul>
+											</div>
+											<select name="" id="" class="select" data-gsap="fade-up">
+												<option value="">최신순</option>
+												<option value="">오래된순</option>
+											</select>
+										</div>
+										<div class="search-wrap" data-gsap="fade-up">
+											<form id="schForm">
+												<fieldset>
+													<div class="field">
+														<div class="form-label search-label">
+															<input type="search" class="input large" placeholder="검색어를 입력하세요.">
+															<button type="button" class="btn sch">
+																<i class="ico search"></i>
+															</button>
+														</div>
+													</div>
+												</fieldset>
+											</form>
+										</div>
+									</div>
+								</div>
+
+								<div class="tabs-body">
+									<!-- [D] 결과값 없을떄 -->
+									<div class="data-no-result">
+										<div class="text-wrap">
+											<p class="text fs-24-14 fc-n600">
+												<span>내용이 없습니다.</span>
+											</p>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // [Page Content End] 페이지 콘텐츠 종료 -->
+			</main>
+			<!-- // () => [Page Sub Media End] 서브 미디어센터 종료 -->
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+
+	<script src="../@resource/js/lib/imagesloaded.min.js"></script>
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+	<script>
+
+		/* [MODULE - FUNCTION] 모듈 - 페이지 공통 함수 */
+		// {Local isCurrent} 로컬에서만 isCurrent 사용
+		isLayoutPath(function(){
+			isCurrent(0);
+		});
+
+		// {GSAP Device Check} 디바이스 체크
+		function byDevice({ tablet, mobile, desktop }) {
+			const $body = $('body');
+
+			if ($body.hasClass('is-mobile')) return mobile;
+			if ($body.hasClass('is-tablet')) return tablet;
+
+			return desktop;
+		}
+		/* // () => [MODULE - FUNCTION] 모듈 - 페이지 공통 함수 */
+
+		
+		/* [SCRIPT - FUNCTION] 스크립트 - 페이지 내 함수, 스크립트 */
+		$(function(){
+
+			// {Page Load Event} 페이지 로드 후 이벤트
+			const bodys = document.body;
+			bodys.classList.remove('loaded'); // 있다면 초기화 후
+			bodys.classList.add('loaded'); 	 // 초기화 이후 로드
+
+			// {Lenis Scroll Reset} 스크롤 새로고침
+			scrollResetWithLenis();
+
+			// {Lenis Scroll Stop} 스크롤 막기
+			window.lenis.stop(); 
+
+			// {Global Function Tab} 탭 이벤트
+			isTab();
+
+			// {GSAP Global Function} 모션 공통 함수
+			let mm; 		// 미디어 매치 변수
+			fadeUpGsap(); 	// GSAP Fade Up
+			
+
+			// {GSAP Motion Event} GSAP 모션 이벤트
+			$(document).ready(function(){
+
+				// GSAP Lib - 모션 라이브러리 실행			
+				gsap.registerPlugin(ScrollTrigger);
+				mm = gsap.matchMedia(); // Match Media
+				
+
+				// Page Header - 페이지 헤더
+				const pageTit = document.querySelector('.page-tit .split span')
+				const pageTxt = document.querySelectorAll('.page-txt .split span')
+				gsap.set([pageTit, pageTxt], { yPercent: 105, autoAlpha: 0 });
+				gsap.to	(pageTit,{
+					yPercent: 0,
+					autoAlpha: 1,
+					duration: 1.2,
+					ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+					onComplete: () => {
+						// 헤더효과
+						headerGsap();
+						setTimeout( () => {
+							if(window.lenis){
+								// Lenis Lib 안전 하게 실행
+								window.lenis.stop();
+								window.lenis.start();
+							}	
+						}, 150);
+					}
+				});
+				gsap.to	(pageTxt,{
+					yPercent: 0,
+					autoAlpha: 1,
+					duration: 1.4,
+					stagger: 0.1,
+					ease: "sint.out",
+				}, "<0.2");
+
+				const pageCont = document.querySelector('.page-content')
+				gsap.set(pageCont, {
+					autoAlpha: 0,
+					y: 60,
+				});
+
+				gsap.to(pageCont, {
+					autoAlpha: 1,
+					y: 0,
+					duration: 1.5,
+					ease: 'power2.out',
+				},"<0.2");
+				
+
+
+				// Tab Swiper
+				const swiper01 = new Swiper("#swiper01",{
+					slidesPerView: 'auto',
+					freeMode: true,
+					slideToClickedSlide: true,
+				});
+
+
+				// GSAP Refresh - 모션 초기화
+				requestAnimationFrame(() => {
+					ScrollTrigger.refresh(true);
+				});
+			});
+		});
+		/* // () => [SCRIPT - FUNCTION] 스크립트 - 페이지 내 함수, 스크립트 */
+
+
+		/* [WINDOW - RESIZE] 윈도우 - 리사이징 */
+		let resizeTimer;
+		$(window).on('resize', function(){
+
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+
+				/* {GSAP Device Check} 디바이스 체크 */
+				
+
+				/* {GSAP Refresh} 모션 위치 감지,초기화 */
+				requestAnimationFrame(() => {
+					window.lenis.resize();
+					ScrollTrigger.refresh(true);
+				});
+
+			}, 120);
+
+		});
+		/* // () => [WINDOW - RESIZE] 윈도우 - 리사이징 */
+	</script>
+</body>
+</html>

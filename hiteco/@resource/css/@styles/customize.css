@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+/*  START ===========
+    Customize
+    (Customize CSS)
+    추가⭕ 수정⭕
+*/
+
+/****** DataPicker  ******/
+/* 전체 캘린더 컨테이너 */
+.ui-datepicker { width: fit-content !important;
+    padding: 16px; background-color: #F8F8FA;
+    border: none !important; border-radius: 8px; 
+    font-family: 'Gmarket Sans'; font-size: 14px;
+    font-weight: 500;
+}
+
+/* 헤더 영역 */
+.ui-datepicker-header {
+    padding: 10px 0; text-align: center;
+    color: #333333; background-color: transparent;
+    border-radius: 6px 6px 0 0; border: none !important;
+    border-bottom: 1px solid #e6e6e6 !important;
+    
+}
+.ui-datepicker-header select{ text-align: center; font-weight: 500;
+    font-family: 'Gmarket Sans', 'Apple SD Gothic Neo', sans-serif;
+    color: #333333;
+}
+
+/* 네비게이션 버튼 */
+.ui-datepicker-prev, .ui-datepicker-next { top: 4px !important;
+    cursor: pointer; border: none !important;
+    background-image: url("../../images/@uio/datepicker-arr.svg") !important;
+    background-size: cover !important; background-repeat: no-repeat !important;
+    background-color: transparent !important; 
+}
+.ui-datepicker-prev{ left: 1px !important;
+    transform: rotate(180deg);
+}
+.ui-datepicker-next{right: 1px !important}
+
+
+/* 요일 셀 */
+.ui-datepicker thead th{
+    padding: 0px; text-align: center;
+    color: #C0C0C0; font-weight: 500;
+    width: 40px !important; height: 40px !important;
+}
+
+/* 날짜 셀 */
+.ui-datepicker td{padding: 1px !important;}
+.ui-datepicker td a,
+.ui-state-default { padding: 0px;
+    display: flex !important; align-items: center;
+    justify-content: center; line-height: 1 !important;
+    text-align: center; color: #333333;
+    border-radius: 50%; border: none !important;
+    width: 38px !important; height: 38px !important;
+}
+
+/* 오늘 날짜 */
+.ui-datepicker td a:hover {
+    color: #FFFFFF; background-color: #45704f;
+}
+.ui-datepicker .ui-datepicker-today a {
+    border: 1px solid #C0C0C0 !important;
+    color: #333333; background-color: transparent;
+}
+/* 선택된 날짜 */
+.ui-datepicker .ui-state-active {
+    color: #FFFFFF; background-color: #45704f;
+}
+
+/****** YearPicker ******/
+
+/****** selectric ******/
+/* 셀렉트 박스 컨테이너 */
+.selectric,
+.selectric .label,
+.selectric .button,
+.selectric-items li{font-size: var(--fs16-14);}
+
+.selectric { position: relative;
+    border: 1px solid var(--border); border-radius: 0px;
+    background-color: var(--white); color: var(--black);    
+    cursor: pointer;
+}
+.selectric.xsmall{ height: var(--xsmall); padding: 0 8px;}
+.selectric.small { height: var(--small);  padding: 0 10px;}
+.selectric.medium{ height: var(--medium); padding: 0 12px;}
+.selectric.large { height: var(--large);  padding: 0 20px;}
+
+/* 라벨 텍스트 */
+.selectric .label { height: inherit; margin: 0 auto;
+    display: flex; align-items: center;
+    color: #333; line-height: inherit;
+    font-family: 'Gmarket Sans', sans-serif;
+}
+
+/* 화살표 버튼 */
+.selectric .button { overflow: hidden; text-indent: -9999px;
+    position: absolute; right: 0;
+    top: 50%; transform: translateY(-50%);
+    width: 40px; height: 100%;
+    color: var(--black); background-color: transparent;
+    pointer-events: none;
+}
+.selectric .button::after{content: "" !important; border: none !important;
+    background-image: url("../../images/@uio/select.svg") !important;
+    background-size: cover; width: 20px; height: 20px;
+}
+.selectric-open .selectric .button::after{transform: rotate(180deg);}
+
+  /* 옵션 목록 */
+.selectric-items { overflow-y: auto; z-index: 10;
+    max-height: 300px; background-color: #fff;
+    border: 1px solid var(--black); border-radius: 0px;
+	padding: 16.5px 20px; box-shadow: none;
+}
+
+/* 리스트 항목 */
+.selectric-items ul{
+	display: flex; flex-direction: column; gap:12px;
+}
+.selectric-items li {
+    padding: 0;
+    font-family: 'Gmarket Sans', sans-serif;
+    color: var(--gray-8); cursor: pointer;
+	font-size: 14px; line-height: 1.6;
+}
+.selectric-items li{color: #B3B3B3;}
+
+/* 마우스 hover 시 & 선택된 항목 표시 */
+
+.selectric-items li:hover,
+.selectric-items li.selected{
+    background-color: var(--white); color: var(--black);
+}
+
+/****** Select2 ******/
+
+/****** Swiper ******/
+.swiper-container{}
+.swiper-wrapper{}
+.swiper-slide{}
+
+.swiper-pagination.normal{
+	bottom: auto; top: auto;
+	display: flex; align-items: center;
+	justify-content: center;
+	gap: var(--gap-10);
+}
+.swiper-pagination.normal span{
+	width: 8px; margin: 0 !important;
+	aspect-ratio: 1/1; opacity: 1 !important;
+	background-color: var(--gray-light);
+}
+.swiper-pagination.normal .swiper-pagination-bullet-active{ background-color: var(--point-green); }
+
+/*  // END
+    Customize
+    (Customize CSS)
+    추가⭕ 수정⭕
+*/

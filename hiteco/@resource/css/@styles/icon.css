@@ -1,0 +1,204 @@
+@charset "utf-8";
+/* ========================================
+= [ICON COMPONENT STYLE] 아이콘 요소 스타일
+= Description: Project Icon Component Style
+======================================== */
+/* [Icon - Reset] 아이콘 - Reset */
+.ico		{
+	display: flex; aspect-ratio: 1/1;
+	background-position: center;
+	background-repeat: no-repeat; background-size: cover;
+	-webkit-mask-size: cover;
+			mask-size: cover;
+	
+}
+.ico:is([class="mask-"]) { 
+	-webkit-mask: url() no-repeat 50% 50%;
+			mask: url() no-repeat 50% 50%;
+	-webkit-mask-size: 100% 100%;
+			mask-size: 100% 100%;
+}
+
+
+/* [Icon - Mask Style] 아이콘 - Mask Style */
+/* 16px */
+.ico:is(.mask-outlink)	{ width: 16px; }
+.ico.mask-outlink		{ 
+	-webkit-mask-image: url("../../images/@ico/outlink.svg");
+			mask-image: url("../../images/@ico/outlink.svg");
+}
+
+/* 20px */
+.ico:is(.mask-chevDown2, .mask-download)	{ width: 20px; }
+.ico.mask-chevDown2		{
+	-webkit-mask-image: url("../../images/@ico/chev-down2.svg");
+			mask-image: url("../../images/@ico/chev-down2.svg");
+}
+.ico.mask-download		{
+	-webkit-mask-image: url("../../images/@ico/download.svg");
+			mask-image: url("../../images/@ico/download.svg");
+}
+
+/* 24px */
+.ico:is(.mask-menu, .mask-chevRight, .mask-chevDown, .mask-check, .mask-arrow-sm, .mask-download2, .mask-eye){
+	width: 24px;
+}
+.ico.mask-menu		{
+	-webkit-mask-image: url("../../images/@common/menu.svg");
+			mask-image: url("../../images/@common/menu.svg");
+}
+.ico.mask-chevRight		{
+	-webkit-mask-image: url("../../images/@ico/chev-right.svg");
+			mask-image: url("../../images/@ico/chev-right.svg");
+}
+.ico.mask-chevDown		{
+	-webkit-mask-image: url("../../images/@ico/chev-down.svg");
+			mask-image: url("../../images/@ico/chev-down.svg");
+}
+.ico.mask-check		{
+	-webkit-mask-image: url("../../images/@ico/check.svg");
+			mask-image: url("../../images/@ico/check.svg");
+}
+.ico.mask-arrow-sm{
+	-webkit-mask-image: url("../../images/@ico/arrow-sm.svg");
+			mask-image: url("../../images/@ico/arrow-sm.svg");
+}
+.ico.mask-download2		{
+	-webkit-mask-image: url("../../images/@ico/download2.svg");
+			mask-image: url("../../images/@ico/download2.svg");
+}
+.ico.mask-eye	{ 
+	-webkit-mask-image: url("../../images/@ico/eye.svg");
+			mask-image: url("../../images/@ico/eye.svg");
+}
+
+/* 36px */
+.ico:is(.mask-global)	{ width: 36px; }
+.ico.mask-global{
+	-webkit-mask-image: url("../../images/@ico/global.svg");
+			mask-image: url("../../images/@ico/global.svg");
+}
+
+/* 40px */
+.ico:is(.mask-arrow-md)	{ width: 40px; }
+.ico.mask-arrow-md{
+	-webkit-mask-image: url("../../images/@ico/arrow-md.svg");
+			mask-image: url("../../images/@ico/arrow-md.svg");
+}
+
+/* 68px */
+.ico:is(.mask-arrow-lg)	{ width: 68px; }
+.ico.mask-arrow-lg{
+	-webkit-mask-image: url("../../images/@ico/arrow-lg.svg");
+			mask-image: url("../../images/@ico/arrow-lg.svg");
+}
+
+/* [Mask - Etc Style] 마스트 - Etc Style */
+
+
+
+
+/* [Icon - Background Style] 아이콘 - Background Style */
+
+/* 24px */
+.ico:is(.plus-b, .copy, .search){ width: 24px;} 
+.ico.plus-b	{ background-image: url("../../images/@ico/plus-b.svg"); }
+.ico.copy	{ background-image: url("../../images/@ico/copy.svg"); }
+.ico.search	{ background-image: url("../../images/@ico/search.svg"); }
+
+/* 40px */
+.ico.pdf		{ background-image: url("../../images/@ico/pdf.svg"); }
+.ico.play		{ background-image: url("../../images/@ico/play.svg"); }
+.ico.popup-close{ background-image: url("../../images/@common/pop-close.svg"); }
+
+
+/* 68px */
+.ico:is([class*="talent2-"]){ width: var(--h1-68-32); }
+.ico.talent2-01	{ background-image: url("../../images/@ico/talent-05.svg"); }
+.ico.talent2-02	{ background-image: url("../../images/@ico/talent-06.svg"); }
+.ico.talent2-03	{ background-image: url("../../images/@ico/talent-07.svg"); }
+.ico.talent2-04	{ background-image: url("../../images/@ico/talent-08.svg"); }
+.ico.talent2-05	{ background-image: url("../../images/@ico/talent-09.svg"); }
+.ico.talent2-06	{ background-image: url("../../images/@ico/talent-10.svg"); }
+
+/* 80px */
+.ico:is([class*="social-"]){ width: 80px; }
+.ico.social-01	{ background-image: url("../../images/@ico/social-01.svg"); }
+.ico.social-02	{ background-image: url("../../images/@ico/social-02.svg"); }
+.ico.social-03	{ background-image: url("../../images/@ico/social-03.svg"); }
+.ico.social-04	{ background-image: url("../../images/@ico/social-04.svg"); }
+.ico.social-05	{ background-image: url("../../images/@ico/social-05.svg"); }
+
+/* 160px */
+.ico:is([class*="culture-"], [class*="talent-"]){ width: clamp(120px,15.63vw,160px); }
+.ico.culture-01	{ background-image: url("../../images/@ico/culture-01.svg"); }
+.ico.culture-02	{ background-image: url("../../images/@ico/culture-02.svg"); }
+.ico.culture-03	{ background-image: url("../../images/@ico/culture-03.svg"); }
+.ico.culture-04	{ background-image: url("../../images/@ico/culture-04.svg"); }
+.ico.culture-05	{ background-image: url("../../images/@ico/culture-05.svg"); }
+.ico.culture-06	{ background-image: url("../../images/@ico/culture-06.svg"); }
+
+.ico.talent-01	{ background-image: url("../../images/@ico/talent-01.svg"); }
+.ico.talent-02	{ background-image: url("../../images/@ico/talent-02.svg"); }
+.ico.talent-03	{ background-image: url("../../images/@ico/talent-03.svg"); }
+.ico.talent-04	{ background-image: url("../../images/@ico/talent-04.svg"); }
+
+/* 326px */
+.ico:is([class*="hiteco-about-"], [class*="tams-about-"]){ width: 100%; }
+.ico.hiteco-about-02{ background-image: url("../../images/@ico/hiteco-about-02.svg"); }
+.ico.hiteco-about-03{ background-image: url("../../images/@ico/hiteco-about-03.svg"); }
+.ico.hiteco-about-04{ background-image: url("../../images/@ico/hiteco-about-04.svg"); }
+.ico.hiteco-about-05{ background-image: url("../../images/@ico/hiteco-about-05.svg"); }
+.ico.hiteco-about-06{ background-image: url("../../images/@ico/hiteco-about-06.svg"); }
+.ico.hiteco-about-07{ background-image: url("../../images/@ico/hiteco-about-07.svg"); }
+.ico.hiteco-about-08{ background-image: url("../../images/@ico/hiteco-about-08.svg"); }
+.ico.hiteco-about-09{ background-image: url("../../images/@ico/hiteco-about-09.svg"); }
+.ico.hiteco-about-10{ background-image: url("../../images/@ico/hiteco-about-10.svg"); }
+.ico.hiteco-about-11{ background-image: url("../../images/@ico/hiteco-about-11.svg"); }
+.ico.hiteco-about-12{ background-image: url("../../images/@ico/hiteco-about-12.svg"); }
+
+.ico.tams-about-01{ background-image: url("../../images/@ico/tams-about-01.svg"); }
+.ico.tams-about-02{ background-image: url("../../images/@ico/tams-about-02.svg"); }
+.ico.tams-about-03{ background-image: url("../../images/@ico/tams-about-03.svg"); }
+.ico.tams-about-04{ background-image: url("../../images/@ico/tams-about-04.svg"); }
+
+/* 452px */
+.ico:is([class*="mapal-about-"]){ width: 100%; }
+.ico.mapal-about-01{ background-image: url("../../images/@ico/mapal-about-01.svg"); }
+.ico.mapal-about-02{ background-image: url("../../images/@ico/mapal-about-02.svg"); }
+.ico.mapal-about-03{ background-image: url("../../images/@ico/mapal-about-03.svg"); }
+.ico.mapal-about-04{ background-image: url("../../images/@ico/mapal-about-04.svg"); }
+.ico.mapal-about-05{ background-image: url("../../images/@ico/mapal-about-05.svg"); }
+.ico.mapal-about-06{ background-image: url("../../images/@ico/mapal-about-06.svg"); }
+
+/* [Background - Etc Style] 백그라운드 - Etc Style */
+.ico:is(.mapal, .hiteco, .tams, .nlt) { width: 240px; aspect-ratio: 240/120; }
+.ico.mapal	{ background-image: url("../../images/@ico/mapal.svg");  }
+.ico.hiteco	{ background-image: url("../../images/@ico/hiteco.svg"); }
+.ico.tams	{ background-image: url("../../images/@ico/tams.svg");	 }
+.ico.nlt	{ background-image: url("../../images/@ico/nlt.svg");	 }
+
+/* [RWD Icon Size] 반응형 */
+@media all and (max-width:767px) {
+	.ico:is([class*="culture-"], [class*="talent-"])	{ width: 80px; }
+	.ico:is([class*="mapal-about-"])					{ width: 218px; }					
+	.ico:is([class*="hiteco-about-"])					{  }
+}
+
+
+
+/* [Icon - Size] 아이콘 - 사이즈 */
+.ico-16		{ width: 16px; }
+.ico-20		{ width: 20px; }
+.ico-24		{ width: 24px; }
+.ico-28		{ width: 28px; }
+.ico-32		{ width: 32px; }
+.ico-40		{ width: 40px; }
+
+.ico-40-28	{ width: 40px; }
+@media all and (max-width:767px) {
+	.ico-40-28{ width: 28px; }
+}
+
+
+/* // () => [ICON COMPONENT STYLE END] 아이콘 요소 스타일 종료 */

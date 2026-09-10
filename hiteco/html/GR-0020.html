@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HiTECO Group">
+	<meta property="og:description" content="WE MAKE IT SIMPLE">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="하이테코 그룹">
+	<meta property="og:image" content="../@resource/images/ogimg.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<link rel="icon" href="../@resource/images/favicon.ico" sizes="any">
+
+	<title>HiTECO Group</title>
+
+	<link rel="stylesheet" href="../@resource/css/hiteco.css">
+	<link rel="stylesheet" href="../@resource/css/hiteco_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/hiteco.js"></script>
+
+</head>
+<body>
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container container-sub">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="sub company greeting">
+				<div class="page-header">
+					<div class="gutter">
+						<div class="max-1452">
+							<div class="title-area pack-down gap-16-10">
+								<h2 class="page-tit">
+									<div class="split-overline">
+										<span class="split-line">
+											<span>변화가 필요한 곳에&nbsp;</span>
+										</span>
+									</div>									
+									<div class="split-overline">
+										<span class="split-line">
+											<span>새로운 가능성을 제시&nbsp;</span>
+										</span>
+										<span class="split-line">
+											<span>하겠습니다.</span>
+										</span>
+									</div>
+								</h2>
+								<p class="page-label split-box">
+									<span>인사말</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // [Page Header End] 페이지 헤더 종료 -->
+
+				<div class="page-content">
+					<section class="section greet">
+						<div class="content-area pack-center">
+							<div class="greet-wrap bg-wrap">
+								<div class="greet-bg"></div>
+							</div>
+
+							<div class="greet-wrap title-area">
+								<div class="pack-down gap-160">
+									<div class="title-wrap pack-down gap-84-48">
+										<h3 class="title fs-68-32 lh125 fw500-700" data-gsap="fade-up">
+											<span>Make it Simple!</span>
+										</h3>
+									
+										<p class="text fs-24-16 fw400 fc-n600">
+											<span data-gsap="fade-up">
+												하이테코그룹은 지난 30년간 복잡한 산업의 문제를 명확하고 효율적인 방식으로 <br>
+												해결하며, 고객의 현장에서 ‘실질적인 변화’를 만들어왔습니다.
+											</span>
+											<br>
+											<span data-gsap="fade-up">
+												우리는 단순한 공구 공급자가 아니라, <br>
+												솔루션으로 고객의 문제를 해결하는 엔지니어 그룹입니다.
+											</span>
+											<br>
+											<span data-gsap="fade-up">
+												앞으로의 30년, HiTECO GROUP은 ‘Simple Thinking’을 바탕으로 <br>
+												기술과 서비스의 본질에 집중하며, 고객과 함께 지속 가능한 성장을 이어가겠습니다.
+											</span>
+											<br>
+											<span data-gsap="fade-up">
+												고객의 신뢰, 그것이 우리의 가장 명확하고 확실한 목표입니다.
+											</span>
+										</p>
+									</div>
+
+									<div class="sing-wrap pack-down gap-24-16" data-gsap="fade-up">
+										<img src="../@resource/images/company/greeting-02.png"
+											alt="(주)HiTECO GROUP 회장 박주석">
+										<span class="sing fs-16-14 fc-n800"> (주)HiTECO GROUP 회장 </span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- // {Section Greet End} 섹션 Visual 종료  -->
+
+				</div>
+				<!-- // [Page Content End] 페이지 콘텐츠 종료 -->
+			</main>
+			<!-- // () => [Page Sub Company End] 서브 그룹소개 종료 -->
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+
+	<script src="../@resource/js/lib/imagesloaded.min.js"></script>
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+	<script>
+
+		/* [MODULE - FUNCTION] 모듈 - 페이지 공통 함수 */
+		// {Local isCurrent} 로컬에서만 isCurrent 사용
+		isLayoutPath(function(){
+			isCurrent(1,2);
+		});
+
+		// {GSAP Device Check} 디바이스 체크
+		function byDevice({ tablet, mobile, desktop }) {
+			const $body = $('body');
+
+			if ($body.hasClass('is-mobile')) return mobile;
+			if ($body.hasClass('is-tablet')) return tablet;
+
+			return desktop;
+		}
+		/* // () => [MODULE - FUNCTION] 모듈 - 페이지 공통 함수 */
+
+		
+		/* [SCRIPT - FUNCTION] 스크립트 - 페이지 내 함수, 스크립트 */
+		$(function(){
+
+			// {Page Load Event} 페이지 로드 후 이벤트
+			const bodys = document.body;
+			bodys.classList.remove('loaded'); // 있다면 초기화 후
+			bodys.classList.add('loaded'); 	 // 초기화 이후 로드
+
+			// {Lenis Scroll Reset} 스크롤 새로고침
+			scrollResetWithLenis();
+
+			// {Lenis Scroll Stop} 스크롤 막기
+			window.lenis.stop(); 
+
+			// {Global Function Tab} 탭 이벤트
+			isTab();
+			
+			// {GSAP Global Function} 모션 공통 함수
+			let mm; 		// 미디어 매치 변수
+			fadeUpGsap(); 	// GSAP Fade Up
+			
+
+			// {GSAP Motion Event} GSAP 모션 이벤트
+			$(document).ready(function(){
+
+				// GSAP Lib - 모션 라이브러리 실행
+				gsap.registerPlugin(ScrollTrigger);
+
+				// Page Header - 페이지 헤더
+				let titStagger = byDevice({
+					desktop: 0,
+					tablet: 0,
+					mobile: 0.1,
+				});
+				const pageTl 	 = gsap.timeline({});
+				const pageHeader = document.querySelector('.page-header');
+				const pageTit 	 = pageHeader.querySelectorAll('.split-line span');
+				const pageLab 	 = pageHeader.querySelector('.page-label span');
+
+				gsap.set([pageTit, pageLab], { yPercent: 150, autoAlpha: 0 }, 0);
+				pageTl.to(pageTit,{
+					yPercent: 0,
+					autoAlpha: 1,
+					duration: 1.2,
+					ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+					stagger: titStagger,
+					onComplete: () => {
+						// 헤더효과
+						headerGsap();
+						setTimeout( () => {
+							if(window.lenis){
+								// Lenis Lib 안전 하게 실행
+								window.lenis.stop();
+								window.lenis.start();
+							}	
+						}, 150);
+					},
+				}).to(pageLab,{ 
+					yPercent: 0,
+					autoAlpha: 1,
+					duration: 1,
+					ease: "sint.out",
+				}, "<0.2");
+
+				const pageCont = document.querySelector('.page-content');
+				gsap.set(pageCont, { y: 60, autoAlpha: 0, });
+				gsap.to	(pageCont, {
+					y: 0,
+					autoAlpha: 1,
+					duration: 1.6,
+					ease: 'power2.out'
+				}, "<0.3")
+
+				
+				// GSAP Refresh - 모션 초기화
+				requestAnimationFrame(() => {
+					ScrollTrigger.refresh(true);
+				});
+			});
+		});
+		/* // () => [SCRIPT - FUNCTION] 스크립트 - 페이지 내 함수, 스크립트 */
+
+
+		/* [WINDOW - RESIZE] 윈도우 - 리사이징 */
+		let resizeTimer;
+		$(window).on('resize', function(){
+
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+
+				/* {GSAP Device Check} 디바이스 체크 */
+				
+
+				/* {GSAP Refresh} 모션 위치 감지,초기화 */
+				requestAnimationFrame(() => {
+					window.lenis.resize();
+					ScrollTrigger.refresh(true);
+				});
+
+			}, 120);
+
+		});
+		/* // () => [WINDOW - RESIZE] 윈도우 - 리사이징 */
+	</script>
+</body>
+</html>

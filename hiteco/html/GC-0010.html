@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HiTECO Group">
+	<meta property="og:description" content="WE MAKE IT SIMPLE">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="하이테코 그룹">
+	<meta property="og:image" content="../@resource/images/ogimg.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<link rel="icon" href="../@resource/images/favicon.ico" sizes="any">
+
+	<title>HiTECO Group</title>
+
+	<link rel="stylesheet" href="../@resource/css/hiteco.css">
+	<link rel="stylesheet" href="../@resource/css/hiteco_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/hiteco.js"></script>
+
+</head>
+<body>
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container container-sub">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="sub orgs mapal">
+				<div class="page-header">
+					<section class="section titles">
+						<div class="gutter">
+							<div class="max-1752 pack-down title-area">
+								<div class="title-wrap">
+									<h2 class="page-tit fw-700 fs-48-24 lh125-140">
+										<span class="split">
+											<span>정교한 기술과</span>
+										</span>
+										<span class="split">
+											<span>스마트 엔지니어링으로 </span>
+										</span>
+										<span class="split">
+											<span>
+												제조 현장의 가치를 높이는 
+											</span>
+										</span>
+										<span class="split">
+											<span>
+												글로벌 솔루션 기업
+											</span>
+										</span>
+									</h2>
+								</div>
+								<div class="img-wrap org-img">
+									<img src="../@resource/images/orgs/mapal/mapal.svg" alt="MAPAL">
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="section intros">
+						<div class="video-area">
+							<picture class="video-wrap active">
+								<source srcset="../@resource/images/orgs/mapal/mapal-01_mo.jpg"
+										media="(max-width: 767px)">
+								<img src="../@resource/images/orgs/mapal/mapal-01.jpg" alt="">
+							</picture>
+						</div>
+					</section>
+				</div>
+				<!-- // [Page Header End] 페이지 헤더 종료 -->
+
+				<div class="page-content">
+					<div class="tabs-group">
+						<div class="tabs-header">
+							<div id="tabSwiper" class="swiper gutter">
+								<ul class="tabs swiper-wrapper solid-01">
+									<li class="current swiper-slide">
+										<a href="javascript:void(0);" data-tab="about">
+											<span>About</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" data-tab="history">
+											<span>History</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" data-tab="rnd">
+											<span>R&D</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" data-tab="product">
+											<span>Products</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" data-tab="partners">
+											<span>Partners</span>
+										</a>
+									</li>
+									<li class="swiper-slide">
+										<a href="javascript:void(0);" data-tab="business">
+											<span>Business</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- [D] 탭 페이지 Ajax 처리 -->
+						<div id="mapalTabContent" class="tabs-body"></div>
+						<!-- // [D] 탭 페이지 Ajax 처리 -->
+						
+					</div>
+				</div>
+				<!-- // [Page Content End] 페이지 콘텐츠 종료 -->
+			</main>
+			<!-- // () => [Page Main End] 메인 종료 -->
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+	<script src="../@resource/js/lib/imagesloaded.min.js"></script>
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+	<script>
+
+		/* [MODULE - FUNCTION] 모듈 - 페이지 공통 함수 */
+		// {Local isCurrent} 로컬에서만 isCurrent 사용
+		isLayoutPath(function(){
+			isCurrent(0);
+		});
+
+		// {GSAP Device Check} 디바이스 체크
+		function byDevice({ tablet, mobile, desktop }) {
+			const $body = $('body');
+
+			if ($body.hasClass('is-mobile')) return mobile;
+			if ($body.hasClass('is-tablet')) return tablet;
+
+			return desktop;
+		}
+
+		function scrollChk(){
+			const st = $(window).scrollTop();
+			const pageCont = $('.page-content').offset().top;
+			if(st >= pageCont){
+				$('body').addClass('sticky-header');
+			}else{
+				$('body').removeClass('sticky-header');
+			}
+		};
+		/* // () => [MODULE - FUNCTION] 모듈 - 페이지 공통 함수 */
+
+		
+		/* [SCRIPT - FUNCTION] 스크립트 - 페이지 내 함수, 스크립트 */
+		$(function(){
+
+			// {Page Load Event} 페이지 로드 후 이벤트
+			const bodys = document.body;
+			bodys.classList.remove('loaded'); // 있다면 초기화 후
+			bodys.classList.add('loaded'); 	 // 초기화 이후 로드
+
+			// {Lenis Scroll Reset} 스크롤 새로고침
+			scrollResetWithLenis();
+
+			// {Lenis Scroll Stop} 스크롤 막기
+			window.lenis.stop(); 
+			
+			// {GSAP Global Function} 모션 공통 함수
+			let mm; 		// 미디어 매치 변수
+			//fadeUpGsap(); 	// GSAP Fade Up
+
+			// {GSAP Motion Event} GSAP 모션 이벤트
+			$(document).ready(function(){
+
+				// GSAP Lib - 모션 라이브러리 실행
+				gsap.registerPlugin(ScrollTrigger);
+				mm = gsap.matchMedia(); // Match Media
+
+				// Page Header - 페이지 헤더
+				const pageTl 	 = gsap.timeline({});
+				const pageHeader = document.querySelector('.page-header');
+				const pageTit	 = pageHeader.querySelectorAll('.page-tit .split span');
+				const pageImg	 = pageHeader.querySelector('.org-img');
+				gsap.set(pageTit, { yPercent: 105, autoAlpha: 0 });
+				gsap.set(pageImg, { scale: 0, })
+			
+				
+				pageTl.to(pageTit,{
+					yPercent: 0,
+					autoAlpha: 1,
+					duration: 1.2,
+					ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+					onComplete: () => {
+						// 헤더효과
+						headerGsap();
+						setTimeout( () => {
+							if(window.lenis){
+								// Lenis Lib 안전 하게 실행
+								window.lenis.stop();
+								window.lenis.start();
+							}	
+						}, 150);
+					},
+				}).to(pageImg, { 
+					scale: 1,
+					duration: 1.5,
+					ease: "power2.out"
+				}, "<");
+
+		
+				const titles	= document.querySelector('.section.titles');
+				const intros	= document.querySelector('.section.intros');
+				const introsVid	= intros.querySelector('.video-wrap');
+
+				let widthChange = byDevice({
+					mobile:  '35%',
+					tablet: '25%',
+					desktop: '15%',
+				});
+				let heightChange = byDevice({
+					mobile:  '10%',
+					tablet: '12%',
+					desktop: '15%',
+				});
+
+				gsap.set(introsVid,{
+					width: widthChange,
+					height: heightChange
+				});
+				gsap.to(introsVid,{
+					scrollTrigger:{
+						trigger: pageHeader,
+						start: 'top top',
+						end: `${titles.offsetHeight} top`,
+						scrub: true,
+						invalidateOnRefresh: true,
+						//markers: true,
+						onLeave: () => {
+							introsVid.classList.remove('active');
+						},
+						onEnterBack: () => {
+							introsVid.classList.add('active');
+						}
+					},
+					width: '100%',
+					height: '100%',
+					top: 0,
+					right: 0,
+
+				});
+
+				// Tab Content - 공통
+				scrollChk(); // Sticky Header
+				const tabSwiper = new Swiper('#tabSwiper', {
+					slidesPerView: 'auto',
+					spaceBetween: 16,
+					freeMode: true,
+					slideToClickedSlide: false,
+					observer: true,
+					observeParents: true,
+					breakpoints:{
+						768:{
+							spaceBetween: 24,
+							freeMode: false,
+						},
+						1025:{
+							spaceBetween: 48,
+							freeMode: false,
+						}
+					},
+					on: {
+						click(swiper) {
+							const idx = swiper.clickedIndex;
+							if (idx === undefined || idx < 0) return;
+
+							const slideEl = swiper.slides[idx];
+							const swiperWidth = swiper.width;
+							const slideLeft = slideEl.offsetLeft;
+							const slideWidth = slideEl.offsetWidth;
+							const maxTranslate = swiper.maxTranslate();
+
+							// ✅ 클릭한 슬라이드가 정중앙으로
+							let targetX = slideLeft - (swiperWidth / 1.5) + (slideWidth / 1.5);
+
+							// ✅ 첫/끝 슬라이드 빈공간 방지
+							targetX = Math.max(0, targetX);
+							targetX = Math.min(targetX, -maxTranslate);
+
+							swiper.setTranslate(-targetX);
+							swiper.setTransition(300);
+						}
+					}
+				});
+
+
+				const tabConfig = {
+					about:    { url: 'mapal/mapal-about.html',    init: 'isTabAbout'     },
+					history:  { url: 'mapal/mapal-history.html',  init: 'isTabHistory'   },
+					rnd:      { url: 'mapal/mapal-rnd.html',      init: 'isTabRnd'       },
+					product:  { url: 'mapal/mapal-product.html',  init: 'isTabProduct'   },
+					partners: { url: 'mapal/mapal-partners.html', init: 'isTabPartners'  },
+					business: { url: 'mapal/mapal-business.html', init: 'isTabBusiness'  },
+				}
+
+				// ✅ localStorage key / 기본 탭 명확하게 분리
+				const TAB_STORAGE_KEY = 'tabState_mapal'; // localStorage 저장 key
+				const TAB_DEFAULT     = 'about';          // 기본 탭
+				const PAGE_TAB_EXPIRE = 'tabState_mapal_expire';
+
+				function killTabScrollTriggers() {
+					const tabContainer = document.querySelector('#mapalTabContent');
+					if (!tabContainer) return;
+					ScrollTrigger.getAll().forEach(trigger => {
+						if (!trigger || !trigger.trigger) return;
+						if (tabContainer.contains(trigger.trigger)) trigger.kill();
+					});
+				}
+
+				// ✅ 자정 만료 체크
+				function checkTabExpire() {
+					const now = new Date();
+					const kstOffset = 9 * 60;
+					const utc    = now.getTime() + (now.getTimezoneOffset() * 60000);
+					const kstNow = new Date(utc + kstOffset * 60000);
+
+					// 🔥 내일 자정으로 만료 시간 설정 (오늘 자정 X → 내일 자정 기준)
+					const nextMidnight = new Date(kstNow);
+					nextMidnight.setHours(24, 0, 0, 0); // ✅ 다음 자정 00:00:00
+
+					const savedExpire = localStorage.getItem(PAGE_TAB_EXPIRE);
+
+					if (!savedExpire || now.getTime() >= Number(savedExpire)) {
+						// ✅ 만료됐으면 초기화
+						localStorage.removeItem(TAB_STORAGE_KEY);
+						localStorage.setItem(PAGE_TAB_EXPIRE, nextMidnight.getTime());
+						console.log('탭 로컬스토리지 초기화');
+					}
+				}
+
+				function loadTab(tabKey) {
+					if (!tabConfig[tabKey]) return;
+
+					const config = tabConfig[tabKey];
+
+					$('#tabSwiper .tabs li a').closest('li').removeClass('current');
+					$('#tabSwiper .tabs li a[data-tab="' + tabKey + '"]').closest('li').addClass('current');
+
+					$.ajax({
+						url: config.url,
+						type: 'GET',
+						dataType: 'html',
+						cache: false,
+						success: function (response) {
+							killTabScrollTriggers();
+
+							$('#mapalTabContent').html(response);
+
+							// ✅ init 에러가 localStorage 저장을 막지 못하도록 먼저 저장
+							localStorage.setItem(TAB_STORAGE_KEY, tabKey);
+
+							requestAnimationFrame(() => { fadeUpGsap(); });
+
+							// ✅ init 함수 에러 방어
+							try {
+								if (typeof window[config.init] === 'function') {
+									window[config.init]();
+								}
+							} catch(e) {
+								console.error('init 에러:', config.init, e);
+							}
+						}
+					});
+				}
+
+				let tabs = $('#tabSwiper .tabs li a');
+				tabs.on('click', function (e) {
+					e.preventDefault();
+					const tabKey = $(this).data('tab');
+
+					const target = document.querySelector('.sub.orgs.mapal .page-content');
+					if (!target) return;
+
+					const headerHeight = $('#header').outerHeight() || 0;
+					const targetTop = target.getBoundingClientRect().top + lenis.scroll - headerHeight;
+					const currentScroll = lenis && lenis.scroll ? lenis.scroll : window.scrollY;
+					const threshold = 5;
+
+					if (Math.abs(currentScroll - targetTop) <= threshold) {
+						loadTab(tabKey);
+						return;
+					}
+
+					lenis.scrollTo(target, {
+						offset: -headerHeight,
+						duration: 0.5,
+						onComplete: () => { loadTab(tabKey); }
+					});
+				});
+
+				// ✅ 저장된 탭 불러오기
+				const savedTab = localStorage.getItem(TAB_STORAGE_KEY);
+				loadTab(savedTab && tabConfig[savedTab] ? savedTab : TAB_DEFAULT);
+
+				// GSAP Refresh - 모션 초기화
+				requestAnimationFrame(() => {
+					ScrollTrigger.refresh(true);
+				});
+			});
+		});
+		/* // () => [SCRIPT - FUNCTION] 스크립트 - 페이지 내 함수, 스크립트 */
+
+		$(window).on('scroll', function(){
+			scrollChk(); // Sticky Header
+		})
+
+		/* [WINDOW - RESIZE] 윈도우 - 리사이징 */
+		let resizeTimer;
+		$(window).on('resize', function(){
+
+			
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+				scrollChk(); // Sticky Header
+
+				/* {GSAP Device Check} 디바이스 체크 */
+				widthChange = byDevice({
+					mobile:  '35%',
+					tablet: '25%',
+					desktop: '15%',
+				});
+				heightChange = byDevice({
+					mobile:  '10%',
+					tablet: '12%',
+					desktop: '15%',
+				});
+				speedChange = byDevice({
+					mobile:  0.8,
+					tablet:  1.1,
+					desktop:  1.5,
+				});
+
+
+				/* {GSAP Refresh} 모션 위치 감지,초기화 */
+				requestAnimationFrame(() => {
+					window.lenis.resize();
+					ScrollTrigger.refresh(true);
+				});
+
+			}, 120);
+
+		});
+		/* // () => [WINDOW - RESIZE] 윈도우 - 리사이징 */
+	</script>
+</body>
+</html>

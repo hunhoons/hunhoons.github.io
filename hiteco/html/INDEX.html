@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HiTECO Group">
+	<meta property="og:description" content="WE MAKE IT SIMPLE">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="하이테코 그룹">
+	<meta property="og:image" content="../@resource/images/ogimg.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<link rel="icon" href="../@resource/images/favicon.ico" sizes="any">
+
+	<title>HiTECO Group</title>
+
+	<link rel="stylesheet" href="../@resource/css/hiteco.css">
+	<link rel="stylesheet" href="../@resource/css/hiteco_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/hiteco.js"></script>
+
+</head>
+<body>
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container container-sub">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="content" style="height: var(--vh100); background-color: var(--black-op-40);">
+				<div class="page-header">
+				</div>
+				<!-- // [Page Header End] 페이지 헤더 종료 -->
+
+				<div class="page-content">
+					<div class="maquee-images">
+						<div class="img-inner">
+							<div class="maquee-img">
+								<img src="" alt="">
+							</div>
+							<div class="maquee-img">
+								<img src="" alt="">
+							</div>
+							<div class="maquee-img">
+								<img src="" alt="">
+							</div>
+							<div class="maquee-img">
+								<img src="" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // [Page Content End] 페이지 콘텐츠 종료 -->
+			</main>
+			<!-- // () => [Page Main End] 메인 종료 -->
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+	
+	<script src="../@resource/js/lib/imagesloaded.min.js"></script>
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+	<script>
+
+		/* [MODULE - FUNCTION] 모듈 - 페이지 공통 함수 */
+		// {Local isCurrent} 로컬에서만 isCurrent 사용
+		isLayoutPath(function(){
+			isCurrent(0);
+		});
+
+		// {GSAP Device Check} 디바이스 체크
+		function byDevice({ tablet, mobile, desktop }) {
+			const $body = $('body');
+
+			if ($body.hasClass('is-mobile')) return mobile;
+			if ($body.hasClass('is-tablet')) return tablet;
+
+			return desktop;
+		}
+		/* // () => [MODULE - FUNCTION] 모듈 - 페이지 공통 함수 */
+
+		
+		/* [SCRIPT - FUNCTION] 스크립트 - 페이지 내 함수, 스크립트 */
+		$(function(){
+
+			// {Page Load Event} 페이지 로드 후 이벤트
+			const bodys = document.body;
+			bodys.classList.remove('loaded'); // 있다면 초기화 후
+			bodys.classList.add('loaded'); 	 // 초기화 이후 로드
+
+			// {Lenis Scroll Reset} 스크롤 새로고침
+			scrollResetWithLenis();
+
+			// {Lenis Scroll Stop} 스크롤 막기
+			window.lenis.stop(); 
+
+			// {Global Function Tab} 탭 이벤트
+			isTab();
+			
+			// {GSAP Global Function} 모션 공통 함수
+			let mm; 		// 미디어 매치 변수
+			//fadeUpGsap(); 	// GSAP Fade Up
+			
+
+			// {GSAP Motion Event} GSAP 모션 이벤트
+			$(document).ready(function(){
+
+				// GSAP Lib - 모션 라이브러리 실행
+				gsap.registerPlugin(ScrollTrigger);
+				mm = gsap.matchMedia(); // Match Media
+
+				setTimeout( () => {
+					// 헤더효과
+					headerGsap();
+
+					if(window.lenis){
+						// Lenis Lib 안전 하게 실행
+						window.lenis.stop();
+						window.lenis.start();
+					}	
+				}, 150);
+
+				// GSAP Refresh - 모션 초기화
+				requestAnimationFrame(() => {
+					ScrollTrigger.refresh(true);
+				});
+			});
+		});
+		/* // () => [SCRIPT - FUNCTION] 스크립트 - 페이지 내 함수, 스크립트 */
+
+
+		/* [WINDOW - RESIZE] 윈도우 - 리사이징 */
+		let resizeTimer;
+		$(window).on('resize', function(){
+
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+
+				/* {GSAP Device Check} 디바이스 체크 */
+				
+
+				/* {GSAP Refresh} 모션 위치 감지,초기화 */
+				requestAnimationFrame(() => {
+					window.lenis.resize();
+					ScrollTrigger.refresh(true);
+				});
+
+			}, 120);
+
+		});
+		/* // () => [WINDOW - RESIZE] 윈도우 - 리사이징 */
+	</script>
+</body>
+</html>

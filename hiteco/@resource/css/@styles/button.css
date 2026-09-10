@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/* ========================================
+= [BUTTON COMMON] 버튼 공통
+= Description: Button Component Common
+======================================== */
+/* [Button - Reset] 버튼 - Reset */
+button, .btn{
+	position: relative; cursor: pointer;
+	width: fit-content; margin: 0; padding: 0;
+
+	display: inline-flex; align-items: center;
+	justify-content: center;
+
+	text-align: center; vertical-align: middle;
+
+	border: 0 none; outline: none;
+	color: inherit; background-color: transparent;
+
+	font-size: inherit; 
+
+	transition: all 0.4s ease; appearance: none;
+	font-size: var(--fs-16-14); gap: 4px;
+}
+:is(button, .btn):focus-visible { outline: auto; }
+
+
+/* [Button - Flex Alignment Utilities] 버튼 - Flex Alignment Utilities */
+[class*="button-"] 			{
+	display: flex; 
+	align-items: center;
+}
+[class*="button-"].start   	{ justify-content: flex-start; }
+[class*="button-"].end     	{ justify-content: flex-end; }
+[class*="button-"].center  	{ justify-content: center; }
+[class*="button-"].between 	{ justify-content: space-between; }
+[class*="button-"].down    	{ flex-direction: column; }
+/* [RWD Flex Alignment Utilities] 반응형 */
+@media all and (max-width: 767px) {
+	[class*="button-"].mo-down { flex-direction: column; }
+}
+
+
+/* [Button - Disabled & Readonly] 버튼 - Disabled & Readonly */
+.btn:not([class*="swiper-"]):disabled,
+.btn:not([class*="swiper-"])[disabled] {
+	color: var(--black);  cursor: not-allowed; 
+	background-color: var(--black-op-80);
+}
+
+
+/* [Button - Size] 버튼 - Size */
+.btn.xsmall { 
+	height: var(--xsmall);
+	padding: 0 16px; 
+}
+.btn.small  { 
+	height: var(--small); 
+	padding: 0 16px;
+}
+.btn.medium { 
+	height: var(--medium);
+	padding: 0 24px;
+}
+.btn.large  { 
+	height: var(--large); 
+	padding: 0 20px; 
+}
+.btn.xlarge { 
+	height: var(--xlarge);
+	padding: 0 24px; 
+}
+
+
+/* [Button - Styles] 버튼 - Styles */
+
+.btn[class*="line-"]	{ border-radius: 250px; }
+.btn.line-w			{ color: var(--n-900); background-color: var(--white); }
+.btn.line-b			{ color: var(--white); background-color: var(--n-900); }
+
+
+.btn[class*="solid-"] { border: 1px solid transparent; }
+.btn.solid-w		 { border-color: var(--white); }
+.btn.solid-b		 { border-color: var(--black); }
+.btn.solid-n4		 { border-color: var(--n-400); color: var(--n-600); }
+
+
+/* [Button - Etc] 버튼 - Etc */
+.btn[class*="more-"]{ gap: 12px; }
+.btn.more-w	{ color: var(--white);}
+.btn.more-w .ico{ background-color: var(--white); }
+
+.btn.more-b	{ color: var(--n-900);}
+.btn.more-b .ico{ background-color: var(--n-900); }
+
+.btn.download{}
+.btn.download.fc-n900 { color: var(--n-900); }
+
+.btn.download-b{
+	border-radius: 2px;
+	background-color: var(--n-900);
+	color: var(--white); font-size: var(--fs-14);
+	font-weight: 400;
+}
+
+[class*="button-"].swipers	{}
+[class*="button-"].swipers .btn[class*="swiper-"] 		{
+	width: 40px; height: 40px;
+	border-radius: 100px; border: 1px solid red;
+}
+[class*="button-"].swipers .btn[class*="swiper-"] .ico	{
+	
+	background-size: cover; background-repeat: no-repeat;
+	background-position: center center;
+
+	-webkit-mask-position: center center;
+	        mask-position: center center;
+	-webkit-mask-size: cover;
+	        mask-size: cover;
+	-webkit-mask-repeat: no-repeat;
+	        mask-repeat: no-repeat;
+
+	-webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'><mask id='mask0_1049_13010' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'><rect x='15.25' y='15.25' width='14.5' height='14.5' transform='rotate(-180 15.25 15.25)' fill='%23D9D9D9' stroke='black' stroke-width='1.5'/></mask><g mask='url(%23mask0_1049_13010)'><path d='M9.65625 13.5469L4.11717 8.00779L9.65625 2.46871' stroke='%23898E94' stroke-width='1.6'/></g></svg>");
+	 		mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'><mask id='mask0_1049_13010' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'><rect x='15.25' y='15.25' width='14.5' height='14.5' transform='rotate(-180 15.25 15.25)' fill='%23D9D9D9' stroke='black' stroke-width='1.5'/></mask><g mask='url(%23mask0_1049_13010)'><path d='M9.65625 13.5469L4.11717 8.00779L9.65625 2.46871' stroke='%23898E94' stroke-width='1.6'/></g></svg>");
+	
+	width: 16px; height: 16px;
+	background-color: var(--n-600);
+}
+[class*="button-"].swipers .btn.swiper-prev	{ transform: rotate(180deg); }
+[class*="button-"].swipers .btn.swiper-next	{ }
+
+
+/* [Effect Button Hover] 호버 이펙트 */
+.btn:has(.motions, .output, .rotate-45) .ico { transition: transform 0.5s; }
+@media (any-hover: hover) and (any-pointer: fine) {
+	.btn.line-b:hover	{ background-color: var(--n-800); }
+
+	.btn:has(.motions):hover .ico	{ transform: translateX(3px); }
+	.btn:has(.output):hover .ico	{ transform: translate(2px, -2px); }
+	.btn:has(.rotate-45):hover .ico	{ transform: rotate(-45deg);}
+}
+/* // () => [BUTTON COMMON END] 버튼 공통 종료 */

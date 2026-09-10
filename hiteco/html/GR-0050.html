@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HiTECO Group">
+	<meta property="og:description" content="WE MAKE IT SIMPLE">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="하이테코 그룹">
+	<meta property="og:image" content="../@resource/images/ogimg.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<link rel="icon" href="../@resource/images/favicon.ico" sizes="any">
+
+	<title>HiTECO Group</title>
+
+	<link rel="stylesheet" href="../@resource/css/hiteco.css">
+	<link rel="stylesheet" href="../@resource/css/hiteco_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/hiteco.js"></script>
+
+</head>
+<body>
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="container container-sub">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="sub company">
+				<div class="page-header">
+					<div class="gutter">
+						<div class="max-1452">
+							<div class="title-area pack-down gap-16-10">
+								<h2 class="page-tit">
+									<div class="split-overline">
+										<span class="split-line">
+											<span>기술의 성장을 멈추지&nbsp;</span>
+										</span>
+										<span class="split-line">
+											<span>않으며</span>
+										</span>
+									</div>									
+									<div class="split-overline">
+										<span class="split-line">
+											<span>글로벌 제조의 다음을&nbsp;</span>
+										</span>
+										<span class="split-line">
+											<span>준비합니다.</span>
+										</span>
+									</div>
+								</h2>
+								<p class="page-label split-box">
+									<span>R&D</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // [Sub - Page Header End] 페이지 Header 종료  -->
+			</main>
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+
+	<script src="../@resource/js/lib/imagesloaded.min.js"></script>
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+	<script>
+
+		/* Comment () => [Local isCurrent] 로컬에서만 isCurrent 사용 */
+		isLayoutPath(function(){
+			isCurrent(1,5);
+		});
+
+		/* Comment () => [GSAP Device Check] 디바이스 체크 */
+		function byDevice({ tablet, mobile, desktop }) {
+			const $body = $('body');
+
+			if ($body.hasClass('is-mobile')) return mobile;
+			if ($body.hasClass('is-tablet')) return tablet;
+
+			return desktop;
+		}
+
+		/* Comment () => [Script Start] 스크립트 시작 */
+		$(function(){
+			/* [Script - Page Load Common] 스크립트 - Page Load Common(로드 시 공통) */
+			$('body').removeClass('loaded'); // 있다면 초기화 후
+			$('body').addClass('loaded'); 	 // 초기화 이후 로드
+
+			scrollResetWithLenis(); 		 // 스크롤 리셋
+			isTab(); 						 // 탭
+
+
+			/* () => {Page Load Common - GSAP}  */
+			let mm; 		// 미디어 매치 변수
+			fadeUpGsap(); 	// GSAP Fade Up
+
+			window.lenis.stop(); // 스크롤 막기
+
+			/* Comment () => [GSAP Motion Common] GSAP 모션 실행을 위한 로드 */
+			$(document).ready(function(){
+
+
+
+				setTimeout( () => {
+					// 헤더효과
+					headerGsap();
+
+					if(window.lenis){
+						// Lenis Lib 안전 하게 실행
+						window.lenis.stop();
+						window.lenis.start();
+					}	
+				}, 150);
+			
+
+
+
+				/* {GSAP Refresh} 모션 위치 감지,초기화 */
+				ScrollTrigger.refresh(true);
+			});
+		});
+
+		/* Comment () => [Resize] GSAP, Window 반응형 대응 */
+		let resizeTimer;
+		$(window).on('resize', function(){
+
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+
+				/* {GSAP Device Check} 디바이스 체크 */
+				
+
+
+				/* {GSAP Refresh} 모션 위치 감지,초기화 */
+				requestAnimationFrame(() => {
+					window.lenis.resize();
+					ScrollTrigger.refresh(true);
+				});
+
+			}, 120);
+
+		});
+	</script>
+</body>
+</html>

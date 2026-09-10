@@ -1,0 +1,252 @@
+/* ========================================
+= [VARIABLE COMMON] 변수 공통
+= Description: Project Variable Common
+======================================== */
+
+:root{
+
+	/* [Variable - View Port] 변수 - View Port */
+	--vh100: calc(var(--vh, 1vh) * 100);
+	--vhMin: 900px;
+	
+
+	/* [Variable - Layout] 변수 - Layout */
+	--header: 	100px;
+
+
+	/* [Variable - Gutter & Spacing] 변수 - Gutter & Spacing */
+	--gutter:	clamp(60px,4.17vw,84px);
+
+	--gap-4:		4px;
+	--gap-8:		8px;
+	--gap-10:		10px;
+	--gap-10-04:	clamp(6px,0.78vw,10px);
+	--gap-16:		16px;
+	--gap-16-10:	clamp(13px,1.69vw,16px);
+	--gap-24:		24px;
+	--gap-24-16:	clamp(20px,2.6vw,24px);
+	--gap-32:		32px;
+
+	--gap-40:		40px;
+	--gap-40-24:	clamp(28px,3.65vw,40px);
+
+	--gap-48:		48px;	
+	--gap-48-24:	clamp(30px,3.91vw,48px);
+	--gap-48-20:	clamp(26px,3.39vw,48px);
+	--gap-48-16:	clamp(20px,2.6vw,48px);
+	--gap-48-14:	clamp(18px,2.34vw,48px);
+
+	--gap-60-32:	clamp(36px,4.69vw,60px);
+	--gap-68-48:	clamp(52px,6.77vw,68px);
+
+	--gap-80-40:	clamp(44px,5.73vw,80px);
+
+	--gap-84:		84px;
+	--gap-84-48:	clamp(52px,6.77vw,84px);
+	--gap-84-40:	clamp(44px,5.73vw,84px);
+	
+	--gap-102:		102px;
+
+	--gap-120:		120px;
+	--gap-120-84:	clamp(88px,11.46vw,120px);
+
+	--gap-160:		160px;
+	--gap-160-84:	clamp(90px,11.46vw,160px);
+
+	--gap-240:		240px;
+	--gap-240-160:	clamp(180px,23.44vw,240px);
+
+
+	/* [Variable - Round] 변수 - Round */
+	--round-s	: 16px;
+	--round-xs	: 10px;
+	--round-xxs	: 4px;
+
+
+	/* [Variable - Line Height] 변수 - Line Height */
+	--lh110: 	1.1;
+	--lh120: 	1.2;
+	--lh125: 	1.25;
+	--lh130: 	1.3;
+	--lh140: 	1.4;
+	--lh150: 	1.5;
+	--lh160: 	1.6;
+	--lh180: 	1.8;
+	--lh200: 	2;
+
+	--lh125-140: 1.25;
+	--lh125-160: 1.25;
+	--lh140-160: 1.4;
+	
+
+	/* [Variable - Element Size] 변수 - Element Size */
+	--xsmall: 36px;
+	--small	: 40px;
+	--medium: 48px;
+	--large	: 60px;
+	--xlarge: 68px;
+
+
+	/* [Variable - Font Collection] 변수 - Font Collection */
+	/* [Font - Weight] 폰트 - Weight */
+	--fw200: 200;
+	--fw300: 300;
+	--fw400: 400;
+	--fw500: 500;
+	--fw600: 600;
+	--fw700: 700;
+	--fw800: 800;
+	--fw900: 900;
+
+	--fw500-700: 500;
+
+	/* [Font - Size] 폰트 - Size */
+	--fs-base: 16px;
+
+	--display-160	:	160px;
+	--display-160-48:	clamp(58px,7.55vw,160px);
+	--display-120	:	120px;
+	--display-120-48:	clamp(56px,7.29vw,120px);
+	--display-120-40:	clamp(48px,6.25vw,120px);
+	--display-120-32:	clamp(42px,7.29vw,120px);
+
+	--display-100:		100px;
+	--display-100-48:	clamp(54px,7.03vw,100px);
+
+	--display-88:		88px;
+	--display-88-48:	clamp(54px,7.03vw,88px);
+	--display-88-32:	clamp(38px,4.95vw,88px);
+
+	--h1-68:	68px;
+	--h1-68-32:	clamp(36px,4.69vw,68px);
+
+	--h2-48:	48px;
+	--h2-48-24:	clamp(28px,3.65vw,48px);
+	--h2-48-20:	clamp(24px,3.13vw,48px);
+
+	--h3-32:	32px;
+	--h3-32-20:	clamp(24px,2.86vw,32px);
+	--h3-32-18:	clamp(22px,2.86vw,32px);
+	--h3-32-16:	clamp(20px,2.6vw,32px);
+
+	--fs-24:	24px;
+	--fs-24-18:	clamp(22px,2.86vw,24px);
+	--fs-24-16:	clamp(20px,2.6vw,24px);
+	--fs-24-14:	clamp(18px,2.34vw,24px);
+
+	--fs-20:	20px;
+	--fs-20-16:	clamp(18px,2.09vw,20px);
+	--fs-20-14:	clamp(16px,1.83vw,20px);
+	
+	--fs-18:	18px;
+	--fs-18-16:	18px;
+	--fs-18-14:	clamp(16px,2.08vw,18px);
+	--fs-16:	16px;
+	--fs-16-14:	16px;
+
+	--fs-14:	14px;
+	--fs-12:	12px;
+	
+	/* [Font - Family] 폰트 - Family */
+	--ff-suit:		'SUIT Variable';
+	--ff-mont:		'Montserrat Variable';
+	
+}
+
+/* [RWD Variable - 1024 & 1439] */
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+	:root{
+		/* [Variable - Layout] 변수 - Layout */
+		--header: clamp(86px,8.4vw,100px);
+		
+
+		/* [Variable - Gutter & Spacing] 변수 - Gutter & Spacing */
+		--gutter:	clamp(44px,4.3vw,60px);
+	}
+}
+/* [RWD Variable - 768 & 1023] */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+	:root{
+		/* [Variable - Layout] 변수 - Layout */
+		--header: clamp(72px,9.38vw,86px);
+
+
+		/* [Variable - Gutter & Spacing] 변수 - Gutter & Spacing */
+		--gutter:	clamp(24px,3.13vw,44px);
+	}
+}
+/* [RWD Variable - 767] */
+@media all and (max-width: 767px) {
+	:root{
+		/* [Variable - Layout] 변수 - Layout */
+		--header: 68px;
+
+
+		/* [Variable - Gutter & Spacing] 변수 - Gutter & Spacing */
+		--gutter: 20px;
+
+		--gap-10-04:	4px;
+
+		--gap-16-10: 	10px;
+		--gap-24-16:	16px;
+
+		--gap-40-24:	24px;
+
+		--gap-48-14:	14px;
+		--gap-48-16:	16px;
+		--gap-48-20:	20px;
+		--gap-48-24:	24px;
+
+		--gap-60-32:	32px;
+		--gap-68-48:	48px;
+
+		--gap-80-40: 	40px;
+		--gap-84-40:	40px;
+		--gap-84-48:	48px;
+
+		--gap-120-84:	84px;
+		--gap-160-84:	84px;
+
+		--gap-240-160:	160px;
+
+		/* [Variable - Line Height] 변수 - Line Height */
+		--lh125-140: 1.4;
+		--lh125-160: 1.6;
+		--lh140-160: 1.6;
+
+
+		/* [Variable - Font Collection] 변수 - Font Collection */
+		/* [Font - Weight] 폰트 - Weight */
+		--fw500-700: 700;
+
+		/* [Font - Size] 폰트 - Size */
+		--display-160-48: 	48px;
+		--display-120-48: 	48px;
+		--display-120-40: 	40px;
+		--display-120-32: 	32px;
+		--display-100-48: 	48px;
+		--display-88-48:	48px;
+		--display-88-32:	32px;
+
+		--h1-68-32:	32px;
+
+		--h2-48-24:	24px;
+		--h2-48-20:	20px;
+
+		--h3-32-20:	20px;
+		--h3-32-18:	18px;
+		--h3-32-16:	16px;
+
+		--fs-24-18:	18px;
+		--fs-24-16:	16px;
+		--fs-24-14:	14px;
+
+		--fs-20-16:	16px;
+		--fs-20-14:	14px;
+
+		--fs-18-16:	16px;
+		--fs-18-14: 14px;
+		--fs-16-14:	14px;
+	}
+}
+/* // () => [VARIABLE COMMON END] 변수 공통 종료 */
