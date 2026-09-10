@@ -1,0 +1,26 @@
+/* [Font] (Project Font Style) */
+/* Description: 프로젝트 폰트 스타일 */
+
+/* <Pretendard> - 프리텐다드 */
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: local('Pretendard Variable'),
+		 url('../fonts/Pretendard/web/variable/woff2/PretendardVariable.woff2') format('woff2-variations');
+	unicode-range: U+AC00-D7A3; /* 한글 유니코드 범위 */
+}
+
+
+@font-face {
+	font-family: 'Montserrat Variable';
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+	src: local('Montserrat Variable'),
+		 url('../fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('woff2-variations'),
+		 url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+	unicode-range: U+0020-007E; /* 기본 라틴 (영어/숫자/기호) */	
+}
+/* // [Font] 프로젝트 폰트 스타일 종료 */

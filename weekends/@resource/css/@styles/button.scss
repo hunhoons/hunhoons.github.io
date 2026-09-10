@@ -1,0 +1,149 @@
+@use 'mixins' as *;
+
+/* [Button] (Button Component) */
+/* Description: 버튼 요소 */
+button, .btn{
+	position: relative; cursor: pointer;
+	width: fit-content; margin: 0; padding: 0;
+
+	display: inline-flex; align-items: center;
+	justify-content: center;
+
+	text-align: center; vertical-align: middle;
+
+	border: 0 none; outline: none;
+	color: inherit; background-color: transparent;
+
+	font-size: inherit; font-weight: inherit;
+
+	transition: all 0.4s ease; appearance: none;
+
+	/* <Focus> - 포커스 */
+	&:focus-visible { outline: auto; }
+
+	/* <Size> - 버튼 사이즈 */
+	&.xsmall	{ height: var(--xsmall); padding: 0 0.4rem; }
+	&.small 	{ height: var(--small);  padding: 0 2.4rem; }
+	&.medium	{ height: var(--medium); padding: 0 1.6rem; }
+	&.large 	{ height: var(--large);  padding: 0 2rem; }
+	&.xlarge	{ height: var(--xlarge); padding: 0 2.4rem; }
+	
+
+	/* {Styles} - 버튼 스타일 */
+	/* <Solid> - 채워진 버튼 */
+	&[class*="solid-"]	{ background-color: var(--bg); color: var(--color); }
+	&.solid-b			{ --bg: var(--ntr-700); --color: var(--white); }
+	&.solid-w			{ --bg: var(--white); --color: var(--ntr-700); }
+	&.solid-zinc		{ --bg: var(--zinc-100); --color: var(--ntr-700); }
+	&.solid-orange		{ --bg: var(--orange); --color: var(--white); }
+
+	/* <Line> - 선 버튼 */
+	&[class*="line-"]	{ 
+		background-color: var(--bg, transparent);
+		border: 1px solid var(--border); color: var(--color);
+	}
+	&.line-b			{ --border: var(--ntr-700); --color: var(--ntr-700); }
+	&.line-w			{ --border: var(--white); --color: var(--white); }
+
+	/* <ETC> - 기타 버튼 */
+	&.link				{}
+	&.more				{}
+
+
+
+	/* <State> - 버튼 상태 값 */
+	&:disabled,
+	&[disabled] {
+		color: var(--black); cursor: not-allowed;
+		background-color: var(--black-op-80);
+	}
+
+	/* <Animation> - 호버 애니메이션 */
+	@keyframes jello-vertical { // 젤리
+		0% {
+			-webkit-transform: scale3d(1, 1, 1);
+					transform: scale3d(1, 1, 1);
+		}
+		30% {
+			-webkit-transform: scale3d(0.75, 1.25, 1);
+					transform: scale3d(0.75, 1.25, 1);
+		}
+		40% {
+			-webkit-transform: scale3d(1.25, 0.75, 1);
+					transform: scale3d(1.25, 0.75, 1);
+		}
+		50% {
+			-webkit-transform: scale3d(0.85, 1.15, 1);
+					transform: scale3d(0.85, 1.15, 1);
+		}
+		65% {
+			-webkit-transform: scale3d(1.05, 0.95, 1);
+					transform: scale3d(1.05, 0.95, 1);
+		}
+		75% {
+			-webkit-transform: scale3d(0.95, 1.05, 1);
+					transform: scale3d(0.95, 1.05, 1);
+		}
+		100% {
+			-webkit-transform: scale3d(1, 1, 1);
+					transform: scale3d(1, 1, 1);
+		}
+	}
+
+}
+
+
+/* {Utility} - 버튼 랩 유틸리티 */
+[class*="button-"] 			{ 
+	display: flex; align-items: center;
+
+	/* <Positions> - 버튼 랩 위치 */
+	&.start   	{ justify-content: flex-start; }
+	&.end     	{ justify-content: flex-end; }
+	&.center  	{ justify-content: center; }
+	&.between 	{ justify-content: space-between; }
+	&.down    	{ flex-direction: column; }
+
+	/* [RWD] (Responsive) 반응형 */
+	@include mobile {
+		&.mo-start 	{ justify-content: flex-start; }
+		&.mo-end 	{ justify-content: flex-end; }
+		&.mo-center { justify-content: center; }
+		&.mo-down 	{ flex-direction: column; }
+	}
+}
+
+
+/* {Swiper Button} - 스와이퍼 버튼 */
+.button-swipers			{
+	.btn, .btn-circle	{ 
+		width: 4.8rem; aspect-ratio: 1/1;
+		
+		/* <Icon> - 아이콘 디자인 */
+		.ico			{
+			@include bg-mask-base();
+			@include mask-icon("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'><mask id='mask0_1049_13010' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'><rect x='15.25' y='15.25' width='14.5' height='14.5' transform='rotate(-180 15.25 15.25)' fill='%23D9D9D9' stroke='black' stroke-width='1.5'/></mask><g mask='url(%23mask0_1049_13010)'><path d='M9.65625 13.5469L4.11717 8.00779L9.65625 2.46871' stroke='%23898E94' stroke-width='1.6'/></g></svg>");
+
+			width: 1.6rem; aspect-ratio: 1/1;
+			background-color: var(--black);
+		}
+
+		/* <Prev, Next> - 이전, 다음 */
+		&.prev			{ }
+		&.next			{ transform: rotate(180deg); }
+	}
+
+	/* <Swiper Button Circle> - 스와이퍼 둥근 버튼 */
+	.btn-circle			{ border-radius: 50%; border: 1px solid var(--black); }
+}
+
+
+/* [Hover] 버튼 호버 시 */
+@include hover {
+
+	.jello:hover	{
+		-webkit-animation: jello-vertical 0.9s both;
+				animation: jello-vertical 0.9s both;
+	}
+}
+/* // [Button] 버튼 요소 종료 */

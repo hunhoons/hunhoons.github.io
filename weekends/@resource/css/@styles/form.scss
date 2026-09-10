@@ -1,0 +1,250 @@
+@use 'mixins' as *;
+
+/* [Form] (Form Component) */
+/* Description: 폼 요소 */
+
+/* <Setting> - 폼 기본 설정 */
+form, fieldset, legend,
+input, select, textarea, label				{ position: relative; box-sizing: border-box; }
+
+input, select, textarea,
+input::-webkit-search-cancel-button,
+input::-webkit-calendar-picker-indicator	{
+	outline: none; border:0; 
+	border-radius: 0; color: var(--black);
+	-webkit-appearance:none;
+			appearance:none;
+}
+
+fieldset	{ min-width: 0; margin: 0; padding: 0;  border: 0;  }
+legend		{ display: table; padding: 0; }
+label		{ display: inline-block;  cursor: pointer; }
+
+input, select		{ overflow: hidden; }
+input, textarea		{ caret-color: var(--black); }
+select::-ms-expand	{ display: none; }
+::placeholder		{ color: var(--black-op-60); }
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button 	{
+	margin: 0;
+	-webkit-appearance: none; 
+			appearance:none;
+}
+input[type=number]	{ -moz-appearance: textfield; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="date"]::-webkit-clear-button {
+	-webkit-appearance: none;
+			appearance: none;
+
+	position: relative; right: 0.5rem;
+	width: 2rem; aspect-ratio: 1/1;
+
+	@include mask-icon-full("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M15 5L5 15M5 5l10 10' stroke='%23000' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+
+	background-color: var(--black); cursor: pointer;
+}
+
+
+/* {Input, Select, Textarea Setting} - 요소 세팅  */
+/* <Styles> - 폼 스타일 */
+.input, .select, .textarea{
+	border: none; border-radius: 0px;
+	color: var(--ntr-700); background-color: var(--zinc-100); 
+}
+/* <State> - 폼 상태 값 */
+:is(.input, .select, .textarea){
+	&:focus		{ border-color: none; outline-color: var(--orange); }
+	&:disabled,
+	&[disabled]	{
+		color: var(--black); 
+		border-color: var(--black);
+	}
+}
+/* <Size> - 폼 사이즈 */
+:is(.input, .select){
+	&.xsmall	{ height: var(--xsmall); padding: 0 1.6rem; }
+	&.small 	{ height: var(--small);  padding: 0 1.6rem; }
+	&.medium	{ height: var(--medium); padding: 0 2rem; }
+	&.large 	{ height: var(--large);  padding: 0 2rem; }
+	&.xlarge 	{ height: var(--xlarge); padding: 0 var(--gap-24-16); }
+}
+
+
+/* <Input> - 폼 인풋 */
+.input			{
+	/* Border Bottom - 하단 선 처리 */
+	&.under{
+		border: none; 
+		border-bottom: 1px solid var(--black-op-60);
+	}
+
+	width: 100%;
+}
+
+/* <Select> - 폼 셀렉트박스 */
+.select{
+	padding-right: 2.4rem;
+	background: #fff url("../images/@common/select.svg") no-repeat calc(100% - 0.4rem) 50%;
+	background-size: 2rem 2rem; vertical-align: middle;
+
+	/* &:is(.xsmall, .small, .medium, .large, .xlarge){ padding-right: 24px; } */
+}
+
+/* <Textarea> - 폼 텍스트에리어 */
+.textarea{ 
+	padding: clamp(1.2rem, 3.2vw, 1.6rem);
+	resize: none;
+
+	/* Scrollbar Custom - 텍스트에리어 스크롤바 커스텀 */
+	&::-webkit-scrollbar       { width: 0.4rem; }
+	&::-webkit-scrollbar-thumb { background-color: var(--black-op-60); }
+	&::-webkit-scrollbar-track { background-color: var(--white-op-60); }
+}
+/* // {Input, Select, Textarea Setting} - 요소 세팅 종료  */
+
+
+/* {Checkbox & Radio} - 폼 체크박스 & 라디오 */
+.checkbox, .radio{
+	overflow: hidden; position: relative;
+	width: 2rem; aspect-ratio: 1/1; margin: 0;
+	vertical-align: middle; background-color: transparent;
+
+	& + .label			{ color: var(--black); }
+	&::before, &::after { content: ''; display: block; }
+	&::before			{ /* 외부 컬러 & 선 */
+		width: 100%; height: 100%; background-color: var(--white); 
+		border: 1px solid var(--black); box-sizing: border-box;
+		transition: all 0.2s ease;
+	}
+	&::after			{ /* 내부 컬러 & 효과 */
+		position: absolute; top: 50%; left: 50%;
+		transform: translate(-50%, -50%) scale(0);
+		mask-size: 100%; background-color: transparent;
+		transition: all 0.2s ease;
+	}
+	
+	/* <Checked> - 체크 했을 때 */
+	&:checked::before	{ /* Checked 시 Border & Background Color 변경 */
+		border-color: var(--black-op-60);
+		background-color: var(--black);
+	}
+	&:checked::after	{ /* Checked 시 Icon & Background Color 변경 */
+		background-color: var(--white);
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	/* <State> - 상태 값 */
+	&:checked:disabled:before	{
+		border-color: var(--black);
+		background-color: var(--black);
+	}
+	&:checked:disabled::after	{ background-color: var(--black); }
+
+	&:disabled + .label			{ color: var(--black); cursor: no-drop; }
+
+}
+/* <Checkbox> - 체크박스 */
+.checkbox{
+	&::before		{ border-radius: 0.2rem; }
+	&::after		{
+			width: 1.2rem; aspect-ratio: 1/1;
+			@include mask-icon-full("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 12'%3E%3Cpath d='M13.6823 0.768948C14.0861 1.14578 14.1079 1.77857 13.7311 2.18232L5.33106 11.1823C5.14193 11.385 4.87719 11.5 4.6 11.5C4.32282 11.5 4.05807 11.385 3.86895 11.1823L0.268948 7.32518C-0.107886 6.92143 -0.0860652 6.28864 0.317686 5.91181C0.721436 5.53497 1.35423 5.55679 1.73106 5.96054L4.6 9.03441L12.2689 0.817685C12.6458 0.413935 13.2786 0.392114 13.6823 0.768948Z'/%3E%3C/svg%3E");
+		}
+
+	
+}
+/* <Radio> - 라디오 */
+.radio{
+	&::before, &::after	{ border-radius: 9999rem; }
+	&::after			{ width: 0.8rem; aspect-ratio: 1/1; }
+}
+/* // {Checkbox & Radio} - 폼 체크박스 & 라디오 종료 */
+
+
+/* {Field & label Styles} - 폼 필드 & 라벨 스타일 */
+.field-group,
+.field-wrap,
+.checkable-group			{ 
+	display: flex;
+
+	&.cols 			{ flex-direction: column; }
+}
+
+.field-wrap					{ }
+.field						{ }
+.field .insert				{ }
+
+.checkable-wrap				{
+	display: flex; align-items: center;
+	flex-wrap: wrap; gap: 1rem 2rem;
+}
+
+/* <Labels> - 라벨 태그에 사용 (Styles) */
+[class*="-label"] {
+	display: flex; gap: 1rem;
+
+	&.down { flex-direction: column; }
+	&.down .label { width: 100%; }
+}
+
+
+/* <Form Label> - 기본 디자인 */
+.form-label		{}
+
+
+/* <Search Label> - 검색 디자인 */
+.search-area{}
+.search-wrap{}
+.search-label	{
+	position: relative; gap: 0px;
+	
+	.input.search	{ width: 100%; padding-right: calc(var(--medium) + 0.5rem); }
+	.btn.search		{
+		position: absolute; top: 0; right: 0;
+		height: 100%; aspect-ratio: 1/1;
+	}
+}
+
+/* <File Upload Label> - 업로드 디자인 */
+.upload-wrap{
+	position: relative;
+	display: flex; align-items: center;
+}
+.upload-label	{}
+
+/* <Policy Label> - 약관 디자인 */
+.policy-label	{}
+
+/* <Checkbox & Radio Label> - 체크박스 & 라디오 디자인 */
+.checkable-label{ 
+	display: flex; gap: var(--gap-8);
+
+	&.checkable-form{
+		background-color: var(--zinc-100);
+		transition: background-color 0.4s ease;
+
+		flex-direction: column; text-align: center;
+		align-items: center; justify-content: center;
+
+		:is(.title, .text){ transition: color 0.4s ease; }
+		.title	{ font-size: var(--fs-18-14); line-height: var(--lh-125); color: var(--ntr-700); }
+		.text	{ font-size: var(--fs-16-14); color: var(--ntr-700-60); }
+
+	}
+	&.checkable-form:has(.checkbox:checked){
+		background-color: var(--orange);
+
+		.title	{ color: var(--white); }
+		.text	{ color: var(--white-op-60); }
+	}
+}
+
+
+
+
+/* // {Field & labels} - 폼 필드 & 라벨 종료 */
+
+
+/* // [Form] 폼 요소 종료 */

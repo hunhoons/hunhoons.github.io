@@ -1,0 +1,436 @@
+/* [Mixins Import] */
+@use 'mixins' as *;
+
+/* [Global] (Project Global Styles) */
+/* Description: 프로젝트 전체 공통(요소) 스타일 */
+
+/* <Viewport> - 공통 뷰포트 */
+.vh100	{ height: var(--vh100); }
+.vhMin 	{ height: var(--vhMin); }
+
+/* <Container> - 공통 컨테이너 */
+[class*="max-"]	{ width: 100%; margin: 0 auto; }
+.max-1100		{ max-width: max(110rem, 57.29vw); }
+.max-1250		{ max-width: max(125rem, 66.67vw); }
+.max-1280		{ max-width: max(128rem, 66.67vw); }
+.max-1340		{ max-width: max(134rem, 69.79vw); }
+.max-1440		{ max-width: max(144rem, 75vw); }
+.max-1520		{ max-width: max(152rem, 79.17vw); }
+.max-1560		{ max-width: max(156rem, 81.25vw); }
+
+/* <Full Size> */
+.is-full	{ width: 100%; height: 100%; }
+.w-full		{ width: 100%; }
+.h-full		{ height: 100%; }
+
+/* <Display> - 공통 디스플레이 */
+.d-none		{ display: none; }
+.d-block	{ display: block; }
+.d-flex		{ display: flex; }
+.d-grid		{ display: grid; }
+ 
+/* <Position> - 공통 포지션 */
+.pos-rel	{ position: relative; }
+.pos-abs	{ position: absolute; }
+.pos-fix	{ position: fixed; }
+.pos-stk	{ position: sticky; }
+ 
+/* <Overflow> - 공통 오버플로우 */
+.of-h		{ overflow: hidden; }
+.of-a		{ overflow: auto; }
+.of-s		{ overflow: scroll; }
+ 
+/* <Gutter> - 공통 좌우 여백 */
+.m-0		{ margin: 0; }
+.p-0	{	 padding: 0; }
+
+.gutter		{ width: 100%; padding-inline: var(--gutter); }
+/* [RWD] (Responsive) 반응형 */
+@include pc {
+	.gutter-pc	{ width: 100%; padding-inline: var(--gutter); }
+}
+@include mobile {
+	.gutter-mo	{ width: 100%; padding-inline: var(--gutter); }
+}
+
+/* <Gap & Inner> - 공통 간격 */
+.gap-4			{ gap: var(--gap-4); }
+.gap-8			{ gap: var(--gap-8); }
+.gap-10			{ gap: var(--gap-10); }
+.gap-12			{ gap: var(--gap-12); }
+.gap-14			{ gap: var(--gap-14); }
+.gap-16			{ gap: var(--gap-16); }
+.gap-18			{ gap: var(--gap-18); }
+.gap-20			{ gap: var(--gap-20); }
+.gap-24			{ gap: var(--gap-24); }
+.gap-28			{ gap: var(--gap-28); }
+.gap-30			{ gap: var(--gap-30); }
+.gap-40			{ gap: var(--gap-40); }
+.gap-44			{ gap: var(--gap-44); }
+.gap-60			{ gap: var(--gap-60); }
+.gap-66			{ gap: var(--gap-66); }
+.gap-80			{ gap: var(--gap-80); }
+.gap-100		{ gap: var(--gap-100); }
+
+/* [RWD] 간격 사이즈 */
+.gap-10-4		{ gap: var(--gap-10-4); }
+
+.gap-16-12		{ gap: var(--gap-16-12); }
+.gap-16-14		{ gap: var(--gap-16-14); }
+
+.gap-20-12		{ gap: var(--gap-20-12); }
+.gap-20-14		{ gap: var(--gap-20-14); }
+.gap-20-15		{ gap: var(--gap-20-15); }
+
+.gap-24-10		{ gap: var(--gap-24-10); }
+.gap-24-16		{ gap: var(--gap-24-16); }
+.gap-24-20		{ gap: var(--gap-24-20); }
+
+.gap-28-16		{ gap: var(--gap-28-16); }
+.gap-28-20		{ gap: var(--gap-28-20); }
+.gap-28-24		{ gap: var(--gap-28-24); }
+
+.gap-30-16		{ gap: var(--gap-30-16); }
+.gap-30-20		{ gap: var(--gap-30-20); }
+
+.gap-40-10		{ gap: var(--gap-40-10); }
+.gap-40-20		{ gap: var(--gap-40-20); }
+.gap-40-24		{ gap: var(--gap-40-24); }
+
+.gap-60-10		{ gap: var(--gap-60-10); }
+.gap-60-24		{ gap: var(--gap-60-24); }
+.gap-60-30		{ gap: var(--gap-60-30); }
+
+.gap-66-22		{ gap: var(--gap-66-22); }
+.gap-66-30		{ gap: var(--gap-66-30); }
+.gap-66-40		{ gap: var(--gap-66-40); }
+
+.gap-80-32		{ gap: var(--gap-80-32); }
+.gap-80-40		{ gap: var(--gap-80-40); }
+.gap-80-48		{ gap: var(--gap-80-48); }
+
+.gap-106-60		{ gap: var(--gap-106-60); }
+
+.gap-120-24		{ gap: var(--gap-120-24); }
+.gap-120-40		{ gap: var(--gap-120-40); }
+.gap-120-60		{ gap: var(--gap-120-60); }
+
+.gap-160-60		{ gap: var(--gap-160-60); }
+.gap-180-60		{ gap: var(--gap-180-60); }
+
+.gap-240-60		{ gap: var(--gap-240-60); }
+.gap-240-120	{ gap: var(--gap-240-120); }
+.gap-240-160	{ gap: var(--gap-240-160); }
+
+/* <Content Show & Hide> - 공통 PC/MO 노출 여부 */
+@include pc {
+	.only-mo{ display:none !important; }
+}
+@include mobile {
+	.only-pc{ display:none !important; }
+}
+
+/* <Blind> - 공통 숨김 처리 */
+.blind,
+.ico > span	{
+	@include blind;
+}
+
+/* <Background & Mask> - 공통 마스킹처리 */
+.bg-base		{ @include bg-base }
+.bg-mask		{ @include bg-mask-base; }
+.mix-darken		{ mix-blend-mode: darken; }
+.mix-difference	{ mix-blend-mode: difference; }
+
+/* <Ellipsis> - 공통 ...처리 */
+.ellipsis						{ overflow: hidden; text-overflow: ellipsis; }
+.ellipsis:not([class*="line-"])	{ display: block; white-space: nowrap; }
+.ellipsis[class*="line-"]		{ display: -webkit-box; -webkit-box-orient: vertical; }
+
+.ellipsis.line-2,
+.ellipsis.line-2-1				{ -webkit-line-clamp: 2; }
+.ellipsis.line-3				{ -webkit-line-clamp: 3; }
+/* [RWD] (Responsive) 반응형 */
+@include mobile {
+	.ellipsis.line-2-1			{ -webkit-line-clamp: 1; }
+}
+
+
+/* {Font Related styles} - 공통 폰트 관련 스타일 */
+/* <Align> - 폰트 정렬 */
+.ta-l 				{ text-align: left !important; }
+.ta-r 				{ text-align: right !important; }
+.ta-c 				{ text-align: center !important; }
+
+/* <Effect> - 폰트 효과 */
+.underline 			{ text-decoration: underline; }
+.uppercase 			{ text-transform: uppercase; }
+
+/* <Weight> - 폰트 굵기 */
+.fw-base		{
+	span:not([class*="fw"]){ font-weight: inherit; }  // fw 클래스가 없는 span만 상속
+}
+
+.fw200 				{ font-weight: var(--fw-200); }
+.fw300 				{ font-weight: var(--fw-300); }
+.fw400 				{ font-weight: var(--fw-400); }
+.fw500 				{ font-weight: var(--fw-500); }
+.fw600 				{ font-weight: var(--fw-600); }
+strong,
+.fw700				{ font-weight: var(--fw-700); }
+.fw500-700			{ font-weight: var(--fw-500-700); }
+.fw600-400			{ font-weight: var(--fw-600-400); }
+
+
+/* <Size> - 폰트 사이즈 */
+.fs-10				{ font-size: var(--fs-10); }
+.fs-12				{ font-size: var(--fs-12); }
+.fs-14				{ font-size: var(--fs-14); }
+.fs-16				{ font-size: var(--fs-16); }
+.fs-18				{ font-size: var(--fs-18); }
+.fs-20				{ font-size: var(--fs-20); }
+.fs-22				{ font-size: var(--fs-22); }
+.fs-24				{ font-size: var(--fs-24); }
+.fs-26				{ font-size: var(--fs-26); }
+
+/* [RWD] 폰트 사이즈 */
+.fs-14-10 			{ font-size: var(--fs-14-10); }
+.fs-14-12 			{ font-size: var(--fs-14-12); }
+
+.fs-16-12 			{ font-size: var(--fs-16-12); }
+.fs-16-14 			{ font-size: var(--fs-16-14); }
+
+.fs-18-12 			{ font-size: var(--fs-18-12); }
+.fs-18-14 			{ font-size: var(--fs-18-14); }
+.fs-18-16 			{ font-size: var(--fs-18-16); }
+
+.fs-20-12 			{ font-size: var(--fs-20-12); }
+.fs-20-14 			{ font-size: var(--fs-20-14); }
+.fs-20-16 			{ font-size: var(--fs-20-16); }
+.fs-20-18 			{ font-size: var(--fs-20-18); }
+
+.fs-22-14 			{ font-size: var(--fs-22-14); }
+.fs-22-16 			{ font-size: var(--fs-22-16); }
+.fs-22-18 			{ font-size: var(--fs-22-18); }
+
+.fs-24-16 			{ font-size: var(--fs-24-16); }
+.fs-24-18 			{ font-size: var(--fs-24-18); }
+
+.fs-28-18 			{ font-size: var(--fs-28-18); }
+.fs-28-20 			{ font-size: var(--fs-28-20); }
+
+.fs-32-16 			{ font-size: var(--fs-32-16); }
+.fs-32-18 			{ font-size: var(--fs-32-18); }
+.fs-32-20 			{ font-size: var(--fs-32-20); }
+.fs-32-24 			{ font-size: var(--fs-32-24); }
+
+.fs-40-24 			{ font-size: var(--fs-40-24); }
+
+.fs-48-18 			{ font-size: var(--fs-48-18); }
+.fs-48-20 			{ font-size: var(--fs-48-20); }
+.fs-48-24 			{ font-size: var(--fs-48-24); }
+.fs-48-32 			{ font-size: var(--fs-48-32); }
+.fs-48-40 			{ font-size: var(--fs-48-40); }
+
+.fs-68-24			{ font-size: var(--fs-68-24); }
+
+.fs-80-16 			{ font-size: var(--fs-80-16); }
+.fs-88-48 			{ font-size: var(--fs-88-48); }
+
+.fs-100-40 			{ font-size: var(--fs-100-40); }
+.fs-100-44 			{ font-size: var(--fs-100-44); }
+
+.fs-120-44 			{ font-size: var(--fs-120-44); }
+.fs-120-48 			{ font-size: var(--fs-120-48); }
+
+.fs-200-68 			{ font-size: var(--fs-200-68); }
+.fs-240-68 			{ font-size: var(--fs-240-68); }
+
+/* <Family> - 폰트 종류 */
+.ff-mont			{ font-family: var(--ff-mont) !important; }
+
+/* // {Font Related styles} 공통 폰트 관련 스타일 종료  */
+
+
+/* {Color styles} - 공통 컬러 */
+/* <Font Color> - 폰트 컬러 */
+.fc-white			{ color: var(--white); }
+.fc-white-20		{ color: var(--white-op-20); }
+.fc-white-40		{ color: var(--white-op-40); }
+.fc-white-60		{ color: var(--white-op-60); }
+.fc-white-80		{ color: var(--white-op-80); }
+
+.fc-black			{ color: var(--black); }
+.fc-ntr-700			{ color: var(--ntr-700); }
+.fc-ntr-700-80		{ color: var(--ntr-700-80); }
+.fc-ntr-700-60		{ color: var(--ntr-700-60); }
+.fc-ntr-700-40		{ color: var(--ntr-700-40); }
+
+/* <Background Color> - 배경 컬러 */
+.bg-white			{ background-color: var(--white); }
+.bg-black			{ background-color: var(--black); }
+.bg-orange			{ background-color: var(--orange); }
+.bg-ntr-700			{ background-color: var(--ntr-700); }
+
+
+/* // {Color styles} 공통 컬러 종료  */
+
+
+/* <Opacity> - 공통 불투명도 */
+.op-10				{ opacity: var(--op-10); }
+.op-20				{ opacity: var(--op-20); }
+.op-30				{ opacity: var(--op-30); }
+.op-40				{ opacity: var(--op-40); }
+.op-50				{ opacity: var(--op-50); }
+.op-60				{ opacity: var(--op-60); }
+.op-70				{ opacity: var(--op-70); }
+.op-80				{ opacity: var(--op-80); }
+
+/* <Line Height> - 공통 텍스트 라인 높이 */
+.lh100				{ line-height: var(--lh-100); }
+.lh110				{ line-height: var(--lh-110); }
+.lh120				{ line-height: var(--lh-120); }
+.lh125				{ line-height: var(--lh-125); }
+.lh130				{ line-height: var(--lh-130); }
+.lh140				{ line-height: var(--lh-140); }
+.lh150				{ line-height: var(--lh-150); }
+.lh160				{ line-height: var(--lh-160); }
+.lh160				{ line-height: var(--lh-180); }
+
+.lh115-125	{ line-height: var(--lh-115-125); }
+.lh125-140	{ line-height: var(--lh-125-140); }
+.lh125-160	{ line-height: var(--lh-125-160); }
+.lh140-160	{ line-height: var(--lh-140-160); }
+
+/* <Radius> - 공통 지름 */
+.r-4		{ border-radius: 0.4rem; }
+.r-8		{ border-radius: 0.8rem; }
+.r-12		{ border-radius: 1.2rem; }
+.r-16		{ border-radius: 1.6rem; }
+.r-20		{ border-radius: 2.0rem; }
+.r-24		{ border-radius: 2.4rem; }
+.r-100		{ border-radius: 10rem; }
+
+/* <Circle> - 공통 구 */
+[class*="circle-"]	{
+	border-radius: 50%;
+	aspect-ratio: 1/1;
+}
+.circle-32			{ width: 3.2rem; }
+.circle-36			{ width: 3.6rem; }
+.circle-40			{ width: 4.0rem; }
+.circle-48			{ width: 4.8rem; }
+
+
+/* {Flex & Grid Utility} - 공통 콘텐츠 레이아웃 유틸리티 */
+/* <Flex> - 플렉스 */
+[class*="pack-"],
+.pack-basic 		{ display: flex; }
+
+.pack-center		{ align-items: center; justify-content: center; }
+.pack-between 		{ align-items: center; justify-content: space-between; }
+.pack-down			{ flex-direction: column; }
+.pack-wrap			{ flex-wrap: wrap; }
+
+.items-start    	{ align-items: flex-start; }
+.items-end      	{ align-items: flex-end; }
+.items-center   	{ align-items: center; }
+.items-stretch  	{ align-items: stretch; }
+
+.justify-start   	{ justify-content: flex-start; }
+.justify-end     	{ justify-content: flex-end; }
+.justify-center  	{ justify-content: center; }
+.justify-between 	{ justify-content: space-between; }
+.justify-around  	{ justify-content: space-around; }
+/* [RWD] (Responsive) 반응형 */
+@include mobile {
+	.mo-row { flex-direction: row; }
+	.mo-col { flex-direction: column; }
+}
+
+/* <Grid> - 그리드 */
+[class*="grid-"]					{ display: grid; }
+[class*="grid-"] > :is(li, div, a)	{ min-width: 0; } /* Swiper가 들어가는 경우 넘치는 것 예방 */
+
+.grid-wrap.col-2		{ grid-template-columns: repeat(2, 1fr); }
+.grid-wrap.col-3		{ grid-template-columns: repeat(3, 1fr); }
+.grid-wrap.col-4		{ grid-template-columns: repeat(4, 1fr); }
+
+.grid-wrap.col-2-1		{ grid-template-columns: repeat(2, 1fr); }
+.grid-wrap.col-3-2		{ grid-template-columns: repeat(3, 1fr); }
+.grid-wrap.col-4-1		{ grid-template-columns: repeat(4, 1fr); }
+.grid-wrap.col-5-2		{ grid-template-columns: repeat(5, 1fr); }
+.grid-wrap.col-5-3		{ grid-template-columns: repeat(5, 1fr); }
+
+.grid-custom			{ grid-template-columns: repeat(12, 1fr); }
+.grid-custom .col-1		{ grid-column: span 1; }
+.grid-custom .col-2		{ grid-column: span 2; }
+.grid-custom .col-3		{ grid-column: span 3; }
+.grid-custom .col-4		{ grid-column: span 4; }
+.grid-custom .col-5		{ grid-column: span 5; }
+.grid-custom .col-6		{ grid-column: span 6; }
+.grid-custom .col-7		{ grid-column: span 7; }
+.grid-custom .col-8		{ grid-column: span 8; }
+.grid-custom .col-9		{ grid-column: span 9; }
+.grid-custom .col-10	{ grid-column: span 10; }
+.grid-custom .col-11	{ grid-column: span 11; }
+.grid-custom .col-12	{ grid-column: span 12; }
+
+@media all and (min-width: 1025px) and (max-width: 1440px) {
+	.grid-wrap.col-5-2		{ grid-template-columns: repeat(4, 1fr); }
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+	.grid-wrap.col-4-1		{ grid-template-columns: repeat(2, 1fr); }
+	.grid-wrap.col-5-2		{ grid-template-columns: repeat(3, 1fr); }
+	.grid-wrap.col-5-3		{ grid-template-columns: repeat(4, 1fr); }
+}
+@media all and (max-width: 767px) {
+	.grid-wrap.col-3-2,
+	.grid-wrap.col-5-2		{ grid-template-columns: repeat(2, 1fr); }
+
+	.grid-wrap.col-2-1,
+	.grid-wrap.col-4-1		{ grid-template-columns: repeat(1, 1fr); }		
+	.grid-wrap.col-5-3		{ grid-template-columns: repeat(3, 1fr); }
+}
+/* // {Flex & Grid Utility} 공통 콘텐츠 레이아웃 유틸리티 종료  */
+
+
+/* <Split Motion> - 공통 텍스트 */
+.split,
+.split > span						{ display: block; will-change: transform; }
+
+.split,
+.split-box							{
+	overflow: hidden; position: relative;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.split-overline						{ display: flex; }
+.split-overline .split-line			{
+	overflow: hidden; position: relative;
+	display: block; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.split-overline .split-line span	{ display: block; will-change: transform; }
+/* [RWD] (Responsive) 반응형 */
+@include mobile {
+	.split-overline	{ flex-direction: column; }
+}
+
+/* <Spacer> - 공통 콘텐츠 간격(모션)  */
+.spacer-sm			{ padding-top: 20vh; }
+.spacer-md			{ padding-top: 45vh; }
+.spacer				{ padding-top: 60vh; }
+
+.spacer-block-sm	{ padding-block: 30vh; }
+.spacer-block-md	{ padding-block: 45vh; }
+.spacer-block-lg	{ padding-block: 60vh; }
+
+.spacer-40-20	{ padding-block: 40vh 20vh; }
+.spacer-60-30	{ padding-block: 60vh 30vh; }
+/* [RWD] (Responsive) 반응형 */
+@media all and (max-width: 1024px) {
+	.spacer			{ padding-top: 30vh; }
+	.spacer-40-20	{ padding-block: 20vh 10vh; }
+	.spacer-60-30	{ padding-block: 30vh 20vh; }
+}
+/* // [Global] (Project Global Styles End) */

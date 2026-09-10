@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+	<title>WEEKENDS</title>
+
+	<!-- SEO -->
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Weekends | 위켄즈">
+
+	<!-- Open Graph (카카오, 페북, 슬랙 등) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Weekends | 위켄즈">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="../@resource/images/opengraph.jpg">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="Weekends | 위켄즈">
+	<meta property="og:locale" content="ko_KR">
+
+	<!-- Twitter 카드 -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image" content="../@resource/images/opengraph.jpg">
+
+	<link rel="icon" href="../@resource/images/favicon.ico" sizes="any">
+	<link rel="icon" href="../@resource/images/favicon.png" type="image/png+xml">
+	<link rel="apple-touch-icon" sizes="180x180" href="../@resource/images/favicon.ico">
+
+	<!-- LIB 라이브러리 -->
+	<link rel="stylesheet" href="../@resource/css/lib/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../@resource/css/lib/lenis.css">
+
+	<!-- PROJECT -->
+	<link rel="stylesheet" href="../@resource/css/weekends.css">
+	<link rel="stylesheet" href="../@resource/css/weekends_dev.css">
+	<script src="../@resource/js/lib/jquery-4.0.0.min.js"></script>
+	<script src="../@resource/js/weekends.js"></script>
+
+</head>
+<body>
+	
+	<div id="wrap" class="wrap">
+		<div id="container" class="container">
+			<div class="skip-nav">
+				<a href="#content">
+					<span>본문바로가기</span>
+				</a>
+			</div>
+
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="content">
+				<section class="section" style="height: calc(var(--vh100) * 1);  position: relative; z-index: 1;">
+					
+				</section>
+			</main>
+			
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+	
+
+
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/SplitText.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+
+
+	<script src="../@resource/js/motion.js"></script>
+	<script>
+		/* {GSAP Lib} - 이 페이지에서 사용하는 GSAP 플러그인 */
+		gsap.registerPlugin(ScrollTrigger, SplitText);
+		let mm = gsap.matchMedia();
+
+		/* {isLayoutReady} - header/footer include 완료 뒤 실행 */
+		function isLayoutReady() {
+			/* <Nav Current> */
+			isCurrent(0);
+
+			/* <Layout GSAP Motions> */
+			headerGsap();
+			footerGsap();
+
+			/*
+				include로 삽입된 header/footer의 실제 높이가 브라우저에 반영된 다음,
+				Lenis와 ScrollTrigger의 최초 위치를 한 번만 측정한다.
+			*/
+			requestAnimationFrame(() => {
+				window.lenis?.resize();
+				ScrollTrigger.refresh();
+				document.body.classList.add('loaded');
+				window.lenis?.start();
+			});
+		}
+
+		/* {Lenis} - 초기 멈춤 */
+		window.lenis?.stop();
+
+		/* {isLayoutReady} - 함수 실행 */
+		typeof isLayoutPath === 'function'
+			? isLayoutPath(isLayoutReady)
+			: isLayoutReady();
+
+		/* [Document Ready] (DOM) */
+		/* Description: DOM 로드 시 실행 함수 */
+		$(function(){
+
+
+		});
+		/* // [Document Ready] - DOM 로드 시 실행 함수 종료 */
+	</script>
+
+</body>
+</html>

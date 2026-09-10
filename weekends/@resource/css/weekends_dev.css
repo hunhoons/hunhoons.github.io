@@ -1,0 +1,304 @@
+@charset "utf-8";
+/* [Dev] (Modified After Development) */
+/* Description: 개발 이후 */
+
+/* [Main] - 메인 수정 */
+
+/* [Sub] - 서브 수정 */
+
+
+/*
+ * Matter.js DOM drop — standalone stylesheet
+ * Required markup only: .test > .section.matters > .matter-area > .matter-wrap > .matter-box
+ * The former project utility classes (fs-*, fc-*, pack-down, gap-*) are intentionally not required.
+ */
+
+.test .section.matters {
+	--matter-bg: #f7f5f1;
+	--matter-ink: #121212;
+	--matter-orange: #ff5a1f;
+	--matter-orange-hover: #171717;
+	--matter-text-size: clamp(132px, 21.5vw, 420px);
+	--matter-image-size: clamp(78px, 11vw, 210px);
+	--matter-viewport-h: 100dvh;
+
+	position: relative;
+	isolation: isolate;
+	z-index: 1;
+	width: 100%;
+	height: min(100dvh, var(--matter-viewport-h));
+	min-height: 360px;
+	max-height: 100dvh;
+	background: var(--matter-bg);
+}
+
+.test .section.matters .matter-area {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.test .section.matters .matter-wrap {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	isolation: isolate;
+}
+
+/*
+ * Matter.js가 left/top이 아닌 transform을 통해 좌표를 제어한다.
+ * 따라서 각 요소의 원래 document flow는 발생하지 않는다.
+ */
+.test .section.matters .matter-box {
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	z-index: 1;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	cursor: grab;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: none;
+	will-change: transform, opacity;
+	transform-origin: 50% 50%;
+	opacity: 0;
+}
+
+.test .section.matters .matter-box.is-spawned {
+	opacity: 1;
+}
+
+.test .section.matters .matter-box.is-dragging {
+	z-index: 10;
+	cursor: grabbing;
+}
+
+/* Text-based shapes */
+.test .section.matters .matter-text {
+	overflow: hidden;
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: var(--matter-text-size);
+	aspect-ratio: 1;
+	background: var(--matter-orange);
+	color: #fff;
+	box-shadow: 0 12px 30px rgb(18 18 18 / 12%);
+	transition: background-color 240ms ease, box-shadow 240ms ease;
+}
+
+.test .section.matters .matter-text:hover,
+.test .section.matters .matter-text:focus-within {
+	background: var(--matter-orange-hover);
+	box-shadow: 0 16px 42px rgb(18 18 18 / 22%);
+}
+
+.test .section.matters .matter-text .text-wrap {
+	display: flex;
+	box-sizing: border-box;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding: clamp(20px, 3.1vw, 54px);
+	text-align: center;
+}
+
+/* Old utility classes may remain in the HTML but are not needed for layout. */
+.test .section.matters .matter-text .title,
+.test .section.matters .matter-text .text {
+	margin: 0;
+	color: inherit;
+}
+
+.test .section.matters .matter-text .title {
+	font-family: inherit;
+	font-size: clamp(16px, 1.75vw, 28px);
+	font-weight: 700;
+	
+}
+
+.test .section.matters .matter-text .text {
+	margin-top: clamp(10px, 1.5vw, 22px);
+	font-family: inherit;
+	font-size: clamp(10px, 1.1vw, 17px);
+	font-weight: 400;
+	line-height: 1.55;
+	letter-spacing: -0.035em;
+	word-break: keep-all;
+}
+
+.test .section.matters .matter-01 {
+	border-radius: 50%;
+	clip-path: circle(50% at 50% 50%);
+}
+
+.test .section.matters .matter-02 {
+	/* Matter.js의 triangle 바디 방향과 일치 */
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.test .section.matters .matter-02 .text-wrap {
+	padding: clamp(54px, 8vw, 124px) clamp(20px, 3vw, 50px) clamp(20px, 3vw, 48px);
+}
+
+.test .section.matters .matter-03 {
+	clip-path: inset(0);
+}
+
+/* SVG image-based boxes */
+.test .section.matters .matter-img {
+	width: var(--matter-image-size);
+	aspect-ratio: 1;
+	filter: drop-shadow(0 10px 16px rgb(18 18 18 / 10%));
+}
+
+.test .section.matters .matter-img .img-wrap,
+.test .section.matters .matter-img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.test .section.matters .matter-img img {
+	object-fit: contain;
+	pointer-events: none;
+}
+
+@media (max-width: 767px) {
+	.test .section.matters {
+		--matter-text-size: clamp(132px, 47vw, 260px);
+		--matter-image-size: clamp(68px, 25vw, 130px);
+		min-height: 320px;
+	}
+
+	.test .section.matters .matter-text .text-wrap {
+		padding: 24px;
+	}
+
+	.test .section.matters .matter-text .title {
+		font-size: clamp(15px, 4.3vw, 20px);
+	}
+
+	.test .section.matters .matter-text .text {
+		margin-top: 10px;
+		font-size: clamp(9px, 2.8vw, 12px);
+		line-height: 1.45;
+	}
+
+	.test .section.matters .matter-02 .text-wrap {
+		padding: 58px 22px 18px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.test .section.matters .matter-text {
+		transition: none;
+	}
+}
+
+
+/* // [Dev] 개발 이후 종료 */
+
+
+/* {Section Service} - 섹션 서비스 */
+.main .section.matters{
+	height: calc(var(--vh100) * 2);
+	background-color: var(--white); isolation: isolate;
+
+	.matter-area	{
+		overflow: hidden; position: relative;
+		width: 100%; height: var(--vh100); 
+	}
+	.matter-wrap	{ position: absolute; inset: 0 0 0 0; isolation: isolate; }
+	.matter-wrap canvas{ width: 100%; height: 100%; }
+
+	.matter-box {
+		position: absolute !important; top: 0 !important; left: 0 !important;
+		z-index: 1;
+		cursor: grab; touch-action: none;
+		will-change: transform, opacity; transform-origin: 50% 50%;
+		opacity: 0;
+
+		&.is-spawned	{ opacity: 1; }
+		&.is-dragging	{ z-index: 3; cursor: grabbing; }
+	}
+
+	.matter-text {
+		z-index: 2;
+		overflow: hidden; position: relative;
+		display: grid; place-items: center;
+		width: 40rem;
+		aspect-ratio: 1;
+		background-color: var(--orange); color: var(--white);
+		transition: background-color 1s ease;
+
+		&:hover{ background-color: var(--ntr-700); }
+
+		.text-wrap{
+			width: 100%; height: 100%;
+			align-items: center;
+			text-align: center; justify-content: center;
+		}
+
+		.title	{ 
+			font-size: var(--fs-24-16); font-weight: var(--fw-700);
+			line-height: 1.2; letter-spacing: -0.04em;
+		}
+		.text	{
+			font-family: inherit;
+			font-size: var(--fs-16);
+			font-weight: 400;
+			line-height: 1.55;
+			letter-spacing: -0.035em;
+			word-break: keep-all;
+		}
+	}
+}
+
+.main .section.matters .matter-01 {
+	border-radius: 50%;
+	clip-path: circle(50% at 50% 50%);
+}
+
+.main .section.matters .matter-02 {
+	/* Matter.js의 triangle 바디 방향과 일치 */
+	width: 50rem; aspect-ratio: 500/400;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.main .section.matters .matter-02 .text-wrap {
+	position: relative; top: 5.5rem;
+}
+
+.main .section.matters .matter-03 {
+	clip-path: inset(0);
+}
+
+/* SVG image-based boxes */
+.main .section.matters .matter-img {
+	width: 16rem;
+	aspect-ratio: 1;
+}
+.main .section.matters .matter-img:nth-of-type(odd){
+	width: 12rem;
+}
+
+
+.main .section.matters .matter-img .img-wrap,
+.main .section.matters .matter-img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.main .section.matters .matter-img img {
+	object-fit: contain;
+	pointer-events: none;
+}
+

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+	<title>WEEKENDS</title>
+
+	<!-- SEO -->
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Weekends | 위켄즈">
+
+	<!-- Open Graph (카카오, 페북, 슬랙 등) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Weekends | 위켄즈">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="../@resource/images/opengraph.jpg">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="Weekends | 위켄즈">
+	<meta property="og:locale" content="ko_KR">
+
+	<!-- Twitter 카드 -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image" content="../@resource/images/opengraph.jpg">
+
+	<link rel="icon" href="../@resource/images/favicon.ico" sizes="any">
+	<link rel="icon" href="../@resource/images/favicon.png" type="image/png+xml">
+	<link rel="apple-touch-icon" sizes="180x180" href="../@resource/images/favicon.ico">
+
+	<!-- LIB 라이브러리 -->
+	<link rel="stylesheet" href="../@resource/css/lib/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../@resource/css/lib/lenis.css">
+
+	<!-- PROJECT -->
+	<link rel="stylesheet" href="../@resource/css/weekends.css">
+	<link rel="stylesheet" href="../@resource/css/weekends_dev.css">
+	<script src="../@resource/js/lib/jquery-4.0.0.min.js"></script>
+	<script src="../@resource/js/weekends.js"></script>
+
+</head>
+<body>
+	
+	<div id="wrap" class="wrap">
+		<div id="container" class="container">
+			<div class="skip-nav">
+				<a href="#content">
+					<span>본문바로가기</span>
+				</a>
+			</div>
+
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<main id="content" class="sub contact">
+				<div class="gutter">
+					<div class="max-1340 inner-area pack-down gap-160-60">
+						<div class="page-header gap-160-60">
+							<div class="title-area">
+								<h2 class="page-tit lh125 fs-120-48 uppercase">
+									<strong class="split-overline">
+										<span class="split-line">
+											<span>Let's&nbsp;</span>
+										</span>
+										<span class="split-line">
+											<span>Shape</span>
+										</span>
+									</strong>
+									<strong class="split-overline">
+										<span class="split-line">
+											<span>Together.</span>
+										</span>
+									</strong>
+								</h2>
+							</div>
+							<div class="button-wrap" data-gsap="fade-up">
+								<a href="../html/CS-0020.html" class="btn circle-basic bg-orange fc-white fw600 fs-20-14 gap-4">
+									<span>간편한 <br class="only-mo"> 문의하기</span>
+									<i class="ico mask-arrow-r bg-white"></i>
+								</a>
+							</div>
+						</div>
+
+						<div class="page-content pack-down gap-160-60">
+							<div class="info-wrap" data-gsap="fade-up">
+								<ul class="info-list pack-down gap-4">
+									<li data-gsap="fade-up">
+										<a href="https://naver.me/51uXI2Us" target="_blank" class="fs-20-14 fw400">
+											<span>서울 성동구 연무장길 76, 성수AK밸리 903,904</span>
+										</a>
+									</li>
+									<li data-gsap="fade-up">
+										<a href="tel:070-7672-0701" class="fs-20-14 fw400">
+											<span>+82.070.7672.0701</span>
+										</a>
+									</li>
+									<li data-gsap="fade-up">
+										<a href="mailTo:info@weekends.co.kr" class="fs-20-14 fw400">
+											<span>info@weekends.co.kr</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							
+							<div class="maps-wrap" data-gsap="fade-up">
+								<div class="maps is-full">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x357ca548cec009a9%3A0xc2086d2861a0b3c2!2z7ISx7IiYQUvrsLjrpqwg7KeA7Iud7IKw7JeF7IS87YSw!5e0!3m2!1sko!2skr!4v1788165812256!5m2!1sko!2skr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" class="is-full"></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+	
+
+
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/SplitText.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+
+
+	<script src="../@resource/js/motion.js"></script>
+	<script>
+		/* {GSAP Lib} - 이 페이지에서 사용하는 GSAP 플러그인 */
+		gsap.registerPlugin(ScrollTrigger, SplitText);
+		let mm = gsap.matchMedia();
+
+		/*
+			숨기는 것은 body가 보이기 전에 즉시, 재생하는 것만 나중에(transitionend 이후) 해야 한다.
+			둘 다 나중으로 미루면 body 페이드인 0.8s 동안 타이틀/리스트가 안 숨겨진 채로 그대로
+			보이다가 뒤늦게 숨겨졌다 다시 재생되는 것처럼 보인다.
+		*/
+		gsap.set('.page-tit .split-line span', { yPercent: 102, autoAlpha: 0 });
+		gsap.set('[data-gsap="fade-up"]', { y: 30, autoAlpha: 0 });
+
+		/* {isLayoutReady} - header/footer include 완료 뒤 실행 */
+		function isLayoutReady() {
+			/* <Nav Current> */
+			isCurrent(5);
+
+			/* <Layout GSAP Motions> */
+			headerGsap();
+			footerGsap();
+
+			requestAnimationFrame(() => {
+				window.lenis?.resize();
+				ScrollTrigger.refresh();
+				document.body.classList.add('loaded');
+				window.lenis?.start();
+
+				
+				let introStarted = false;
+				function startContactIntro() {
+					if (introStarted) return;
+					introStarted = true;
+
+					const page 		= document.querySelector('.sub.contact');
+					const contacts 	= {}
+
+					// Page Header
+					contacts.header	 = page.querySelector('.page-header');
+					contacts.tit	 = gsap.utils.toArray('.page-tit .split-line span');
+
+					// GSAP
+					contacts.tl = gsap.timeline({});
+
+					contacts.tl
+						.to	(contacts.tit, 		{
+							yPercent: 0,
+							autoAlpha: 1,
+							duration: 2.6,
+							ease: 'elastic.out(1, 0.7)',
+							stagger: 0.1,
+						});
+					fadeUpGsap(96); // GSAP Fade Up Motions
+				}
+
+				document.body.addEventListener('transitionend', function onLoadedFade(e) {
+					if (e.target !== document.body || e.propertyName !== 'opacity') return;
+					document.body.removeEventListener('transitionend', onLoadedFade);
+					startContactIntro();
+				});
+				setTimeout(startContactIntro, 900);
+			});
+		}
+
+		/* {Lenis} - 초기 멈춤 */
+		window.lenis?.stop();
+
+		/* {isLayoutReady} - 함수 실행 */
+		typeof isLayoutPath === 'function'
+			? isLayoutPath(isLayoutReady)
+			: isLayoutReady();
+
+		/* [Document Ready] (DOM) */
+		/* Description: DOM 로드 시 실행 함수 */
+		$(function(){
+		});
+		/* // [Document Ready] - DOM 로드 시 실행 함수 종료 */
+	</script>
+
+</body>
+</html>

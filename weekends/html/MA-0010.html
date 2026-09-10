@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+	<title>WEEKENDS</title>
+
+	<!-- SEO -->
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Weekends | 위켄즈">
+
+	<!-- Open Graph (카카오, 페북, 슬랙 등) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Weekends | 위켄즈">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="../@resource/images/opengraph.jpg">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="Weekends | 위켄즈">
+	<meta property="og:locale" content="ko_KR">
+
+	<!-- Twitter 카드 -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image" content="../@resource/images/opengraph.jpg">
+
+	<link rel="icon" href="../@resource/images/favicon.ico" sizes="any">
+	<link rel="icon" href="../@resource/images/favicon.png" type="image/png+xml">
+	<link rel="apple-touch-icon" sizes="180x180" href="../@resource/images/favicon.ico">
+
+	<!-- LIB 라이브러리 -->
+	<link rel="stylesheet" href="../@resource/css/lib/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../@resource/css/lib/lenis.css">
+
+	<!-- PROJECT -->
+	<link rel="stylesheet" href="../@resource/css/weekends.css">
+	<link rel="stylesheet" href="../@resource/css/weekends_dev.css">
+	<script src="../@resource/js/lib/jquery-4.0.0.min.js"></script>
+	<script src="../@resource/js/weekends.js"></script>
+
+</head>
+<body>
+	
+	<div id="wrap" class="wrap">
+		<div id="container" class="container">
+			<div class="skip-nav">
+				<a href="#content">
+					<span>본문바로가기</span>
+				</a>
+			</div>
+
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<!-- [D] header-white 클래스  Main / About 페이지 필수 -->
+			<main id="content" class="main header-white">
+
+				<section class="section visual">
+					<div class="canvas-wrap">
+						<canvas id="heros"></canvas>
+					</div>
+
+					<div class="gutter is-full">
+						<div class="visual-wrap">
+							<div class="img-area pack-center is-full">
+								<div class="img-wrap">
+									<img src="../@resource/images/@common/ani-logo.png" alt="Weekends | 위켄즈">
+								</div>
+							</div>
+						</div>
+
+						<div class="shape-area">
+							<div class="shape-inner">
+								<div class="shape-wrap changes changes-01">
+									<div class="text-wrap pack-down items-center gap-40-20 ta-c">
+										<h3 class="title fc-white lh100">
+											<strong>We shape <br class="only-mo"> SCENE</strong>
+										</h3>
+										<p class="desc fc-white lh160">
+											<span>경이로운 장면을 만들고</span>
+										</p>
+									</div>
+								</div>
+								<div class="shape-wrap changes changes-02">
+									<div class="text-wrap pack-down items-center gap-40-20 ta-c">
+										<h3 class="title fc-white lh100">
+											<strong>We shape <br class="only-mo"> EXPERIENCE</strong>
+										</h3>
+										<p class="desc fc-white lh160">
+											<span>관계맺는 경험을 빚어</span>
+										</p>
+									</div>
+								</div>
+								<div class="shape-wrap changes changes-03">
+									<div class="text-wrap pack-down items-center gap-40-20 ta-c">
+										<h3 class="title fc-white lh100">
+											<strong>We shape <br class="only-mo"> WEEKENDS</strong>
+										</h3>
+										<p class="desc fc-white lh160">
+											<span>잊지 못할 주말을 선물합니다.</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="shape-wrap lines lines-01">
+									<div class="text-wrap">
+										<p class="text">
+											<span>오프라인 이벤트의 피크는 주말.</span>
+											<span>현장과 사무실을 지키는 일이 잦았습니다.</span>
+											<span>어느새 주말은,</span>
+											<span>우리의 노력과 결실을 의미하는 정체성이 되었습니다.</span>
+										</p>
+									</div>
+								</div>
+								<div class="shape-wrap lines lines-02">
+									<div class="text-wrap">
+										<p class="text">
+											<span>안녕하세요.</span>
+											<span>주말을 만드는 사람들, 위켄즈입니다.</span>
+											<span>우리가 가장 잘 하는 팝업 익스피리언스를 매개로</span>
+											<span>브랜드와 고객이 가장 가까운 거리에서 만나 관계맺도록 돕고</span>
+											<span>행복한 주말처럼 오롯이 기억되는 순간과 경험을 빚습니다.</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</section>
+				<!-- // [Section Visual End] 섹션 종료 -->
+
+
+				<section class="section gradient">
+					<div class="img-area">
+						<picture class="img-wrap">
+							<source srcset="../@resource/images/@common/gradient.webp" type="image/webp">
+							<img 	src="../@resource/images/@common/gradient.png" alt="Weekends">
+						</picture>
+					</div>
+				</section>
+				<!-- // [Section Gradient End] 섹션 종료 -->
+
+
+				<section class="section matters" data-gsap="bg-white">
+					<div class="matter-area">
+						<div class="matter-wrap">
+						</div>
+					</div>
+				</section>
+				<!-- // [Section Matters End] 섹션 종료 -->
+
+
+				<section class="section collab">
+					<div class="collab-area">
+
+						<div class="collab-wrap collab-01">
+							<div class="collab-bg bg-base" 
+								 style="--bg-url: url('../images/main/brand01.jpg')"></div>
+							<div class="collab-dim"></div>
+							<div class="collab-line">
+								<!-- [D] 컬러 코드 값 및 SVG ID 개별 값으로
+									--stroke: 데이터 컬러 코드값 ,
+									--fills: 데이터 컬러 코드값
+								-->
+								<svg xmlns="http://www.w3.org/2000/svg" width="2784" height="4467" viewBox="0 0 2784 4467" fill="none" style="--stroke: #89C6FF; --fills: #FFFFFF;" class="collab-svg">
+									<path id="collabPath01" class="collab-path" d="M51.3784 440.497C29.716 666.234 -4.73643 899.728 183.227 1018.54C495.101 1215.68 898.466 903.999 1193.48 488.497C1488.5 72.9958 1897.5 -41.2274 2244.5 79.4939C2591.5 200.215 2871.5 542.994 2694.5 910.497C2517.5 1278 1904 1226.19 1904 1707.49C1904 2188.8 2974.83 2803.6 2601.04 3343.69C2353.96 3700.7 1790.07 3721.82 1351.12 3015.18C934.501 2344.48 44.1229 3124.26 581.162 3619.64C893.127 3907.41 1129.8 4173.85 1228.46 4432.5" stroke="var(--stroke)" stroke-width="68" stroke-linecap="round"/>
+
+									<use href="#collabPath01" class="collab-line-rail" aria-hidden="true" />
+
+									<g id="collabTextGroup01">
+										<text class="collab-line-text" dominant-baseline="middle"
+											  alignment-baseline="middle" style="fill: var(--fills)">
+											
+											<textPath id="collabTextPath01" href="#collabPath01" startOffset="0%" dy="0.30em" method="align" spacing="auto">
+												<!-- [D] 데이터로 값이 들어옴 -->
+												PUBGM x KIA / 제8구역 / 브랜드와 게임, 두 세계가 하나의 공간에서 만나다.
+											</textPath>
+										</text>
+									</g>
+								</svg>
+							</div>
+							
+							<div class="gutter">
+								<div class="max-1520 max-wrap">
+									<div class="collab-inner">
+
+										<div class="title-wrap">
+											<h2 class="title">
+												<strong>
+													PUBGM <br>
+													x KIA  <br>
+													제8구역
+												</strong>
+											</h2>
+										</div>
+
+										<div class="text-wrap">
+											<h3 class="sub-title">
+												<strong>
+													브랜드와 게임, <br>
+													두 세계가 하나의 공간에서 만나다.
+												</strong>
+											</h3>
+											<p class="text fs-18-12">
+												<span>
+													PUBG MOBILE 8주년을 맞아 게임의 핵심 경험인 '자기장'과 '전투'를 현실 공간으로 구현했습니다. 
+													<br>
+													두 개의 거점을 하나의 세계관으로 연결해 방문객이 직접 탐험하고 입하는 브랜드 경험을 설계했습니다.
+												</span>
+											</p>
+										</div>
+
+										<div class="img-area">
+											<div class="img-wrap">
+												<img src="../@resource/images/@temp/brand01-01.png" 
+													 alt="KRAFTON PUBG">
+											</div>
+											<div class="img-wrap">
+												<img src="../@resource/images/@temp/brand01-02.png" 
+													 alt="KRAFTON PUBG">
+											</div>
+										</div>
+
+										<div class="video-area">
+											<div class="video-wrap">
+												<video autoplay muted playsinline loop>
+													<source src="../@resource/videos/brand01.mp4" type="video/mp4">
+												</video>
+											</div>
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+						<!-- // Collaboration 01 -->
+
+						<div class="collab-wrap collab-02">
+							<div class="collab-bg bg-base" 
+								 style="--bg-url: url('../images/main/brand02.jpg')"></div>
+							<div class="collab-dim"></div>
+							<div class="collab-line">
+								<!-- [D] 컬러 코드 값 및 SVG ID 개별 값으로
+									--stroke: 데이터 컬러 코드값 ,
+									--fills: 데이터 컬러 코드값
+								-->
+								<svg xmlns="http://www.w3.org/2000/svg" width="2784" height="4467" viewBox="0 0 2784 4467" fill="none" style="--stroke: #0152c0; --fills: #FFFFFF;" class="collab-svg">
+									<path id="collabPath02" class="collab-path" d="M51.3784 440.497C29.716 666.234 -4.73643 899.728 183.227 1018.54C495.101 1215.68 898.466 903.999 1193.48 488.497C1488.5 72.9958 1897.5 -41.2274 2244.5 79.4939C2591.5 200.215 2871.5 542.994 2694.5 910.497C2517.5 1278 1904 1226.19 1904 1707.49C1904 2188.8 2974.83 2803.6 2601.04 3343.69C2353.96 3700.7 1790.07 3721.82 1351.12 3015.18C934.501 2344.48 44.1229 3124.26 581.162 3619.64C893.127 3907.41 1129.8 4173.85 1228.46 4432.5" stroke="var(--stroke)" stroke-width="68" stroke-linecap="round"/>
+
+									<use href="#collabPath02" class="collab-line-rail" aria-hidden="true" />
+
+									<g id="collabTextGroup02">
+										<text class="collab-line-text" dominant-baseline="middle"
+											  alignment-baseline="middle" style="fill: var(--fills)">
+											
+											<textPath id="collabTextPath02" href="#collabPath02" startOffset="0%" dy="0.30em" method="align" spacing="auto">
+												<!-- [D] 데이터로 값이 들어옴 -->
+												PUBGM x KIA / 제8구역 / 브랜드와 게임, 두 세계가 하나의 공간에서 만나다.
+											</textPath>
+										</text>
+									</g>
+								</svg>
+							</div>
+							
+							<div class="gutter">
+								<div class="max-1520 max-wrap">
+									<div class="collab-inner">
+
+										<div class="title-wrap">
+											<h2 class="title">
+												<strong>
+													PUBGM <br>
+													x KIA  <br>
+													제8구역
+												</strong>
+											</h2>
+										</div>
+
+										<div class="text-wrap">
+											<h3 class="sub-title">
+												<strong>
+													브랜드와 게임, <br>
+													두 세계가 하나의 공간에서 만나다.
+												</strong>
+											</h3>
+											<p class="text fs-18-12">
+												<span>
+													PUBG MOBILE 8주년을 맞아 게임의 핵심 경험인 '자기장'과 '전투'를 현실 공간으로 구현했습니다. 
+													<br>
+													두 개의 거점을 하나의 세계관으로 연결해 방문객이 직접 탐험하고 입하는 브랜드 경험을 설계했습니다.
+												</span>
+											</p>
+										</div>
+
+										<div class="img-area">
+											<div class="img-wrap">
+												<img src="../@resource/images/@temp/brand01-01.png" 
+													 alt="KRAFTON PUBG">
+											</div>
+											<div class="img-wrap">
+												<img src="../@resource/images/@temp/brand01-02.png" 
+													 alt="KRAFTON PUBG">
+											</div>
+										</div>
+
+										<div class="video-area">
+											<div class="video-wrap">
+												<video autoplay muted playsinline loop>
+													<source src="../@resource/videos/brand01.mp4" type="video/mp4">
+												</video>
+											</div>
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+						<!-- // Collaboration 02 -->
+
+						<div class="collab-wrap collab-03">
+							<div class="collab-bg bg-base" 
+								 style="--bg-url: url('../images/main/brand03.jpg')"></div>
+							<div class="collab-dim"></div>
+							<div class="collab-line">
+								<!-- [D] 컬러 코드 값 및 SVG ID 개별 값으로
+									--stroke: 데이터 컬러 코드값 ,
+									--fills: 데이터 컬러 코드값
+								-->
+								<svg xmlns="http://www.w3.org/2000/svg" width="2784" height="4467" viewBox="0 0 2784 4467" fill="none" style="--stroke: #FF671D; --fills: #FFFFFF;" class="collab-svg">
+									<path id="collabPath03" class="collab-path" d="M51.3784 440.497C29.716 666.234 -4.73643 899.728 183.227 1018.54C495.101 1215.68 898.466 903.999 1193.48 488.497C1488.5 72.9958 1897.5 -41.2274 2244.5 79.4939C2591.5 200.215 2871.5 542.994 2694.5 910.497C2517.5 1278 1904 1226.19 1904 1707.49C1904 2188.8 2974.83 2803.6 2601.04 3343.69C2353.96 3700.7 1790.07 3721.82 1351.12 3015.18C934.501 2344.48 44.1229 3124.26 581.162 3619.64C893.127 3907.41 1129.8 4173.85 1228.46 4432.5" stroke="var(--stroke)" stroke-width="68" stroke-linecap="round"/>
+
+									<use href="#collabPath03" class="collab-line-rail" aria-hidden="true" />
+
+									<g id="collabTextGroup03">
+										<text class="collab-line-text" dominant-baseline="middle"
+											  alignment-baseline="middle" style="fill: var(--fills)">
+											
+											<textPath id="collabTextPath03" href="#collabPath03" startOffset="0%" dy="0.30em" method="align" spacing="auto">
+												<!-- [D] 데이터로 값이 들어옴 -->
+												PUBGM x KIA / 제8구역 / 브랜드와 게임, 두 세계가 하나의 공간에서 만나다.
+											</textPath>
+										</text>
+									</g>
+								</svg>
+							</div>
+							
+							<div class="gutter">
+								<div class="max-1520 max-wrap">
+									<div class="collab-inner">
+
+										<div class="title-wrap">
+											<h2 class="title">
+												<strong>
+													PUBGM <br>
+													x KIA  <br>
+													제8구역
+												</strong>
+											</h2>
+										</div>
+
+										<div class="text-wrap">
+											<h3 class="sub-title">
+												<strong>
+													브랜드와 게임, <br>
+													두 세계가 하나의 공간에서 만나다.
+												</strong>
+											</h3>
+											<p class="text fs-18-12">
+												<span>
+													PUBG MOBILE 8주년을 맞아 게임의 핵심 경험인 '자기장'과 '전투'를 현실 공간으로 구현했습니다. 
+													<br>
+													두 개의 거점을 하나의 세계관으로 연결해 방문객이 직접 탐험하고 입하는 브랜드 경험을 설계했습니다.
+												</span>
+											</p>
+										</div>
+
+										<div class="img-area">
+											<div class="img-wrap">
+												<img src="../@resource/images/@temp/brand01-01.png" 
+													 alt="KRAFTON PUBG">
+											</div>
+											<div class="img-wrap">
+												<img src="../@resource/images/@temp/brand01-02.png" 
+													 alt="KRAFTON PUBG">
+											</div>
+										</div>
+
+										<div class="video-area">
+											<div class="video-wrap">
+												<video autoplay muted playsinline loop>
+													<source src="../@resource/videos/brand01.mp4" type="video/mp4">
+												</video>
+											</div>
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+						<!-- // Collaboration 03 -->
+
+						<div class="collab-wrap collab-04">
+							<div class="collab-bg bg-base" 
+								 style="--bg-url: url('../images/main/brand04.jpg')"></div>
+							<div class="collab-dim"></div>
+							<div class="collab-line">
+								<!-- [D] 컬러 코드 값 및 SVG ID 개별 값으로
+									--stroke: 데이터 컬러 코드값 ,
+									--fills: 데이터 컬러 코드값
+								-->
+								<svg xmlns="http://www.w3.org/2000/svg" width="2784" height="4467" viewBox="0 0 2784 4467" fill="none" style="--stroke: #FFFFC5; --fills: #353535;" class="collab-svg">
+									<path id="collabPath04" class="collab-path" d="M51.3784 440.497C29.716 666.234 -4.73643 899.728 183.227 1018.54C495.101 1215.68 898.466 903.999 1193.48 488.497C1488.5 72.9958 1897.5 -41.2274 2244.5 79.4939C2591.5 200.215 2871.5 542.994 2694.5 910.497C2517.5 1278 1904 1226.19 1904 1707.49C1904 2188.8 2974.83 2803.6 2601.04 3343.69C2353.96 3700.7 1790.07 3721.82 1351.12 3015.18C934.501 2344.48 44.1229 3124.26 581.162 3619.64C893.127 3907.41 1129.8 4173.85 1228.46 4432.5" stroke="var(--stroke)" stroke-width="68" stroke-linecap="round"/>
+
+									<use href="#collabPath04" class="collab-line-rail" aria-hidden="true" />
+
+									<g id="collabTextGroup04">
+										<text class="collab-line-text" dominant-baseline="middle"
+											  alignment-baseline="middle" style="fill: var(--fills)">
+											
+											<textPath id="collabTextPath04" href="#collabPath04" startOffset="0%" dy="0.30em" method="align" spacing="auto">
+												<!-- [D] 데이터로 값이 들어옴 -->
+												PUBGM x KIA / 제8구역 / 브랜드와 게임, 두 세계가 하나의 공간에서 만나다.
+											</textPath>
+										</text>
+									</g>
+								</svg>
+							</div>
+							
+							<div class="gutter">
+								<div class="max-1520 max-wrap">
+									<div class="collab-inner">
+
+										<div class="title-wrap">
+											<h2 class="title">
+												<strong>
+													PUBGM <br>
+													x KIA  <br>
+													제8구역
+												</strong>
+											</h2>
+										</div>
+
+										<div class="text-wrap">
+											<h3 class="sub-title">
+												<strong>
+													브랜드와 게임, <br>
+													두 세계가 하나의 공간에서 만나다.
+												</strong>
+											</h3>
+											<p class="text fs-18-12">
+												<span>
+													PUBG MOBILE 8주년을 맞아 게임의 핵심 경험인 '자기장'과 '전투'를 현실 공간으로 구현했습니다. 
+													<br>
+													두 개의 거점을 하나의 세계관으로 연결해 방문객이 직접 탐험하고 입하는 브랜드 경험을 설계했습니다.
+												</span>
+											</p>
+										</div>
+
+										<div class="img-area">
+											<div class="img-wrap">
+												<img src="../@resource/images/@temp/brand01-01.png" 
+													 alt="KRAFTON PUBG">
+											</div>
+											<div class="img-wrap">
+												<img src="../@resource/images/@temp/brand01-02.png" 
+													 alt="KRAFTON PUBG">
+											</div>
+										</div>
+
+										<div class="video-area">
+											<div class="video-wrap">
+												<video autoplay muted playsinline loop>
+													<source src="../@resource/videos/brand01.mp4" type="video/mp4">
+												</video>
+											</div>
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+						<!-- // Collaboration 04 -->
+					</div>
+				</section>
+				<!-- // [Section Collaboration End] 섹션 종료 -->
+
+
+				<section class="section gallery">
+					<div class="gallery-area grid-wrap col-3">
+						<div class="gallery-wrap side-01">
+							<div class="img-wrap">
+								<img src="../@resource/images/main/bento01.jpg" alt="SUPERCELL | 슈퍼셀">
+							</div>
+							<div class="img-wrap">
+								<img src="../@resource/images/main/bento04.jpg" alt="NEXON | 넥슨">
+							</div>
+							<div class="img-wrap">
+								<img src="../@resource/images/main/bento07.jpg" alt="DEVSISTERS | 데브시스터즈">
+							</div>
+						</div>
+
+						<div class="gallery-wrap gallery">
+							<div class="img-wrap">
+								<img src="../@resource/images/main/bento02.jpg" alt="Riot Games | 라이엇 게임즈">
+							</div>
+							<div class="img-wrap gallery">
+								<span class="blind">Weekends | 위켄즈</span>
+								<div class="img"></div>
+							</div>
+							<div class="img-wrap">
+								<img src="../@resource/images/main/bento08.jpg" alt="NAVER | 네이버">
+							</div>
+						</div>
+
+						<div class="gallery-wrap side-03">
+							<div class="img-wrap">
+								<img src="../@resource/images/main/bento03.jpg" alt="AMOREPACIFIC | 아모레퍼시픽">
+							</div>
+							<div class="img-wrap">
+								<img src="../@resource/images/main/bento06.jpg" alt="KRAFTON | 크래프톤">
+							</div>
+							<div class="img-wrap">
+								<img src="../@resource/images/main/bento09.jpg" alt="KIA | 기아">
+							</div>
+						</div>
+						
+
+						<div class="marquee-wrap">
+							<div class="marquee">
+								<p class="inner uppercase fw700 fc-white"></p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- // [Section Gallery End] 섹션 종료 -->
+
+				<section class="section achieve">
+					<div class="gutter is-full">
+						<div class="achieve-inner">
+							<div class="title-area pack-center">
+								<h2 class="title fc-white uppercase ta-c fw400 lh130">
+									<span class="split only-pc">
+										<span>What We've</span>
+									</span>
+
+									<span class="split only-mo">
+										<span>What</span>
+									</span>
+									<span class="split only-mo">
+										<span>We've</span>
+									</span>
+									<span class="split">
+										<span>Achieved</span>
+									</span>
+								</h2>
+							</div>	
+
+							<div class="achieve-area">
+								<div class="achieve-wrap credit">
+									<div class="text-area">
+										<div class="text-wrap pack-down gap-10">
+											<h3 class="title fc-white lh125 fw-base">
+												<strong>
+													기업신용등급 <br>
+													<span class="fw600">(2025)</span>
+												</strong>
+											</h3>
+											<p class="text fc-white-60 lh125 fw400">
+												<span>
+													한국기술신용평가 <br>
+													KB국민은행
+												</span>
+											</p>								
+										</div>
+
+										<div class="total-wrap">
+											<p class="totals fc-white lh100">
+												<strong>A</strong>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="achieve-wrap partner">
+									<div class="text-area">
+										<div class="text-wrap pack-down gap-10">
+											<h3 class="title fc-white lh125">
+												<strong>
+													파트너사
+												</strong>
+											</h3>
+											<p class="text fc-white-60 lh125 fw400">
+												<span>
+													2025
+												</span>
+											</p>								
+										</div>
+
+										<div class="total-wrap">
+											<p class="totals fc-white lh100">
+												<strong>150+</strong>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="achieve-wrap people">
+									<div class="text-area">
+										<div class="text-wrap pack-down gap-10">
+											<h3 class="title fc-white lh125">
+												<span>
+													현장 참가자
+												</span>
+											</h3>
+											<p class="text fc-white-60 lh125 fw400">
+												<span>
+													2025
+												</span>
+											</p>								
+										</div>
+
+										<div class="total-wrap">
+											<p class="totals fc-white lh100">
+												<strong>600K+</strong>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- // [Section Achieve End] 섹션 종료 -->
+			</main>
+
+			
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div>
+	</div>
+
+	
+
+
+	<script src="../@resource/js/lib/swiper-bundle.min.js"></script>
+	<script src="../@resource/js/lib/lenis.min.js"></script>
+
+	<script src="../@resource/js/lib/gsap.min.js"></script>
+	<script src="../@resource/js/lib/ScrollTrigger.min.js"></script>
+	<script src="../@resource/js/lib/SplitText.min.js"></script>
+	<script src="../@resource/js/lib/ScrambleTextPlugin.min.js"></script>
+	<script src="../@resource/js/lib/Flip.min.js"></script>
+
+	<script type="module">
+		import * as THREE from '../@resource/js/lib/three.module.min.js';
+		window.THREE = THREE;
+		window.dispatchEvent(new Event('three:ready'));
+	</script>
+
+	<script src="../@resource/js/lib/matter.min.js"></script>
+
+	<script src="../@resource/js/motion.js"></script>
+	<script src="../@resource/js/main.js"></script>
+	<script>
+
+	</script>
+
+</body>
+</html>

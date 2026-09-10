@@ -1,0 +1,86 @@
+@use 'mixins' as *;
+
+/* [Icon] (Project Icon) */
+/* Description: 프로젝트 사용 아이콘 */
+
+/* <Icon Variable> */
+:root {
+	--ico-16: 	1.6rem;
+	--ico-20: 	2.0rem;
+	--ico-24: 	2.4rem;
+	--ico-28: 	2.8rem;
+	--ico-30: 	3.0rem;
+	--ico-32: 	3.2rem;
+	--ico-40: 	4.0rem;
+	--ico-48: 	4.8rem;
+
+	--ico-24-20: clamp(2rem,2.6vw,2.4rem);
+	--ico-30-24: clamp(2.4rem,3.13vw,3rem);
+	--ico-48-32: clamp(3.2rem,4.17vw,4.8rem);
+}
+
+/* <Setting> - 아이콘 설정 */
+.ico		{
+	display: flex; aspect-ratio: 1/1;
+	@include bg-base;
+
+	&.rotate-90 { transform: rotate(90deg) }
+	&.rotate-180{ transform: rotate(180deg) }
+
+	&[class*="mask-"] { @include mask-base; }
+
+	/* <@Ui Common> - 기본 */
+	&:is(.menu, .mask-menu, .close, .mask-close)	{ width: var(--ico-24); }
+	&.menu					{ background-image: url("../images/@uic/menu.svg"); }
+	&.mask-menu				{ @include mask-icon("../images/@uic/menu.svg"); }
+	&.close					{ background-image: url("../images/@uic/close.svg"); }
+	&.mask-close			{ @include mask-icon("../images/@uic/close.svg"); }
+
+	&.search, 
+	&.mask-search			{ width: var(--ico-24); }
+
+	&.search				{ background-image: url("../images/@uic/search.svg"); }
+	&.mask-search			{ @include mask-icon("../images/@uic/search.svg"); }
+
+
+	/* <@Common> */
+	&:is(.logo, .mask-logo)	{ width: var(--ico-48-32); }
+	&.logo					{ background-image: url("../images/@common/h-logo.svg"); }
+	&.mask-logo				{ @include mask-icon("../images/@common/h-logo.svg"); }
+
+	&.mask-logo_mo			{ 
+		width: 11rem; aspect-ratio: 100/28; 
+		@include mask-icon("../images/@common/h-logo_mo.svg");
+	}
+
+
+
+	/* <Background> - 아이콘 백그라운드 */
+	// 24px
+	&:is(.arrow-r)			{ width: var(--ico-24); }
+	&.arrow-r				{ background-image: url('../images/@ico/arrow-r.svg'); }
+
+
+	/* <Mask> - 아이콘 마스크 */
+	// 24px
+	&:is(.mask-arrow-r, .mask-cirClose, .mask-download)	{ width: var(--ico-24-20); }
+	&.mask-arrow-r				{ @include mask-icon('../images/@ico/arrow-r.svg'); }
+	&.mask-cirClose				{ @include mask-icon("../images/@common/close-circle.svg"); }
+	&.mask-download				{ @include mask-icon("../images/@common/download.svg"); }
+
+	// 30px
+	&:is(.mask-instagram)	{ width: var(--ico-30-24); }
+	&.mask-instagram		{  @include mask-icon('../images/@ico/instagram.svg') }
+
+
+	&:is(.mask-diamond, .mask-wave){ width: clamp(6.8rem,8.85vw,14.8rem); }
+	&.mask-diamond		{  @include mask-icon('../images/@ico/diamond.svg') }
+	&.mask-wave			{  @include mask-icon('../images/@ico/wave.svg') }
+
+	/* <Etc> - 기타 */
+}
+/* [RWD] (Responsive) 반응형 */
+@include mobile {
+
+}
+/* // [Icon] 프로젝트 사용 아이콘 종료 */
