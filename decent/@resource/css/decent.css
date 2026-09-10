@@ -8,13 +8,13 @@
 @import url(lib/scrollbar.min.css);
 @import url(lib/jquery.mCustomScrollbar.css);
 /* common css */
-@import url(_font.css);
-@import url(_colors.css);
-@import url(_vars.css);
-@import url(_button.css);
-@import url(_form.css);
-@import url(_layout.css);
-@import url(_global.css);
+@import url(font.css);
+@import url(colors.css);
+@import url(vars.css);
+@import url(button.css);
+@import url(form.css);
+@import url(layout.css);
+@import url(global.css);
 
 
 /****** main index ******/

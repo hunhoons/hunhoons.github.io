@@ -1,0 +1,90 @@
+:root {
+	--vh100: calc(var(--vh, 1vh) * 100);
+
+	/* btn & input */
+	--xsmall: 36px;
+	--small: 40px;
+	--medium: 42px;
+	--large: 60px;
+	--large-2: 60px;
+
+	/* scroll */
+	--scroll: 4px;
+
+	/* scroll */
+	--pop-header: 80px;
+
+	/* color */
+	--temp: LightBlue;
+	--temp2: LightSteelBlue;
+	--temp3: MistyRose;
+	--temp4: SeaShell;
+
+	/* font size */
+	--fs14 : 14px;
+	--fs16 : 16px;
+	--fs18 : 18px;
+	--fs22 : 22px;
+
+	/* gutter */
+	--gutter : 9.271vw;
+
+	/* letter spaceing */
+	--letter-042 : -0.42px;
+	--letter-048 : -0.48px;
+	--letter-054 : -0.54px;
+	--letter-066 : -0.66px;
+	--letter-066-2 : -0.66px;
+	--letter-108 : -1.08px;
+	--letter-120 : -1.2px;
+
+}
+
+@media all and (min-width: 1920px) {
+	:root{
+		--gutter : 178px;
+	}
+}
+
+@media all and (min-width:1261px) and (max-width: 1919px) {
+	:root{
+		--gutter : 9.276vw;
+	}
+}
+
+@media all and (min-width: 769px) and (max-width: 1260px) {
+	:root{
+		--gutter : 5.263vw;
+	}
+}
+
+@media all and (min-width: 769px) {
+	:root {
+		/* header */
+		--header: 80px;
+	}
+}
+
+@media all and (max-width: 768px) {
+	:root {
+		/* header */
+		--header: 60px;
+
+		/* btn & input */
+		--large: 42px;
+
+		/* gutter */
+		--gutter : 20px;
+
+		/* letter spaceing */
+		--letter-042 : -0.36px;
+		--letter-048 : -0.36px;
+		--letter-054 : -0.42px;
+		--letter-066 : -0.48px;
+		--letter-066-2 : -0.54px;
+		--letter-108 : -0.6px;
+		--letter-120 : -0.84px;
+
+	}
+}
+
