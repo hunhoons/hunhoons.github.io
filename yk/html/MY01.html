@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>법무법인 YK</title>
+	<link type="text/css" rel="stylesheet" href="../@resource/css/lib/aos.css">
+	<link type="text/css" rel="stylesheet" href="../@resource/css/yk.css">
+	<link type="text/css" rel="stylesheet" href="../@resource/css/yk_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/lib/aos.js"></script>
+	<script src="../@resource/js/yk.js"></script>
+</head>
+<body>
+
+	<div class="skip-nav">
+		<a href="#content">본문 바로가기</a>
+	</div>
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="my-page info-modify">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<div id="content">
+				<div class="location">
+					<div class="inner">
+						<a href="HM00.html" class="home" title="홈"><i class="ico home"></i></a>
+						<a href="MY00.html">마이페이지</a>
+						<span class="current">회원 정보 수정</span>
+					</div>
+				</div>
+				<div class="content-header">
+					<h1 data-aos="fade-up">회원 정보 수정</h1>
+				</div>
+				<div class="content-primary">
+					<div class="form-wrap max-480">
+						<form action="">
+							<fieldset>
+								<legend>회원 정보 수정</legend>
+								<h2>기본정보</h2>
+
+								<div class="field">
+									<div class="label">아이디</div>
+									<div class="insert input-wrap">
+										<input type="text" class="input-text medium" value="yk1234" readonly>
+									</div>
+								</div>
+								<div class="field">
+									<div class="label">이름</div>
+									<div class="insert input-wrap">
+										<input type="text" class="input-text medium" value="와이케이" readonly>
+									</div>
+								</div>
+
+								<div class="field birthday">
+									<div class="label flex space-between">생년월일</div>
+									<div class="insert input-wrap">
+										<div class="year">
+											<input type="number" oninput="maxLengthCheck(this)" maxlength="4" class="input-text medium" value="1998">	
+											<span class="text">년</span>
+										</div>
+										<div class="month">
+											<select name="" id="" class="select">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+											</select>
+											<span class="text">월</span>
+										</div>
+										<div class="day">
+											<select name="" id="" class="select">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+												<option value="13">13</option>
+												<option value="14">14</option>
+												<option value="15">15</option>
+												<option value="16">16</option>
+												<option value="17">17</option>
+												<option value="18">18</option>
+												<option value="19">19</option>
+												<option value="20">20</option>
+												<option value="21">21</option>
+												<option value="22">22</option>
+												<option value="23">23</option>
+												<option value="24">24</option>
+												<option value="25">25</option>
+												<option value="26">26</option>
+												<option value="27">27</option>
+												<option value="28">28</option>
+												<option value="29">29</option>
+												<option value="30">30</option>
+												<option value="31">31</option>
+											</select>
+											<span class="text">일</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="field">
+									<div class="label">가입일</div>
+									<div class="insert input-wrap">
+										<input type="text" class="input-text medium" value="2020.01.01" readonly>
+									</div>
+								</div>
+
+								<div class="field">
+									<div class="label">휴대폰번호</div>
+									<div class="insert input-wrap">
+										<input type="text" class="input-text medium" value="01012345678" readonly>
+									</div>
+								</div>
+
+								<h2>필수정보</h2>
+
+								<div class="field password existing">
+									<div class="label">기존 비밀번호</div>
+									<div class="insert input-wrap">
+										<input type="password" class="input-text medium" placeholder="기존 비밀번호 입력">
+										<button type="button" class="btn visible"><i class="ico pw-visible"></i></button>
+									</div>
+									<button type="button" class="btn light small">인증하기</button>
+								</div>
+
+
+								<div class="field password">
+									<div class="label flex space-between">신규 비밀번호</div>
+									<div class="insert input-wrap">
+										<input type="password" class="input-text medium" placeholder="신규 비밀번호 입력">
+										<button type="button" class="btn visible"><i class="ico pw-visible"></i></button>
+									</div>
+								</div>
+
+								<div class="field password">
+									<div class="label flex space-between">신규 비밀번호 확인</div>
+									<div class="insert input-wrap error"> <!-- // [D] 불일치 시 error 클래스 추가 -->
+										<input type="password" class="input-text medium" placeholder="신규 비밀번호 입력 확인">
+										<button type="button" class="btn invisible"><i class="ico pw-invisible"></i></button>
+									</div>
+									<p class="text fc-red-80">입력하신 비밀번호가 일치하지 않습니다.</p> <!-- // [D] 불일치 시 안내문구 -->
+								</div>
+
+								<div class="field cell-phone">
+									<div class="label">신규 휴대폰 번호</div>
+									<div class="insert input-wrap">
+										<select name="" id="" class="select medium">
+											<option value="통신사">통신사</option>
+											<option value="SK">SK</option>
+											<option value="KT">KT</option>
+											<option value="LG U+">LG U+</option>
+											<option value="알뜰폰">알뜰폰</option>
+										</select>
+										<input type="number" oninput="maxLengthCheck(this)" maxlength="11" class="input-text medium" placeholder="신규 번호 입력">
+										<button class="btn light small">인증번호요청</button>
+									</div>
+
+									<div class="insert input-wrap">
+										<input type="text" class="input-text medium" placeholder="인증번호 입력 (5:00)">
+										<button class="btn light small">인증번호확인</button>
+									</div>
+								</div>
+								
+								<h2>선택 정보</h2>
+								<div class="field">
+									<div class="label">이메일</div>
+									<div class="insert input-wrap">
+										<input type="email" class="input-text medium" placeholder="">
+									</div>
+								</div>
+
+								<div class="field address">
+									<div class="label">우편번호 / 주소</div>
+									<div class="insert input-wrap">
+										<input type="text" class="input-text medium">
+										<button type="button" class="btn light small">우편번호 검색</button>
+									</div>
+									<div class="insert input-wrap">
+										<input type="text" class="input-text medium">
+									</div>
+								</div>
+
+								<div class="field">
+									<div class="label">우편물 송달</div>
+									<div class="insert">
+										<select name="" id="" class="select medium">
+											<option value="수령 장소 선택">수령 장소 선택</option>
+											<option value="상기주소">상기주소</option>
+											<option value="로펌수령">로펌수령</option>
+										</select>
+									</div>
+								</div>
+								
+								<div class="field agree">
+									<div class="label">수신 동의</div>
+									<div class="insert">
+										<input type="checkbox" class="checkbox" name="cbRule" id="cbRule1">
+										<label for="cbRule1">카카오톡 / SMS 수신 동의 (선택)</label>
+									</div>
+								</div>
+
+								<div class="btn-area large aside">
+									<button type="button" class="btn normal large">수정하기</button>
+									<a class="btn text line" href="MY02.html" role="button">회원 탈퇴</a>
+								</div>
+							</fieldset>
+
+						</form>
+					</div>
+				</div>
+			</div><!-- // #content -->
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div><!-- // #container -->
+	</div><!-- // #wrap -->
+	<div id="popSearch" class="overlay pop-search">
+		<div class="popup-body">
+			<h2><span class="ff-inter">YK GPT</span>에 궁금한 <br class="only-mo"> 키워드를 검색해보세요</h2>
+			<div class="search-wrap">
+				<form action="">
+					<fieldset>
+						<legend>검색</legend>
+						<div class="input-wrap max-720">
+							<input type="text" class="input-text large" placeholder="검색어를 입력해주세요.">
+							<button type="button" class="btn search" title="검색">
+								<i class="ico search-2"></i>
+							</button>
+							<button type="button" class="btn clear" title="삭제">
+								<i class="ico delete"></i>
+							</button>
+						</div>
+	
+						<div class="search-bottom">
+							<!-- [D] li max 6개 -->
+							<ul class="autocomplete">
+								<li><a href="javascript:void(0);"><strong>성</strong>추행</a></li>
+								<li><a href="javascript:void(0);"><strong>성</strong>매매</a></li>
+								<li><a href="javascript:void(0);"><strong>성</strong>희롱</a></li>
+								<li><a href="javascript:void(0);"><strong>성</strong>범죄</a></li>
+								<li><a href="javascript:void(0);">디지털 <strong>성</strong>범죄</a></li>
+								<li><a href="javascript:void(0);"><strong>성</strong>추행 고소장</a></li>
+							</ul>
+							<!-- // [D] li max 6개 -->
+							
+						</div>
+	
+						<div class="tag-wrap">
+							<span class="tag small">#형사전문변호사</span>
+							<span class="tag small">#강제추행</span>
+							<span class="tag small">#이혼전문변호사</span>
+						</div>
+						<button type="button" class="btn bdr-3 small btn-close">닫기</button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="http://pub.hanbom.com/@pub/@resource/js/hanbomIn.js"></script>
+	<script src="../@resource/js/lib/jquery.nicescroll.min.js"></script>
+	<script>
+		var includeCallback = function(){
+			// nav.current(1, 2);
+			nav.FooterNav();
+		};
+		jQuery(function(){
+			// 아코디언
+			accordion(1);
+
+			const passCheck = $('.field.password .btn');
+			passCheck.each((idx, item) => {
+				let type = false;
+				$(item).click( () => {
+					if(!type){
+						$(item).siblings().prop('type', 'text')
+						$(item).find('i').attr('class','ico pw-invisible');
+						type = true;
+					}else{
+						$(item).siblings().prop('type', 'password')
+						$(item).find('i').attr('class','ico pw-visible');
+						type = false;
+					}
+				});
+			});
+		});
+
+	</script>
+</body>
+</html>

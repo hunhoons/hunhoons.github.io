@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>법무법인 YK</title>
+	<link type="text/css" rel="stylesheet" href="../@resource/css/lib/aos.css">
+	<link type="text/css" rel="stylesheet" href="../@resource/css/yk.css">
+	<link type="text/css" rel="stylesheet" href="../@resource/css/yk_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/lib/aos.js"></script>
+	<script src="../@resource/js/yk.js"></script>
+</head>
+<body>
+
+	<div class="skip-nav">
+		<a href="#content">본문 바로가기</a>
+	</div>
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="my-page">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<div id="content">
+				<div class="location">
+						<div class="inner">
+						<a href="HM00.html" class="home" title="홈"><i class="ico home"></i></a>
+						<a href="MY00.html" class="current">마이페이지</a>
+					</div>
+				</div>
+				<div class="content-header">
+					<div class="flex space-between max-1280">
+						<h1>마이페이지</h1>
+						<div class="aside">
+							<div class="user">와이케이님<span>(yk1234)</span></div>
+							<a class="btn light-2 x-small" href="MY01.html" role="button">정보 수정</a>
+						</div>
+					</div>
+				</div>
+				<div class="content-primary">
+					<div class="max-1280">
+						<ul class="tabs medium" role="tablist">
+							<li role="presentation"><a href="MY00.html" aria-controls="tabCon1" aria-selected="true">나의 사건 현황</a></li>
+							<li role="presentation"><a href="MY00_02.html" aria-controls="tabCon2" aria-selected="false">법률 지식인</a></li>
+							<li class="active" role="presentation"><a href="javascript:void(0);" aria-controls="tabCon3" aria-selected="false">상담 예약 현황</a></li>
+						</ul>
+
+						<div class="flex space-between with">
+							<div class="title-wrap flex">
+								<h2>상담 예약 현황</h2>
+								<p class="text aside">상담 예약 및 취소는 1688-7073으로 연락해주세요.</p>
+							</div>
+
+							<div class="reservation-status">
+								<dl>
+									<dt>대기중</dt>
+									<dd><strong>01</strong>건</dd>
+								</dl>
+								<dl>
+									<dt>예약완료</dt>
+									<dd><strong>01</strong>건</dd>
+								</dl>
+								<dl>
+									<dt>상담완료</dt>
+									<dd><strong>01</strong>건</dd>
+								</dl>
+								<dl>
+									<dt>상담취소</dt>
+									<dd><strong>01</strong>건</dd>
+								</dl>
+							</div>
+						</div>
+
+						<!-- [D] DATA 있을 때 -->
+						<div class="table-wrap flow-x">
+							<table class="data-table">
+								<colgroup>
+									<col style="width: 7%;">
+									<col style="width: 9%;">
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">NO.</th>
+										<th scope="col">분야</th>
+										<th scope="col">상담방법</th>
+										<th scope="col">예약일시</th>
+										<th scope="col">상태</th>
+										<th scope="col">신청일</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>01</td>
+										<td>형사</td>
+										<td>방문상담</td>
+										<td>
+											<span class="date">2023.04.11</span>
+											<span class="time">13:00</span>
+										</td>
+										<td class="state ing">대기 중</td>
+										<td>2022.12.22</td>
+									</tr>
+									<tr>
+										<td>02</td>
+										<td>형사</td>
+										<td>전화상담</td>
+										<td>
+											<span class="date">2023.04.11</span>
+											<span class="time">13:00</span>
+										</td>
+										<td class="state complete">예약완료</td>
+										<td>2022.11.01</td>
+									</tr>
+									<tr>
+										<td>03</td>
+										<td>가사</td>
+										<td>화상상담</td>
+										<td>
+											<span class="date">2023.04.11</span>
+											<span class="time">13:00</span>
+										</td>
+										<td class="state end">상담완료</td>
+										<td>2022.12.22</td>
+									</tr>
+									<tr>
+										<td>04</td>
+										<td>가사</td>
+										<td>화상상담</td>
+										<td>
+											<span class="date">2023.04.11</span>
+											<span class="time">13:00</span>
+										</td>
+										<td class="state end">상담취소</td>
+										<td>2022.11.01</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- // [D] DATA 있을 때 -->
+
+						<!-- [D] DATA 없을 때 -->
+						<div class="no-case">
+							<p class="text">상담 예약 내역이 없습니다.</p>
+						</div>
+						<!-- // [D] DATA 없을 때 -->
+					</div>
+				</div>
+			</div><!-- // #content -->
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div><!-- // #container -->
+	</div><!-- // #wrap -->
+	<div id="popSearch" class="overlay pop-search">
+		<div class="popup-body">
+			<h2><span class="ff-inter">YK GPT</span>에 궁금한 <br class="only-mo"> 키워드를 검색해보세요</h2>
+			<div class="search-wrap">
+				<form action="">
+					<fieldset>
+						<legend>검색</legend>
+						<div class="input-wrap max-720">
+							<input type="text" class="input-text large" placeholder="검색어를 입력해주세요.">
+							<button type="button" class="btn search" title="검색">
+								<i class="ico search-2"></i>
+							</button>
+							<button type="button" class="btn clear" title="삭제">
+								<i class="ico delete"></i>
+							</button>
+						</div>
+	
+						<div class="search-bottom">
+							<!-- [D] li max 6개 -->
+							<ul class="autocomplete">
+								<li><a href="javascript:void(0);"><strong>성</strong>추행</a></li>
+								<li><a href="javascript:void(0);"><strong>성</strong>매매</a></li>
+								<li><a href="javascript:void(0);"><strong>성</strong>희롱</a></li>
+								<li><a href="javascript:void(0);"><strong>성</strong>범죄</a></li>
+								<li><a href="javascript:void(0);">디지털 <strong>성</strong>범죄</a></li>
+								<li><a href="javascript:void(0);"><strong>성</strong>추행 고소장</a></li>
+							</ul>
+							<!-- // [D] li max 6개 -->
+							
+						</div>
+	
+						<div class="tag-wrap">
+							<span class="tag small">#형사전문변호사</span>
+							<span class="tag small">#강제추행</span>
+							<span class="tag small">#이혼전문변호사</span>
+						</div>
+						<button type="button" class="btn bdr-3 small btn-close">닫기</button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="http://pub.hanbom.com/@pub/@resource/js/hanbomIn.js"></script>
+	<script src="../@resource/js/lib/jquery.nicescroll.min.js"></script>
+	<script>
+		var includeCallback = function(){
+			// nav.current(1, 2);
+			nav.FooterNav();
+		};
+		jQuery(function(){
+
+		});
+	</script>
+</body>
+</html>

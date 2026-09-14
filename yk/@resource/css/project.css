@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* hanbom.com _ project _ name _ yymmdd */
+
+/* reset */
+@import url(lib/reset.css);
+/*
+@import url(lib/normalize.css);
+*/
+/* library */
+@import url(lib/swiper.min.css);
+/* beteast css */
+@import url(_font.css);
+@import url(_button.css);
+@import url(_form.css);
+@import url(_layout.css);
+@import url(_global.css);
+
+
+/* page common */
+.classname{}
+@media all and (max-width:640px){
+	.classname{}
+}
+@media all and (min-width:641px){
+	.classname{}
+}
+
+/* pageid1 */
+#pageid1 .classname{}
+@media all and (max-width:640px){
+	#pageid1 .classname{}
+}
+@media all and (min-width:641px){
+	#pageid1 .classname{}
+}
+
+/* pageid2 */
+#pageid2 .classname{}
+@media all and (max-width:640px){
+	#pageid2 .classname{}
+}
+@media all and (min-width:641px){
+	#pageid2 .classname{}
+}

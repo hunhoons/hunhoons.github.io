@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+/* ESG 경영 230717 추가 */
+.introduce.esg .content-primary{padding-top: 80px !important;}
+.introduce.esg .intro-wrap .img-wrap{display: block; width: calc(100% + 80px); margin-left: -40px;}
+.introduce.esg .intro-wrap .img-wrap img{vertical-align: top;}
+.introduce.esg .intro-wrap .text-wrap .text + .text{padding-top: 40px;}
+@media all and (max-width:1920px) {
+	.introduce.esg .intro-wrap .img-wrap{width: calc(100% + 4.167vw); margin-left: -2.083vw;}
+}

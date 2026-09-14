@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>법무법인 YK</title>
+	<link type="text/css" rel="stylesheet" href="../@resource/css/lib/aos.css">
+	<link type="text/css" rel="stylesheet" href="../@resource/css/yk.css">
+	<link type="text/css" rel="stylesheet" href="../@resource/css/yk_dev.css">
+	<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../@resource/js/lib/aos.js"></script>
+	<script src="../@resource/js/yk.js"></script>
+</head>
+<body>
+
+	<div class="skip-nav">
+		<a href="#content">본문 바로가기</a>
+	</div>
+
+	<div id="wrap" class="wrap">
+		<div id="container" class="login find password">
+			<header id="header" class="header" data-include-path="../inc/header.html"></header>
+
+			<div id="content">
+				<div class="content-header">
+					<h1 data-aos="fade-up">비밀번호 변경</h1>
+					<p class="text large fc-black-80">새로운 비밀번호를 설정해 주세요.</p>
+				</div>
+				<div class="content-primary">
+					<div class="form-wrap max-480">
+						<form action="">
+							<fieldset>
+								<legend>YK 회원가입 정보입력</legend>
+								
+								<div class="field cell-phone">
+									<div class="label">휴대폰번호</div>
+									<div class="insert input-wrap">
+										<select name="" id="" class="select medium">
+											<option value="통신사">통신사</option>
+											<option value="SK">SK</option>
+											<option value="KT">KT</option>
+											<option value="LG U+">LG U+</option>
+											<option value="알뜰폰">알뜰폰</option>
+										</select>
+										<input type="number" oninput="maxLengthCheck(this)" maxlength="11" class="input-text medium" placeholder="">
+										<button class="btn light small">인증번호요청</button>
+									</div>
+
+									<div class="insert input-wrap">
+										<input type="text" class="input-text medium" placeholder="인증번호 입력 (5:00)">
+										<button class="btn light small">인증번호확인</button>
+									</div>
+								</div>
+
+								<div class="field new-password">
+									<div class="label flex space-between">새 비밀번호</div>
+									<div class="insert input-wrap">
+										<input type="password" class="input-text medium" placeholder="새 비밀번호 입력">
+									</div>
+								</div>
+
+								<div class="field new-password">
+									<div class="label flex space-between">새 비밀번호 확인</div>
+									<div class="insert input-wrap error"> <!-- // [D] 불일치 시 error 클래스 추가 -->
+										<input type="password" class="input-text medium" placeholder="새 비밀번호 확인">
+										<button class="btn light small">확인</button>
+									</div>
+									<p class="text fc-red-80">입력하신 비밀번호가 일치하지 않습니다.</p> <!-- // [D] 불일치 시 안내문구 -->
+								</div>
+
+								<div class="btn-area small full">
+									<button type="button" class="btn normal-2 large">비밀번호 변경</button>
+								</div>
+								<div class="btn-util">
+									<a class="btn text basic" href="LO03.html" role="button">아이디 찾기</a>
+									<a class="btn text basic" href="LO00.html" role="button">로그인하기</a>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div><!-- // #content -->
+
+			<footer id="footer" class="footer" data-include-path="../inc/footer.html"></footer>
+		</div><!-- // #container -->
+	</div><!-- // #wrap -->
+	<div id="popSearch" class="overlay pop-search">
+		<div class="popup-body">
+			<h2><span class="ff-inter">YK GPT</span>에 궁금한 <br class="only-mo"> 키워드를 검색해보세요</h2>
+			<div class="search-wrap">
+				<form action="">
+					<fieldset>
+						<legend>검색</legend>
+						<div class="input-wrap max-720">
+							<input type="text" class="input-text large" placeholder="검색어를 입력해주세요.">
+							<button type="button" class="btn search" title="검색">
+								<i class="ico search-2"></i>
+							</button>
+							<button type="button" class="btn clear" title="삭제">
+								<i class="ico delete"></i>
+							</button>
+						</div>
+	
+						<div class="search-bottom">
+							<!-- [D] li max 6개 -->
+							<ul class="autocomplete">
+								<li><a href="javascript:void(0);"><strong>성</strong>추행</a></li>
+								<li><a href="javascript:void(0);"><strong>성</strong>매매</a></li>
+								<li><a href="javascript:void(0);"><strong>성</strong>희롱</a></li>
+								<li><a href="javascript:void(0);"><strong>성</strong>범죄</a></li>
+								<li><a href="javascript:void(0);">디지털 <strong>성</strong>범죄</a></li>
+								<li><a href="javascript:void(0);"><strong>성</strong>추행 고소장</a></li>
+							</ul>
+							<!-- // [D] li max 6개 -->
+							
+						</div>
+	
+						<div class="tag-wrap">
+							<span class="tag small">#형사전문변호사</span>
+							<span class="tag small">#강제추행</span>
+							<span class="tag small">#이혼전문변호사</span>
+						</div>
+						<button type="button" class="btn bdr-3 small btn-close">닫기</button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="http://pub.hanbom.com/@pub/@resource/js/hanbomIn.js"></script>
+	<script src="../@resource/js/lib/jquery.nicescroll.min.js"></script>
+	<script>
+		var includeCallback = function(){
+			// nav.current(1, 2);
+			nav.FooterNav();
+		};
+		jQuery(function(){
+			
+			
+			// 아코디언
+			accordion(1);
+
+			const passCheck = $('.field.password .btn');
+			passCheck.each((idx, item) => {
+				let type = false;
+				$(item).click( () => {
+					if(!type){
+						$(item).siblings().prop('type', 'text')
+						$(item).find('i').attr('class','ico pw-invisible');
+						type = true;
+					}else{
+						$(item).siblings().prop('type', 'password')
+						$(item).find('i').attr('class','ico pw-visible');
+						type = false;
+					}
+				});
+			});
+			
+		});
+
+		// 방문경로 > 기타 선택
+		function changeFunc() {
+			var selectBox = document.getElementById("selectPath");
+			var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+			if (selectedValue=="기타"){
+				$('#inputPath').show();
+			}
+			else {
+				$('#inputPath').hide();
+			}
+		}
+		
+	</script>
+</body>
+</html>

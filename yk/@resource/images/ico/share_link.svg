@@ -1,0 +1,19 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="z1xonwpx8a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="16" height="16">
+        <path fill="#D9D9D9" d="M2 2h16v16H2z"/>
+    </mask>
+    <g clip-path="url(#oppkq7tuob)">
+        <mask id="hiqlsvsv6c" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+            <path d="M10 0 0 9.999l10 10 9.999-10-10-10z" fill="#fff"/>
+        </mask>
+        <g mask="url(#hiqlsvsv6c)" fill="#626C83">
+            <path d="M7.083 8.75a.59.59 0 0 1 0 .833l-1.25 1.25a2.357 2.357 0 1 0 3.333 3.333l1.25-1.25a.59.59 0 1 1 .833.833L10 14.999a3.535 3.535 0 0 1-5-5l1.25-1.25a.59.59 0 0 1 .834 0zM9.583 7.083a.59.59 0 1 1-.833-.834L10 5a3.535 3.535 0 0 1 5 5l-1.25 1.25a.59.59 0 1 1-.834-.833l1.25-1.25a2.357 2.357 0 0 0-3.333-3.333l-1.25 1.25z"/>
+            <path d="M12.5 7.499a.59.59 0 0 1 0 .833L8.332 12.5a.59.59 0 0 1-.833-.834L11.666 7.5a.59.59 0 0 1 .833 0z"/>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="oppkq7tuob">
+            <path fill="#fff" transform="rotate(-45 12.07 5)" d="M0 0h14.141v14.141H0z"/>
+        </clipPath>
+    </defs>
+</svg>
